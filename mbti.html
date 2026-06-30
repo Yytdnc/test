@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MindCheck - MBTI 테스트</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">MindCheck</a>
+    <nav>
+      <a class="active" href="mbti.html">MBTI</a>
+      <a href="couples.html">Couples</a>
+      <a href="balance.html">Fun</a>
+      <a href="result.html">Result</a>
+    </nav>
+  </header>
+
+  <main class="quiz-shell">
+    <div class="ad"><span class="material-symbols-outlined">ads_click</span>ADVERTISEMENT</div>
+    <section class="quiz-card" id="quiz">
+      <div class="progress-row">
+        <strong id="progressText">01 <span>/ 12</span></strong>
+        <span id="progressHint">천천히 골라도 괜찮아요</span>
+      </div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <h1 id="questionText"></h1>
+      <div class="likert" id="answers"></div>
+      <div class="quiz-nav">
+        <button class="button ghost" id="prevBtn" type="button">
+          <span class="material-symbols-outlined">arrow_back</span>이전으로
+        </button>
+        <button class="button primary" id="nextBtn" type="button" disabled>
+          다음 질문<span class="material-symbols-outlined">arrow_forward</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>MindCheck</strong>
+    <p>© 2024 MindCheck. All rights reserved.</p>
+  </footer>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
