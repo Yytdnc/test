@@ -1,80 +1,145 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>커뮤니티 | MindPick</title>
-  <meta name="description" content="MindPick 이용자들과 테스트 결과, 이야기를 자유롭게 나눠보세요." />
-  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/admin.css" />
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<title>커뮤니티 | MindPick</title>
+<meta name="description" content="MindPick 이용자들과 테스트 결과, 이야기를 자유롭게 나눠보세요." />
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+<script id="tailwind-config">
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          "on-primary": "#ffffff",
+          "surface": "#f8f9fa",
+          "on-secondary": "#ffffff",
+          "on-background": "#191c1d",
+          "surface-container-lowest": "#ffffff",
+          "secondary": "#4648d4",
+          "background": "#f8f9fa",
+          "surface-container-low": "#f3f4f5",
+          "on-surface": "#191c1d",
+          "outline": "#727785",
+          "surface-container": "#edeeef",
+          "error": "#ba1a1a",
+          "secondary-container": "#6063ee",
+          "surface-container-high": "#e7e8e9",
+          "on-error-container": "#93000a",
+          "outline-variant": "#c2c6d6",
+          "primary": "#0058be",
+          "on-error": "#ffffff",
+          "on-surface-variant": "#424754",
+          "surface-container-highest": "#e1e3e4",
+          "error-container": "#ffdad6",
+          "primary-container": "#2170e4"
+        },
+        borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+        spacing: { sm: "8px", xl: "32px", md: "16px", lg: "24px", xs: "4px", base: "4px", "margin-mobile": "16px", "gutter-mobile": "12px" },
+        fontFamily: {
+          "body-sm": ["Be Vietnam Pro"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Be Vietnam Pro"],
+          "label-md": ["Be Vietnam Pro"], "label-sm": ["Be Vietnam Pro"], "headline-sm": ["Plus Jakarta Sans"],
+          "headline-md": ["Plus Jakarta Sans"], "body-md": ["Be Vietnam Pro"]
+        },
+        fontSize: {
+          "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+          "headline-lg": ["30px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "700" }],
+          "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+          "label-md": ["14px", { lineHeight: "16px", letterSpacing: "0.01em", fontWeight: "600" }],
+          "label-sm": ["12px", { lineHeight: "14px", letterSpacing: "0.02em", fontWeight: "500" }],
+          "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+          "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700" }],
+          "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }]
+        }
+      }
+    }
+  };
+</script>
+<style>
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  body { font-family: "Be Vietnam Pro", sans-serif; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+</style>
 </head>
-<body>
-  <header class="topbar">
-    <a class="brand" href="index.html"><span class="logo-emoji">🧠</span>Mind<span class="accent">Pick</span></a>
-    <nav>
-      <a href="index.html">홈</a>
-      <a class="active" href="community.html">커뮤니티</a>
-      <a href="privacy.html">개인정보처리방침</a>
-    </nav>
-  </header>
+<body class="bg-background text-on-surface min-h-screen flex flex-col font-body-md">
 
-  <main class="community-shell">
-    <div class="section-head" style="margin-bottom:18px;">
-      <h1 style="font-size:1.4rem; font-weight:800; margin:0;">💬 커뮤니티</h1>
+<header class="w-full sticky top-0 z-50 bg-surface shadow-sm flex items-center justify-between px-margin-mobile h-16">
+  <a class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-container-low transition-colors active:scale-95 duration-100 text-primary" href="index.html">
+    <span class="material-symbols-outlined">home</span>
+  </a>
+  <h1 class="font-headline-md text-headline-md text-primary font-bold">커뮤니티</h1>
+  <div id="auth-area" class="flex items-center gap-xs"></div>
+</header>
+
+<main class="flex-grow flex flex-col pt-md max-w-3xl mx-auto w-full md:px-margin-mobile pb-32">
+
+  <div id="config-warning" class="mx-margin-mobile mb-md p-md rounded-lg bg-error-container text-on-error-container text-body-sm" style="display:none;">
+    아직 관리자가 커뮤니티 연결을 완료하지 않았어요. 잠시 후 다시 확인해주세요.
+  </div>
+
+  <section class="w-full overflow-x-auto no-scrollbar pl-margin-mobile md:pl-0 pb-md">
+    <div id="category-pills" class="flex gap-sm w-max pr-margin-mobile">
+      <button type="button" data-category="all" class="pill-btn px-md py-sm text-label-md rounded-full font-semibold">#전체</button>
+      <button type="button" data-category="free" class="pill-btn px-md py-sm text-label-md rounded-full font-semibold">#자유</button>
+      <button type="button" data-category="qna" class="pill-btn px-md py-sm text-label-md rounded-full font-semibold">#질문</button>
+      <button type="button" data-category="share" class="pill-btn px-md py-sm text-label-md rounded-full font-semibold">#결과공유</button>
     </div>
+  </section>
 
-    <div id="config-warning" class="status-msg err" style="display:none;">
-      아직 관리자가 커뮤니티 연결을 완료하지 않았어요. 잠시 후 다시 확인해주세요.
-    </div>
+  <section id="post-list" class="flex flex-col gap-lg px-margin-mobile md:px-0"></section>
 
-    <div id="auth-logged-out" class="auth-prompt" style="display:none;">
-      <p>글을 쓰고 댓글을 남기려면 로그인해주세요.</p>
-      <div class="auth-prompt-actions">
-        <a href="login.html" class="button ghost">로그인</a>
-        <a href="signup.html" class="button primary">회원가입</a>
+  <div id="post-empty" class="text-center text-on-surface-variant text-body-sm py-xl" style="display:none;">
+    아직 등록된 글이 없어요. 첫 글을 남겨보세요!
+  </div>
+</main>
+
+<!-- FAB -->
+<button id="compose-fab" type="button" class="fixed bottom-lg right-margin-mobile md:right-lg w-14 h-14 bg-primary text-on-primary rounded-2xl flex items-center justify-center shadow-[0_8px_24px_rgba(0,88,190,0.3)] hover:bg-primary-container transition-colors active:scale-95 z-40">
+  <span class="material-symbols-outlined text-[28px]">edit</span>
+</button>
+
+<!-- Compose Modal -->
+<div id="compose-modal" class="fixed inset-0 z-[60] hidden">
+  <div id="compose-backdrop" class="absolute inset-0 bg-black/40"></div>
+  <div class="absolute bottom-0 left-0 right-0 md:inset-0 md:flex md:items-center md:justify-center">
+    <div class="bg-surface-container-lowest rounded-t-xl md:rounded-xl w-full md:max-w-lg max-h-[85vh] overflow-y-auto p-lg">
+      <div class="flex items-center justify-between mb-md">
+        <h2 class="text-headline-sm font-headline-sm font-semibold">✏️ 새 글 쓰기</h2>
+        <button type="button" id="compose-close-btn" class="w-9 h-9 flex items-center justify-center rounded-full hover:bg-surface-container-low">
+          <span class="material-symbols-outlined">close</span>
+        </button>
       </div>
+
+      <div id="share-preview" class="mb-md p-sm rounded-lg bg-primary-container/10 text-primary text-body-sm" style="display:none;"></div>
+
+      <label class="block text-label-md text-on-surface-variant mb-xs">카테고리</label>
+      <select id="post-category" class="w-full mb-md px-md py-sm rounded-lg border border-outline-variant bg-white text-body-md">
+        <option value="free">자유</option>
+        <option value="qna">질문</option>
+        <option value="share">결과공유</option>
+      </select>
+
+      <label class="block text-label-md text-on-surface-variant mb-xs">제목</label>
+      <input id="post-title" maxlength="60" class="w-full mb-md px-md py-sm rounded-lg border border-outline-variant text-body-md focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary" />
+
+      <label class="block text-label-md text-on-surface-variant mb-xs">내용</label>
+      <textarea id="post-content" rows="5" maxlength="2000" class="w-full mb-md px-md py-sm rounded-lg border border-outline-variant text-body-md focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"></textarea>
+
+      <button type="button" id="post-submit-btn" class="w-full py-sm bg-primary text-on-primary rounded-full font-label-md text-label-md font-semibold">등록하기</button>
+      <div id="post-status" class="text-body-sm mt-sm"></div>
     </div>
+  </div>
+</div>
 
-    <div id="auth-logged-in" class="auth-user-bar" style="display:none;">
-      <p><strong id="auth-nickname"></strong>님, 환영해요!</p>
-      <button type="button" id="logout-btn" class="button ghost">로그아웃</button>
-    </div>
-
-    <section id="write-box" class="panel" style="display:none;">
-      <h2 style="font-size:1rem; margin:0 0 12px;">✏️ 새 글 쓰기</h2>
-      <div id="share-preview" class="share-preview" style="display:none;"></div>
-      <div class="field"><label>제목</label><input type="text" id="post-title" maxlength="60" /></div>
-      <div class="field"><label>내용</label><textarea id="post-content" rows="4" maxlength="2000"></textarea></div>
-      <div class="toolbar">
-        <button type="button" id="post-submit-btn" class="button primary">등록하기</button>
-      </div>
-      <div id="post-status" class="status-msg"></div>
-    </section>
-
-    <section class="section">
-      <div id="post-list" class="post-list"></div>
-      <div id="post-empty" class="status-msg info" style="display:none;">아직 등록된 글이 없어요. 첫 글을 남겨보세요!</div>
-    </section>
-
-    <div class="ad-slot"><span>광고 영역 (AdSense)</span></div>
-  </main>
-
-  <footer>
-    <div class="foot-links">
-      <a href="index.html">홈</a>
-      <a href="community.html">커뮤니티</a>
-      <a href="privacy.html">개인정보처리방침</a>
-    </div>
-    <p>© 2026 MindPick.</p>
-  </footer>
-
-  <script src="js/tests-data.js"></script>
-  <script src="js/custom-tests.js"></script>
-  <script src="js/tests-registry.js"></script>
-  <script src="js/compare-utils.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/supabase-config.js"></script>
-  <script src="js/community.js"></script>
+<script src="js/tests-data.js"></script>
+<script src="js/custom-tests.js"></script>
+<script src="js/tests-registry.js"></script>
+<script src="js/compare-utils.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/community.js"></script>
 </body>
 </html>
