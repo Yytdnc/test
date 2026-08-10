@@ -18,82 +18,26 @@
   </header>
 
   <main class="admin-shell">
-    <h1>🛠️ 퀴즈 관리자</h1>
-    <p class="sub">새 심리테스트를 만들어 GitHub 저장소에 바로 저장할 수 있어요. 이 페이지는 검색엔진에 노출되지 않아요.</p>
-
-    <section class="panel">
-      <h2>1. GitHub 연결 설정</h2>
-      <p class="hint">본인 저장소에 쓰기 권한이 있는 Personal Access Token이 필요해요. <a href="https://github.com/settings/tokens?type=beta" target="_blank" rel="noopener" style="color:var(--accent);">Fine-grained token 발급</a> 시 이 저장소에 대해 "Contents: Read and write" 권한을 주세요. 토큰은 이 브라우저에만 저장되고 서버로 전송되지 않아요.</p>
-      <div class="row3">
-        <div class="field"><label>owner</label><input type="text" id="cfg-owner" placeholder="Yytdnc" /></div>
-        <div class="field"><label>repo</label><input type="text" id="cfg-repo" placeholder="test" /></div>
-        <div class="field"><label>branch</label><input type="text" id="cfg-branch" placeholder="main" /></div>
-      </div>
-      <div class="field"><label>Personal Access Token</label><input type="password" id="cfg-token" placeholder="ghp_... 또는 github_pat_..." /></div>
+    <section class="panel" id="login-panel">
+      <h1>🔒 관리자 로그인</h1>
+      <p class="hint">관리자만 접근할 수 있어요.</p>
+      <div class="field"><label>아이디</label><input type="text" id="login-id" autocomplete="username" /></div>
+      <div class="field"><label>비밀번호</label><input type="password" id="login-pw" autocomplete="current-password" /></div>
       <div class="toolbar">
-        <button type="button" id="cfg-load-btn" class="button primary">설정 저장 &amp; GitHub에서 불러오기</button>
+        <button type="button" id="login-btn" class="button primary">로그인</button>
       </div>
-      <div id="cfg-status" class="status-msg"></div>
+      <div id="login-status" class="status-msg"></div>
     </section>
 
-    <section class="panel">
-      <h2>저장된 커스텀 테스트</h2>
-      <div id="saved-list" class="saved-list"></div>
-    </section>
-
-    <section class="panel" id="builder-panel">
-      <h2>2. 새 테스트 만들기 / 수정하기</h2>
-      <div class="row2">
-        <div class="field"><label>ID (URL에 쓰임, 영문/숫자/하이픈)</label><input type="text" id="q-id" placeholder="예: food-type" /></div>
-        <div class="field"><label>태그</label><input type="text" id="q-tag" placeholder="예: 재미" /></div>
+    <section class="panel" id="admin-panel" style="display:none;">
+      <div class="row2" style="align-items:center;">
+        <h1 style="margin:0;">🛠️ 관리자 페이지</h1>
+        <div style="text-align:right;"><button type="button" id="logout-btn" class="button ghost">로그아웃</button></div>
       </div>
-      <div class="row2">
-        <div class="field"><label>이모지</label><input type="text" id="q-emoji" placeholder="🍜" /></div>
-        <div class="field"><label>결과 판정 방식</label>
-          <select id="q-type">
-            <option value="category">유형 판정 (보기마다 유형이 쌓여 최다 유형이 결과)</option>
-            <option value="score">점수 판정 (보기 점수 합산 후 구간 매칭)</option>
-          </select>
-        </div>
-      </div>
-      <div class="field"><label>제목</label><input type="text" id="q-title" placeholder="예: 나의 음식 취향 테스트" /></div>
-      <div class="field"><label>한 줄 소개</label><input type="text" id="q-tagline" placeholder="예: 당신의 입맛은 어떤 스타일일까요?" /></div>
-
-      <div id="categories-wrap">
-        <h2 style="font-size:0.95rem; margin-top:22px;">결과 유형 (2개 이상)</h2>
-        <div id="categories-list"></div>
-        <button type="button" id="add-category-btn" class="add-btn">+ 결과 유형 추가</button>
-      </div>
-
-      <div id="ranges-wrap">
-        <h2 style="font-size:0.95rem; margin-top:22px;">점수 구간 (겹치지 않게, 빈틈없이)</h2>
-        <div id="ranges-list"></div>
-        <button type="button" id="add-range-btn" class="add-btn">+ 점수 구간 추가</button>
-      </div>
-
-      <h2 style="font-size:0.95rem; margin-top:22px;">질문</h2>
-      <div id="questions-list"></div>
-      <button type="button" id="add-question-btn" class="add-btn">+ 질문 추가</button>
-
-      <div class="toolbar" style="margin-top:20px;">
-        <button type="button" id="reset-btn" class="button ghost">새로 작성 (초기화)</button>
-        <button type="button" id="export-btn" class="button ghost">코드로 내보내기</button>
-        <button type="button" id="save-btn" class="button primary">GitHub에 저장</button>
-      </div>
-      <pre id="export-output" class="code-export" style="display:none;"></pre>
-      <div id="save-status" class="status-msg"></div>
-    </section>
-
-    <section class="panel">
-      <h2>미리보기</h2>
-      <div class="test-grid" style="max-width:260px;">
-        <div class="test-card" id="preview-card" style="cursor:default;"></div>
-      </div>
+      <p class="hint">기능은 아직 준비 중이에요. 필요한 기능을 설명해주시면 추가할게요.</p>
     </section>
   </main>
 
-  <script src="js/tests-data.js"></script>
-  <script src="js/custom-tests.js"></script>
   <script src="js/admin.js"></script>
 </body>
 </html>
