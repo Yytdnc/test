@@ -60,7 +60,7 @@
   });
 
   if (relatedGrid) {
-    const others = TESTS.filter((t) => t.id !== test.id).slice(0, 3);
+    const others = ALL_TESTS.filter((t) => t.id !== test.id).slice(0, 3);
     relatedGrid.innerHTML = others
       .map(
         (t) => `
