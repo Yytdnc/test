@@ -597,4 +597,424 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "food",
+    tag: "음식",
+    title: "나의 음식 취향 테스트",
+    emoji: "🍽️",
+    tagline: "당신의 진짜 입맛은 어떤 스타일일까요?",
+    type: "category",
+    questions: [
+      {
+        text: "회식 메뉴를 내가 고를 수 있다면?",
+        options: [
+          { text: "마라탕이나 불닭처럼 매콤한 메뉴", value: "spicy" },
+          { text: "고기 무제한 메뉴", value: "meat" },
+          { text: "샐러드바나 건강식당", value: "light" },
+          { text: "디저트 뷔페", value: "dessert" },
+        ],
+      },
+      {
+        text: "배달앱을 켰을 때 가장 먼저 검색하는 건?",
+        options: [
+          { text: "'매운맛' 필터부터 켠다", value: "spicy" },
+          { text: "고기, 치킨류", value: "meat" },
+          { text: "샐러드, 포케", value: "light" },
+          { text: "케이크, 빙수", value: "dessert" },
+        ],
+      },
+      {
+        text: "스트레스 받을 때 당기는 음식은?",
+        options: [
+          { text: "불닭볶음면", value: "spicy" },
+          { text: "삼겹살, 스테이크", value: "meat" },
+          { text: "과일, 요거트", value: "light" },
+          { text: "초콜릿, 아이스크림", value: "dessert" },
+        ],
+      },
+      {
+        text: "여행지에서 꼭 먹어봐야 하는 음식은?",
+        options: [
+          { text: "현지의 매운 향신료 요리", value: "spicy" },
+          { text: "그 지역 명물 고기 요리", value: "meat" },
+          { text: "신선한 채소·해산물 요리", value: "light" },
+          { text: "유명한 디저트나 빵집", value: "dessert" },
+        ],
+      },
+      {
+        text: "매운맛 단계를 고를 수 있다면 나는?",
+        options: [
+          { text: "가장 매운 단계에 도전한다", value: "spicy" },
+          { text: "매운 건 별로, 고기나 더 먹는다", value: "meat" },
+          { text: "순한 맛으로 무난하게", value: "light" },
+          { text: "애초에 매운 것보다 단 게 좋다", value: "dessert" },
+        ],
+      },
+      {
+        text: "카페에 가면 주로 주문하는 건?",
+        options: [
+          { text: "매콤한 스낵류", value: "spicy" },
+          { text: "든든한 샌드위치·브런치", value: "meat" },
+          { text: "그린 스무디나 샐러드", value: "light" },
+          { text: "조각 케이크와 달달한 음료", value: "dessert" },
+        ],
+      },
+      {
+        text: "냉장고를 열었을 때 항상 있는 재료는?",
+        options: [
+          { text: "청양고추, 핫소스", value: "spicy" },
+          { text: "고기, 계란", value: "meat" },
+          { text: "채소, 두부", value: "light" },
+          { text: "초콜릿, 아이스크림", value: "dessert" },
+        ],
+      },
+      {
+        text: "나에게 완벽한 한 끼란?",
+        options: [
+          { text: "땀 나게 매운 한 그릇", value: "spicy" },
+          { text: "고기가 듬뿍 든 든든한 한 상", value: "meat" },
+          { text: "가볍고 신선한 건강식", value: "light" },
+          { text: "메인보다 디저트가 진짜 주인공", value: "dessert" },
+        ],
+      },
+    ],
+    categories: {
+      spicy: {
+        title: "화끈 매운맛파 – 자극적인 짜릿함",
+        emoji: "🌶️",
+        desc: "화끈하고 짜릿한 매운맛이 있어야 스트레스가 풀리는 당신! 자극적인 걸 즐기는 만큼 도전정신도 강해요. 가끔은 위장을 위해 순한 음식도 챙겨주세요.",
+      },
+      meat: {
+        title: "든든 고기파 – 포만감이 최고",
+        emoji: "🍖",
+        desc: "배부르고 든든해야 진짜 잘 먹었다고 느끼는 당신. 확실한 포만감을 주는 메뉴를 좋아해요. 야채도 곁들여 먹으면 더 좋겠죠?",
+      },
+      light: {
+        title: "건강 담백파 – 가볍고 신선하게",
+        emoji: "🥗",
+        desc: "몸이 가벼워야 마음도 편한 당신은 신선하고 담백한 음식을 선호해요. 자기관리에 신경 쓰는 편이지만, 가끔은 맛있는 것도 마음껏 즐겨보세요.",
+      },
+      dessert: {
+        title: "달콤 디저트파 – 인생은 단짠단짠",
+        emoji: "🍰",
+        desc: "메인 메뉴보다 디저트가 더 중요한 당신에게 하루의 행복은 달콤함에서 와요. 단 걸 먹을 때 스트레스가 풀리는 타입이지만 당 섭취는 적당히!",
+      },
+    },
+  },
+
+  {
+    id: "travel",
+    tag: "여행",
+    title: "나의 여행 스타일 테스트",
+    emoji: "✈️",
+    tagline: "떠나는 방식만 봐도 알 수 있는 진짜 나의 모습",
+    type: "category",
+    questions: [
+      {
+        text: "여행 계획을 짤 때 나는?",
+        options: [
+          { text: "시간표까지 짜서 완벽하게 준비한다", value: "plan" },
+          { text: "비행기표만 끊고 나머진 가서 정한다", value: "spontaneous" },
+          { text: "숙소 위주로 느긋하게 정한다", value: "relax" },
+          { text: "액티비티 예약부터 알아본다", value: "active" },
+        ],
+      },
+      {
+        text: "여행지에 도착하면 제일 먼저 하는 건?",
+        options: [
+          { text: "미리 짜둔 코스대로 출발", value: "plan" },
+          { text: "발길 닿는 대로 걷는다", value: "spontaneous" },
+          { text: "숙소에서 여유롭게 쉰다", value: "relax" },
+          { text: "액티비티 센터부터 찾는다", value: "active" },
+        ],
+      },
+      {
+        text: "여행 중 예상치 못한 일이 생기면?",
+        options: [
+          { text: "당황스럽지만 바로 대안을 짠다", value: "plan" },
+          { text: "오히려 재밌는 이벤트라고 생각한다", value: "spontaneous" },
+          { text: "그냥 흘러가는 대로 받아들인다", value: "relax" },
+          { text: "몸으로 부딪히며 해결한다", value: "active" },
+        ],
+      },
+      {
+        text: "여행 사진첩을 보면 대체로?",
+        options: [
+          { text: "명소별로 각 잡고 찍은 사진들", value: "plan" },
+          { text: "즉흥적으로 찍은 웃긴 사진들", value: "spontaneous" },
+          { text: "노을, 풍경 위주의 힐링샷", value: "relax" },
+          { text: "액티비티하며 찍은 역동적인 사진", value: "active" },
+        ],
+      },
+      {
+        text: "이상적인 여행 동반자는?",
+        options: [
+          { text: "계획을 함께 짜줄 사람", value: "plan" },
+          { text: "어디로 튈지 모르는 자유로운 사람", value: "spontaneous" },
+          { text: "말 없이도 편안한 사람", value: "relax" },
+          { text: "체력 좋고 뭐든 같이 도전할 사람", value: "active" },
+        ],
+      },
+      {
+        text: "여행 예산을 짤 때는?",
+        options: [
+          { text: "항목별로 세세하게 계산한다", value: "plan" },
+          { text: "일단 쓰고 본다", value: "spontaneous" },
+          { text: "숙소에 가장 많이 투자한다", value: "relax" },
+          { text: "액티비티·체험에 아낌없이 쓴다", value: "active" },
+        ],
+      },
+      {
+        text: "낯선 도시에서 길을 잃으면?",
+        options: [
+          { text: "미리 저장해둔 지도로 바로 해결한다", value: "plan" },
+          { text: "그냥 헤매는 것도 여행이라 생각한다", value: "spontaneous" },
+          { text: "근처 카페에서 쉬며 생각한다", value: "relax" },
+          { text: "지나가는 사람에게 물어보며 모험처럼 즐긴다", value: "active" },
+        ],
+      },
+      {
+        text: "나에게 완벽한 여행이란?",
+        options: [
+          { text: "계획한 대로 완벽하게 끝난 여행", value: "plan" },
+          { text: "예상 밖의 순간들로 가득한 여행", value: "spontaneous" },
+          { text: "아무것도 안 하고 푹 쉰 여행", value: "relax" },
+          { text: "몸이 부서져라 놀았던 여행", value: "active" },
+        ],
+      },
+    ],
+    categories: {
+      plan: {
+        title: "완벽 계획형 – 여행은 준비부터 즐거움",
+        emoji: "🗺️",
+        desc: "꼼꼼하게 세운 계획 덕분에 여행 중 시행착오가 적은 당신. 알찬 일정을 소화하는 능력이 뛰어나요. 가끔은 계획을 내려놓고 즉흥적인 순간도 즐겨보세요.",
+      },
+      spontaneous: {
+        title: "즉흥 방랑형 – 발길 닿는 대로",
+        emoji: "🎒",
+        desc: "정해진 것 없이 흘러가는 여행에서 진짜 매력을 느끼는 당신. 예상치 못한 순간들이 최고의 추억이 되곤 해요. 최소한의 안전장치는 챙겨두는 게 좋아요.",
+      },
+      relax: {
+        title: "힐링 여유형 – 쉼이 곧 여행",
+        emoji: "🌅",
+        desc: "빡빡한 일정보다 여유로운 휴식이 진짜 여행이라고 생각하는 당신. 몸과 마음을 충전하는 시간을 소중히 여겨요. 가끔은 새로운 도전도 재충전이 될 수 있어요.",
+      },
+      active: {
+        title: "액티비티 탐험형 – 몸으로 즐기는 여행",
+        emoji: "🏄",
+        desc: "가만히 있기보다 직접 부딪히며 체험해야 여행이 실감 나는 당신. 에너지 넘치는 모험을 즐길 줄 알아요. 체력 관리도 여행 준비물 중 하나라는 걸 잊지 마세요.",
+      },
+    },
+  },
+
+  {
+    id: "pastlife",
+    tag: "판타지",
+    title: "나의 전생 테스트",
+    emoji: "🔮",
+    tagline: "재미로 알아보는 나의 전생은 어떤 모습이었을까요?",
+    type: "category",
+    questions: [
+      {
+        text: "어릴 때부터 유독 끌렸던 것은?",
+        options: [
+          { text: "화려한 궁전, 왕관 같은 것들", value: "royal" },
+          { text: "그림, 음악, 시 같은 예술", value: "artist" },
+          { text: "검, 갑옷, 전쟁 이야기", value: "warrior" },
+          { text: "지도, 낯선 나라 이야기", value: "wanderer" },
+        ],
+      },
+      {
+        text: "꿈에서 자주 나타나는 배경은?",
+        options: [
+          { text: "웅장한 성이나 궁궐", value: "royal" },
+          { text: "조용한 작업실이나 무대", value: "artist" },
+          { text: "전쟁터나 훈련장", value: "warrior" },
+          { text: "바다, 사막 같은 낯선 풍경", value: "wanderer" },
+        ],
+      },
+      {
+        text: "사람들과 있을 때 나의 역할은?",
+        options: [
+          { text: "자연스럽게 중심에 서서 이끈다", value: "royal" },
+          { text: "분위기를 감성적으로 채운다", value: "artist" },
+          { text: "위기 상황에서 앞장선다", value: "warrior" },
+          { text: "새로운 이야기와 정보를 물어다 준다", value: "wanderer" },
+        ],
+      },
+      {
+        text: "갑자기 큰돈이 생긴다면?",
+        options: [
+          { text: "품격 있는 물건에 투자한다", value: "royal" },
+          { text: "작품 활동, 예술에 쓴다", value: "artist" },
+          { text: "몸을 단련하는 데 쓴다", value: "warrior" },
+          { text: "바로 여행 티켓을 끊는다", value: "wanderer" },
+        ],
+      },
+      {
+        text: "스트레스를 풀 때 나는?",
+        options: [
+          { text: "품위 있게 혼자만의 시간을 갖는다", value: "royal" },
+          { text: "글을 쓰거나 그림을 그린다", value: "artist" },
+          { text: "몸을 움직이며 땀을 뺀다", value: "warrior" },
+          { text: "훌쩍 어디론가 떠난다", value: "wanderer" },
+        ],
+      },
+      {
+        text: "골동품 시장에서 눈길이 가는 물건은?",
+        options: [
+          { text: "화려한 장신구나 왕관 모양 소품", value: "royal" },
+          { text: "오래된 악기나 그림", value: "artist" },
+          { text: "낡은 칼이나 갑옷", value: "warrior" },
+          { text: "이국적인 지도나 나침반", value: "wanderer" },
+        ],
+      },
+      {
+        text: "사람들이 나를 표현한다면?",
+        options: [
+          { text: "품격 있고 카리스마 있는 사람", value: "royal" },
+          { text: "감성적이고 독특한 사람", value: "artist" },
+          { text: "용감하고 의리 있는 사람", value: "warrior" },
+          { text: "자유롭고 호기심 많은 사람", value: "wanderer" },
+        ],
+      },
+      {
+        text: "만약 과거로 돌아간다면 살고 싶은 삶은?",
+        options: [
+          { text: "궁전에서 나라를 다스리는 삶", value: "royal" },
+          { text: "예술로 이름을 남기는 삶", value: "artist" },
+          { text: "명예를 지키며 싸우는 삶", value: "warrior" },
+          { text: "세계 곳곳을 누비는 상인의 삶", value: "wanderer" },
+        ],
+      },
+    ],
+    categories: {
+      royal: {
+        title: "왕족 – 우아한 통치자의 전생",
+        emoji: "👑",
+        desc: "타고난 카리스마와 품격을 지닌 당신. 전생에 사람들을 이끄는 자리에 있었을지도 몰라요. 지금도 무리 속에서 자연스럽게 중심이 되는 편이죠.",
+      },
+      artist: {
+        title: "예술가 – 시대를 앞서간 창작자의 전생",
+        emoji: "🎨",
+        desc: "감성이 풍부하고 표현력이 남다른 당신. 전생에 그림이나 음악으로 사람들의 마음을 움직였을지도 몰라요. 지금도 독특한 시선으로 세상을 바라봐요.",
+      },
+      warrior: {
+        title: "무사 – 명예를 지킨 전사의 전생",
+        emoji: "⚔️",
+        desc: "의리 있고 용감한 당신. 전생에 소중한 것을 지키기 위해 앞장섰을지도 몰라요. 지금도 위기 상황에서 믿음직한 사람으로 통해요.",
+      },
+      wanderer: {
+        title: "방랑 상인 – 세상을 누빈 자유인의 전생",
+        emoji: "🧭",
+        desc: "호기심 많고 자유로운 영혼을 가진 당신. 전생에 세계 곳곳을 누비며 새로운 것들을 발견했을지도 몰라요. 지금도 낯선 곳에 대한 설렘이 남다르죠.",
+      },
+    },
+  },
+
+  {
+    id: "meme",
+    tag: "밈",
+    title: "나의 인터넷 밈 캐릭터 테스트",
+    emoji: "📱",
+    tagline: "단톡방·SNS 속 나는 어떤 캐릭터일까요?",
+    type: "category",
+    questions: [
+      {
+        text: "단톡방에 웃긴 짤이 올라오면 나는?",
+        options: [
+          { text: "ㅋㅋㅋㅋㅋ 바로 폭풍 리액션", value: "hype" },
+          { text: "속으로 웃지만 그냥 읽는다", value: "lurker" },
+          { text: "더 웃긴 짤로 바로 받아친다", value: "trendsetter" },
+          { text: "짧고 임팩트 있는 한마디만 던진다", value: "deadpan" },
+        ],
+      },
+      {
+        text: "새로운 유행어가 생기면?",
+        options: [
+          { text: "바로 써먹으면서 신나한다", value: "hype" },
+          { text: "남들 쓰는 거 보고 나서야 안다", value: "lurker" },
+          { text: "내가 먼저 퍼뜨리는 편이다", value: "trendsetter" },
+          { text: "알아도 굳이 잘 안 쓴다", value: "deadpan" },
+        ],
+      },
+      {
+        text: "단체 사진을 찍을 때 나는?",
+        options: [
+          { text: "제일 과한 포즈를 잡는다", value: "hype" },
+          { text: "뒤쪽에서 조용히 서 있는다", value: "lurker" },
+          { text: "컨셉을 제안하고 이끈다", value: "trendsetter" },
+          { text: "무표정으로 그냥 서 있는다", value: "deadpan" },
+        ],
+      },
+      {
+        text: "SNS 스토리를 올릴 때는?",
+        options: [
+          { text: "하루에도 여러 번 올린다", value: "hype" },
+          { text: "거의 안 올리고 남의 것만 본다", value: "lurker" },
+          { text: "트렌디한 포맷을 제일 먼저 시도한다", value: "trendsetter" },
+          { text: "어쩌다 한 번, 짧고 심플하게", value: "deadpan" },
+        ],
+      },
+      {
+        text: "친구가 실수로 웃긴 짓을 하면?",
+        options: [
+          { text: "크게 웃으며 바로 놀린다", value: "hype" },
+          { text: "속으로만 빵 터진다", value: "lurker" },
+          { text: "그 순간을 바로 밈으로 만든다", value: "trendsetter" },
+          { text: "'그럴 줄 알았다'는 표정만 짓는다", value: "deadpan" },
+        ],
+      },
+      {
+        text: "모임에서 침묵이 흐르면?",
+        options: [
+          { text: "먼저 나서서 분위기를 띄운다", value: "hype" },
+          { text: "그냥 가만히 있는다", value: "lurker" },
+          { text: "재밌는 이야깃거리를 꺼낸다", value: "trendsetter" },
+          { text: "짧은 드립 하나 던지고 다시 조용해진다", value: "deadpan" },
+        ],
+      },
+      {
+        text: "이모티콘을 고를 때 나는?",
+        options: [
+          { text: "감정 과장된 이모티콘 총출동", value: "hype" },
+          { text: "기본 이모티콘 하나로 끝", value: "lurker" },
+          { text: "최신 유행 이모티콘부터 산다", value: "trendsetter" },
+          { text: "뼈 있는 드립 이모티콘 선호", value: "deadpan" },
+        ],
+      },
+      {
+        text: "친구들이 생각하는 나는?",
+        options: [
+          { text: "있으면 시끌벅적, 에너자이저", value: "hype" },
+          { text: "조용하지만 다 지켜보고 있는 사람", value: "lurker" },
+          { text: "늘 새로운 걸 제일 먼저 아는 사람", value: "trendsetter" },
+          { text: "말은 없지만 할 말은 다 하는 사람", value: "deadpan" },
+        ],
+      },
+    ],
+    categories: {
+      hype: {
+        title: "리액션 대장형 – 텐션이 국룰",
+        emoji: "🎉",
+        desc: "언제나 에너지 넘치는 리액션으로 분위기를 살리는 당신. 있는 것만으로도 모임이 즐거워져요. 가끔은 리액션 없이 조용히 듣는 것도 매력이에요.",
+      },
+      lurker: {
+        title: "눈팅 관찰형 – 조용히 다 보고 있다",
+        emoji: "👀",
+        desc: "말은 적어도 대화의 흐름을 놓치지 않는 당신. 조용하지만 은근히 존재감 있는 타입이에요. 가끔은 먼저 말을 걸어보는 것도 좋아요.",
+      },
+      trendsetter: {
+        title: "밈 제조기형 – 유행은 내가 만든다",
+        emoji: "🔥",
+        desc: "누구보다 빠르게 유행을 캐치하고 만들어내는 당신. 센스 있는 드립으로 대화방의 분위기 메이커예요. 가끔은 트렌드 없이도 편하게 쉬어가세요.",
+      },
+      deadpan: {
+        title: "무심 드립형 – 말은 없어도 임팩트는 확실히",
+        emoji: "😏",
+        desc: "말수는 적지만 한마디가 늘 웃긴 당신. 무심한 듯 던지는 드립이 진짜 매력이에요. 가끔은 리액션을 조금 더 크게 해줘도 상대가 좋아할 거예요.",
+      },
+    },
+  },
 ];
