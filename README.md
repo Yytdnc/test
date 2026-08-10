@@ -5,21 +5,27 @@ poomang.com 스타일을 참고한 심리테스트 사이트입니다. 순수 �
 ## 구성
 
 ```
-index.html      홈 (테스트 목록)
-quiz.html       테스트 진행 (?id=테스트ID)
-result.html     결과 페이지
-privacy.html    개인정보처리방침 (애드센스 승인에 필요)
-css/style.css   디자인
-js/tests-data.js  테스트 문항/결과 데이터 (여기만 수정하면 테스트 추가/수정 가능)
-js/main.js      홈 화면 카드 렌더링
-js/quiz.js      질문 진행 및 채점 엔진
-js/result.js    결과 표시
+index.html          홈 (테스트 목록)
+quiz.html           테스트 진행 (?id=테스트ID)
+result.html         결과 페이지
+compare.html         커플/친구 답변 비교 결과 페이지
+admin.html           관리자 로그인 게이트 (아이디/비밀번호 입력, 실제 보안 아님)
+privacy.html         개인정보처리방침 (애드센스 승인에 필요)
+css/style.css        디자인
+css/admin.css        관리자 페이지 전용 스타일
+js/tests-data.js     테스트 문항/결과 데이터 (여기만 수정하면 테스트 추가/수정 가능)
+js/main.js           홈 화면 카드 렌더링
+js/quiz.js           질문 진행 및 채점 엔진
+js/result.js         결과 표시 + 커플 비교 링크 생성
+js/compare.js         커플 비교 결과 계산/표시
+js/compare-utils.js  답변 인코딩/디코딩, 채점 로직 (quiz/result/compare 공용)
+js/admin.js           관리자 로그인 게이트 로직
 ```
 
-현재 테스트 5종: 성격 컬러, 동물상, 연애 스타일, 정신연령, 스트레스 지수.
+현재 테스트 10종: 성격 컬러, 동물상, 연애 스타일, 정신연령, 스트레스 지수, 애착유형, 음식 취향, 여행 스타일, 전생, 인터넷 밈 캐릭터.
 
 ### 새 테스트 추가하는 법
-`js/tests-data.js`의 `TESTS` 배열에 항목을 하나 추가하면 홈/퀴즈/결과 페이지에 자동으로 반영됩니다. `type: "category"`(유형 판정) 또는 `type: "score"`(점수 구간 판정) 중 선택.
+`js/tests-data.js`의 `TESTS` 배열에 항목을 하나 추가하면 홈/퀴즈/결과 페이지에 자동으로 반영됩니다. `type: "category"`(유형 판정) 또는 `type: "score"`(점수 구간 판정) 중 선택. 테스트 객체에 `compare: true`를 추가하면 결과 페이지에 "커플/친구와 비교하기" 공유 링크 기능이 자동으로 활성화됩니다 (URL에 답변을 인코딩해서 전달하는 방식이라 별도 서버/DB가 필요 없습니다).
 
 ## 로컬 확인
 
@@ -27,7 +33,7 @@ js/result.js    결과 표시
 
 ```bash
 python3 -m http.server 8080
-# 브라우저에서 http://l너가ocalhost:8080 접속
+# 브라우저에서 http://localhost:8080 접속
 ```
 
 ## GitHub Pages 자동 배포
