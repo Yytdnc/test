@@ -265,7 +265,7 @@
 
     const commentsHTML = comments
       .map((c) => {
-        const canDeleteComment = currentUser && currentUser.id === c.author_id;
+        const canDeleteComment = currentUser && (currentUser.id === c.author_id || isAdmin);
         return `
           <div class="comment-item" data-id="${c.id}">
             <span class="comment-author">${escapeHTML(c.author_name)}</span>
