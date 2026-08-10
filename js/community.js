@@ -26,6 +26,7 @@
   const postStatus = document.getElementById("post-status");
 
   let currentUser = null;
+  let isAdmin = false;
 
   // ---------- 결과 공유(퀴즈 결과 -> 커뮤니티 글) 준비 ----------
   const params = new URLSearchParams(location.search);
@@ -83,13 +84,20 @@
     return (user.user_metadata && (user.user_metadata.nickname || user.user_metadata.name)) || user.email;
   }
 
-  function renderAuthState(user) {
+  async function renderAuthState(user) {
     currentUser = user;
+    isAdmin = false;
     if (user) {
       loggedOutEl.style.display = "none";
       loggedInEl.style.display = "block";
-      nicknameEl.textContent = nicknameOf(user);
       writeBox.style.display = "block";
+      const { data: adminRow } = await sb
+        .from("admins")
+        .select("user_id")
+        .eq("user_id", user.id)
+        .maybeSingle();
+      isAdmin = !!adminRow;
+      nicknameEl.textContent = nicknameOf(user) + (isAdmin ? " (관리자)" : "");
     } else {
       loggedOutEl.style.display = "block";
       loggedInEl.style.display = "none";
@@ -250,7 +258,7 @@
 
   function renderPostCard(post, comments) {
     const date = new Date(post.created_at).toLocaleDateString("ko-KR");
-    const canDelete = currentUser && currentUser.id === post.author_id;
+    const canDelete = currentUser && (currentUser.id === post.author_id || isAdmin);
     const shareBadge = post.quiz_test_id
       ? `<a class="post-share-badge" href="quiz.html?id=${post.quiz_test_id}">${post.quiz_result_emoji || ""} ${escapeHTML(post.quiz_result_title || "")} 결과 공유</a>`
       : "";
