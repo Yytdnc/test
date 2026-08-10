@@ -30,9 +30,23 @@ create policy "users can update their own posts"
   on public.posts for update
   using (auth.uid() = author_id);
 
-create policy "users can delete their own posts"
+-- 관리자 (최고 관리자 계정만 여기 추가되며, 모든 글/댓글을 삭제할 수 있음)
+create table if not exists public.admins (
+  user_id uuid primary key references auth.users(id) on delete cascade
+);
+
+alter table public.admins enable row level security;
+
+create policy "users can check their own admin status"
+  on public.admins for select
+  using (auth.uid() = user_id);
+
+create policy "users can delete their own posts or admins any"
   on public.posts for delete
-  using (auth.uid() = author_id);
+  using (
+    auth.uid() = author_id
+    or exists (select 1 from public.admins a where a.user_id = auth.uid())
+  );
 
 -- 댓글
 create table if not exists public.comments (
@@ -56,6 +70,12 @@ create policy "users can insert their own comments"
   on public.comments for insert
   with check (auth.uid() = author_id);
 
-create policy "users can delete their own comments"
+create policy "users can delete their own comments or admins any"
   on public.comments for delete
-  using (auth.uid() = author_id);
+  using (
+    auth.uid() = author_id
+    or exists (select 1 from public.admins a where a.user_id = auth.uid())
+  );
+
+-- 관리자로 지정하려면 (schema.sql 실행 후):
+-- insert into public.admins (user_id) values ('회원가입한 계정의 UID');
