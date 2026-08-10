@@ -571,51 +571,6 @@ footer .foot-links a:hover { color: var(--accent); }
   box-shadow: 0 0 0 3px var(--accent-soft);
 }
 
-.auth-divider {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 22px 0 16px;
-  color: var(--text-soft);
-  font-size: 0.78rem;
-}
-.auth-divider::before,
-.auth-divider::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: var(--border);
-}
-
-.button.oauth {
-  border: 1.5px solid var(--border);
-  gap: 10px;
-  margin-bottom: 10px;
-}
-.button.oauth .oauth-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  font-size: 0.75rem;
-  font-weight: 800;
-}
-.button.google {
-  background: #fff;
-  color: #1c1d21;
-}
-.button.google .oauth-icon { background: #4285f4; color: #fff; }
-.button.google:hover { background: #f8f8f8; }
-.button.kakao {
-  background: #fee500;
-  color: #191600;
-  border-color: #fee500;
-}
-.button.kakao .oauth-icon { background: #191600; color: #fee500; }
-.button.kakao:hover { background: #fada00; }
-
 .auth-switch {
   text-align: center;
   font-size: 0.85rem;
