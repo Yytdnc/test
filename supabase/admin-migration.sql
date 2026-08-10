@@ -10,7 +10,7 @@ alter table public.admins enable row level security;
 
 drop policy if exists "users can check their own admin status" on public.admins;
 create policy "users can check their own admin status"
-  on public.admins for select
+  on public.admins for selectd
   using (auth.uid() = user_id);
 
 -- 게시글: 본인 글이거나, 관리자면 모든 글 삭제 가능
