@@ -558,7 +558,9 @@ footer .foot-links a:hover { color: var(--accent); }
   margin: 0;
 }
 
-.auth-card .field input {
+.auth-card .field input[type="email"],
+.auth-card .field input[type="text"],
+.auth-card .field input[type="password"] {
   padding: 12px 14px;
   font-size: 0.95rem;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
