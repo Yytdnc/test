@@ -11,7 +11,9 @@ create table if not exists public.posts (
   -- 심리테스트 결과를 공유한 글이면 채워짐 (일반 글은 null)
   quiz_test_id text,
   quiz_result_title text,
-  quiz_result_emoji text
+  quiz_result_emoji text,
+  -- 태그 필터: free(자유) / qna(질문) / share(결과공유)
+  category text not null default 'free'
 );
 
 create index if not exists posts_created_at_idx on public.posts (created_at desc);
@@ -76,6 +78,28 @@ create policy "users can delete their own comments or admins any"
     auth.uid() = author_id
     or exists (select 1 from public.admins a where a.user_id = auth.uid())
   );
+
+-- 좋아요
+create table if not exists public.likes (
+  post_id uuid not null references public.posts(id) on delete cascade,
+  user_id uuid not null references auth.users(id) on delete cascade,
+  created_at timestamptz not null default now(),
+  primary key (post_id, user_id)
+);
+
+alter table public.likes enable row level security;
+
+create policy "likes are viewable by everyone"
+  on public.likes for select
+  using (true);
+
+create policy "users can like as themselves"
+  on public.likes for insert
+  with check (auth.uid() = user_id);
+
+create policy "users can remove their own like"
+  on public.likes for delete
+  using (auth.uid() = user_id);
 
 -- 관리자로 지정하려면 (schema.sql 실행 후):
 -- insert into public.admins (user_id) values ('회원가입한 계정의 UID');
