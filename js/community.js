@@ -292,7 +292,7 @@
           <h2 class="font-headline-sm text-headline-sm font-semibold">${escapeHTML(post.title)}</h2>
           <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">${escapeHTML(post.content)}</p>
         </div>
-        <footer class="flex items-center gap-lg border-t border-outline-variant pt-sm mt-sm">
+        <footer class="flex items-center gap-md sm:gap-lg border-t border-outline-variant pt-sm mt-sm">
           <button type="button" class="like-btn flex items-center gap-xs ${likeInfo.likedByMe ? "text-primary" : "text-on-surface-variant"} hover:text-primary transition-colors">
             <span class="material-symbols-outlined text-[20px]" style="font-variation-settings:'FILL' ${likeInfo.likedByMe ? 1 : 0}">thumb_up</span>
             <span class="like-count font-label-md text-label-md">${likeInfo.count}</span>
