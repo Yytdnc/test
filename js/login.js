@@ -28,6 +28,12 @@
     return new URL("community.html" + (next || ""), location.href).href;
   }
 
+  const nextParam = new URLSearchParams(location.search).get("next");
+  if (nextParam) {
+    const switchLink = document.querySelector(".auth-switch a");
+    if (switchLink) switchLink.href = "signup.html?next=" + encodeURIComponent(nextParam);
+  }
+
   sb.auth.getUser().then(({ data }) => {
     if (data.user) location.href = communityUrl();
   });
