@@ -518,6 +518,88 @@ footer .foot-links a:hover { color: var(--accent); }
 }
 .compare-row.match .compare-answers .vs { color: #1b7a3d; }
 
+/* ---------- Community ---------- */
+.community-shell {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 36px 20px 60px;
+}
+
+.auth-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.auth-tab-btn {
+  flex: 1;
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 9px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  cursor: pointer;
+}
+.auth-tab-btn.active {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+  background: var(--accent-soft);
+}
+
+.oauth-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.mini-btn {
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--text-soft);
+}
+.mini-btn:hover { border-color: var(--accent); color: var(--accent); }
+.mini-btn.danger:hover { border-color: #e0524c; color: #e0524c; }
+
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.post-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+}
+.post-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: var(--text-soft);
+  margin-bottom: 8px;
+}
+.post-author { font-weight: 700; }
+.post-title {
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+.post-content {
+  font-size: 0.9rem;
+  color: var(--text);
+  white-space: pre-wrap;
+  margin: 0 0 10px;
+}
+
 @media (max-width: 560px) {
   .topbar nav { display: none; }
   .hero { padding: 40px 0 24px; }
