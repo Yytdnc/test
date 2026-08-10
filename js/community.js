@@ -1,7 +1,6 @@
-/* community.html: Supabase 기반 간단 커뮤니티 (회원가입/로그인/글쓰기/댓글/결과공유) */
+/* community.html: Supabase 기반 간단 커뮤니티 (글쓰기/댓글/결과공유, 인증은 login.html/signup.html) */
 (function () {
   const configWarning = document.getElementById("config-warning");
-  const authBox = document.getElementById("auth-box");
 
   const isConfigured =
     typeof SUPABASE_URL === "string" &&
@@ -16,17 +15,23 @@
 
   const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-  if (authBox) authBox.style.display = "block";
-
   const loggedOutEl = document.getElementById("auth-logged-out");
   const loggedInEl = document.getElementById("auth-logged-in");
   const nicknameEl = document.getElementById("auth-nickname");
   const writeBox = document.getElementById("write-box");
-  const authStatus = document.getElementById("auth-status");
   const postStatus = document.getElementById("post-status");
 
   let currentUser = null;
   let isAdmin = false;
+
+  // 로그인 없이 결과 공유 링크로 들어온 경우, 로그인/회원가입 후에도 돌아올 수 있도록 현재 쿼리를 넘겨둠
+  if (location.search) {
+    const next = encodeURIComponent(location.search);
+    const loginLink = loggedOutEl && loggedOutEl.querySelector('a[href="login.html"]');
+    const signupLink = loggedOutEl && loggedOutEl.querySelector('a[href="signup.html"]');
+    if (loginLink) loginLink.href = `login.html?next=${next}`;
+    if (signupLink) signupLink.href = `signup.html?next=${next}`;
+  }
 
   // ---------- 결과 공유(퀴즈 결과 -> 커뮤니티 글) 준비 ----------
   const params = new URLSearchParams(location.search);
@@ -62,23 +67,6 @@
     }
   }
 
-  // ---------- 로그인/회원가입 탭 ----------
-  document.querySelectorAll(".auth-tab-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll(".auth-tab-btn").forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      const tab = btn.dataset.tab;
-      document.getElementById("tab-login").style.display = tab === "login" ? "block" : "none";
-      document.getElementById("tab-signup").style.display = tab === "signup" ? "block" : "none";
-      authStatus.className = "status-msg";
-    });
-  });
-
-  function setAuthStatus(msg, type) {
-    authStatus.textContent = msg;
-    authStatus.className = "status-msg " + (type || "info");
-  }
-
   function nicknameOf(user) {
     if (!user) return "";
     return (user.user_metadata && (user.user_metadata.nickname || user.user_metadata.name)) || user.email;
@@ -89,7 +77,7 @@
     isAdmin = false;
     if (user) {
       loggedOutEl.style.display = "none";
-      loggedInEl.style.display = "block";
+      loggedInEl.style.display = "flex";
       writeBox.style.display = "block";
       const { data: adminRow } = await sb
         .from("admins")
@@ -99,7 +87,7 @@
       isAdmin = !!adminRow;
       nicknameEl.textContent = nicknameOf(user) + (isAdmin ? " (관리자)" : "");
     } else {
-      loggedOutEl.style.display = "block";
+      loggedOutEl.style.display = "flex";
       loggedInEl.style.display = "none";
       writeBox.style.display = "none";
     }
@@ -109,41 +97,6 @@
   sb.auth.getUser().then(({ data }) => renderAuthState(data.user || null));
   sb.auth.onAuthStateChange((_event, session) => {
     renderAuthState(session ? session.user : null);
-  });
-
-  document.getElementById("signup-submit-btn").addEventListener("click", async () => {
-    const nickname = document.getElementById("signup-nickname").value.trim();
-    const email = document.getElementById("signup-email").value.trim();
-    const password = document.getElementById("signup-password").value;
-    if (!nickname || !email || password.length < 6) {
-      setAuthStatus("닉네임, 이메일, 6자 이상 비밀번호를 모두 입력해주세요.", "err");
-      return;
-    }
-    const { error } = await sb.auth.signUp({
-      email,
-      password,
-      options: { data: { nickname } },
-    });
-    if (error) {
-      setAuthStatus(error.message, "err");
-    } else {
-      setAuthStatus("가입 완료! 이메일 인증이 필요할 수 있어요. 인증 후 로그인해주세요.", "ok");
-    }
-  });
-
-  document.getElementById("login-submit-btn").addEventListener("click", async () => {
-    const email = document.getElementById("login-email").value.trim();
-    const password = document.getElementById("login-password").value;
-    const { error } = await sb.auth.signInWithPassword({ email, password });
-    if (error) setAuthStatus(error.message, "err");
-  });
-
-  document.getElementById("google-login-btn").addEventListener("click", () => {
-    sb.auth.signInWithOAuth({ provider: "google" });
-  });
-
-  document.getElementById("kakao-login-btn").addEventListener("click", () => {
-    sb.auth.signInWithOAuth({ provider: "kakao" });
   });
 
   document.getElementById("logout-btn").addEventListener("click", () => {

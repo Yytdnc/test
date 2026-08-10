@@ -24,7 +24,8 @@
   }
 
   function communityUrl() {
-    return new URL("community.html", location.href).href;
+    const next = new URLSearchParams(location.search).get("next");
+    return new URL("community.html" + (next || ""), location.href).href;
   }
 
   sb.auth.getUser().then(({ data }) => {
