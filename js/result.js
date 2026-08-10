@@ -47,6 +47,17 @@
 
   retryLink.href = `quiz.html?id=${test.id}`;
 
+  const shareCommunityBtn = document.getElementById("share-community-btn");
+  if (shareCommunityBtn) {
+    shareCommunityBtn.addEventListener("click", () => {
+      const q =
+        stored.resultKey !== undefined
+          ? `share_result=${encodeURIComponent(stored.resultKey)}`
+          : `share_score=${encodeURIComponent(stored.score)}`;
+      location.href = `community.html?share_test=${test.id}&${q}`;
+    });
+  }
+
   shareBtn.addEventListener("click", () => {
     const url = location.href;
     if (navigator.share) {
