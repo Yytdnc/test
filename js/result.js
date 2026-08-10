@@ -59,6 +59,30 @@
     }
   });
 
+  if (test.compare) {
+    const inviteEl = document.getElementById("compare-invite");
+    const inviteBtn = document.getElementById("invite-btn");
+    const inviteStatus = document.getElementById("invite-status");
+    if (inviteEl) inviteEl.style.display = "block";
+    if (inviteBtn) {
+      inviteBtn.addEventListener("click", () => {
+        const encoded = mpEncodeAnswers(stored.answers || []);
+        const url = `${location.origin}${location.pathname.replace(
+          "result.html",
+          "quiz.html"
+        )}?id=${test.id}&from=${encoded}`;
+        if (navigator.share) {
+          navigator.share({ title: `${test.title} - 같이 해볼래?`, url }).catch(() => {});
+        } else if (navigator.clipboard) {
+          navigator.clipboard.writeText(url).then(() => {
+            inviteStatus.textContent = "링크가 복사되었어요! 상대방에게 보내보세요.";
+            inviteStatus.className = "status-msg ok";
+          });
+        }
+      });
+    }
+  }
+
   if (relatedGrid) {
     const others = ALL_TESTS.filter((t) => t.id !== test.id).slice(0, 3);
     relatedGrid.innerHTML = others
