@@ -27,7 +27,7 @@ js/result.js    결과 표시
 
 ```bash
 python3 -m http.server 8080
-# 브라우저에서 http://localhost:8080 접속
+# 브라우저에서 http://l너가ocalhost:8080 접속
 ```
 
 ## GitHub Pages 자동 배포
