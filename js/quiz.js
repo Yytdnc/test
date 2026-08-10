@@ -110,9 +110,13 @@
     const result = computeResult();
     sessionStorage.setItem(
       "mindpick_result",
-      JSON.stringify({ testId: test.id, ...result })
+      JSON.stringify({ testId: test.id, answers, ...result })
     );
-    location.href = `result.html?id=${test.id}`;
+    if (isPartnerValid) {
+      location.href = `compare.html?id=${test.id}&from=${encodeURIComponent(fromParam)}`;
+    } else {
+      location.href = `result.html?id=${test.id}`;
+    }
   }
 
   introEl.querySelector(".start-btn").addEventListener("click", startQuiz);
