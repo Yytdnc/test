@@ -1,86 +1,64 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MindCheck - MBTI 결과</title>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>결과 | MindPick</title>
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Google AdSense: 승인 후 client 값을 발행자 ID로 교체하고 주석을 해제하세요 -->
+  <!--
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  -->
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="">MindCheck</a>
+    <a class="brand" href="index.html"><span class="logo-emoji">🧠</span>Mind<span class="accent">Pick</span></a>
     <nav>
-      <a href="mbti.html">MBTI</a>
-      <a href="couples.html">Couples</a>
-      <a href="balance.html">Fun</a>
-      <a class="active" href="result.html">Result</a>
+      <a href="index.html">홈</a>
+      <a href="privacy.html">개인정보처리방침</a>
     </nav>
   </header>
 
-  <main>
-    <section class="result-hero">
-      <span class="eyebrow">당신의 성격 유형은</span>
-      <h1 id="typeText">ENFP</h1>
-      <p id="typeTitle">재기발랄한 활동가</p>
-      <div class="result-visual"></div>
-      <div class="glass">
-        <h2><span class="material-symbols-outlined">auto_awesome</span>어떤 사람인가요?</h2>
-        <p id="typeDescription">자유로운 영혼의 소유자인 ENFP형은 타인과 정서적으로 깊은 유대감을 맺는 것을 즐깁니다. 창의적이며 활발한 성격으로, 세상 모든 것에서 가능성을 발견하고 주변 사람들에게 긍정적인 에너지를 전파합니다.</p>
+  <main class="result-shell">
+    <div id="result-not-found" style="display:none; text-align:center; padding: 60px 0;">
+      <p>결과를 찾을 수 없어요. 테스트를 먼저 진행해주세요.<br /><a href="index.html" style="color:var(--accent); font-weight:700;">홈으로 돌아가기</a></p>
+    </div>
+
+    <div id="result-card" class="result-card">
+      <div class="r-emoji"></div>
+      <div class="r-eyebrow"></div>
+      <h1></h1>
+      <p></p>
+    </div>
+
+    <div class="result-actions">
+      <a id="retry-link" class="button ghost" style="flex:1;" href="index.html">다시 하기</a>
+      <button id="share-btn" class="button primary" style="flex:1;">결과 링크 공유하기</button>
+    </div>
+
+    <div class="ad-slot"><span>광고 영역 (AdSense)</span></div>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>다른 심리테스트도 해보세요</h2>
       </div>
+      <div class="test-grid" id="related-test-grid"></div>
     </section>
 
-    <section class="section narrow">
-      <h2>성격 키워드 분석</h2>
-      <div class="cards-2">
-        <article class="info-card">
-          <span class="material-symbols-outlined good">trending_up</span>
-          <h3>강점</h3>
-          <ul id="strengthList">
-            <li>풍부한 상상력과 창의적인 문제 해결력</li>
-            <li>타인의 감정에 깊이 공감하는 소통 능력</li>
-            <li>새로운 도전과 변화에 대한 높은 수용성</li>
-          </ul>
-        </article>
-        <article class="info-card">
-          <span class="material-symbols-outlined warn">warning</span>
-          <h3>주의할 점</h3>
-          <ul id="weaknessList">
-            <li>반복적이고 세부적인 작업에 쉽게 지루함</li>
-            <li>타인의 시선과 평가에 민감하게 반응</li>
-            <li>가끔은 현실보다 이상에 치우치는 경향</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section narrow">
-      <h2>나와 잘 맞는 친구는?</h2>
-      <div class="cards-2">
-        <article class="match-card good-bg">
-          <span>환상의 짝꿍</span>
-          <h3>INFJ / INTJ</h3>
-          <p>넘치는 아이디어를 깊이 이해해주고 실행으로 옮길 수 있게 도와주는 파트너입니다.</p>
-        </article>
-        <article class="match-card warn-bg">
-          <span>조금 더 노력이 필요해요</span>
-          <h3>ISTJ / ISFJ</h3>
-          <p>질서와 규칙을 중시하는 성향과 가치관 차이가 생길 수 있어 서로의 다름을 존중해야 합니다.</p>
-        </article>
-      </div>
-      <div class="share">
-        <button type="button" data-copy-result><span class="material-symbols-outlined">link</span></button>
-        <a class="button primary" href="mbti.html">다시 검사하기</a>
-      </div>
-    </section>
+    <p class="disclaimer">본 테스트 결과는 재미로 즐기는 콘텐츠이며 과학적·심리학적 근거가 없습니다.</p>
   </main>
 
   <footer>
-    <strong>MindCheck</strong>
-    <p>© 2024 MindCheck. All rights reserved.</p>
+    <div class="foot-links">
+      <a href="index.html">홈</a>
+      <a href="privacy.html">개인정보처리방침</a>
+    </div>
+    <p>© 2026 MindPick.</p>
   </footer>
-  <script src="result.js"></script>
-  <script src="app.js"></script>
+
+  <script src="js/tests-data.js"></script>
+  <script src="js/result.js"></script>
 </body>
 </html>
