@@ -454,6 +454,9 @@
   function validate() {
     const errors = [];
     if (!/^[a-z0-9-]+$/.test(state.id)) errors.push("ID는 영문 소문자/숫자/하이픈만 사용할 수 있어요.");
+    if (typeof TESTS !== "undefined" && TESTS.some((t) => t.id === state.id)) {
+      errors.push("이 ID는 기본 제공 테스트에서 이미 사용 중이에요. 다른 ID를 입력해주세요.");
+    }
     if (!state.title.trim()) errors.push("제목을 입력해주세요.");
     if (!state.emoji.trim()) errors.push("이모지를 입력해주세요.");
     if (!state.tagline.trim()) errors.push("한 줄 소개를 입력해주세요.");
