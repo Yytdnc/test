@@ -5,4 +5,4 @@
  * 이 anon key는 공개되어도 되는 키예요 (RLS 정책이 실제 접근 권한을 통제합니다).
  * service_role 키는 절대 여기에 넣지 마세요. */
 const SUPABASE_URL = "https://kvlwtsqkgpgctjsimoty.supabase.co";
-const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
+const SUPABASE_ANON_KEY = "sb_publishable_ngKqI5eFZbgVNefjvHnIrw_KPcUIqxG";
