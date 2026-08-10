@@ -1,4 +1,4 @@
-/* login.html: 이메일/비밀번호 로그인 + 구글/카카오 소셜 로그인 */
+/* login.html: 이메일/비밀번호 로그인 */
 (function () {
   const configWarning = document.getElementById("config-warning");
   const authCard = document.getElementById("auth-card");
@@ -55,13 +55,5 @@
 
   document.getElementById("login-password").addEventListener("keydown", (e) => {
     if (e.key === "Enter") document.getElementById("login-submit-btn").click();
-  });
-
-  document.getElementById("google-login-btn").addEventListener("click", () => {
-    sb.auth.signInWithOAuth({ provider: "google", options: { redirectTo: communityUrl() } });
-  });
-
-  document.getElementById("kakao-login-btn").addEventListener("click", () => {
-    sb.auth.signInWithOAuth({ provider: "kakao", options: { redirectTo: communityUrl() } });
   });
 })();
