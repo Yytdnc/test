@@ -31,11 +31,6 @@ create policy "users can delete their own comments or admins any"
     or exists (select 1 from public.admins a where a.user_id = auth.uid())
   );
 
--- ============================================================
--- 사용 방법
--- 1. community.html 에서 관리자로 쓸 계정으로 먼저 회원가입하세요.
--- 2. Supabase 대시보드 → Authentication → Users 에서 그 계정의 UID(User UID)를 복사하세요.
--- 3. 아래 문장의 UID 부분을 바꿔서 SQL Editor에서 실행하세요:
---
--- insert into public.admins (user_id) values ('여기에-복사한-UID-붙여넣기');
--- ============================================================
+-- 관리자로 지정
+insert into public.admins (user_id) values ('3a3839f0-f2ef-4516-9219-714bcd142069')
+on conflict (user_id) do nothing;
