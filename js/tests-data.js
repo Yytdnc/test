@@ -220,6 +220,7 @@ const TESTS = [
     emoji: "💘",
     tagline: "사랑할 때 진짜 나의 모습은 어떤 스타일일까요?",
     type: "category",
+    compare: true,
     questions: [
       {
         text: "좋아하는 사람이 생기면 나는?",
