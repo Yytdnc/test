@@ -2,6 +2,7 @@
 (function () {
   const params = new URLSearchParams(location.search);
   const testId = params.get("id");
+  const fromParam = params.get("from");
   const test = ALL_TESTS.find((t) => t.id === testId);
 
   const introEl = document.getElementById("quiz-intro");
@@ -13,13 +14,27 @@
     return;
   }
 
+  const partnerAnswers =
+    test.compare && fromParam ? mpDecodeAnswers(fromParam) : null;
+  const isPartnerValid =
+    Array.isArray(partnerAnswers) && partnerAnswers.length === test.questions.length;
+
   document.title = `${test.title} | MindPick`;
 
   // Intro
   introEl.querySelector(".big-emoji").textContent = test.emoji;
   introEl.querySelector("h1").textContent = test.title;
-  introEl.querySelector(".tagline").textContent = test.tagline;
+  introEl.querySelector(".tagline").textContent = isPartnerValid
+    ? "상대방이 보낸 테스트예요! 답변을 마치면 서로의 결과를 비교해볼 수 있어요 💑"
+    : test.tagline;
   introEl.querySelector(".q-count").textContent = `질문 ${test.questions.length}개`;
+
+  if (isPartnerValid) {
+    const badge = document.createElement("div");
+    badge.className = "compare-invite-badge";
+    badge.textContent = "💑 커플 비교 모드";
+    introEl.insertBefore(badge, introEl.querySelector(".big-emoji"));
+  }
 
   const answers = [];
   let currentIndex = 0;
