@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Community Feed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed": "#002113",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#6ffbbe",
+                    "surface": "#f8f9fa",
+                    "on-tertiary-container": "#f5fff6",
+                    "on-secondary-fixed": "#07006c",
+                    "inverse-surface": "#2e3132",
+                    "on-tertiary-fixed-variant": "#005236",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#2f2ebe",
+                    "tertiary": "#006947",
+                    "on-background": "#191c1d",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#4648d4",
+                    "background": "#f8f9fa",
+                    "on-primary-container": "#fefcff",
+                    "surface-container-low": "#f3f4f5",
+                    "on-surface": "#191c1d",
+                    "outline": "#727785",
+                    "inverse-primary": "#adc6ff",
+                    "surface-container": "#edeeef",
+                    "error": "#ba1a1a",
+                    "secondary-container": "#6063ee",
+                    "surface-container-high": "#e7e8e9",
+                    "tertiary-container": "#00855b",
+                    "on-error-container": "#93000a",
+                    "outline-variant": "#c2c6d6",
+                    "secondary-fixed": "#e1e0ff",
+                    "primary-fixed": "#d8e2ff",
+                    "surface-bright": "#f8f9fa",
+                    "primary": "#0058be",
+                    "on-error": "#ffffff",
+                    "on-surface-variant": "#424754",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface-variant": "#e1e3e4",
+                    "tertiary-fixed-dim": "#4edea3",
+                    "on-secondary-container": "#fffbff",
+                    "primary-fixed-dim": "#adc6ff",
+                    "surface-dim": "#d9dadb",
+                    "on-primary-fixed": "#001a42",
+                    "surface-tint": "#005ac2",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#c0c1ff",
+                    "primary-container": "#2170e4",
+                    "on-primary-fixed-variant": "#004395"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "xl": "32px",
+                    "md": "16px",
+                    "lg": "24px",
+                    "xs": "4px",
+                    "base": "4px",
+                    "margin-mobile": "16px",
+                    "gutter-mobile": "12px"
+            },
+            "fontFamily": {
+                    "body-sm": [
+                            "Be Vietnam Pro"
+                    ],
+                    "headline-lg": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "body-lg": [
+                            "Be Vietnam Pro"
+                    ],
+                    "label-md": [
+                            "Be Vietnam Pro"
+                    ],
+                    "label-sm": [
+                            "Be Vietnam Pro"
+                    ],
+                    "headline-sm": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "headline-md": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "body-md": [
+                            "Be Vietnam Pro"
+                    ]
+            },
+            "fontSize": {
+                    "body-sm": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "30px",
+                            {
+                                    "lineHeight": "38px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "14px",
+                                    "letterSpacing": "0.02em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-sm": [
+                            "20px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        /* Hide scrollbar for horizontal scrolling tags */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col font-body-md pb-20 md:pb-0">
+<!-- TopAppBar -->
+<header class="w-full sticky top-0 z-50 bg-surface shadow-sm flex items-center justify-between px-margin-mobile h-16">
+<button class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-container-low transition-colors active:scale-95 duration-100 text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-md text-headline-md text-primary font-bold">Community</h1>
+<button class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-container-low transition-colors active:scale-95 duration-100 text-primary">
+<span class="material-symbols-outlined">search</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col pt-md max-w-3xl mx-auto w-full md:px-margin-mobile">
+<!-- Popular Tags (Horizontal Scroll) -->
+<section class="w-full overflow-x-auto no-scrollbar pl-margin-mobile md:pl-0 pb-md">
+<div class="flex gap-sm w-max pr-margin-mobile">
+<button class="px-md py-sm bg-primary/10 text-primary font-label-md text-label-md rounded-full font-semibold">#Discussion</button>
+<button class="px-md py-sm bg-surface-container-high text-on-surface-variant font-label-md text-label-md rounded-full font-semibold hover:bg-surface-container-highest transition-colors">#Daily</button>
+<button class="px-md py-sm bg-surface-container-high text-on-surface-variant font-label-md text-label-md rounded-full font-semibold hover:bg-surface-container-highest transition-colors">#QA</button>
+<button class="px-md py-sm bg-surface-container-high text-on-surface-variant font-label-md text-label-md rounded-full font-semibold hover:bg-surface-container-highest transition-colors">#Introductions</button>
+<button class="px-md py-sm bg-surface-container-high text-on-surface-variant font-label-md text-label-md rounded-full font-semibold hover:bg-surface-container-highest transition-colors">#Tips</button>
+</div>
+</section>
+<!-- Feed List -->
+<section class="flex flex-col gap-lg px-margin-mobile md:px-0">
+<!-- Post Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-[0_4px_16px_rgba(0,88,190,0.05)] border border-outline-variant p-md flex flex-col gap-md">
+<header class="flex items-center gap-gutter-mobile">
+<img class="w-[48px] h-[48px] rounded-full object-cover" data-alt="A close-up portrait of a cheerful person in a bright, modern park setting, soft sunlight. The style is modern corporate, optimistic and clear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxTGp9d9O18WFXiBLEMaSN4JZFkzePlidB8CA2ww7R3STfKLuX9pGp3wLwkLpFQJ8HYO5husjVCmqsdyn5H1FObvAjD2T9zXanOwgKrej8RKHyMDsdZx-jU0kN9rQKcJ9Gk-EMZMmy6ZuMR9i2Ct51pxV80uLTCXl-9ICR2NhFAUh-fNrB0qMy_-2Vo7Vy0aHos6h_UZSOZOyf6_To8Zz9KKynuHJxSVxMkphYN8DbhkqrBtRQpdkx"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">AlexJohnson</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 hours ago</span>
+</div>
+</header>
+<div class="flex flex-col gap-sm">
+<h2 class="font-headline-sm text-headline-sm font-semibold">Best practices for starting a new project?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                        I'm about to kick off a major redesign and I'm looking for advice on how to structure the initial research phase. What are some pitfalls I should avoid?
+                    </p>
+</div>
+<footer class="flex items-center gap-lg border-t border-outline-variant pt-sm mt-sm">
+<button class="flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">thumb_up</span>
+<span class="font-label-md text-label-md">24</span>
+</button>
+<button class="flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">chat_bubble_outline</span>
+<span class="font-label-md text-label-md">8</span>
+</button>
+<button class="flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors ml-auto">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</footer>
+</article>
+<!-- Post Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-[0_4px_16px_rgba(0,88,190,0.05)] border border-outline-variant p-md flex flex-col gap-md">
+<header class="flex items-center gap-gutter-mobile">
+<img class="w-[48px] h-[48px] rounded-full object-cover" data-alt="A professional headshot of a woman with glasses, smiling warmly in a bright office environment, modern corporate style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_PqUYPdtJ8h2O5jNAIIatxq60iSblnXsPP1O6ml_XL5F6F1jARtr45ubgICJ-H39imgwhfwDO1Y3636s4JpkLjZB-0CS4L0MKL55RxSwwHluuSmuWaTRQ7p2_4lioDQ3_aeGOHRYB-QyowBTwi22TgUZiS-PPh29I98N1Yx2cj4ZTDK0GIVzNE6be95gi1M5aGFxc0iUrqLL9g4R54pGyyduAHB1Sb11lR4sZcDMkTYkdbgX5tc8V"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">SarahDesign</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">5 hours ago</span>
+</div>
+</header>
+<div class="flex flex-col gap-sm">
+<h2 class="font-headline-sm text-headline-sm font-semibold">Loving the new typography updates!</h2>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                        Just wanted to share my appreciation for the recent changes to the typography scale. Everything feels so much more readable and balanced now. Great job team!
+                    </p>
+</div>
+<footer class="flex items-center gap-lg border-t border-outline-variant pt-sm mt-sm">
+<button class="flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">thumb_up</span>
+<span class="font-label-md text-label-md">112</span>
+</button>
+<button class="flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">chat_bubble_outline</span>
+<span class="font-label-md text-label-md">34</span>
+</button>
+<button class="flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors ml-auto">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</footer>
+</article>
+<!-- Post Card 3 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-[0_4px_16px_rgba(0,88,190,0.05)] border border-outline-variant p-md flex flex-col gap-md mb-xl">
+<header class="flex items-center gap-gutter-mobile">
+<div class="w-[48px] h-[48px] rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-headline-sm font-bold">M</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">MikeBuilds</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Yesterday</span>
+</div>
+</header>
+<div class="flex flex-col gap-sm">
+<h2 class="font-headline-sm text-headline-sm font-semibold">Has anyone tried the new animation API?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                        I'm struggling to get the timing right on complex sequences. Does anyone have a good tutorial or example repo they could point me towards?
+                    </p>
+</div>
+<footer class="flex items-center gap-lg border-t border-outline-variant pt-sm mt-sm">
+<button class="flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">thumb_up</span>
+<span class="font-label-md text-label-md">5</span>
+</button>
+<button class="flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">chat_bubble_outline</span>
+<span class="font-label-md text-label-md">2</span>
+</button>
+<button class="flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors ml-auto">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</footer>
+</article>
+</section>
+</main>
+<!-- FAB -->
+<button class="fixed bottom-[88px] right-margin-mobile md:bottom-lg md:right-lg w-14 h-14 bg-primary text-on-primary rounded-2xl flex items-center justify-center shadow-[0_8px_24px_rgba(0,88,190,0.2)] hover:bg-primary-fixed-variant transition-colors active:scale-95 z-40">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 0;">edit</span>
+</button>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-xl bg-surface/80 backdrop-blur-md border-t border-outline-variant shadow-[0_-4px_12px_rgba(0,0,0,0.05)] flex justify-around items-center h-16 px-4">
+<a class="flex flex-col items-center justify-center text-primary font-semibold transition-all active:scale-90 duration-150 gap-xs" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-sm text-label-sm">Feed</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 duration-150 gap-xs" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">add_circle</span>
+<span class="font-label-sm text-label-sm">Create</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 duration-150 gap-xs" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">notifications</span>
+<span class="font-label-sm text-label-sm">Notifications</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 duration-150 gap-xs" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+</body></html>
