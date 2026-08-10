@@ -15,10 +15,10 @@
     const allGrid = document.getElementById("all-test-grid");
     const popularGrid = document.getElementById("popular-test-grid");
     if (allGrid) {
-      allGrid.innerHTML = TESTS.map(cardHTML).join("");
+      allGrid.innerHTML = ALL_TESTS.map(cardHTML).join("");
     }
     if (popularGrid) {
-      popularGrid.innerHTML = TESTS.slice(0, 3).map(cardHTML).join("");
+      popularGrid.innerHTML = ALL_TESTS.slice(0, 3).map(cardHTML).join("");
     }
   }
 

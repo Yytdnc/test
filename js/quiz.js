@@ -2,7 +2,7 @@
 (function () {
   const params = new URLSearchParams(location.search);
   const testId = params.get("id");
-  const test = TESTS.find((t) => t.id === testId);
+  const test = ALL_TESTS.find((t) => t.id === testId);
 
   const introEl = document.getElementById("quiz-intro");
   const questionEl = document.getElementById("quiz-question");

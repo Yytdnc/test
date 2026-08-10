@@ -2,7 +2,7 @@
 (function () {
   const params = new URLSearchParams(location.search);
   const testId = params.get("id");
-  const test = TESTS.find((t) => t.id === testId);
+  const test = ALL_TESTS.find((t) => t.id === testId);
 
   const cardEl = document.getElementById("result-card");
   const notFoundEl = document.getElementById("result-not-found");
