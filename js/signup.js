@@ -1,4 +1,4 @@
-/* signup.html: 이메일/비밀번호 회원가입 + 구글/카카오 소셜 로그인 */
+/* signup.html: 이메일/비밀번호 회원가입 */
 (function () {
   const configWarning = document.getElementById("config-warning");
   const authCard = document.getElementById("auth-card");
@@ -60,13 +60,5 @@
     } else {
       setStatus("가입 완료! 이메일 인증이 필요할 수 있어요. 메일함을 확인한 뒤 로그인해주세요.", "ok");
     }
-  });
-
-  document.getElementById("google-login-btn").addEventListener("click", () => {
-    sb.auth.signInWithOAuth({ provider: "google", options: { redirectTo: communityUrl() } });
-  });
-
-  document.getElementById("kakao-login-btn").addEventListener("click", () => {
-    sb.auth.signInWithOAuth({ provider: "kakao", options: { redirectTo: communityUrl() } });
   });
 })();
