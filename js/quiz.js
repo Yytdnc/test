@@ -14,6 +14,10 @@
     return;
   }
 
+  if (window.mpRecordTestView) {
+    window.mpRecordTestView(test.id);
+  }
+
   const partnerAnswers =
     test.compare && fromParam ? mpDecodeAnswers(fromParam) : null;
   const isPartnerValid =
