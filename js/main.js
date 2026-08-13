@@ -57,6 +57,23 @@
     }
   }
 
+  function injectItemListSchema() {
+    const data = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      itemListElement: ALL_TESTS.map((t, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${location.origin}${location.pathname.replace("index.html", "")}quiz.html?id=${t.id}`,
+        name: t.title,
+      })),
+    };
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify(data);
+    document.head.appendChild(script);
+  }
+
   function render() {
     const allGrid = document.getElementById("all-test-grid");
     if (allGrid) {
@@ -65,6 +82,7 @@
 
     // 조회수 데이터가 오기 전까지는 기본 순서로 먼저 보여준다
     renderPopular(ALL_TESTS, {});
+    injectItemListSchema();
 
     if (window.mpFetchTestViews) {
       window.mpFetchTestViews().then((viewMap) => {

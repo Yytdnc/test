@@ -43,13 +43,14 @@ function mpComputeResult(test, answers) {
     return { score: total };
   }
   if (test.type === "mbti") {
-    const counts = {};
-    answers.forEach((v) => {
-      counts[v] = (counts[v] || 0) + 1;
+    const totals = {};
+    test.questions.forEach((q, i) => {
+      if (!q.axis) return;
+      const key = q.axis[0] + q.axis[1];
+      totals[key] = (totals[key] || 0) + (answers[i] || 0);
     });
-    const axes = [["E", "I"], ["S", "N"], ["T", "F"], ["J", "P"]];
-    const resultKey = axes
-      .map(([a, b]) => ((counts[a] || 0) >= (counts[b] || 0) ? a : b))
+    const resultKey = ["EI", "SN", "TF", "JP"]
+      .map((key) => ((totals[key] || 0) >= 0 ? key[0] : key[1]))
       .join("");
     return { resultKey };
   }
@@ -73,6 +74,20 @@ function mpShareLink(url, title, onCopied) {
     return;
   }
   mpShareFallback(url, onCopied);
+}
+
+/* 테스트/결과별로 <title>과 메타 설명, OG/트위터 태그를 갱신한다 (SEO + 공유 미리보기용) */
+function mpSetMeta(title, description) {
+  document.title = title;
+  const setContent = (selector, value) => {
+    const el = document.querySelector(selector);
+    if (el) el.setAttribute("content", value);
+  };
+  setContent('meta[name="description"]', description);
+  setContent('meta[property="og:title"]', title);
+  setContent('meta[property="og:description"]', description);
+  setContent('meta[name="twitter:title"]', title);
+  setContent('meta[name="twitter:description"]', description);
 }
 
 function mpShareFallback(url, onCopied) {

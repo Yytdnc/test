@@ -34,8 +34,6 @@
     return;
   }
 
-  document.title = `${test.title} 결과 | MindPick`;
-
   const computed = mpComputeResult(test, answers);
   const resultInfo = mpResultInfo(test, computed);
 
@@ -44,6 +42,11 @@
     if (cardEl) cardEl.style.display = "none";
     return;
   }
+
+  mpSetMeta(
+    `${resultInfo.title} - ${test.title} | MindPick`,
+    `${resultInfo.emoji} ${resultInfo.desc}`
+  );
 
   // 링크로 바로 들어온 경우에도 세션에 저장해 공유/비교 버튼이 계속 동작하게 한다
   sessionStorage.setItem(
@@ -81,17 +84,37 @@
     const inviteEl = document.getElementById("compare-invite");
     const inviteBtn = document.getElementById("invite-btn");
     const inviteStatus = document.getElementById("invite-status");
+    const checkStatus = document.getElementById("check-status");
     if (inviteEl) inviteEl.style.display = "block";
     if (inviteBtn) {
       inviteBtn.addEventListener("click", () => {
-        const encoded = mpEncodeAnswers(answers);
-        const url = `${location.origin}${location.pathname.replace(
-          "result.html",
-          "quiz.html"
-        )}?id=${test.id}&from=${encoded}`;
-        mpShareLink(url, `${test.title} - 같이 해볼래?`, () => {
-          inviteStatus.textContent = "링크가 복사되었어요! 상대방에게 보내보세요.";
-          inviteStatus.className = "status-msg ok";
+        if (!window.mpCreateCompareSession) return;
+        inviteBtn.disabled = true;
+        inviteBtn.textContent = "링크 만드는 중...";
+        window.mpCreateCompareSession(test.id, answers).then((code) => {
+          inviteBtn.disabled = false;
+          inviteBtn.textContent = "비교 링크 만들어서 공유하기";
+          if (!code) {
+            inviteStatus.textContent = "비교 링크를 만들지 못했어요. 잠시 후 다시 시도해주세요.";
+            inviteStatus.className = "status-msg err";
+            return;
+          }
+          const inviteUrl = `${location.origin}${location.pathname.replace(
+            "result.html",
+            "quiz.html"
+          )}?id=${test.id}&from=${code}`;
+          mpShareLink(inviteUrl, `${test.title} - 같이 해볼래?`, () => {
+            inviteStatus.textContent = "링크가 복사되었어요! 상대방에게 보내보세요.";
+            inviteStatus.className = "status-msg ok";
+          });
+          if (checkStatus) {
+            const checkUrl = `${location.origin}${location.pathname.replace(
+              "result.html",
+              "compare.html"
+            )}?id=${test.id}&code=${code}&as=initiator`;
+            checkStatus.innerHTML = `상대방이 답하면 <a href="${checkUrl}" style="color:var(--accent-dark); font-weight:700; text-decoration:underline;">이 링크</a>에서 비교 결과를 확인할 수 있어요. 링크를 꼭 저장해두세요!`;
+            checkStatus.className = "status-msg info";
+          }
         });
       });
     }

@@ -1,6 +1,13 @@
 <!doctype html>
 <html lang="ko">
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WZW58QPM');</script>
+  <!-- End Google Tag Manager -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
@@ -11,6 +18,10 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5113083554519679" crossorigin="anonymous"></script>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZW58QPM"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <header class="topbar">
     <a class="brand" href="index.html"><span class="logo-emoji">🧠</span>Mind<span class="accent">Pick</span></a>
     <nav>
@@ -25,7 +36,12 @@
       <p>비교할 결과를 찾을 수 없어요. 링크가 만료됐거나 잘못됐을 수 있어요.<br /><a href="index.html" style="color:var(--accent); font-weight:700;">홈으로 돌아가기</a></p>
     </div>
 
-    <div id="compare-content">
+    <div id="compare-waiting" style="display:none; text-align:center; padding: 60px 0;">
+      <p style="font-size:2rem; margin-bottom:12px;">⏳</p>
+      <p>아직 상대방이 테스트를 완료하지 않았어요.<br />상대방이 답하면 이 링크를 새로고침해서 다시 확인해보세요!<br /><a href="index.html" style="color:var(--accent); font-weight:700;">홈으로 돌아가기</a></p>
+    </div>
+
+    <div id="compare-content" style="display:none;">
       <div id="match-badge" class="match-badge"></div>
 
       <div class="compare-cards">
@@ -66,10 +82,13 @@
     <p>© 2026 MindPick.</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
   <script src="js/tests-data.js"></script>
   <script src="js/custom-tests.js"></script>
   <script src="js/tests-registry.js"></script>
   <script src="js/compare-utils.js"></script>
+  <script src="js/compare-session.js"></script>
   <script src="js/compare.js"></script>
 </body>
 </html>

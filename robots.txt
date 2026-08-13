@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /login.html
+Disallow: /signup.html
+Disallow: /compare.html
+
+Sitemap: https://yytdnc.github.io/test/sitemap.xml

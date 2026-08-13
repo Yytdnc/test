@@ -1,6 +1,16 @@
 /* MindPick 심리테스트 데이터
  * type: "category" (보기마다 유형이 쌓여 가장 많은 유형이 결과) | "score" (보기마다 점수 합산 후 구간 매칭)
+ *     | "mbti" (문항마다 axis: [찬성쪽, 반대쪽] 축을 가지며, 5점 리커트 응답 가중치를 축별로 합산)
  */
+
+// MBTI 문항에서 공통으로 쓰는 5점 리커트 척도 (매우 그렇다 ~ 매우 그렇지 않다)
+const LIKERT_OPTIONS = [
+  { text: "매우 그렇다", value: 2 },
+  { text: "그렇다", value: 1 },
+  { text: "보통이다", value: 0 },
+  { text: "그렇지 않다", value: -1 },
+  { text: "매우 그렇지 않다", value: -2 },
+];
 
 const TESTS = [
   {
@@ -1655,230 +1665,41 @@ const TESTS = [
     type: "mbti",
     compare: true,
     questions: [
-      {
-        text: "주말에 에너지를 얻는 방법은?",
-        options: [
-          { text: "사람들과 어울려 논다", value: "E" },
-          { text: "혼자만의 시간을 보낸다", value: "I" },
-        ],
-      },
-      {
-        text: "새로운 모임에 가면?",
-        options: [
-          { text: "먼저 말을 걸고 다닌다", value: "E" },
-          { text: "분위기를 살피며 조용히 있는다", value: "I" },
-        ],
-      },
-      {
-        text: "생각이 많을 때 나는?",
-        options: [
-          { text: "누군가에게 털어놓으며 정리한다", value: "E" },
-          { text: "혼자 곱씹으며 정리한다", value: "I" },
-        ],
-      },
-      {
-        text: "긴 하루를 보내고 나면?",
-        options: [
-          { text: "사람을 만나야 충전된다", value: "E" },
-          { text: "혼자 쉬어야 충전된다", value: "I" },
-        ],
-      },
-      {
-        text: "전화와 문자 중 편한 건?",
-        options: [
-          { text: "바로 전화하는 게 편하다", value: "E" },
-          { text: "문자로 정리해서 보내는 게 편하다", value: "I" },
-        ],
-      },
-      {
-        text: "파티에 가면 나는?",
-        options: [
-          { text: "여러 사람과 두루두루 이야기한다", value: "E" },
-          { text: "친한 한두 명과 깊게 이야기한다", value: "I" },
-        ],
-      },
-      {
-        text: "회의에서 아이디어가 떠오르면?",
-        options: [
-          { text: "바로 말하면서 생각을 정리한다", value: "E" },
-          { text: "먼저 속으로 정리한 후 말한다", value: "I" },
-        ],
-      },
-      {
-        text: "낯선 장소에 가면?",
-        options: [
-          { text: "사람들에게 말을 걸며 적응한다", value: "E" },
-          { text: "자리를 관찰하며 적응한다", value: "I" },
-        ],
-      },
-      {
-        text: "설명을 들을 때 선호하는 방식은?",
-        options: [
-          { text: "구체적인 예시와 사실 위주", value: "S" },
-          { text: "큰 그림과 가능성 위주", value: "N" },
-        ],
-      },
-      {
-        text: "이야기할 때 나는?",
-        options: [
-          { text: "실제 있었던 일 위주로 말한다", value: "S" },
-          { text: "비유와 상상을 섞어 말한다", value: "N" },
-        ],
-      },
-      {
-        text: "새로운 아이디어를 들으면?",
-        options: [
-          { text: "현실성부터 따져본다", value: "S" },
-          { text: "가능성에 먼저 설렌다", value: "N" },
-        ],
-      },
-      {
-        text: "여행 계획을 짤 때?",
-        options: [
-          { text: "실용적인 정보 위주로 준비한다", value: "S" },
-          { text: "새로운 경험과 영감 위주로 상상한다", value: "N" },
-        ],
-      },
-      {
-        text: "일할 때 더 편한 방식은?",
-        options: [
-          { text: "검증된 방법을 따른다", value: "S" },
-          { text: "새로운 방법을 시도해본다", value: "N" },
-        ],
-      },
-      {
-        text: "책이나 영화를 볼 때 끌리는 이야기는?",
-        options: [
-          { text: "현실적인 이야기", value: "S" },
-          { text: "상상력 넘치는 이야기", value: "N" },
-        ],
-      },
-      {
-        text: "문제를 해결할 때?",
-        options: [
-          { text: "과거 경험에서 답을 찾는다", value: "S" },
-          { text: "새로운 관점에서 답을 찾는다", value: "N" },
-        ],
-      },
-      {
-        text: "대화 중 자주 하는 말은?",
-        options: [
-          { text: "\"정확히 무슨 일이었냐면\"", value: "S" },
-          { text: "\"만약에 이렇다면\"", value: "N" },
-        ],
-      },
-      {
-        text: "친구가 고민을 말하면?",
-        options: [
-          { text: "원인과 해결책을 먼저 짚어준다", value: "T" },
-          { text: "마음부터 공감해준다", value: "F" },
-        ],
-      },
-      {
-        text: "결정을 내릴 때 중요한 기준은?",
-        options: [
-          { text: "논리와 효율", value: "T" },
-          { text: "사람들의 감정과 관계", value: "F" },
-        ],
-      },
-      {
-        text: "비판을 받으면?",
-        options: [
-          { text: "근거가 맞으면 받아들인다", value: "T" },
-          { text: "말투나 태도에 먼저 마음이 상한다", value: "F" },
-        ],
-      },
-      {
-        text: "갈등 상황에서 나는?",
-        options: [
-          { text: "옳고 그름을 명확히 하려 한다", value: "T" },
-          { text: "관계가 상하지 않길 바란다", value: "F" },
-        ],
-      },
-      {
-        text: "일 처리 기준은?",
-        options: [
-          { text: "원칙과 기준대로", value: "T" },
-          { text: "상황과 사람에 맞게 유연하게", value: "F" },
-        ],
-      },
-      {
-        text: "친구의 잘못을 보면?",
-        options: [
-          { text: "솔직하게 지적해준다", value: "T" },
-          { text: "마음 다칠까 봐 부드럽게 돌려 말한다", value: "F" },
-        ],
-      },
-      {
-        text: "칭찬을 들으면?",
-        options: [
-          { text: "사실인지 객관적으로 생각해본다", value: "T" },
-          { text: "그 마음 자체가 고맙게 느껴진다", value: "F" },
-        ],
-      },
-      {
-        text: "나에게 더 중요한 건?",
-        options: [
-          { text: "공정함과 논리", value: "T" },
-          { text: "배려와 조화", value: "F" },
-        ],
-      },
-      {
-        text: "여행 준비는?",
-        options: [
-          { text: "일정을 미리 다 짜둔다", value: "J" },
-          { text: "가서 즉흥적으로 정한다", value: "P" },
-        ],
-      },
-      {
-        text: "할 일이 생기면?",
-        options: [
-          { text: "바로 계획을 세워 처리한다", value: "J" },
-          { text: "마감 임박해서 몰아친다", value: "P" },
-        ],
-      },
-      {
-        text: "책상이나 방 상태는?",
-        options: [
-          { text: "정리정돈이 잘 되어 있다", value: "J" },
-          { text: "조금 어질러져 있어도 신경 안 쓴다", value: "P" },
-        ],
-      },
-      {
-        text: "약속을 잡을 때?",
-        options: [
-          { text: "날짜와 시간을 명확히 정한다", value: "J" },
-          { text: "\"그때 봐서\" 느슨하게 정한다", value: "P" },
-        ],
-      },
-      {
-        text: "새로운 정보가 생기면?",
-        options: [
-          { text: "원래 계획을 밀고 나간다", value: "J" },
-          { text: "계획을 유연하게 바꾼다", value: "P" },
-        ],
-      },
-      {
-        text: "일을 마무리하는 스타일은?",
-        options: [
-          { text: "끝을 확실히 맺어야 편하다", value: "J" },
-          { text: "여지를 열어두는 게 편하다", value: "P" },
-        ],
-      },
-      {
-        text: "하루를 보내는 방식은?",
-        options: [
-          { text: "할 일 목록대로 움직인다", value: "J" },
-          { text: "그때그때 끌리는 대로 움직인다", value: "P" },
-        ],
-      },
-      {
-        text: "결정을 내릴 때?",
-        options: [
-          { text: "빨리 정하고 마음을 놓는다", value: "J" },
-          { text: "최대한 옵션을 열어두고 미룬다", value: "P" },
-        ],
-      },
+      { text: "나는 낯선 사람과도 스스럼없이 대화를 시작하는 편이다", axis: ["E", "I"], options: LIKERT_OPTIONS },
+      { text: "새로운 모임에 가면 자연스럽게 여러 사람에게 말을 건다", axis: ["E", "I"], options: LIKERT_OPTIONS },
+      { text: "생각이 많을 때는 다른 사람에게 이야기하면서 정리하는 편이다", axis: ["E", "I"], options: LIKERT_OPTIONS },
+      { text: "긴 하루를 보내고 나면 사람을 만나야 오히려 에너지가 채워진다", axis: ["E", "I"], options: LIKERT_OPTIONS },
+      { text: "혼자 있는 시간보다 사람들과 함께 있는 시간이 더 편하다", axis: ["E", "I"], options: LIKERT_OPTIONS },
+      { text: "모임에서는 여러 사람과 두루두루 이야기하는 편이다", axis: ["E", "I"], options: LIKERT_OPTIONS },
+      { text: "아이디어가 떠오르면 일단 말하면서 생각을 정리하는 편이다", axis: ["E", "I"], options: LIKERT_OPTIONS },
+      { text: "낯선 장소에 가면 사람들에게 먼저 말을 걸며 적응하는 편이다", axis: ["E", "I"], options: LIKERT_OPTIONS },
+
+      { text: "나는 설명을 들을 때 구체적인 예시와 사실을 중요하게 여긴다", axis: ["S", "N"], options: LIKERT_OPTIONS },
+      { text: "나는 이야기할 때 실제 있었던 일 위주로 말하는 편이다", axis: ["S", "N"], options: LIKERT_OPTIONS },
+      { text: "나는 새로운 아이디어를 들으면 먼저 현실성부터 따져본다", axis: ["S", "N"], options: LIKERT_OPTIONS },
+      { text: "나는 여행 계획을 짤 때 실용적인 정보 위주로 준비한다", axis: ["S", "N"], options: LIKERT_OPTIONS },
+      { text: "나는 검증된 방법을 따르는 것이 더 편하다", axis: ["S", "N"], options: LIKERT_OPTIONS },
+      { text: "나는 현실적인 이야기에 더 끌리는 편이다", axis: ["S", "N"], options: LIKERT_OPTIONS },
+      { text: "나는 문제를 해결할 때 과거 경험에서 답을 찾는 편이다", axis: ["S", "N"], options: LIKERT_OPTIONS },
+      { text: "나는 '정확히 무슨 일이 있었는지'를 중요하게 여기는 편이다", axis: ["S", "N"], options: LIKERT_OPTIONS },
+
+      { text: "나는 친구가 고민을 말하면 원인과 해결책을 먼저 짚어주는 편이다", axis: ["T", "F"], options: LIKERT_OPTIONS },
+      { text: "나는 결정을 내릴 때 논리와 효율을 가장 중요하게 여긴다", axis: ["T", "F"], options: LIKERT_OPTIONS },
+      { text: "나는 비판을 받아도 근거가 맞으면 쉽게 받아들이는 편이다", axis: ["T", "F"], options: LIKERT_OPTIONS },
+      { text: "나는 갈등 상황에서 옳고 그름을 명확히 하려는 편이다", axis: ["T", "F"], options: LIKERT_OPTIONS },
+      { text: "나는 원칙과 기준을 지키는 것을 중요하게 여긴다", axis: ["T", "F"], options: LIKERT_OPTIONS },
+      { text: "나는 친구의 잘못을 보면 솔직하게 지적해주는 편이다", axis: ["T", "F"], options: LIKERT_OPTIONS },
+      { text: "나는 칭찬을 들으면 그게 사실인지 객관적으로 생각해보는 편이다", axis: ["T", "F"], options: LIKERT_OPTIONS },
+      { text: "나는 배려보다 공정함이 더 중요하다고 생각한다", axis: ["T", "F"], options: LIKERT_OPTIONS },
+
+      { text: "나는 여행 갈 때 일정을 미리 다 짜두는 편이다", axis: ["J", "P"], options: LIKERT_OPTIONS },
+      { text: "나는 할 일이 생기면 바로 계획을 세워 처리하는 편이다", axis: ["J", "P"], options: LIKERT_OPTIONS },
+      { text: "나는 책상이나 방을 정리정돈하는 편이다", axis: ["J", "P"], options: LIKERT_OPTIONS },
+      { text: "나는 약속을 잡을 때 날짜와 시간을 명확히 정하는 편이다", axis: ["J", "P"], options: LIKERT_OPTIONS },
+      { text: "나는 새로운 정보가 생겨도 원래 계획을 밀고 나가는 편이다", axis: ["J", "P"], options: LIKERT_OPTIONS },
+      { text: "나는 일을 확실하게 끝맺어야 마음이 편하다", axis: ["J", "P"], options: LIKERT_OPTIONS },
+      { text: "나는 할 일 목록대로 하루를 움직이는 편이다", axis: ["J", "P"], options: LIKERT_OPTIONS },
+      { text: "나는 결정을 빨리 내리고 마음을 놓는 편이다", axis: ["J", "P"], options: LIKERT_OPTIONS },
     ],
     categories: {
       ISTJ: {

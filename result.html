@@ -1,10 +1,26 @@
 <!doctype html>
 <html lang="ko">
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WZW58QPM');</script>
+  <!-- End Google Tag Manager -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>결과 | MindPick</title>
   <meta name="description" content="MindPick 심리테스트 결과를 확인하고 친구와 공유해보세요." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%A0%3C/text%3E%3C/svg%3E" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MindPick" />
+  <meta property="og:title" content="결과 | MindPick" />
+  <meta property="og:description" content="MindPick 심리테스트 결과를 확인하고 친구와 공유해보세요." />
+  <meta property="og:locale" content="ko_KR" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="결과 | MindPick" />
+  <meta name="twitter:description" content="MindPick 심리테스트 결과를 확인하고 친구와 공유해보세요." />
   <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
@@ -12,6 +28,10 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5113083554519679" crossorigin="anonymous"></script>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZW58QPM"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <header class="topbar">
     <a class="brand" href="index.html"><span class="logo-emoji">🧠</span>Mind<span class="accent">Pick</span></a>
     <nav>
@@ -47,6 +67,7 @@
       <p>링크를 보내서 상대방도 이 테스트를 하면, 서로의 답변과 결과를 나란히 비교해볼 수 있어요.</p>
       <button type="button" id="invite-btn" class="button primary block">비교 링크 만들어서 공유하기</button>
       <div id="invite-status" class="status-msg"></div>
+      <div id="check-status" class="status-msg"></div>
     </div>
 
     <section class="section">
@@ -68,10 +89,13 @@
     <p>© 2026 MindPick.</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
   <script src="js/tests-data.js"></script>
   <script src="js/custom-tests.js"></script>
   <script src="js/tests-registry.js"></script>
   <script src="js/compare-utils.js"></script>
+  <script src="js/compare-session.js"></script>
   <script src="js/result.js"></script>
 </body>
 </html>
