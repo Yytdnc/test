@@ -5,4 +5,4 @@ Disallow: /login.html
 Disallow: /signup.html
 Disallow: /compare.html
 
-Sitemap: https://yytdnc.github.io/test/sitemap.xml
+Sitemap: https://www.mindpick.net/sitemap.xml
