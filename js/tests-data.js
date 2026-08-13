@@ -1017,4 +1017,618 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "worktype",
+    tag: "직장생활",
+    title: "나의 업무 스타일 테스트",
+    emoji: "💼",
+    tagline: "회사에서, 학교에서 진짜 내 모습은 어떤 스타일일까요?",
+    type: "category",
+    questions: [
+      {
+        text: "새 프로젝트가 주어지면?",
+        options: [
+          { text: "계획부터 세운다", value: "plan" },
+          { text: "일단 시작하고 본다", value: "speed" },
+          { text: "팀원들과 역할부터 나눈다", value: "team" },
+          { text: "세부사항부터 꼼꼼히 파악한다", value: "detail" },
+        ],
+      },
+      {
+        text: "마감이 촉박할 때 나는?",
+        options: [
+          { text: "일정을 재조정한다", value: "plan" },
+          { text: "속도를 끌어올려 몰아친다", value: "speed" },
+          { text: "도움을 요청해 나눈다", value: "team" },
+          { text: "그래도 퀄리티를 지키려 애쓴다", value: "detail" },
+        ],
+      },
+      {
+        text: "회의에서 나의 역할은?",
+        options: [
+          { text: "안건과 순서를 정리한다", value: "plan" },
+          { text: "빠르게 결론을 낸다", value: "speed" },
+          { text: "의견을 모으고 조율한다", value: "team" },
+          { text: "놓친 부분을 짚어준다", value: "detail" },
+        ],
+      },
+      {
+        text: "실수를 발견하면?",
+        options: [
+          { text: "재발 방지 계획을 세운다", value: "plan" },
+          { text: "바로 수정하고 넘어간다", value: "speed" },
+          { text: "팀에 공유하고 함께 해결한다", value: "team" },
+          { text: "원인을 끝까지 파고든다", value: "detail" },
+        ],
+      },
+      {
+        text: "이상적인 업무 환경은?",
+        options: [
+          { text: "체계적인 프로세스가 있는 곳", value: "plan" },
+          { text: "빠르게 실행할 수 있는 곳", value: "speed" },
+          { text: "소통이 활발한 곳", value: "team" },
+          { text: "꼼꼼함을 인정해주는 곳", value: "detail" },
+        ],
+      },
+      {
+        text: "업무 툴을 고를 때 중요한 건?",
+        options: [
+          { text: "일정 관리 기능", value: "plan" },
+          { text: "빠른 실행 속도", value: "speed" },
+          { text: "협업 기능", value: "team" },
+          { text: "정확한 기록 기능", value: "detail" },
+        ],
+      },
+      {
+        text: "번아웃이 올 것 같을 때 나는?",
+        options: [
+          { text: "계획을 다시 세워 정리한다", value: "plan" },
+          { text: "더 몰아붙여서 끝낸다", value: "speed" },
+          { text: "동료에게 털어놓는다", value: "team" },
+          { text: "원인을 분석한다", value: "detail" },
+        ],
+      },
+      {
+        text: "동료가 나를 평가한다면?",
+        options: [
+          { text: "\"체계적인 사람\"", value: "plan" },
+          { text: "\"일 처리가 빠른 사람\"", value: "speed" },
+          { text: "\"함께 일하기 좋은 사람\"", value: "team" },
+          { text: "\"꼼꼼하고 믿음직한 사람\"", value: "detail" },
+        ],
+      },
+    ],
+    categories: {
+      plan: {
+        title: "계획형 – 체계적인 전략가",
+        emoji: "📋",
+        desc: "무엇이든 계획을 세워야 마음이 놓이는 당신. 예측 가능한 프로세스 안에서 최고의 효율을 만들어내요. 가끔은 계획 밖의 변수도 유연하게 받아들여보세요.",
+      },
+      speed: {
+        title: "속도형 – 일단 해내는 실행러",
+        emoji: "⚡",
+        desc: "고민보다 실행이 빠른 당신은 어디서든 추진력 있는 사람으로 통해요. 속도만큼 중요한 디테일도 놓치지 않도록 한 번씩 점검해보세요.",
+      },
+      team: {
+        title: "협업형 – 함께라서 빛나는 사람",
+        emoji: "🤝",
+        desc: "혼자보다 함께할 때 더 큰 힘을 발휘하는 당신. 사람들과의 소통 속에서 최선의 결과를 만들어내요. 가끔은 혼자만의 판단도 믿어보세요.",
+      },
+      detail: {
+        title: "디테일형 – 완벽을 추구하는 장인",
+        emoji: "🔍",
+        desc: "작은 것 하나도 허투루 넘기지 않는 당신 덕분에 결과물의 완성도가 높아져요. 가끔은 완벽보다 속도가 필요한 순간도 있다는 걸 기억하세요.",
+      },
+    },
+  },
+
+  {
+    id: "money",
+    tag: "재테크",
+    title: "나의 소비 습관 테스트",
+    emoji: "💰",
+    tagline: "월급이 통장을 스칠 때, 진짜 내 소비 스타일은?",
+    type: "category",
+    questions: [
+      {
+        text: "월급(용돈)이 들어오면 가장 먼저 하는 일은?",
+        options: [
+          { text: "저축부터 이체한다", value: "save" },
+          { text: "갖고 싶었던 걸 지른다", value: "flex" },
+          { text: "예산을 짜서 분배한다", value: "plan" },
+          { text: "딱히 계획 없이 쓴다", value: "impulse" },
+        ],
+      },
+      {
+        text: "친구가 좋은 물건을 추천하면?",
+        options: [
+          { text: "필요한지 한참 고민한다", value: "save" },
+          { text: "바로 산다", value: "flex" },
+          { text: "예산에 맞는지 확인한다", value: "plan" },
+          { text: "일단 장바구니에 담아둔다", value: "impulse" },
+        ],
+      },
+      {
+        text: "세일 기간이 되면?",
+        options: [
+          { text: "꼭 필요한 것만 산다", value: "save" },
+          { text: "이 기회에 왕창 산다", value: "flex" },
+          { text: "미리 리스트를 짜서 산다", value: "plan" },
+          { text: "눈에 띄는 대로 담는다", value: "impulse" },
+        ],
+      },
+      {
+        text: "소비 기록(가계부)은?",
+        options: [
+          { text: "안 쓰는 게 목표라 딱히 안 챙긴다", value: "save" },
+          { text: "딱히 신경 안 쓴다", value: "flex" },
+          { text: "매달 정리하며 관리한다", value: "plan" },
+          { text: "쓰다가 흐지부지된다", value: "impulse" },
+        ],
+      },
+      {
+        text: "여행을 갈 때 예산은?",
+        options: [
+          { text: "최대한 아껴서 다녀온다", value: "save" },
+          { text: "이번엔 제대로 즐긴다", value: "flex" },
+          { text: "항목별로 세세하게 계획한다", value: "plan" },
+          { text: "가서 상황 보고 쓴다", value: "impulse" },
+        ],
+      },
+      {
+        text: "갖고 싶은 게 생기면?",
+        options: [
+          { text: "정말 필요한지 며칠 고민한다", value: "save" },
+          { text: "나에게 주는 선물이라 생각하고 산다", value: "flex" },
+          { text: "예산에 여유가 있는지 확인한다", value: "plan" },
+          { text: "그 순간 못 참고 산다", value: "impulse" },
+        ],
+      },
+      {
+        text: "주변 사람들이 보는 나의 소비 스타일은?",
+        options: [
+          { text: "\"절약왕\"", value: "save" },
+          { text: "\"플렉스 부자\"", value: "flex" },
+          { text: "\"계획적인 사람\"", value: "plan" },
+          { text: "\"지르고 보는 사람\"", value: "impulse" },
+        ],
+      },
+      {
+        text: "돈에 대한 나의 철학은?",
+        options: [
+          { text: "안 쓰는 게 버는 것", value: "save" },
+          { text: "있을 때 즐기자", value: "flex" },
+          { text: "계획적으로 모으고 쓰자", value: "plan" },
+          { text: "하고 싶은 건 일단 하고 본다", value: "impulse" },
+        ],
+      },
+    ],
+    categories: {
+      save: {
+        title: "알뜰형 – 티끌 모아 태산",
+        emoji: "🐿️",
+        desc: "필요한 것과 원하는 것을 구분할 줄 아는 당신. 꾸준한 절약 습관이 미래의 큰 자산이 될 거예요. 가끔은 스스로에게 작은 보상도 허락해주세요.",
+      },
+      flex: {
+        title: "플렉스형 – 인생은 한 번뿐",
+        emoji: "💸",
+        desc: "지금 이 순간의 행복을 중요하게 여기는 당신. 아낌없이 쓰는 만큼 만족감도 크죠. 미래를 위한 최소한의 저축도 함께 챙겨보세요.",
+      },
+      plan: {
+        title: "계획형 – 가계부의 정석",
+        emoji: "📊",
+        desc: "예산과 목표가 뚜렷한 당신은 돈 관리에서도 믿음직한 사람이에요. 계획적인 소비 덕분에 흔들림이 적죠. 가끔은 계획 없는 즉흥적 소비도 즐거움이 될 수 있어요.",
+      },
+      impulse: {
+        title: "충동형 – 지르고 후회, 그래도 또 지른다",
+        emoji: "🛍️",
+        desc: "마음이 끌리면 바로 행동에 옮기는 당신. 순간의 만족은 크지만 통장은 늘 아쉬울 수 있어요. 큰 지출 전엔 하루만 참아보는 습관을 들여보세요.",
+      },
+    },
+  },
+
+  {
+    id: "friendship",
+    tag: "관계",
+    title: "우정 속 나의 역할 테스트",
+    emoji: "👯",
+    tagline: "친구들 사이에서 나는 어떤 존재일까요?",
+    type: "category",
+    questions: [
+      {
+        text: "모임 약속을 잡을 때 나는?",
+        options: [
+          { text: "날짜와 장소를 먼저 제안한다", value: "leader" },
+          { text: "다른 사람 의견에 맞춘다", value: "supporter" },
+          { text: "다들 편한 시간을 조율한다", value: "peacemaker" },
+          { text: "편한 친구랑 먼저 정한다", value: "bestie" },
+        ],
+      },
+      {
+        text: "친구가 고민을 털어놓으면?",
+        options: [
+          { text: "해결책을 적극적으로 제시한다", value: "leader" },
+          { text: "옆에서 묵묵히 들어준다", value: "supporter" },
+          { text: "감정을 다독이며 중재한다", value: "peacemaker" },
+          { text: "같이 맞장구치며 공감한다", value: "bestie" },
+        ],
+      },
+      {
+        text: "친구들 사이 다툼이 생기면?",
+        options: [
+          { text: "상황을 정리하고 나선다", value: "leader" },
+          { text: "힘든 쪽을 먼저 챙긴다", value: "supporter" },
+          { text: "중간에서 화해를 시킨다", value: "peacemaker" },
+          { text: "그냥 눈치껏 지켜본다", value: "bestie" },
+        ],
+      },
+      {
+        text: "여행 계획을 짤 때 나는?",
+        options: [
+          { text: "코스와 일정을 주도한다", value: "leader" },
+          { text: "필요한 걸 챙기고 서포트한다", value: "supporter" },
+          { text: "다들 만족하는 방향으로 조율한다", value: "peacemaker" },
+          { text: "재밌으면 다 좋다", value: "bestie" },
+        ],
+      },
+      {
+        text: "친구가 새로운 도전을 한다면?",
+        options: [
+          { text: "방향을 제시해준다", value: "leader" },
+          { text: "필요한 걸 옆에서 도와준다", value: "supporter" },
+          { text: "응원하며 균형을 잡아준다", value: "peacemaker" },
+          { text: "누구보다 먼저 응원한다", value: "bestie" },
+        ],
+      },
+      {
+        text: "단톡방에서 나의 포지션은?",
+        options: [
+          { text: "대화를 이끈다", value: "leader" },
+          { text: "필요할 때 도움을 준다", value: "supporter" },
+          { text: "분위기를 부드럽게 만든다", value: "peacemaker" },
+          { text: "편하게 아무 말이나 한다", value: "bestie" },
+        ],
+      },
+      {
+        text: "친구들이 나를 찾는 이유는?",
+        options: [
+          { text: "결정을 잘 내려서", value: "leader" },
+          { text: "늘 챙겨줘서", value: "supporter" },
+          { text: "이야기를 잘 들어줘서", value: "peacemaker" },
+          { text: "편하고 재밌어서", value: "bestie" },
+        ],
+      },
+      {
+        text: "나에게 우정이란?",
+        options: [
+          { text: "함께 성장하는 것", value: "leader" },
+          { text: "서로 힘이 되어주는 것", value: "supporter" },
+          { text: "서로를 이해하는 것", value: "peacemaker" },
+          { text: "편안하게 있는 그대로인 것", value: "bestie" },
+        ],
+      },
+    ],
+    categories: {
+      leader: {
+        title: "리더형 – 모임의 중심",
+        emoji: "🎤",
+        desc: "자연스럽게 모임을 이끄는 당신. 결단력 있는 모습 덕분에 친구들이 믿고 따라와요. 가끔은 다른 사람에게 주도권을 넘겨보는 것도 좋아요.",
+      },
+      supporter: {
+        title: "서포터형 – 든든한 조력자",
+        emoji: "🛟",
+        desc: "필요한 순간 옆에서 힘이 되어주는 당신. 친구들에게 없어서는 안 될 존재예요. 가끔은 스스로를 위한 도움도 받아보세요.",
+      },
+      peacemaker: {
+        title: "조율자형 – 갈등을 푸는 평화주의자",
+        emoji: "🕊️",
+        desc: "모두가 편안하도록 균형을 맞추는 당신. 관계 속 갈등을 지혜롭게 풀어내는 능력이 있어요. 본인의 감정도 잊지 말고 챙겨주세요.",
+      },
+      bestie: {
+        title: "절친형 – 편안함 그 자체",
+        emoji: "🍯",
+        desc: "함께 있으면 편하고 즐거운 당신. 꾸밈없는 모습 그대로가 친구들에게 큰 위로가 돼요. 가끔은 조금 더 적극적으로 나서보는 것도 좋아요.",
+      },
+    },
+  },
+
+  {
+    id: "talent",
+    tag: "자기계발",
+    title: "나의 숨은 재능 테스트",
+    emoji: "✨",
+    tagline: "아직 발견하지 못한 나만의 재능은 무엇일까요?",
+    type: "category",
+    questions: [
+      {
+        text: "새로운 문제를 마주하면?",
+        options: [
+          { text: "기발한 아이디어부터 떠올린다", value: "creative" },
+          { text: "데이터와 근거를 먼저 찾는다", value: "analytic" },
+          { text: "팀을 모아 방향을 정한다", value: "leadership" },
+          { text: "관련된 사람들 입장을 먼저 헤아린다", value: "empathy" },
+        ],
+      },
+      {
+        text: "어릴 때 유독 잘했던 것은?",
+        options: [
+          { text: "그림, 글쓰기, 만들기", value: "creative" },
+          { text: "퍼즐, 수학, 논리 게임", value: "analytic" },
+          { text: "반장, 조장 같은 역할", value: "leadership" },
+          { text: "친구 고민 들어주기", value: "empathy" },
+        ],
+      },
+      {
+        text: "칭찬을 자주 듣는 부분은?",
+        options: [
+          { text: "\"아이디어가 참신하다\"", value: "creative" },
+          { text: "\"설명을 논리적으로 잘한다\"", value: "analytic" },
+          { text: "\"믿고 따라가게 된다\"", value: "leadership" },
+          { text: "\"이야기가 잘 통한다\"", value: "empathy" },
+        ],
+      },
+      {
+        text: "여가 시간에 끌리는 활동은?",
+        options: [
+          { text: "그림 그리기, 글쓰기, 만들기", value: "creative" },
+          { text: "퍼즐, 전략 게임, 독서", value: "analytic" },
+          { text: "사람들과 모임 주최하기", value: "leadership" },
+          { text: "친구와 깊은 대화 나누기", value: "empathy" },
+        ],
+      },
+      {
+        text: "문제가 안 풀릴 때 나는?",
+        options: [
+          { text: "완전히 새로운 방식으로 접근한다", value: "creative" },
+          { text: "원인을 하나씩 분석한다", value: "analytic" },
+          { text: "다른 사람의 힘을 모은다", value: "leadership" },
+          { text: "잠시 감정을 정리하고 다시 본다", value: "empathy" },
+        ],
+      },
+      {
+        text: "그룹 과제에서 자연스럽게 맡는 역할은?",
+        options: [
+          { text: "아이디어 담당", value: "creative" },
+          { text: "자료 조사·분석 담당", value: "analytic" },
+          { text: "총괄·발표 담당", value: "leadership" },
+          { text: "조율·분위기 담당", value: "empathy" },
+        ],
+      },
+      {
+        text: "사람들이 나에게 조언을 구할 때는?",
+        options: [
+          { text: "색다른 시각이 필요할 때", value: "creative" },
+          { text: "객관적인 판단이 필요할 때", value: "analytic" },
+          { text: "결정을 내려야 할 때", value: "leadership" },
+          { text: "마음의 위로가 필요할 때", value: "empathy" },
+        ],
+      },
+      {
+        text: "나의 강점을 한 단어로 표현하면?",
+        options: [
+          { text: "상상력", value: "creative" },
+          { text: "통찰력", value: "analytic" },
+          { text: "추진력", value: "leadership" },
+          { text: "공감력", value: "empathy" },
+        ],
+      },
+    ],
+    categories: {
+      creative: {
+        title: "창의형 – 무에서 유를 만드는 사람",
+        emoji: "🎨",
+        desc: "남들이 생각 못 한 아이디어를 떠올리는 당신. 상상력이 재능의 핵심이에요. 그 아이디어를 실현시키는 꾸준함을 더하면 완벽해질 거예요.",
+      },
+      analytic: {
+        title: "분석형 – 논리로 답을 찾는 사람",
+        emoji: "🧠",
+        desc: "복잡한 문제도 차분히 분석해 답을 찾아내는 당신. 통찰력이 뛰어난 재능을 가졌어요. 가끔은 논리를 넘어선 직관도 믿어보세요.",
+      },
+      leadership: {
+        title: "리더십형 – 사람을 이끄는 사람",
+        emoji: "🚩",
+        desc: "사람들을 모으고 방향을 제시하는 힘을 가진 당신. 자연스러운 리더십이 재능이에요. 팀원들의 목소리에 귀 기울이는 것도 잊지 마세요.",
+      },
+      empathy: {
+        title: "공감형 – 마음을 읽는 사람",
+        emoji: "💗",
+        desc: "타인의 마음을 잘 헤아리는 당신. 사람을 이해하는 재능이 관계 속에서 빛을 발해요. 본인의 마음도 잘 챙기는 연습을 해보세요.",
+      },
+    },
+  },
+
+  {
+    id: "burnout",
+    tag: "힐링",
+    title: "나의 번아웃 지수 테스트",
+    emoji: "🔥",
+    tagline: "일과 일상 속에서 지금 나의 에너지는 얼마나 남아있을까요?",
+    type: "score",
+    questions: [
+      {
+        text: "요즘 업무(학업) 시작 전 드는 생각은?",
+        options: [
+          { text: "오늘도 힘내보자", value: 1 },
+          { text: "그냥 하는 거지 뭐", value: 2 },
+          { text: "하기 싫은 마음이 크다", value: 3 },
+          { text: "아무 의욕이 없다", value: 4 },
+        ],
+      },
+      {
+        text: "성과에 대한 만족감은?",
+        options: [
+          { text: "뿌듯하다", value: 1 },
+          { text: "그저 그렇다", value: 2 },
+          { text: "예전만 못하다", value: 3 },
+          { text: "전혀 못 느낀다", value: 4 },
+        ],
+      },
+      {
+        text: "동료·친구를 만나는 게?",
+        options: [
+          { text: "즐겁다", value: 1 },
+          { text: "보통이다", value: 2 },
+          { text: "부담스러울 때가 많다", value: 3 },
+          { text: "만나기 싫다", value: 4 },
+        ],
+      },
+      {
+        text: "퇴근(하교) 후 남은 에너지는?",
+        options: [
+          { text: "여전히 넘친다", value: 1 },
+          { text: "적당히 남아있다", value: 2 },
+          { text: "거의 없다", value: 3 },
+          { text: "방전 상태다", value: 4 },
+        ],
+      },
+      {
+        text: "최근 집중력은?",
+        options: [
+          { text: "평소와 같다", value: 1 },
+          { text: "가끔 흐트러진다", value: 2 },
+          { text: "자주 흐트러진다", value: 3 },
+          { text: "거의 집중이 안 된다", value: 4 },
+        ],
+      },
+      {
+        text: "일(공부)에 대한 의미는?",
+        options: [
+          { text: "여전히 크게 느껴진다", value: 1 },
+          { text: "그냥 해야 하니까 한다", value: 2 },
+          { text: "예전보다 흐릿해졌다", value: 3 },
+          { text: "전혀 느껴지지 않는다", value: 4 },
+        ],
+      },
+      {
+        text: "몸 상태는?",
+        options: [
+          { text: "컨디션이 좋다", value: 1 },
+          { text: "가끔 피곤하다", value: 2 },
+          { text: "늘 피곤하다", value: 3 },
+          { text: "몸이 자주 아프다", value: 4 },
+        ],
+      },
+      {
+        text: "쉬는 날엔?",
+        options: [
+          { text: "하고 싶은 걸 하며 충전한다", value: 1 },
+          { text: "대충 쉬긴 한다", value: 2 },
+          { text: "쉬어도 회복이 안 된다", value: 3 },
+          { text: "쉬는 것조차 버겁다", value: 4 },
+        ],
+      },
+    ],
+    scoreRanges: [
+      { min: 8, max: 14, title: "에너지 충만 – 아직 괜찮아요", emoji: "🔋", desc: "지금은 무리 없이 잘 지내고 있는 상태예요. 지금의 페이스와 루틴을 잘 유지해보세요." },
+      { min: 15, max: 20, title: "주의 신호 – 슬슬 피로가 쌓여요", emoji: "🪫", desc: "조금씩 지치는 신호가 보여요. 짧은 휴식을 자주 챙기며 페이스를 조절해보세요." },
+      { min: 21, max: 26, title: "경고 – 번아웃이 가까워졌어요", emoji: "⚠️", desc: "에너지가 많이 소진된 상태예요. 우선순위를 정리하고 나만의 회복 시간을 꼭 확보하세요." },
+      { min: 27, max: 32, title: "위험 – 완전한 휴식이 필요해요", emoji: "🆘", desc: "몸과 마음이 많이 지친 상태로 보여요. 혼자 버티기보다 주변에 도움을 요청하고 충분히 쉬어가세요." },
+    ],
+  },
+
+  {
+    id: "season",
+    tag: "감성",
+    title: "나와 어울리는 계절 테스트",
+    emoji: "🍃",
+    tagline: "당신의 분위기를 닮은 계절은 무엇일까요?",
+    type: "category",
+    questions: [
+      {
+        text: "나를 표현하는 색깔은?",
+        options: [
+          { text: "연한 파스텔톤", value: "spring" },
+          { text: "쨍한 원색", value: "summer" },
+          { text: "따뜻한 갈색·주황", value: "autumn" },
+          { text: "차분한 흰색·회색", value: "winter" },
+        ],
+      },
+      {
+        text: "좋아하는 날씨는?",
+        options: [
+          { text: "따뜻하고 화창한 날", value: "spring" },
+          { text: "뜨겁고 활기찬 날", value: "summer" },
+          { text: "선선하고 차분한 날", value: "autumn" },
+          { text: "춥고 고요한 날", value: "winter" },
+        ],
+      },
+      {
+        text: "선호하는 분위기의 카페는?",
+        options: [
+          { text: "꽃과 파스텔 소품이 있는 곳", value: "spring" },
+          { text: "시원하고 트렌디한 곳", value: "summer" },
+          { text: "감성적인 조명의 빈티지 카페", value: "autumn" },
+          { text: "미니멀하고 조용한 곳", value: "winter" },
+        ],
+      },
+      {
+        text: "친구들이 나에게 느끼는 첫인상은?",
+        options: [
+          { text: "밝고 상큼하다", value: "spring" },
+          { text: "에너지 넘치고 화끈하다", value: "summer" },
+          { text: "차분하고 감성적이다", value: "autumn" },
+          { text: "신비롭고 차갑게 느껴진다", value: "winter" },
+        ],
+      },
+      {
+        text: "스트레스 해소법은?",
+        options: [
+          { text: "산책하며 꽃 구경", value: "spring" },
+          { text: "신나게 놀거나 운동", value: "summer" },
+          { text: "음악 들으며 혼자 사색", value: "autumn" },
+          { text: "조용히 방에서 휴식", value: "winter" },
+        ],
+      },
+      {
+        text: "좋아하는 음악 분위기는?",
+        options: [
+          { text: "밝고 경쾌한 팝", value: "spring" },
+          { text: "신나는 댄스, 여름 노래", value: "summer" },
+          { text: "잔잔한 발라드, 재즈", value: "autumn" },
+          { text: "차분한 피아노, 클래식", value: "winter" },
+        ],
+      },
+      {
+        text: "옷을 고를 때 선호하는 스타일은?",
+        options: [
+          { text: "화사하고 사랑스러운 스타일", value: "spring" },
+          { text: "시원하고 대담한 스타일", value: "summer" },
+          { text: "따뜻하고 클래식한 스타일", value: "autumn" },
+          { text: "심플하고 시크한 스타일", value: "winter" },
+        ],
+      },
+      {
+        text: "나에게 어울리는 감성 한마디는?",
+        options: [
+          { text: "설렘 가득한 시작", value: "spring" },
+          { text: "뜨거운 열정", value: "summer" },
+          { text: "깊어지는 사색", value: "autumn" },
+          { text: "고요한 여백", value: "winter" },
+        ],
+      },
+    ],
+    categories: {
+      spring: {
+        title: "봄 – 설렘 가득한 새싹",
+        emoji: "🌸",
+        desc: "밝고 사랑스러운 에너지를 가진 당신. 함께 있으면 마음이 몽글몽글해지는 봄 같은 사람이에요. 새로운 시작을 두려워하지 않는 점이 매력이죠.",
+      },
+      summer: {
+        title: "여름 – 뜨거운 에너지",
+        emoji: "☀️",
+        desc: "누구보다 열정적이고 화끈한 당신. 함께 있으면 에너지가 전염되는 여름 같은 사람이에요. 가끔은 그 열정을 식히는 휴식도 필요해요.",
+      },
+      autumn: {
+        title: "가을 – 깊어지는 감성",
+        emoji: "🍁",
+        desc: "생각이 깊고 감성이 풍부한 당신. 잔잔하지만 여운이 오래 남는 가을 같은 사람이에요. 그 감성을 표현하는 데 조금 더 용기를 내보세요.",
+      },
+      winter: {
+        title: "겨울 – 고요한 신비로움",
+        emoji: "❄️",
+        desc: "차분하고 신비로운 분위기를 가진 당신. 알아갈수록 매력적인 겨울 같은 사람이에요. 마음을 조금 더 자주 열어 보이는 것도 좋아요.",
+      },
+    },
+  },
 ];
