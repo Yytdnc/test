@@ -71,14 +71,10 @@
 
   shareBtn.addEventListener("click", () => {
     const url = `${location.origin}${location.pathname}?id=${test.id}&r=${mpEncodeAnswers(answers)}`;
-    if (navigator.share) {
-      navigator.share({ title: document.title, url }).catch(() => {});
-    } else if (navigator.clipboard) {
-      navigator.clipboard.writeText(url).then(() => {
-        shareBtn.textContent = "링크가 복사되었어요!";
-        setTimeout(() => (shareBtn.textContent = "결과 링크 공유하기"), 1800);
-      });
-    }
+    mpShareLink(url, document.title, () => {
+      shareBtn.textContent = "링크가 복사되었어요!";
+      setTimeout(() => (shareBtn.textContent = "결과 링크 공유하기"), 1800);
+    });
   });
 
   if (test.compare) {
@@ -93,14 +89,10 @@
           "result.html",
           "quiz.html"
         )}?id=${test.id}&from=${encoded}`;
-        if (navigator.share) {
-          navigator.share({ title: `${test.title} - 같이 해볼래?`, url }).catch(() => {});
-        } else if (navigator.clipboard) {
-          navigator.clipboard.writeText(url).then(() => {
-            inviteStatus.textContent = "링크가 복사되었어요! 상대방에게 보내보세요.";
-            inviteStatus.className = "status-msg ok";
-          });
-        }
+        mpShareLink(url, `${test.title} - 같이 해볼래?`, () => {
+          inviteStatus.textContent = "링크가 복사되었어요! 상대방에게 보내보세요.";
+          inviteStatus.className = "status-msg ok";
+        });
       });
     }
   }

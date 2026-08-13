@@ -63,3 +63,29 @@ function mpResultInfo(test, result) {
   }
   return null;
 }
+
+/* 링크 공유: Web Share API -> 클립보드 복사 -> (둘 다 막힌 인앱 브라우저 등에서는) 직접 복사 창
+ * 각 단계가 조용히 실패해도 다음 단계로 넘어가도록 해서, 모바일 인앱 브라우저 등에서
+ * "버튼을 눌러도 아무 반응이 없는" 상황을 방지한다. onCopied는 클립보드 복사 성공 시에만 호출. */
+function mpShareLink(url, title, onCopied) {
+  if (navigator.share) {
+    navigator.share({ title, url }).catch(() => mpShareFallback(url, onCopied));
+    return;
+  }
+  mpShareFallback(url, onCopied);
+}
+
+function mpShareFallback(url, onCopied) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard
+      .writeText(url)
+      .then(() => {
+        if (onCopied) onCopied();
+      })
+      .catch(() => {
+        window.prompt("아래 링크를 복사해서 공유해주세요 📋", url);
+      });
+    return;
+  }
+  window.prompt("아래 링크를 복사해서 공유해주세요 📋", url);
+}

@@ -86,13 +86,9 @@
     const url = `${location.origin}${location.pathname}?id=${test.id}&from=${encodeURIComponent(
       fromParam
     )}&me=${mpEncodeAnswers(myAnswers)}`;
-    if (navigator.share) {
-      navigator.share({ title: document.title, url }).catch(() => {});
-    } else if (navigator.clipboard) {
-      navigator.clipboard.writeText(url).then(() => {
-        shareBtn.textContent = "링크가 복사되었어요!";
-        setTimeout(() => (shareBtn.textContent = "이 비교 결과 공유하기"), 1800);
-      });
-    }
+    mpShareLink(url, document.title, () => {
+      shareBtn.textContent = "링크가 복사되었어요!";
+      setTimeout(() => (shareBtn.textContent = "이 비교 결과 공유하기"), 1800);
+    });
   });
 })();
