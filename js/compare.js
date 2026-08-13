@@ -3,6 +3,7 @@
   const params = new URLSearchParams(location.search);
   const testId = params.get("id");
   const fromParam = params.get("from");
+  const meParam = params.get("me");
   const test = ALL_TESTS.find((t) => t.id === testId);
 
   const notFoundEl = document.getElementById("compare-not-found");
@@ -17,13 +18,16 @@
 
   const partnerAnswers = fromParam ? mpDecodeAnswers(fromParam) : null;
 
+  let myAnswers = meParam ? mpDecodeAnswers(meParam) : null;
+  if (!myAnswers && stored && stored.testId === testId && Array.isArray(stored.answers)) {
+    myAnswers = stored.answers;
+  }
+
   const valid =
     test &&
     test.compare &&
-    stored &&
-    stored.testId === testId &&
-    Array.isArray(stored.answers) &&
-    stored.answers.length === test.questions.length &&
+    Array.isArray(myAnswers) &&
+    myAnswers.length === test.questions.length &&
     Array.isArray(partnerAnswers) &&
     partnerAnswers.length === test.questions.length;
 
@@ -35,7 +39,7 @@
 
   document.title = `${test.title} 커플 비교 | MindPick`;
 
-  const myResult = mpComputeResult(test, stored.answers);
+  const myResult = mpComputeResult(test, myAnswers);
   const partnerResult = mpComputeResult(test, partnerAnswers);
   const myInfo = mpResultInfo(test, myResult);
   const partnerInfo = mpResultInfo(test, partnerResult);
@@ -49,7 +53,7 @@
   const listEl = document.getElementById("compare-list");
   listEl.innerHTML = test.questions
     .map((q, i) => {
-      const myVal = stored.answers[i];
+      const myVal = myAnswers[i];
       const partnerVal = partnerAnswers[i];
       const isMatch = myVal === partnerVal;
       if (isMatch) matchCount++;
@@ -79,7 +83,9 @@
 
   const shareBtn = document.getElementById("compare-share-btn");
   shareBtn.addEventListener("click", () => {
-    const url = location.href;
+    const url = `${location.origin}${location.pathname}?id=${test.id}&from=${encodeURIComponent(
+      fromParam
+    )}&me=${mpEncodeAnswers(myAnswers)}`;
     if (navigator.share) {
       navigator.share({ title: document.title, url }).catch(() => {});
     } else if (navigator.clipboard) {

@@ -2,6 +2,7 @@
 (function () {
   const params = new URLSearchParams(location.search);
   const testId = params.get("id");
+  const rParam = params.get("r");
   const test = ALL_TESTS.find((t) => t.id === testId);
 
   const cardEl = document.getElementById("result-card");
@@ -17,7 +18,17 @@
     stored = null;
   }
 
-  if (!test || !stored || stored.testId !== testId) {
+  let answers = null;
+  if (stored && stored.testId === testId && Array.isArray(stored.answers)) {
+    answers = stored.answers;
+  } else if (test && rParam) {
+    const decoded = mpDecodeAnswers(rParam);
+    if (Array.isArray(decoded) && decoded.length === test.questions.length) {
+      answers = decoded;
+    }
+  }
+
+  if (!test || !answers) {
     if (notFoundEl) notFoundEl.style.display = "block";
     if (cardEl) cardEl.style.display = "none";
     return;
@@ -25,20 +36,20 @@
 
   document.title = `${test.title} 결과 | MindPick`;
 
-  let resultInfo;
-  if (test.type === "category") {
-    resultInfo = test.categories[stored.resultKey];
-  } else if (test.type === "score") {
-    resultInfo = test.scoreRanges.find(
-      (r) => stored.score >= r.min && stored.score <= r.max
-    );
-  }
+  const computed = mpComputeResult(test, answers);
+  const resultInfo = mpResultInfo(test, computed);
 
   if (!resultInfo) {
     if (notFoundEl) notFoundEl.style.display = "block";
     if (cardEl) cardEl.style.display = "none";
     return;
   }
+
+  // 링크로 바로 들어온 경우에도 세션에 저장해 공유/비교 버튼이 계속 동작하게 한다
+  sessionStorage.setItem(
+    "mindpick_result",
+    JSON.stringify({ testId: test.id, answers, ...computed })
+  );
 
   cardEl.querySelector(".r-emoji").textContent = resultInfo.emoji;
   cardEl.querySelector(".r-eyebrow").textContent = test.title;
@@ -51,15 +62,15 @@
   if (shareCommunityBtn) {
     shareCommunityBtn.addEventListener("click", () => {
       const q =
-        stored.resultKey !== undefined
-          ? `share_result=${encodeURIComponent(stored.resultKey)}`
-          : `share_score=${encodeURIComponent(stored.score)}`;
+        computed.resultKey !== undefined
+          ? `share_result=${encodeURIComponent(computed.resultKey)}`
+          : `share_score=${encodeURIComponent(computed.score)}`;
       location.href = `community.html?share_test=${test.id}&${q}`;
     });
   }
 
   shareBtn.addEventListener("click", () => {
-    const url = location.href;
+    const url = `${location.origin}${location.pathname}?id=${test.id}&r=${mpEncodeAnswers(answers)}`;
     if (navigator.share) {
       navigator.share({ title: document.title, url }).catch(() => {});
     } else if (navigator.clipboard) {
@@ -77,7 +88,7 @@
     if (inviteEl) inviteEl.style.display = "block";
     if (inviteBtn) {
       inviteBtn.addEventListener("click", () => {
-        const encoded = mpEncodeAnswers(stored.answers || []);
+        const encoded = mpEncodeAnswers(answers);
         const url = `${location.origin}${location.pathname.replace(
           "result.html",
           "quiz.html"
