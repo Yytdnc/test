@@ -10,6 +10,7 @@ const TESTS = [
     emoji: "🎨",
     tagline: "당신의 마음을 물들이는 색깔은 무엇일까요?",
     type: "category",
+    compare: true,
     questions: [
       {
         text: "주말 아침, 눈을 뜨자마자 드는 생각은?",
@@ -115,6 +116,7 @@ const TESTS = [
     emoji: "🐾",
     tagline: "당신 안에 숨어있는 동물 캐릭터를 찾아보세요",
     type: "category",
+    compare: true,
     questions: [
       {
         text: "낯선 모임에 초대받았을 때 나는?",
@@ -326,6 +328,7 @@ const TESTS = [
     emoji: "🎂",
     tagline: "실제 나이 말고, 마음 나이는 몇 살일까요?",
     type: "score",
+    compare: true,
     questions: [
       {
         text: "친구와 약속을 잡을 때 나는?",
@@ -415,6 +418,7 @@ const TESTS = [
     emoji: "🌿",
     tagline: "요즘 내 마음, 얼마나 지쳐있을까요?",
     type: "score",
+    compare: true,
     questions: [
       {
         text: "요즘 잠은 잘 자나요?",
@@ -605,6 +609,7 @@ const TESTS = [
     emoji: "🍽️",
     tagline: "당신의 진짜 입맛은 어떤 스타일일까요?",
     type: "category",
+    compare: true,
     questions: [
       {
         text: "회식 메뉴를 내가 고를 수 있다면?",
@@ -710,6 +715,7 @@ const TESTS = [
     emoji: "✈️",
     tagline: "떠나는 방식만 봐도 알 수 있는 진짜 나의 모습",
     type: "category",
+    compare: true,
     questions: [
       {
         text: "여행 계획을 짤 때 나는?",
@@ -815,6 +821,7 @@ const TESTS = [
     emoji: "🔮",
     tagline: "재미로 알아보는 나의 전생은 어떤 모습이었을까요?",
     type: "category",
+    compare: true,
     questions: [
       {
         text: "어릴 때부터 유독 끌렸던 것은?",
@@ -920,6 +927,7 @@ const TESTS = [
     emoji: "📱",
     tagline: "단톡방·SNS 속 나는 어떤 캐릭터일까요?",
     type: "category",
+    compare: true,
     questions: [
       {
         text: "단톡방에 웃긴 짤이 올라오면 나는?",
@@ -1025,6 +1033,7 @@ const TESTS = [
     emoji: "💼",
     tagline: "회사에서, 학교에서 진짜 내 모습은 어떤 스타일일까요?",
     type: "category",
+    compare: true,
     questions: [
       {
         text: "새 프로젝트가 주어지면?",
@@ -1130,6 +1139,7 @@ const TESTS = [
     emoji: "💰",
     tagline: "월급이 통장을 스칠 때, 진짜 내 소비 스타일은?",
     type: "category",
+    compare: true,
     questions: [
       {
         text: "월급(용돈)이 들어오면 가장 먼저 하는 일은?",
@@ -1235,6 +1245,7 @@ const TESTS = [
     emoji: "👯",
     tagline: "친구들 사이에서 나는 어떤 존재일까요?",
     type: "category",
+    compare: true,
     questions: [
       {
         text: "모임 약속을 잡을 때 나는?",
@@ -1340,6 +1351,7 @@ const TESTS = [
     emoji: "✨",
     tagline: "아직 발견하지 못한 나만의 재능은 무엇일까요?",
     type: "category",
+    compare: true,
     questions: [
       {
         text: "새로운 문제를 마주하면?",
@@ -1445,6 +1457,7 @@ const TESTS = [
     emoji: "🔥",
     tagline: "일과 일상 속에서 지금 나의 에너지는 얼마나 남아있을까요?",
     type: "score",
+    compare: true,
     questions: [
       {
         text: "요즘 업무(학업) 시작 전 드는 생각은?",
@@ -1534,6 +1547,7 @@ const TESTS = [
     emoji: "🍃",
     tagline: "당신의 분위기를 닮은 계절은 무엇일까요?",
     type: "category",
+    compare: true,
     questions: [
       {
         text: "나를 표현하는 색깔은?",
@@ -1639,6 +1653,7 @@ const TESTS = [
     emoji: "🧩",
     tagline: "32개 질문으로 자세히 알아보는 나의 진짜 성격유형",
     type: "mbti",
+    compare: true,
     questions: [
       {
         text: "주말에 에너지를 얻는 방법은?",
@@ -1950,11 +1965,11 @@ const TESTS = [
   },
 
   {
-    id: "couple-balance",
-    tag: "커플",
-    title: "커플 밸런스게임 (순한맛~마라맛)",
-    emoji: "🌶️",
-    tagline: "순한맛부터 마라맛까지, 우리는 어떤 커플일까?",
+    id: "balance-mild",
+    tag: "순한맛",
+    title: "커플 밸런스게임 순한맛편",
+    emoji: "🥛",
+    tagline: "가볍고 편안한 일상 취향으로 몸 풀기",
     type: "score",
     compare: true,
     questions: [
@@ -2014,6 +2029,22 @@ const TESTS = [
           { text: "하루 종일 붙어서 카톡", value: 2 },
         ],
       },
+    ],
+    scoreRanges: [
+      { min: 8, max: 11, title: "찐순한맛형 – 안정 최고", emoji: "🐑", desc: "잔잔하고 편안한 걸 좋아하는 당신, 커플 사이에서도 안정감을 최우선으로 여겨요. 가끔은 소소한 이벤트로 설렘을 더해보세요." },
+      { min: 12, max: 16, title: "숨은 액티브형 – 은근 톡톡", emoji: "🎢", desc: "순한맛이라 해도 의외로 톡톡 튀는 선택이 많은 당신! 자극적인 걸 은근히 즐기는 타입일지도 몰라요. 다음 단계인 중간맛에도 도전해보세요." },
+    ],
+  },
+
+  {
+    id: "balance-medium",
+    tag: "중간맛",
+    title: "커플 밸런스게임 중간맛편",
+    emoji: "🍜",
+    tagline: "조금 더 솔직해지는 커플 생활 질문들",
+    type: "score",
+    compare: true,
+    questions: [
       {
         text: "기념일은?",
         options: [
@@ -2070,6 +2101,22 @@ const TESTS = [
           { text: "진지하게 생각 중", value: 2 },
         ],
       },
+    ],
+    scoreRanges: [
+      { min: 8, max: 11, title: "안정 지향 중간맛형", emoji: "🍵", desc: "적당한 거리감 속에서 편안함을 지키는 당신. 커플 사이에서도 각자의 페이스를 존중하는 편이에요. 가끔은 조금 더 적극적으로 표현해보는 것도 좋아요." },
+      { min: 12, max: 16, title: "은근 화끈 중간맛형", emoji: "🌤️", desc: "편안함 속에서도 표현할 건 확실히 표현하는 당신. 애정도 질투도 숨기지 않는 솔직한 스타일이에요. 다음 단계인 매운맛도 한번 도전해보세요." },
+    ],
+  },
+
+  {
+    id: "balance-spicy",
+    tag: "매운맛",
+    title: "커플 밸런스게임 매운맛편",
+    emoji: "🌶️",
+    tagline: "조금 예민할 수 있는, 솔직한 질문들",
+    type: "score",
+    compare: true,
+    questions: [
       {
         text: "애인 핸드폰을 우연히 본다면?",
         options: [
@@ -2126,6 +2173,22 @@ const TESTS = [
           { text: "솔직히 자신 없다", value: 2 },
         ],
       },
+    ],
+    scoreRanges: [
+      { min: 8, max: 11, title: "쿨한 매운맛형", emoji: "😎", desc: "질투나 불안보다 믿음이 앞서는 당신. 상대를 있는 그대로 신뢰하는 여유로운 스타일이에요. 가끔은 솔직한 감정 표현도 관계에 도움이 될 수 있어요." },
+      { min: 12, max: 16, title: "찐 매운맛형", emoji: "🌶️", desc: "감정에 솔직하고 신경 쓰이는 건 확실히 신경 쓰는 당신. 애정이 깊은 만큼 예민해지는 지점도 뚜렷해요. 불안한 마음을 대화로 풀어가는 연습을 해보세요." },
+    ],
+  },
+
+  {
+    id: "balance-mala",
+    tag: "마라맛",
+    title: "커플 밸런스게임 마라맛편",
+    emoji: "🔥",
+    tagline: "가장 솔직하고 극한의 커플 밸런스 질문들",
+    type: "score",
+    compare: true,
+    questions: [
       {
         text: "다시 태어나도 지금 애인과 만난다 vs 다른 사람과 새로운 사랑을 해본다",
         options: [
@@ -2184,10 +2247,8 @@ const TESTS = [
       },
     ],
     scoreRanges: [
-      { min: 32, max: 39, title: "순한맛 커플형", emoji: "🥛", desc: "편안하고 잔잔한 연애를 선호하는 순한맛 커플이에요. 자극보다는 안정감 속에서 서로를 아끼는 사이랍니다. 가끔은 예상 밖의 이벤트로 설렘을 더해보는 것도 좋아요." },
-      { min: 40, max: 47, title: "중간맛 커플형", emoji: "🍜", desc: "적당한 자극과 안정감을 함께 즐기는 균형 잡힌 커플이에요. 편안하면서도 가끔은 짜릿한 순간을 즐길 줄 아는 사이죠. 서로 다른 부분도 있는 그대로 존중해주세요." },
-      { min: 48, max: 55, title: "매운맛 커플형", emoji: "🌶️", desc: "솔직하고 화끈한 감정 표현을 즐기는 매운맛 커플이에요. 질투도 애정도 잘 숨기지 않는 뜨거운 사이랍니다. 가끔은 한 발 물러서서 서로에게 여유를 주는 것도 필요해요." },
-      { min: 56, max: 64, title: "마라맛 커플형", emoji: "🔥", desc: "감정도 표현도 화끈하게, 끝까지 솔직한 마라맛 커플이에요. 서로에게 강하게 끌리는 만큼 감정 기복도 클 수 있어요. 뜨거운 만큼 서로를 다독이는 시간도 꼭 챙겨보세요." },
+      { min: 8, max: 11, title: "낭만 지향 마라맛형", emoji: "🕯️", desc: "극한 상황에서도 지금의 사랑을 믿고 지키려는 당신. 관계에 대한 확신과 낭만이 뚜렷한 스타일이에요. 그 믿음을 가끔은 말로도 표현해주세요." },
+      { min: 12, max: 16, title: "현실 직진 마라맛형", emoji: "🔥", desc: "감정도 현실도 끝까지 솔직하게 마주하는 당신. 흔들릴 수 있다는 것도, 힘든 진실도 회피하지 않는 대담한 스타일이에요. 그 솔직함만큼 서로를 다독이는 시간도 챙겨보세요." },
     ],
   },
 ];

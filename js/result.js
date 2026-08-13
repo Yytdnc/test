@@ -98,7 +98,12 @@
   }
 
   if (relatedGrid) {
-    const others = ALL_TESTS.filter((t) => t.id !== test.id).slice(0, 3);
+    const pool = ALL_TESTS.filter((t) => t.id !== test.id);
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+    const others = pool.slice(0, 3);
     relatedGrid.innerHTML = others
       .map(
         (t) => `
