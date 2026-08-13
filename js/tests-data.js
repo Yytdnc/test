@@ -1948,4 +1948,246 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "couple-balance",
+    tag: "커플",
+    title: "커플 밸런스게임 (순한맛~마라맛)",
+    emoji: "🌶️",
+    tagline: "순한맛부터 마라맛까지, 우리는 어떤 커플일까?",
+    type: "score",
+    compare: true,
+    questions: [
+      {
+        text: "여행 갈 때 나는?",
+        options: [
+          { text: "계획 세워서 다니는 편", value: 1 },
+          { text: "발 닿는 대로 다니는 편", value: 2 },
+        ],
+      },
+      {
+        text: "데이트 코스는?",
+        options: [
+          { text: "조용한 카페", value: 1 },
+          { text: "신나는 놀이공원", value: 2 },
+        ],
+      },
+      {
+        text: "좋아하는 계절은?",
+        options: [
+          { text: "선선한 가을", value: 1 },
+          { text: "뜨거운 여름", value: 2 },
+        ],
+      },
+      {
+        text: "영화 볼 때는?",
+        options: [
+          { text: "잔잔한 로맨스", value: 1 },
+          { text: "자극적인 스릴러", value: 2 },
+        ],
+      },
+      {
+        text: "매운 음식은?",
+        options: [
+          { text: "순한 맛만", value: 1 },
+          { text: "매운맛 챌린지", value: 2 },
+        ],
+      },
+      {
+        text: "커플룩은?",
+        options: [
+          { text: "안 입는 편", value: 1 },
+          { text: "자주 맞춰 입는 편", value: 2 },
+        ],
+      },
+      {
+        text: "선물은?",
+        options: [
+          { text: "실용적인 선물이 좋다", value: 1 },
+          { text: "이벤트 넘치는 서프라이즈가 좋다", value: 2 },
+        ],
+      },
+      {
+        text: "연락 스타일은?",
+        options: [
+          { text: "할 말 있을 때만 연락", value: 1 },
+          { text: "하루 종일 붙어서 카톡", value: 2 },
+        ],
+      },
+      {
+        text: "기념일은?",
+        options: [
+          { text: "소소하게 챙긴다", value: 1 },
+          { text: "화려하게 챙긴다", value: 2 },
+        ],
+      },
+      {
+        text: "다툼 후에는?",
+        options: [
+          { text: "시간을 두고 화해한다", value: 1 },
+          { text: "바로 그 자리에서 풀어야 한다", value: 2 },
+        ],
+      },
+      {
+        text: "애정표현은?",
+        options: [
+          { text: "둘이 있을 때만", value: 1 },
+          { text: "SNS에도 대놓고", value: 2 },
+        ],
+      },
+      {
+        text: "미래 계획은?",
+        options: [
+          { text: "그때그때 정한다", value: 1 },
+          { text: "미리 구체적으로 얘기한다", value: 2 },
+        ],
+      },
+      {
+        text: "친구 모임에는?",
+        options: [
+          { text: "각자 따로 참석", value: 1 },
+          { text: "항상 같이 참석", value: 2 },
+        ],
+      },
+      {
+        text: "질투는?",
+        options: [
+          { text: "거의 안 하는 편", value: 1 },
+          { text: "솔직히 좀 하는 편", value: 2 },
+        ],
+      },
+      {
+        text: "연애 스타일은?",
+        options: [
+          { text: "쿨하게, 서로 자유롭게", value: 1 },
+          { text: "하나부터 열까지 공유", value: 2 },
+        ],
+      },
+      {
+        text: "동거·결혼 이야기는?",
+        options: [
+          { text: "아직 먼 얘기", value: 1 },
+          { text: "진지하게 생각 중", value: 2 },
+        ],
+      },
+      {
+        text: "애인 핸드폰을 우연히 본다면?",
+        options: [
+          { text: "그냥 안 본다", value: 1 },
+          { text: "궁금해서 살짝 본다", value: 2 },
+        ],
+      },
+      {
+        text: "전 애인과 아직 연락한다면?",
+        options: [
+          { text: "이해하려 노력한다", value: 1 },
+          { text: "솔직히 신경 쓰인다", value: 2 },
+        ],
+      },
+      {
+        text: "애인이 이성 친구와 단둘이 밥을 먹는다면?",
+        options: [
+          { text: "괜찮다", value: 1 },
+          { text: "미리 말해줬으면 한다", value: 2 },
+        ],
+      },
+      {
+        text: "애인의 SNS 좋아요 목록을 본다면?",
+        options: [
+          { text: "별생각 없다", value: 1 },
+          { text: "누구 건지 궁금하다", value: 2 },
+        ],
+      },
+      {
+        text: "연애 중 가장 힘든 건?",
+        options: [
+          { text: "연락 텀이 뜸해질 때", value: 1 },
+          { text: "내 얘기에 공감 못 받을 때", value: 2 },
+        ],
+      },
+      {
+        text: "애인의 과거 연애사는?",
+        options: [
+          { text: "굳이 안 궁금하다", value: 1 },
+          { text: "자세히 알고 싶다", value: 2 },
+        ],
+      },
+      {
+        text: "애인이 나보다 친구를 먼저 챙긴다면?",
+        options: [
+          { text: "그럴 수도 있지", value: 1 },
+          { text: "서운할 것 같다", value: 2 },
+        ],
+      },
+      {
+        text: "장거리 연애를 하게 된다면?",
+        options: [
+          { text: "믿음으로 버틸 수 있다", value: 1 },
+          { text: "솔직히 자신 없다", value: 2 },
+        ],
+      },
+      {
+        text: "다시 태어나도 지금 애인과 만난다 vs 다른 사람과 새로운 사랑을 해본다",
+        options: [
+          { text: "다시 태어나도 지금 애인", value: 1 },
+          { text: "다른 사람과 새로운 사랑", value: 2 },
+        ],
+      },
+      {
+        text: "평생 안 싸우지만 설렘 없는 연애 vs 자주 싸우지만 뜨거운 연애",
+        options: [
+          { text: "안 싸우고 잔잔한 연애", value: 1 },
+          { text: "자주 싸워도 뜨거운 연애", value: 2 },
+        ],
+      },
+      {
+        text: "애인이 나 몰래 소개팅 자리에 나갔다가 그냥 밥만 먹고 왔다면?",
+        options: [
+          { text: "이해하고 넘어간다", value: 1 },
+          { text: "크게 싸울 것 같다", value: 2 },
+        ],
+      },
+      {
+        text: "이상형이 나타난다면?",
+        options: [
+          { text: "지금 애인이 최고라 흔들리지 않는다", value: 1 },
+          { text: "솔직히 잠깐은 흔들릴 것 같다", value: 2 },
+        ],
+      },
+      {
+        text: "헤어진다면 그 이유는?",
+        options: [
+          { text: "자연스럽게 마음이 식어서", value: 1 },
+          { text: "큰 사건(배신 등)이 터져서", value: 2 },
+        ],
+      },
+      {
+        text: "평생 콩깍지 쓴 채로 사는 것 vs 모든 걸 다 알고 현실적으로 사는 것",
+        options: [
+          { text: "평생 콩깍지 쓰고 산다", value: 1 },
+          { text: "다 알고 현실적으로 산다", value: 2 },
+        ],
+      },
+      {
+        text: "애인의 흑역사를 모두 알게 된다면?",
+        options: [
+          { text: "더 사랑스러워 보인다", value: 1 },
+          { text: "솔직히 좀 깨질 것 같다", value: 2 },
+        ],
+      },
+      {
+        text: "지금 이 순간 애인에게 가장 확인받고 싶은 건?",
+        options: [
+          { text: "날 정말 사랑하는지", value: 1 },
+          { text: "평생 함께할 건지", value: 2 },
+        ],
+      },
+    ],
+    scoreRanges: [
+      { min: 32, max: 39, title: "순한맛 커플형", emoji: "🥛", desc: "편안하고 잔잔한 연애를 선호하는 순한맛 커플이에요. 자극보다는 안정감 속에서 서로를 아끼는 사이랍니다. 가끔은 예상 밖의 이벤트로 설렘을 더해보는 것도 좋아요." },
+      { min: 40, max: 47, title: "중간맛 커플형", emoji: "🍜", desc: "적당한 자극과 안정감을 함께 즐기는 균형 잡힌 커플이에요. 편안하면서도 가끔은 짜릿한 순간을 즐길 줄 아는 사이죠. 서로 다른 부분도 있는 그대로 존중해주세요." },
+      { min: 48, max: 55, title: "매운맛 커플형", emoji: "🌶️", desc: "솔직하고 화끈한 감정 표현을 즐기는 매운맛 커플이에요. 질투도 애정도 잘 숨기지 않는 뜨거운 사이랍니다. 가끔은 한 발 물러서서 서로에게 여유를 주는 것도 필요해요." },
+      { min: 56, max: 64, title: "마라맛 커플형", emoji: "🔥", desc: "감정도 표현도 화끈하게, 끝까지 솔직한 마라맛 커플이에요. 서로에게 강하게 끌리는 만큼 감정 기복도 클 수 있어요. 뜨거운 만큼 서로를 다독이는 시간도 꼭 챙겨보세요." },
+    ],
+  },
 ];
