@@ -42,11 +42,22 @@ function mpComputeResult(test, answers) {
     const total = answers.reduce((sum, v) => sum + v, 0);
     return { score: total };
   }
+  if (test.type === "mbti") {
+    const counts = {};
+    answers.forEach((v) => {
+      counts[v] = (counts[v] || 0) + 1;
+    });
+    const axes = [["E", "I"], ["S", "N"], ["T", "F"], ["J", "P"]];
+    const resultKey = axes
+      .map(([a, b]) => ((counts[a] || 0) >= (counts[b] || 0) ? a : b))
+      .join("");
+    return { resultKey };
+  }
   return {};
 }
 
 function mpResultInfo(test, result) {
-  if (test.type === "category") return test.categories[result.resultKey];
+  if (test.type === "category" || test.type === "mbti") return test.categories[result.resultKey];
   if (test.type === "score") {
     return test.scoreRanges.find((r) => result.score >= r.min && result.score <= r.max);
   }

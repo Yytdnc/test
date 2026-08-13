@@ -32,6 +32,8 @@
     ? "상대방이 보낸 테스트예요! 답변을 마치면 서로의 결과를 비교해볼 수 있어요 💑"
     : test.tagline;
   introEl.querySelector(".q-count").textContent = `질문 ${test.questions.length}개`;
+  const estMinutes = Math.max(1, Math.round((test.questions.length * 6) / 60));
+  introEl.querySelector(".q-time").textContent = `약 ${estMinutes}분 소요`;
 
   if (isPartnerValid) {
     const badge = document.createElement("div");
@@ -106,6 +108,17 @@
     if (test.type === "score") {
       const total = answers.reduce((sum, v) => sum + v, 0);
       return { score: total };
+    }
+    if (test.type === "mbti") {
+      const counts = {};
+      answers.forEach((v) => {
+        counts[v] = (counts[v] || 0) + 1;
+      });
+      const axes = [["E", "I"], ["S", "N"], ["T", "F"], ["J", "P"]];
+      const resultKey = axes
+        .map(([a, b]) => ((counts[a] || 0) >= (counts[b] || 0) ? a : b))
+        .join("");
+      return { resultKey };
     }
     return {};
   }
