@@ -2072,4 +2072,412 @@ const TESTS = [
       { min: 12, max: 16, title: "현실 직진 마라맛형", emoji: "🔥", desc: "감정도 현실도 끝까지 솔직하게 마주하는 당신. 흔들릴 수 있다는 것도, 힘든 진실도 회피하지 않는 대담한 스타일이에요. 그 솔직함만큼 서로를 다독이는 시간도 챙겨보세요." },
     ],
   },
+
+  {
+    id: "socialbattery",
+    tag: "성격",
+    title: "나의 사회성 배터리 테스트",
+    emoji: "🔋",
+    tagline: "사람을 만나고 나면 충전될까, 방전될까?",
+    type: "score",
+    compare: true,
+    questions: [
+      {
+        text: "친구들과 모임이 끝나고 집에 오면?",
+        options: [
+          { text: "더 놀고 싶어서 아쉽다", value: 4 },
+          { text: "적당히 즐거웠다", value: 3 },
+          { text: "조용히 쉬고 싶다", value: 2 },
+          { text: "혼자만의 시간이 간절하다", value: 1 },
+        ],
+      },
+      {
+        text: "주말 약속이 3개나 잡혀있다면?",
+        options: [
+          { text: "완전 신난다, 알차게 논다", value: 4 },
+          { text: "적당히 좋다", value: 3 },
+          { text: "하나쯤은 취소하고 싶다", value: 2 },
+          { text: "생각만 해도 피곤하다", value: 1 },
+        ],
+      },
+      {
+        text: "새로운 사람을 만나는 자리에서 나는?",
+        options: [
+          { text: "먼저 다가가서 말을 건다", value: 4 },
+          { text: "물어보면 편하게 대답한다", value: 3 },
+          { text: "필요한 말만 한다", value: 2 },
+          { text: "최대한 피하고 싶다", value: 1 },
+        ],
+      },
+      {
+        text: "연휴에 딱히 계획이 없다면?",
+        options: [
+          { text: "바로 사람들을 불러 모은다", value: 4 },
+          { text: "누가 부르면 나간다", value: 3 },
+          { text: "집에서 혼자 쉬는 게 더 좋다", value: 2 },
+          { text: "아무도 안 만나는 게 최고다", value: 1 },
+        ],
+      },
+      {
+        text: "회식이나 모임 자리에서 나는?",
+        options: [
+          { text: "분위기 메이커 역할을 한다", value: 4 },
+          { text: "대화에 무난하게 낀다", value: 3 },
+          { text: "말수가 점점 줄어든다", value: 2 },
+          { text: "빨리 끝나기만 바란다", value: 1 },
+        ],
+      },
+      {
+        text: "하루종일 사람을 만나고 나면?",
+        options: [
+          { text: "오히려 에너지가 더 난다", value: 4 },
+          { text: "적당히 피곤하지만 괜찮다", value: 3 },
+          { text: "집에 가서 좀 쉬어야 한다", value: 2 },
+          { text: "완전히 방전돼서 말도 하기 싫다", value: 1 },
+        ],
+      },
+      {
+        text: "전화와 텍스트 중 더 편한 소통 방식은?",
+        options: [
+          { text: "바로 전화하거나 만난다", value: 4 },
+          { text: "영상통화 정도는 괜찮다", value: 3 },
+          { text: "텍스트로 하는 게 편하다", value: 2 },
+          { text: "가능하면 연락 자체를 줄인다", value: 1 },
+        ],
+      },
+      {
+        text: "사람들이 나를 표현한다면?",
+        options: [
+          { text: "\"어디서든 에너자이저\"", value: 4 },
+          { text: "\"무난하게 잘 지내는 사람\"", value: 3 },
+          { text: "\"조용한 편\"", value: 2 },
+          { text: "\"집순이/집돌이 끝판왕\"", value: 1 },
+        ],
+      },
+    ],
+    scoreRanges: [
+      { min: 8, max: 14, title: "완전방전 홈바디형", emoji: "🛌", desc: "혼자만의 시간에서 진짜 에너지를 얻는 당신. 사람을 만나는 것도 좋지만 회복하는 시간이 꼭 필요한 타입이에요. 무리하지 않는 페이스를 지켜주세요." },
+      { min: 15, max: 20, title: "균형 잡힌 하이브리드형", emoji: "🌗", desc: "사람도 좋고 혼자도 좋은, 상황에 따라 유연하게 충전과 방전을 오가는 당신. 그날그날 컨디션에 맞춰 스스로를 잘 조율하는 편이에요." },
+      { min: 21, max: 26, title: "활발한 소셜형", emoji: "🎪", desc: "사람들과 있을 때 에너지가 차오르는 당신. 모임에서 분위기를 살리는 존재예요. 가끔은 혼자만의 휴식도 스스로에게 선물해주세요." },
+      { min: 27, max: 32, title: "인싸 오브 인싸", emoji: "🎉", desc: "사람을 만날수록 오히려 힘이 나는 완전 외향형! 어디서든 먼저 다가가고 분위기를 이끄는 타고난 마당발이에요. 가끔은 재충전할 여백도 남겨두세요." },
+    ],
+  },
+
+  {
+    id: "petmatch",
+    tag: "라이프",
+    title: "나와 잘 맞는 반려동물 테스트",
+    emoji: "🐕",
+    tagline: "라이프스타일로 알아보는 나의 반려동물 궁합",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "퇴근(하교) 후 가장 하고 싶은 건?",
+        options: [
+          { text: "같이 산책하며 에너지 발산", value: "dog" },
+          { text: "조용히 각자의 시간 보내기", value: "cat" },
+          { text: "가만히 바라보며 힐링하기", value: "fish" },
+          { text: "재잘거리는 소리 들으며 쉬기", value: "bird" },
+        ],
+      },
+      {
+        text: "집을 오래 비우는 날이 많다면?",
+        options: [
+          { text: "최대한 빨리 돌아가려 한다", value: "dog" },
+          { text: "크게 걱정 안 한다", value: "cat" },
+          { text: "먹이만 잘 챙기면 괜찮다", value: "fish" },
+          { text: "짝을 지어 키우면 괜찮다", value: "bird" },
+        ],
+      },
+      {
+        text: "나의 애정표현 스타일은?",
+        options: [
+          { text: "적극적으로 안고 쓰다듬는다", value: "dog" },
+          { text: "은근하고 잔잔하게", value: "cat" },
+          { text: "눈으로 지켜보는 걸로 충분", value: "fish" },
+          { text: "말 걸고 소통하는 걸 좋아한다", value: "bird" },
+        ],
+      },
+      {
+        text: "관리(청소, 산책 등)에 들일 수 있는 시간은?",
+        options: [
+          { text: "매일 산책+관리, 자신 있다", value: "dog" },
+          { text: "적당히, 화장실 정도", value: "cat" },
+          { text: "정기적인 수질 관리면 충분", value: "fish" },
+          { text: "새장 청소, 크게 부담 없다", value: "bird" },
+        ],
+      },
+      {
+        text: "나에게 이상적인 주말은?",
+        options: [
+          { text: "밖에 나가 함께 뛰노는 주말", value: "dog" },
+          { text: "집에서 각자 편하게 쉬는 주말", value: "cat" },
+          { text: "조용한 공간에서 여유롭게", value: "fish" },
+          { text: "소소한 대화와 소리가 있는 주말", value: "bird" },
+        ],
+      },
+      {
+        text: "소음이나 활동량에 대한 생각은?",
+        options: [
+          { text: "활기찬 소음은 오히려 좋다", value: "dog" },
+          { text: "조용한 게 최고다", value: "cat" },
+          { text: "소음 없는 게 제일 좋다", value: "fish" },
+          { text: "적당한 지저귐은 반갑다", value: "bird" },
+        ],
+      },
+      {
+        text: "예상치 못한 돌발 행동을 마주하면?",
+        options: [
+          { text: "그러려니, 오히려 귀엽다", value: "dog" },
+          { text: "각자 개성이니 존중한다", value: "cat" },
+          { text: "특별히 신경 쓸 일이 적다", value: "fish" },
+          { text: "그때그때 대화하듯 반응한다", value: "bird" },
+        ],
+      },
+      {
+        text: "나에게 반려동물이란?",
+        options: [
+          { text: "언제나 곁을 지키는 단짝", value: "dog" },
+          { text: "함께 있지만 자유로운 동거인", value: "cat" },
+          { text: "바라만 봐도 힐링되는 존재", value: "fish" },
+          { text: "소소한 대화 상대", value: "bird" },
+        ],
+      },
+    ],
+    categories: {
+      dog: {
+        title: "강아지 궁합형 – 활동적인 단짝",
+        emoji: "🐶",
+        desc: "에너지 넘치고 함께하는 시간을 소중히 여기는 당신에겐 산책하고 뛰노는 강아지가 찰떡궁합이에요. 다만 산책과 케어에 꾸준한 시간을 낼 수 있는지 먼저 점검해보세요.",
+      },
+      cat: {
+        title: "고양이 궁합형 – 자유로운 동거인",
+        emoji: "🐱",
+        desc: "각자의 공간과 시간을 존중하는 당신에게는 독립적인 고양이가 잘 맞아요. 무심한 듯 다가오는 애정표현에서 큰 위로를 받을 거예요.",
+      },
+      fish: {
+        title: "물고기 궁합형 – 잔잔한 힐링러",
+        emoji: "🐠",
+        desc: "조용하고 안정적인 걸 좋아하는 당신에게는 바라보는 것만으로 힐링되는 어항이 딱이에요. 정기적인 수질 관리만 챙기면 부담 없는 동반자가 되어줄 거예요.",
+      },
+      bird: {
+        title: "새 궁합형 – 소소한 대화상대",
+        emoji: "🦜",
+        desc: "소소한 소리와 교감을 즐기는 당신에게는 재잘거리는 새가 좋은 친구가 될 수 있어요. 다만 새장 청소와 꾸준한 관심은 잊지 말고 챙겨주세요.",
+      },
+    },
+  },
+
+  {
+    id: "fandom",
+    tag: "덕질",
+    title: "나의 덕질 유형 테스트",
+    emoji: "💜",
+    tagline: "최애를 대하는 나의 진짜 모습은?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "최애가 생기면 가장 먼저 하는 일은?",
+        options: [
+          { text: "관련 콘텐츠를 밤새 정주행한다", value: "allin" },
+          { text: "굿즈부터 알아본다", value: "collector" },
+          { text: "조용히 SNS를 팔로우한다", value: "lurker" },
+          { text: "팬 커뮤니티부터 찾아 가입한다", value: "social" },
+        ],
+      },
+      {
+        text: "덕질 예산이 생기면?",
+        options: [
+          { text: "굿즈든 콘서트든 아낌없이 쓴다", value: "allin" },
+          { text: "한정판, 포토카드 수집에 쓴다", value: "collector" },
+          { text: "크게 안 쓰고 눈으로 즐긴다", value: "lurker" },
+          { text: "같이 갈 친구들과의 활동에 쓴다", value: "social" },
+        ],
+      },
+      {
+        text: "최애의 새 소식이 뜨면?",
+        options: [
+          { text: "만사 제쳐두고 바로 확인한다", value: "allin" },
+          { text: "관련 굿즈 발매 여부부터 본다", value: "collector" },
+          { text: "나중에 조용히 챙겨본다", value: "lurker" },
+          { text: "커뮤니티에 바로 공유한다", value: "social" },
+        ],
+      },
+      {
+        text: "덕질 사실을 주변에?",
+        options: [
+          { text: "숨김없이 티내고 자랑한다", value: "allin" },
+          { text: "물어보면 수집품을 보여준다", value: "collector" },
+          { text: "웬만하면 티 안 낸다", value: "lurker" },
+          { text: "같이 덕질할 친구를 만든다", value: "social" },
+        ],
+      },
+      {
+        text: "콘서트나 팬미팅 티켓팅은?",
+        options: [
+          { text: "모든 걸 걸고 도전한다", value: "allin" },
+          { text: "MD 구매 목적이 더 크다", value: "collector" },
+          { text: "되면 좋고 안 되면 만다", value: "lurker" },
+          { text: "같이 갈 사람부터 구한다", value: "social" },
+        ],
+      },
+      {
+        text: "최애의 콘텐츠를 볼 때 나는?",
+        options: [
+          { text: "몰입해서 여러 번 반복 시청한다", value: "allin" },
+          { text: "캡처하고 자료로 정리한다", value: "collector" },
+          { text: "느긋하게 나중에 챙겨본다", value: "lurker" },
+          { text: "실시간으로 반응 공유하며 본다", value: "social" },
+        ],
+      },
+      {
+        text: "덕질이 주는 가장 큰 의미는?",
+        options: [
+          { text: "삶의 원동력 그 자체", value: "allin" },
+          { text: "나만의 소중한 컬렉션", value: "collector" },
+          { text: "일상의 소소한 힐링", value: "lurker" },
+          { text: "사람들과 나누는 즐거움", value: "social" },
+        ],
+      },
+      {
+        text: "다른 사람이 내 덕질을 물어보면?",
+        options: [
+          { text: "신나서 몇 시간이고 이야기한다", value: "allin" },
+          { text: "수집한 걸 하나씩 보여준다", value: "collector" },
+          { text: "간단히 답하고 만다", value: "lurker" },
+          { text: "같이 덕질하자고 권한다", value: "social" },
+        ],
+      },
+    ],
+    categories: {
+      allin: {
+        title: "올인 덕후형 – 삶이 곧 덕질",
+        emoji: "🔥",
+        desc: "최애를 향한 마음이 넘치는 당신은 덕질에 온 힘을 쏟는 타입이에요. 그 열정이 큰 행복을 주지만, 가끔은 스스로를 위한 시간도 챙겨보세요.",
+      },
+      collector: {
+        title: "수집형 덕후 – 소장의 미학",
+        emoji: "📦",
+        desc: "소중한 것들을 하나씩 모아가는 재미로 덕질하는 당신. 정성스레 쌓아온 컬렉션이 큰 자랑거리예요. 예산 관리도 잊지 말고 챙기세요.",
+      },
+      lurker: {
+        title: "조용한 덕후형 – 마음속 깊은 애정",
+        emoji: "🤫",
+        desc: "티 내지 않아도 누구보다 진심인 당신. 혼자만의 방식으로 최애를 응원하는 게 편안하죠. 가끔은 같은 마음의 사람들과 나눠보는 것도 즐거울 거예요.",
+      },
+      social: {
+        title: "함께하는 덕후형 – 덕메가 최고",
+        emoji: "🤝",
+        desc: "좋아하는 마음을 사람들과 나눌 때 더 행복한 당신. 덕질로 만난 인연이 삶의 큰 자산이 될 거예요. 혼자만의 힐링 시간도 잊지 마세요.",
+      },
+    },
+  },
+
+  {
+    id: "conflict",
+    tag: "관계심리",
+    title: "나의 갈등 해결 스타일 테스트",
+    emoji: "⚖️",
+    tagline: "부딪히는 순간, 진짜 나의 대처법은?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "친구와 의견이 부딪히면?",
+        options: [
+          { text: "바로 내 생각을 솔직히 말한다", value: "confront" },
+          { text: "굳이 얘기 안 하고 넘어간다", value: "avoid" },
+          { text: "적당한 선에서 맞춘다", value: "compromise" },
+          { text: "원인을 차분히 짚어본다", value: "analyze" },
+        ],
+      },
+      {
+        text: "갈등 상황에서 나의 감정은?",
+        options: [
+          { text: "즉각적으로 드러난다", value: "confront" },
+          { text: "티 안 내고 속으로만 삭인다", value: "avoid" },
+          { text: "적당히 조절하며 대화한다", value: "compromise" },
+          { text: "감정보다 상황을 먼저 본다", value: "analyze" },
+        ],
+      },
+      {
+        text: "다툰 직후 나는?",
+        options: [
+          { text: "바로 풀고 넘어가고 싶다", value: "confront" },
+          { text: "시간이 지나면 괜찮아진다", value: "avoid" },
+          { text: "먼저 손 내밀며 타협점을 찾는다", value: "compromise" },
+          { text: "원인부터 정리해보고 대화한다", value: "analyze" },
+        ],
+      },
+      {
+        text: "상대가 화를 낸다면?",
+        options: [
+          { text: "나도 내 입장을 명확히 밝힌다", value: "confront" },
+          { text: "일단 자리를 피한다", value: "avoid" },
+          { text: "진정시키고 중간점을 찾는다", value: "compromise" },
+          { text: "왜 화가 났는지부터 분석한다", value: "analyze" },
+        ],
+      },
+      {
+        text: "그룹 내 의견 대립이 생기면?",
+        options: [
+          { text: "적극적으로 내 의견을 관철한다", value: "confront" },
+          { text: "웬만하면 다수 의견을 따른다", value: "avoid" },
+          { text: "양쪽 의견을 절충한다", value: "compromise" },
+          { text: "장단점을 정리해서 제시한다", value: "analyze" },
+        ],
+      },
+      {
+        text: "갈등을 대하는 나의 기본 태도는?",
+        options: [
+          { text: "피하지 않고 정면 돌파한다", value: "confront" },
+          { text: "가능하면 갈등 자체를 피한다", value: "avoid" },
+          { text: "서로 win-win할 방법을 찾는다", value: "compromise" },
+          { text: "감정보다 논리로 접근한다", value: "analyze" },
+        ],
+      },
+      {
+        text: "갈등이 쉽게 해결되지 않으면?",
+        options: [
+          { text: "될 때까지 계속 이야기한다", value: "confront" },
+          { text: "시간에 맡기고 거리를 둔다", value: "avoid" },
+          { text: "제3자의 의견을 구한다", value: "compromise" },
+          { text: "근본 원인을 계속 찾는다", value: "analyze" },
+        ],
+      },
+      {
+        text: "나에게 갈등이란?",
+        options: [
+          { text: "풀어야 할 숙제, 미루지 않는다", value: "confront" },
+          { text: "가능하면 피하고 싶은 것", value: "avoid" },
+          { text: "타협으로 풀 수 있는 것", value: "compromise" },
+          { text: "이해하면 풀리는 것", value: "analyze" },
+        ],
+      },
+    ],
+    categories: {
+      confront: {
+        title: "직진 해결형 – 정면 돌파",
+        emoji: "🎯",
+        desc: "갈등을 피하지 않고 바로 부딪혀 해결하는 당신. 솔직함 덕분에 오해가 오래가지 않아요. 다만 상대의 속도도 배려해주는 여유가 필요해요.",
+      },
+      avoid: {
+        title: "평화 우선형 – 시간이 약",
+        emoji: "🌫️",
+        desc: "갈등 자체를 최소화하려는 당신은 관계의 평화를 소중히 여겨요. 다만 쌓아둔 감정이 터지지 않도록 가끔은 솔직한 표현도 필요해요.",
+      },
+      compromise: {
+        title: "타협형 – 서로 한 발씩",
+        emoji: "🤝",
+        desc: "양쪽 입장을 모두 헤아리며 중간점을 찾는 당신. 관계를 부드럽게 이어가는 능력이 뛰어나요. 가끔은 본인의 의견도 더 확실히 챙겨보세요.",
+      },
+      analyze: {
+        title: "분석형 – 원인부터 이해",
+        emoji: "🔍",
+        desc: "감정보다 원인을 먼저 들여다보는 당신. 논리적인 접근으로 갈등의 본질을 잘 짚어내요. 가끔은 분석보다 감정을 먼저 다독여주는 것도 필요해요.",
+      },
+    },
+  },
 ];
