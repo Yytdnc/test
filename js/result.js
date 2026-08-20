@@ -88,19 +88,13 @@
             inviteStatus.className = "status-msg err";
             return;
           }
-          const inviteUrl = `${location.origin}${location.pathname.replace(
-            "result.html",
-            `quiz-${test.id}.html`
-          )}?from=${code}`;
+          const inviteUrl = `${location.origin}/quiz-${test.id}.html?from=${code}`;
           mpShareLink(inviteUrl, `${test.title} - 같이 해볼래?`, () => {
             inviteStatus.textContent = "링크가 복사되었어요! 상대방에게 보내보세요.";
             inviteStatus.className = "status-msg ok";
           });
           if (checkStatus) {
-            const checkUrl = `${location.origin}${location.pathname.replace(
-              "result.html",
-              "compare.html"
-            )}?id=${test.id}&code=${code}&as=initiator`;
+            const checkUrl = `${location.origin}/compare.html?id=${test.id}&code=${code}&as=initiator`;
             checkStatus.innerHTML = `상대방이 답하면 <a href="${checkUrl}" style="color:var(--accent-dark); font-weight:700; text-decoration:underline;">이 링크</a>에서 비교 결과를 확인할 수 있어요. 링크를 꼭 저장해두세요!`;
             checkStatus.className = "status-msg info";
           }

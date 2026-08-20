@@ -64,7 +64,7 @@
       itemListElement: ALL_TESTS.map((t, i) => ({
         "@type": "ListItem",
         position: i + 1,
-        url: `${location.origin}${location.pathname.replace("index.html", "")}quiz-${t.id}.html`,
+        url: `${location.origin}/quiz-${t.id}.html`,
         name: t.title,
       })),
     };
