@@ -4,5 +4,6 @@ Disallow: /admin.html
 Disallow: /login.html
 Disallow: /signup.html
 Disallow: /compare.html
+Disallow: /community.html
 
 Sitemap: https://www.mindpick.net/sitemap.xml
