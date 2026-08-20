@@ -1,7 +1,7 @@
 /* quiz.html: 테스트 진행 엔진 */
 (function () {
   const params = new URLSearchParams(location.search);
-  const testId = params.get("id");
+  const testId = window.MP_TEST_ID || params.get("id");
   const compareCode = params.get("from");
   const test = ALL_TESTS.find((t) => t.id === testId);
 
@@ -54,6 +54,7 @@
 
   const answers = [];
   let currentIndex = 0;
+  let isAnswering = false;
 
   function startQuiz() {
     introEl.style.display = "none";
@@ -62,6 +63,7 @@
   }
 
   function renderQuestion() {
+    isAnswering = false;
     const q = test.questions[currentIndex];
     const progress = Math.round((currentIndex / test.questions.length) * 100);
 
@@ -82,6 +84,8 @@
   }
 
   function selectOption(value) {
+    if (isAnswering) return;
+    isAnswering = true;
     answers.push(value);
     currentIndex++;
     if (currentIndex >= test.questions.length) {
@@ -92,7 +96,8 @@
   }
 
   function goBack() {
-    if (currentIndex === 0) return;
+    if (isAnswering || currentIndex === 0) return;
+    isAnswering = true;
     currentIndex--;
     answers.pop();
     renderQuestion();

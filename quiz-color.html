@@ -18,24 +18,23 @@
   </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MindPick - 나를 알아가는 심리테스트</title>
-  <meta name="description" content="성격, 연애, 애착유형, 음식, 여행, 전생까지! 가볍게 즐기는 심리테스트 모음 MindPick." />
-  <link rel="canonical" href="https://www.mindpick.net/" />
+  <title>나의 성격 컬러 테스트 | MindPick</title>
+  <meta name="description" content="당신의 마음을 물들이는 색깔은 무엇일까요? 지금 무료로 테스트해보세요." />
+  <link rel="canonical" href="https://www.mindpick.net/quiz-color.html" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%A0%3C/text%3E%3C/svg%3E" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="MindPick" />
-  <meta property="og:title" content="MindPick - 나를 알아가는 심리테스트" />
-  <meta property="og:description" content="성격, 연애, 애착유형, 음식, 여행, 전생까지! 가볍게 즐기는 심리테스트 모음 MindPick." />
-  <meta property="og:url" content="https://www.mindpick.net/" />
+  <meta property="og:title" content="나의 성격 컬러 테스트 | MindPick" />
+  <meta property="og:description" content="당신의 마음을 물들이는 색깔은 무엇일까요? 지금 무료로 테스트해보세요." />
+  <meta property="og:url" content="https://www.mindpick.net/quiz-color.html" />
   <meta property="og:locale" content="ko_KR" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="MindPick - 나를 알아가는 심리테스트" />
-  <meta name="twitter:description" content="성격, 연애, 애착유형, 음식, 여행, 전생까지! 가볍게 즐기는 심리테스트 모음 MindPick." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta name="twitter:title" content="나의 성격 컬러 테스트 | MindPick" />
+  <meta name="twitter:description" content="당신의 마음을 물들이는 색깔은 무엇일까요? 지금 무료로 테스트해보세요." />
   <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.mindpick.net/"},{"@type":"ListItem","position":2,"name":"나의 성격 컬러 테스트","item":"https://www.mindpick.net/quiz-color.html"}]}</script>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5113083554519679" crossorigin="anonymous"></script>
 </head>
@@ -47,33 +46,38 @@
   <header class="topbar">
     <a class="brand" href="index.html"><span class="logo-emoji">🧠</span>Mind<span class="accent">Pick</span></a>
     <nav>
-      <a class="active" href="index.html">홈</a>
-      <a href="quiz-color.html">성격</a>
-      <a href="quiz-love.html">연애</a>
+      <a href="index.html">홈</a>
       <a href="community.html">커뮤니티</a>
       <a href="privacy.html">개인정보처리방침</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero wrap">
-      <span class="eyebrow">가볍게 즐기는 3분 심리테스트</span>
-      <h1>오늘의 나는<br />어떤 모습일까요?</h1>
-      <p>성격, 연애, 애착유형, 음식, 여행, 전생까지. 부담 없이 즐기면서 나를 들여다보는 심리테스트 모음이에요.</p>
+  <main class="quiz-shell">
+    <div id="quiz-not-found" style="display:none; text-align:center; padding: 60px 0;">
+      <p>테스트를 찾을 수 없어요. <a href="index.html" style="color:var(--accent); font-weight:700;">홈으로 돌아가기</a></p>
+    </div>
+
+    <section id="quiz-intro" class="quiz-intro">
+      <div class="big-emoji">🎨</div>
+      <h1>나의 성격 컬러 테스트</h1>
+      <p class="tagline">당신의 마음을 물들이는 색깔은 무엇일까요?</p>
+      <div class="meta"><span class="q-count">질문 8개</span><span class="q-time">약 1분 소요</span></div>
+      <button class="button primary block start-btn">테스트 시작하기</button>
     </section>
 
-    <section class="section wrap">
-      <div class="section-head">
-        <h2>🔥 인기 심리테스트</h2>
+    <section id="quiz-question" style="display:none;">
+      <div class="quiz-head">
+        <span>MindPick</span>
+        <span class="q-step"></span>
       </div>
-      <div class="rank-list" id="popular-test-grid"></div>
-    </section>
-
-    <section class="section wrap">
-      <div class="section-head">
-        <h2>🗂️ 전체 테스트</h2>
+      <div class="progress-track"><div class="progress-fill"></div></div>
+      <div class="question-card">
+        <h2></h2>
+        <div class="option-list"></div>
       </div>
-      <div class="test-grid" id="all-test-grid"></div>
+      <div class="quiz-nav">
+        <button class="link-btn back-btn" type="button">이전 질문으로</button>
+      </div>
     </section>
 
   </main>
@@ -87,12 +91,15 @@
     <p>© 2026 MindPick. 본 사이트의 테스트는 재미로 즐기는 콘텐츠이며 과학적 근거가 없습니다.</p>
   </footer>
 
+  <script>window.MP_TEST_ID = "color";</script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="js/supabase-config.js"></script>
   <script src="js/views.js"></script>
   <script src="js/tests-data.js"></script>
   <script src="js/custom-tests.js"></script>
   <script src="js/tests-registry.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/compare-utils.js"></script>
+  <script src="js/compare-session.js"></script>
+  <script src="js/quiz.js"></script>
 </body>
 </html>

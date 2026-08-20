@@ -59,7 +59,7 @@
   cardEl.querySelector("h1").textContent = resultInfo.title;
   cardEl.querySelector("p").textContent = resultInfo.desc;
 
-  retryLink.href = `quiz.html?id=${test.id}`;
+  retryLink.href = `quiz-${test.id}.html`;
 
   const shareCommunityBtn = document.getElementById("share-community-btn");
   if (shareCommunityBtn) {
@@ -101,8 +101,8 @@
           }
           const inviteUrl = `${location.origin}${location.pathname.replace(
             "result.html",
-            "quiz.html"
-          )}?id=${test.id}&from=${code}`;
+            `quiz-${test.id}.html`
+          )}?from=${code}`;
           mpShareLink(inviteUrl, `${test.title} - 같이 해볼래?`, () => {
             inviteStatus.textContent = "링크가 복사되었어요! 상대방에게 보내보세요.";
             inviteStatus.className = "status-msg ok";
@@ -130,7 +130,7 @@
     relatedGrid.innerHTML = others
       .map(
         (t) => `
-        <a class="test-card" href="quiz.html?id=${t.id}">
+        <a class="test-card" href="quiz-${t.id}.html">
           <div class="thumb">${t.emoji}</div>
           <span class="tag">${t.tag}</span>
           <h3>${t.title}</h3>

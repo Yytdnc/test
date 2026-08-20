@@ -16,7 +16,7 @@
 
   function cardHTML(test) {
     return `
-      <a class="test-card" href="quiz.html?id=${test.id}">
+      <a class="test-card" href="quiz-${test.id}.html">
         <div class="thumb">${test.emoji}</div>
         <span class="tag ${tagColorClass(test.id)}">${test.tag}</span>
         <h3>${test.title}</h3>
@@ -35,7 +35,7 @@
   function rankHTML(test, i, views) {
     const viewsText = formatViews(views);
     return `
-      <a class="rank-item" href="quiz.html?id=${test.id}">
+      <a class="rank-item" href="quiz-${test.id}.html">
         <span class="${rankBadgeClass(i)}">${i + 1}</span>
         <span class="rank-thumb">${test.emoji}</span>
         <span class="rank-info">
@@ -64,7 +64,7 @@
       itemListElement: ALL_TESTS.map((t, i) => ({
         "@type": "ListItem",
         position: i + 1,
-        url: `${location.origin}${location.pathname.replace("index.html", "")}quiz.html?id=${t.id}`,
+        url: `${location.origin}${location.pathname.replace("index.html", "")}quiz-${t.id}.html`,
         name: t.title,
       })),
     };

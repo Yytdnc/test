@@ -84,7 +84,7 @@
         const categorySelect = document.getElementById("post-category");
         if (titleInput && !titleInput.value) titleInput.value = `${shareTest.title} 결과: ${info.title}`;
         if (contentInput && !contentInput.value) {
-          contentInput.value = `${info.desc}\n\n다들 결과 뭐 나왔어요? 👉 quiz.html?id=${shareTest.id}`;
+          contentInput.value = `${info.desc}\n\n다들 결과 뭐 나왔어요? 👉 quiz-${shareTest.id}.html`;
         }
         if (categorySelect) categorySelect.value = "share";
       }
@@ -253,7 +253,7 @@
     const initial = (post.author_name || "?").trim().charAt(0).toUpperCase();
     const canDelete = currentUser && (currentUser.id === post.author_id || isAdmin);
     const shareBadge = post.quiz_test_id
-      ? `<a href="quiz.html?id=${post.quiz_test_id}" class="self-start px-sm py-xs bg-secondary-container/10 text-secondary text-label-sm rounded-full font-semibold">${post.quiz_result_emoji || ""} ${escapeHTML(post.quiz_result_title || "")} 결과 공유</a>`
+      ? `<a href="quiz-${post.quiz_test_id}.html" class="self-start px-sm py-xs bg-secondary-container/10 text-secondary text-label-sm rounded-full font-semibold">${post.quiz_result_emoji || ""} ${escapeHTML(post.quiz_result_title || "")} 결과 공유</a>`
       : "";
 
     const commentsHTML = comments
