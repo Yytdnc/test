@@ -2480,4 +2480,482 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "idealtype",
+    tag: "연애심리",
+    title: "나의 이상형 테스트",
+    emoji: "💘",
+    tagline: "나도 몰랐던 내 이상형의 실체는?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "소개팅에서 가장 먼저 눈에 들어오는 건?",
+        options: [
+          { text: "다정하게 챙겨주는 말투", value: "warm" },
+          { text: "흔들림 없는 편안한 태도", value: "reliable" },
+          { text: "재치있는 농담과 텐션", value: "fun" },
+          { text: "알 수 없는 묘한 분위기", value: "mystery" },
+        ],
+      },
+      {
+        text: "연애할 때 가장 중요하게 생각하는 건?",
+        options: [
+          { text: "서로 챙기는 따뜻함", value: "warm" },
+          { text: "믿고 의지할 수 있는 신뢰", value: "reliable" },
+          { text: "함께 있으면 즐거운 케미", value: "fun" },
+          { text: "서로를 알아가는 설렘", value: "mystery" },
+        ],
+      },
+      {
+        text: "힘든 일이 있을 때 상대가 해줬으면 하는 건?",
+        options: [
+          { text: "옆에서 다정하게 위로해준다", value: "warm" },
+          { text: "묵묵히 곁을 지켜준다", value: "reliable" },
+          { text: "웃게 해주는 유머를 던진다", value: "fun" },
+          { text: "혼자만의 시간을 존중해준다", value: "mystery" },
+        ],
+      },
+      {
+        text: "끌리는 데이트 코스는?",
+        options: [
+          { text: "감성 카페에서 도란도란", value: "warm" },
+          { text: "익숙하고 편안한 단골집", value: "reliable" },
+          { text: "액티비티 넘치는 나들이", value: "fun" },
+          { text: "낯선 곳으로 즉흥 여행", value: "mystery" },
+        ],
+      },
+      {
+        text: "상대의 어떤 모습에 반하나요?",
+        options: [
+          { text: "나를 세심하게 챙기는 모습", value: "warm" },
+          { text: "위기에도 흔들리지 않는 모습", value: "reliable" },
+          { text: "텐션을 업 시켜주는 모습", value: "fun" },
+          { text: "쉽게 파악되지 않는 모습", value: "mystery" },
+        ],
+      },
+      {
+        text: "선호하는 연락 스타일은?",
+        options: [
+          { text: "자잘한 일상까지 다정하게", value: "warm" },
+          { text: "필요할 때 확실하게", value: "reliable" },
+          { text: "재밌는 드립이 가득하게", value: "fun" },
+          { text: "가끔 툭 던지는 의미심장한 연락", value: "mystery" },
+        ],
+      },
+      {
+        text: "이상형에게 듣고 싶은 말은?",
+        options: [
+          { text: "\"오늘 하루 어땠어? 힘들지 않았어?\"", value: "warm" },
+          { text: "\"무슨 일 있어도 내가 있잖아\"", value: "reliable" },
+          { text: "\"너랑 있으면 진짜 재밌어\"", value: "fun" },
+          { text: "\"너 은근 모르겠단 말이야, 그게 매력이야\"", value: "mystery" },
+        ],
+      },
+    ],
+    categories: {
+      warm: {
+        title: "다정다감형 – 마음을 채워주는 사랑",
+        emoji: "🌷",
+        desc: "세심하게 챙겨주는 다정함에 마음이 열리는 당신. 사소한 배려 하나에도 크게 감동받아요. 다만 다정함 뒤에 숨은 진심도 함께 봐주세요.",
+      },
+      reliable: {
+        title: "든든한 안정형 – 흔들리지 않는 믿음",
+        emoji: "🛡️",
+        desc: "화려함보다 믿음직함에 끌리는 당신. 편안하고 안정적인 관계를 만드는 사람이에요. 가끔은 설렘도 놓치지 말고 즐겨보세요.",
+      },
+      fun: {
+        title: "유쾌한 텐션형 – 함께 있으면 즐거운",
+        emoji: "🎉",
+        desc: "같이 있을 때 즐거운 사람에게 끌리는 당신. 관계에서 웃음과 에너지를 가장 중요하게 여겨요. 가끔은 진지한 대화도 놓치지 마세요.",
+      },
+      mystery: {
+        title: "신비로운 매력형 – 알아갈수록 빠지는",
+        emoji: "🌙",
+        desc: "쉽게 다 보여주지 않는 매력에 끌리는 당신. 알아가는 과정 자체를 즐기는 사람이에요. 다만 너무 어려운 상대만 좇지는 않도록 균형을 잡아보세요.",
+      },
+    },
+  },
+
+  {
+    id: "jealousy",
+    tag: "연애심리",
+    title: "나의 질투 유형 테스트",
+    emoji: "😤",
+    tagline: "사랑 앞에서 진짜 내 모습은?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "연인이 다른 이성과 톡을 오래 하면?",
+        options: [
+          { text: "바로 물어본다 \"누구야?\"", value: "direct" },
+          { text: "신경쓰이지만 티 내지 않는다", value: "silent" },
+          { text: "대수롭지 않게 넘긴다", value: "logical" },
+          { text: "계속 신경 쓰이고 불안해진다", value: "anxious" },
+        ],
+      },
+      {
+        text: "SNS에 연인이 다른 사람과 찍은 사진이 올라오면?",
+        options: [
+          { text: "바로 연락해서 물어본다", value: "direct" },
+          { text: "마음속으로만 신경쓴다", value: "silent" },
+          { text: "그럴 수도 있지 생각한다", value: "logical" },
+          { text: "계속 사진을 다시 확인하게 된다", value: "anxious" },
+        ],
+      },
+      {
+        text: "질투가 날 때 나의 행동은?",
+        options: [
+          { text: "솔직하게 감정을 표현한다", value: "direct" },
+          { text: "혼자 삭이다가 나중에 티가 난다", value: "silent" },
+          { text: "감정보다 상황을 먼저 판단한다", value: "logical" },
+          { text: "계속 확인하고 싶어진다", value: "anxious" },
+        ],
+      },
+      {
+        text: "연인의 과거 연애 이야기를 들으면?",
+        options: [
+          { text: "궁금한 건 그냥 물어본다", value: "direct" },
+          { text: "듣고 싶지 않지만 참는다", value: "silent" },
+          { text: "과거는 과거일 뿐이라고 생각한다", value: "logical" },
+          { text: "자꾸 비교하게 된다", value: "anxious" },
+        ],
+      },
+      {
+        text: "연인이 친구들과 늦게까지 놀면?",
+        options: [
+          { text: "언제 오는지 솔직히 물어본다", value: "direct" },
+          { text: "서운하지만 말은 안 한다", value: "silent" },
+          { text: "각자의 시간을 존중한다", value: "logical" },
+          { text: "연락이 안 되면 불안해진다", value: "anxious" },
+        ],
+      },
+      {
+        text: "질투를 표현하는 나만의 방식은?",
+        options: [
+          { text: "직접적으로 말한다", value: "direct" },
+          { text: "은근한 말투로 티를 낸다", value: "silent" },
+          { text: "표현하지 않는 편이다", value: "logical" },
+          { text: "서운함이나 눈물로 표현된다", value: "anxious" },
+        ],
+      },
+      {
+        text: "연인이 나를 안심시켜줄 때 필요한 건?",
+        options: [
+          { text: "명확한 설명", value: "direct" },
+          { text: "시간이 지나면 자연히 풀린다", value: "silent" },
+          { text: "별로 필요하지 않다", value: "logical" },
+          { text: "꾸준한 애정 표현", value: "anxious" },
+        ],
+      },
+    ],
+    categories: {
+      direct: {
+        title: "직진 표현형 – 솔직하게 확인하는",
+        emoji: "🔥",
+        desc: "질투가 나면 숨기지 않고 바로 표현하는 당신. 오해를 오래 끌지 않는 게 장점이에요. 다만 상대가 놀라지 않게 말투는 조금 부드럽게!",
+      },
+      silent: {
+        title: "조용한 삭임형 – 속으로 삼키는",
+        emoji: "🌫️",
+        desc: "질투가 나도 겉으로는 티를 잘 안 내는 당신. 상대를 배려하는 마음이지만, 쌓아두면 마음이 힘들어져요. 가끔은 솔직하게 표현해보세요.",
+      },
+      logical: {
+        title: "쿨한 이성형 – 질투에 잘 흔들리지 않는",
+        emoji: "😎",
+        desc: "감정보다 상황을 먼저 보는 당신은 질투에 크게 휘둘리지 않아요. 안정적인 연애를 하는 편이지만, 가끔은 솔직한 감정 표현도 관계에 도움이 돼요.",
+      },
+      anxious: {
+        title: "불안 증폭형 – 사랑이 큰 만큼 불안도 큰",
+        emoji: "💭",
+        desc: "좋아하는 마음이 큰 만큼 불안도 쉽게 커지는 당신. 그만큼 진심으로 사랑하고 있다는 뜻이에요. 스스로 안정감을 채우는 연습을 함께 해보세요.",
+      },
+    },
+  },
+
+  {
+    id: "defense",
+    tag: "성격",
+    title: "나의 방어기제 테스트",
+    emoji: "🧩",
+    tagline: "힘든 순간, 나도 모르게 나오는 마음의 습관은?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "실수했을 때 나의 첫 반응은?",
+        options: [
+          { text: "\"그럴 수도 있지\" 하며 이유를 찾는다", value: "rationalize" },
+          { text: "그 상황 자체를 피하고 싶다", value: "avoidance" },
+          { text: "농담으로 넘기려 한다", value: "humor" },
+          { text: "남 탓부터 하게 된다", value: "projection" },
+        ],
+      },
+      {
+        text: "스트레스 받는 상황이 생기면?",
+        options: [
+          { text: "논리적으로 이유를 설명하려 한다", value: "rationalize" },
+          { text: "아예 그 자리를 벗어난다", value: "avoidance" },
+          { text: "웃음으로 분위기를 바꾼다", value: "humor" },
+          { text: "다른 사람이나 상황 탓을 한다", value: "projection" },
+        ],
+      },
+      {
+        text: "비판을 들었을 때?",
+        options: [
+          { text: "나름의 근거를 대며 설명한다", value: "rationalize" },
+          { text: "그 얘기를 더 이상 하고 싶지 않다", value: "avoidance" },
+          { text: "가볍게 웃어넘긴다", value: "humor" },
+          { text: "상대도 똑같다고 반박한다", value: "projection" },
+        ],
+      },
+      {
+        text: "갈등 상황을 마주하면?",
+        options: [
+          { text: "상황을 분석해서 납득하려 한다", value: "rationalize" },
+          { text: "일단 피하고 나중에 생각한다", value: "avoidance" },
+          { text: "유머로 긴장을 풀려고 한다", value: "humor" },
+          { text: "내 잘못보다 상대 잘못이 크다고 느낀다", value: "projection" },
+        ],
+      },
+      {
+        text: "실패했을 때 스스로에게 하는 말은?",
+        options: [
+          { text: "\"이번엔 상황이 안 좋았을 뿐이야\"", value: "rationalize" },
+          { text: "\"그냥 신경 안 쓸래\"", value: "avoidance" },
+          { text: "\"웃자 웃자, 다음에 잘하면 되지\"", value: "humor" },
+          { text: "\"저것 때문에 이렇게 된 거야\"", value: "projection" },
+        ],
+      },
+      {
+        text: "불안한 감정이 들 때 나는?",
+        options: [
+          { text: "이유를 찾아 스스로를 설득한다", value: "rationalize" },
+          { text: "그 감정을 마주하기보다 다른 데 집중한다", value: "avoidance" },
+          { text: "농담처럼 가볍게 표현한다", value: "humor" },
+          { text: "원인을 외부에서 찾는다", value: "projection" },
+        ],
+      },
+      {
+        text: "화가 났을 때 나의 모습은?",
+        options: [
+          { text: "화난 이유를 조목조목 설명한다", value: "rationalize" },
+          { text: "자리를 피해 진정할 시간을 갖는다", value: "avoidance" },
+          { text: "실없는 농담으로 풀어본다", value: "humor" },
+          { text: "\"너 때문이잖아\"라는 생각이 먼저 든다", value: "projection" },
+        ],
+      },
+    ],
+    categories: {
+      rationalize: {
+        title: "합리화형 – 이유를 찾아 마음을 다독이는",
+        emoji: "🧩",
+        desc: "힘든 상황도 나름의 이유를 찾아 이해하려는 당신. 스스로를 다독이는 힘이 있어요. 가끔은 이유를 찾기보다 감정을 그대로 느껴보는 것도 좋아요.",
+      },
+      avoidance: {
+        title: "회피형 – 일단 거리를 두는",
+        emoji: "🚪",
+        desc: "불편한 상황에서 한 발 물러나 숨을 고르는 당신. 나쁜 게 아니라 스스로를 지키는 방법이에요. 다만 너무 오래 피하지만 말고 천천히 마주해보세요.",
+      },
+      humor: {
+        title: "유머형 – 웃음으로 넘기는",
+        emoji: "😂",
+        desc: "힘든 순간도 유머로 가볍게 넘기는 당신. 분위기를 밝게 만드는 재주가 있어요. 가끔은 웃음 뒤에 숨은 진짜 감정도 들여다봐주세요.",
+      },
+      projection: {
+        title: "투사형 – 원인을 밖에서 찾는",
+        emoji: "🪞",
+        desc: "힘든 감정을 외부에서 원인을 찾아 해소하는 당신. 스스로를 보호하려는 자연스러운 반응이에요. 가끔은 내 마음 안쪽도 한 번씩 들여다보면 더 편안해질 거예요.",
+      },
+    },
+  },
+
+  {
+    id: "perfectionist",
+    tag: "힐링",
+    title: "나의 완벽주의 지수 테스트",
+    emoji: "📐",
+    tagline: "나는 얼마나 나 자신에게 엄격할까요?",
+    type: "score",
+    compare: true,
+    questions: [
+      {
+        text: "일을 시작하기 전에 나는?",
+        options: [
+          { text: "대략적인 계획만 세운다", value: 1 },
+          { text: "어느 정도 계획을 세운다", value: 2 },
+          { text: "세세하게 다 계획해둔다", value: 3 },
+          { text: "완벽한 계획이 아니면 시작을 못한다", value: 4 },
+        ],
+      },
+      {
+        text: "작은 실수를 했을 때?",
+        options: [
+          { text: "대수롭지 않게 넘긴다", value: 1 },
+          { text: "잠깐 신경쓰이지만 넘긴다", value: 2 },
+          { text: "계속 마음에 걸린다", value: 3 },
+          { text: "밤새 곱씹게 된다", value: 4 },
+        ],
+      },
+      {
+        text: "마감 기한 앞두고 결과물이 마음에 안 들면?",
+        options: [
+          { text: "그냥 제출한다", value: 1 },
+          { text: "조금만 다듬고 제출한다", value: 2 },
+          { text: "시간을 늘려서라도 고친다", value: 3 },
+          { text: "완벽해질 때까지 미룬다", value: 4 },
+        ],
+      },
+      {
+        text: "남에게 일을 맡길 때?",
+        options: [
+          { text: "편하게 맡긴다", value: 1 },
+          { text: "대체로 믿고 맡긴다", value: 2 },
+          { text: "맡기고도 계속 신경쓰인다", value: 3 },
+          { text: "차라리 내가 다 하는 게 편하다", value: 4 },
+        ],
+      },
+      {
+        text: "계획이 틀어지면?",
+        options: [
+          { text: "유연하게 바꾼다", value: 1 },
+          { text: "조금 당황하지만 적응한다", value: 2 },
+          { text: "스트레스를 꽤 받는다", value: 3 },
+          { text: "크게 무너지는 기분이 든다", value: 4 },
+        ],
+      },
+      {
+        text: "목표를 100% 달성하지 못하면?",
+        options: [
+          { text: "그래도 잘했다고 생각한다", value: 1 },
+          { text: "아쉽지만 넘어간다", value: 2 },
+          { text: "실패했다고 느낀다", value: 3 },
+          { text: "자신을 심하게 탓한다", value: 4 },
+        ],
+      },
+      {
+        text: "남들이 보는 나의 결과물에 대해?",
+        options: [
+          { text: "크게 신경쓰지 않는다", value: 1 },
+          { text: "어느 정도 신경쓴다", value: 2 },
+          { text: "평가가 계속 신경쓰인다", value: 3 },
+          { text: "완벽해 보여야만 마음이 편하다", value: 4 },
+        ],
+      },
+      {
+        text: "하루 일과를 마치고 드는 생각은?",
+        options: [
+          { text: "\"오늘도 수고했다\"", value: 1 },
+          { text: "\"그럭저럭 괜찮았다\"", value: 2 },
+          { text: "\"더 잘할 수 있었는데\"", value: 3 },
+          { text: "\"오늘도 부족했다\"", value: 4 },
+        ],
+      },
+    ],
+    scoreRanges: [
+      { min: 8, max: 14, title: "여유형 완벽주의 – 널널함이 강점", emoji: "🌼", desc: "기준은 있지만 스스로를 몰아붙이지 않는 편안한 완벽주의예요. 지금의 여유로운 태도를 잘 유지해보세요." },
+      { min: 15, max: 20, title: "균형잡힌 완벽주의 – 적당한 기준", emoji: "⚖️", desc: "높은 기준과 나를 향한 관대함 사이에서 균형을 잘 잡고 있어요. 가끔은 스스로를 조금 더 칭찬해주세요." },
+      { min: 21, max: 26, title: "고강도 완벽주의 – 스스로에게 엄격한", emoji: "🔥", desc: "기준이 높고 책임감도 강해서 좋은 결과를 만들어내지만, 그만큼 스스로를 많이 몰아붙이고 있어요. '이 정도면 충분하다'는 말을 자신에게도 자주 해주세요." },
+      { min: 27, max: 32, title: "번아웃 위험 완벽주의 – 너무 애쓰고 있는", emoji: "🚨", desc: "완벽해야 한다는 부담이 마음을 많이 지치게 하고 있어요. 결과보다 지금의 나를 먼저 돌보는 시간이 꼭 필요해요. 힘들다면 주변이나 전문가의 도움을 받는 것도 좋은 방법이에요." },
+    ],
+  },
+
+  {
+    id: "sns",
+    tag: "라이프",
+    title: "나의 SNS 성향 테스트",
+    emoji: "📱",
+    tagline: "피드 속 진짜 내 모습은 어떤 유형일까요?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "SNS를 켜면 제일 먼저 하는 행동은?",
+        options: [
+          { text: "내 이야기부터 올린다", value: "sharer" },
+          { text: "남들 피드부터 구경한다", value: "lurker" },
+          { text: "저장할 만한 콘텐츠부터 찾는다", value: "curator" },
+          { text: "댓글이나 DM부터 확인한다", value: "connector" },
+        ],
+      },
+      {
+        text: "맛집에 가면?",
+        options: [
+          { text: "바로 스토리에 올린다", value: "sharer" },
+          { text: "사진만 찍고 안 올린다", value: "lurker" },
+          { text: "나중에 예쁘게 편집해서 올린다", value: "curator" },
+          { text: "같이 간 사람과 태그하며 올린다", value: "connector" },
+        ],
+      },
+      {
+        text: "팔로워 수보다 나에게 중요한 건?",
+        options: [
+          { text: "얼마나 자주 올리느냐", value: "sharer" },
+          { text: "남의 게시물 보는 재미", value: "lurker" },
+          { text: "피드의 통일감", value: "curator" },
+          { text: "사람들과의 소통", value: "connector" },
+        ],
+      },
+      {
+        text: "SNS에서 시간을 가장 많이 쓰는 곳은?",
+        options: [
+          { text: "내 게시물 관리", value: "sharer" },
+          { text: "남의 피드 둘러보기", value: "lurker" },
+          { text: "저장한 게시물 정리", value: "curator" },
+          { text: "댓글 달고 답장하기", value: "connector" },
+        ],
+      },
+      {
+        text: "게시물 올릴 때 가장 고민하는 건?",
+        options: [
+          { text: "얼마나 빨리 올릴지", value: "sharer" },
+          { text: "올릴지 말지", value: "lurker" },
+          { text: "어떤 필터, 어떤 배치로 올릴지", value: "curator" },
+          { text: "누구랑 태그할지", value: "connector" },
+        ],
+      },
+      {
+        text: "알림이 울리면?",
+        options: [
+          { text: "내 게시물 반응인지 바로 확인한다", value: "sharer" },
+          { text: "크게 신경 쓰지 않는다", value: "lurker" },
+          { text: "저장·좋아요한 계정 알림만 확인한다", value: "curator" },
+          { text: "댓글이나 DM부터 반갑게 확인한다", value: "connector" },
+        ],
+      },
+      {
+        text: "나에게 SNS란?",
+        options: [
+          { text: "나를 표현하는 공간", value: "sharer" },
+          { text: "정보를 얻는 창구", value: "lurker" },
+          { text: "취향을 기록하는 공간", value: "curator" },
+          { text: "사람들과 이어지는 공간", value: "connector" },
+        ],
+      },
+    ],
+    categories: {
+      sharer: {
+        title: "공유왕형 – 일상을 부지런히 남기는",
+        emoji: "📸",
+        desc: "일상 하나하나를 부지런히 기록하고 공유하는 당신. 소소한 순간도 특별하게 만드는 힘이 있어요. 가끔은 올리지 않고 그 순간 자체를 온전히 즐겨보세요.",
+      },
+      lurker: {
+        title: "눈팅형 – 조용히 지켜보는",
+        emoji: "👀",
+        desc: "직접 올리기보다 구경하는 게 편한 당신. 정보를 얻고 트렌드를 읽는 눈이 밝아요. 가끔은 나의 이야기도 살짝 꺼내보는 것도 재밌을 거예요.",
+      },
+      curator: {
+        title: "큐레이터형 – 취향을 정갈하게 담는",
+        emoji: "🗂️",
+        desc: "피드 하나하나에 취향과 정성을 담는 당신. 보는 사람도 기분 좋아지는 감각을 가졌어요. 가끔은 완벽하지 않은 순간도 편하게 올려보세요.",
+      },
+      connector: {
+        title: "소통왕형 – 사람과 이어지는 게 즐거운",
+        emoji: "💬",
+        desc: "게시물보다 사람과의 대화가 즐거운 당신. 댓글과 DM으로 관계를 넓혀가는 힘이 있어요. 온라인만큼 오프라인 만남도 챙겨보세요.",
+      },
+    },
+  },
 ];

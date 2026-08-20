@@ -306,23 +306,6 @@ button { font: inherit; }
 .button.ghost { background: var(--surface); color: var(--text); border: 1px solid var(--border); }
 .button.block { width: 100%; }
 
-/* ---------- Ad slot ---------- */
-.ad-slot {
-  margin: 28px auto;
-  max-width: var(--max-width);
-  min-height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--surface);
-  border: 1px dashed var(--border);
-  border-radius: var(--radius-md);
-  color: var(--text-soft);
-  font-size: 0.78rem;
-  letter-spacing: 0.02em;
-}
-.ad-slot span { opacity: 0.7; }
-
 /* ---------- Quiz page ---------- */
 .quiz-shell {
   max-width: 640px;
