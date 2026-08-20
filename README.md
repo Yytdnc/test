@@ -35,6 +35,16 @@ scripts/build-quiz-pages.js  quiz-<id>.html 정적 페이지 생성 스크립트
 node scripts/build-quiz-pages.js
 ```
 
+### 캐시 무효화 (`?v=1`)
+
+`www.mindpick.net`은 Cloudflare를 앞단에 두고 있어서, `js/*.js`·`css/*.css` 파일이 배포 후에도 최대 몇 시간 동안 예전 버전으로 캐싱될 수 있습니다 (`Cache-Control: max-age=14400`). 이를 방지하기 위해 모든 `<script src="js/...">`/`<link href="css/...">`에 `?v=1` 같은 버전 쿼리스트링을 붙여뒀습니다.
+
+**`js/` 또는 `css/` 안의 파일을 수정했다면, 아래 두 곳의 버전 번호를 하나 올려주세요** (예: `?v=1` → `?v=2`):
+- `index.html`, `quiz.html`, `result.html`, `compare.html`, `admin.html`, `privacy.html`의 `?v=` 쿼리스트링
+- `scripts/build-quiz-pages.js` 안의 `?v=` 쿼리스트링 (수정 후 `node scripts/build-quiz-pages.js`로 재생성)
+
+버전 번호를 바꾸면 URL 자체가 달라지므로 캐시와 무관하게 최신 파일이 즉시 반영됩니다.
+
 ## 로컬 확인
 
 정적 파일이라 아무 웹서버로 열면 됩니다.
