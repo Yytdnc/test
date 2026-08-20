@@ -61,17 +61,6 @@
 
   retryLink.href = `quiz-${test.id}.html`;
 
-  const shareCommunityBtn = document.getElementById("share-community-btn");
-  if (shareCommunityBtn) {
-    shareCommunityBtn.addEventListener("click", () => {
-      const q =
-        computed.resultKey !== undefined
-          ? `share_result=${encodeURIComponent(computed.resultKey)}`
-          : `share_score=${encodeURIComponent(computed.score)}`;
-      location.href = `community.html?share_test=${test.id}&${q}`;
-    });
-  }
-
   shareBtn.addEventListener("click", () => {
     const url = `${location.origin}${location.pathname}?id=${test.id}&r=${mpEncodeAnswers(answers)}`;
     mpShareLink(url, document.title, () => {

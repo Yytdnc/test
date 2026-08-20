@@ -1,10 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /admin.html
-Disallow: /login.html
-Disallow: /signup.html
 Disallow: /compare.html
-Disallow: /community.html
 Disallow: /quiz.html
 Disallow: /result.html
 
