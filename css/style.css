@@ -196,6 +196,11 @@ button { font: inherit; }
   margin: 0;
 }
 
+.promo-grid { grid-template-columns: 1fr 1fr; }
+@media (max-width: 560px) {
+  .promo-grid { grid-template-columns: 1fr; }
+}
+
 /* 태그별 파스텔 색상 배리에이션 (test id로 결정) */
 .tag-c0 { background: #ffe3ec; color: #d63d72; }
 .tag-c1 { background: #e9e4ff; color: #6a4fd1; }
@@ -610,7 +615,7 @@ footer .foot-links a:hover { color: var(--accent); }
 }
 .compare-row.match .compare-answers .vs { color: #1b7a3d; }
 
-/* ---------- Auth pages (login/signup) ---------- */
+/* ---------- 폼 중심 페이지 (사주 등) ---------- */
 .auth-shell {
   max-width: 420px;
   margin: 0 auto;
@@ -664,187 +669,208 @@ footer .foot-links a:hover { color: var(--accent); }
   box-shadow: 0 0 0 3px var(--accent-soft);
 }
 
-.auth-switch {
-  text-align: center;
-  font-size: 0.85rem;
+.field { margin-bottom: 16px; }
+.field label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+.field .field-hint {
+  font-size: 0.75rem;
   color: var(--text-soft);
-  margin: 20px 0 0;
+  margin-top: 4px;
 }
-.auth-switch a { color: var(--accent-dark); font-weight: 700; }
-.auth-switch a:hover { text-decoration: underline; }
-
-.auth-prompt {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  flex-wrap: wrap;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 18px 22px;
-  margin-bottom: 24px;
-}
-.auth-prompt p { margin: 0; font-size: 0.92rem; font-weight: 600; }
-.auth-prompt .auth-prompt-actions { display: flex; gap: 8px; }
-
-.auth-user-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 16px 22px;
-  margin-bottom: 24px;
-  font-size: 0.92rem;
-}
-.auth-user-bar strong { color: var(--accent-dark); }
-
-/* ---------- Community ---------- */
-.community-shell {
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 36px 20px 60px;
-}
-
-.auth-tabs {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-.auth-tab-btn {
-  flex: 1;
-  background: #fff;
-  border: 1.5px solid var(--border);
+.field input[type="text"],
+.field input[type="date"],
+.field input[type="time"] {
+  width: 100%;
+  padding: 10px 12px;
   border-radius: var(--radius-sm);
-  padding: 9px;
-  font-weight: 700;
-  font-size: 0.88rem;
-  color: var(--text-soft);
-  cursor: pointer;
-}
-.auth-tab-btn.active {
-  border-color: var(--accent);
-  color: var(--accent-dark);
-  background: var(--accent-soft);
-}
-
-.oauth-row {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 14px;
-  padding-top: 14px;
-  border-top: 1px solid var(--border);
-}
-
-.mini-btn {
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border);
   background: #fff;
-  border-radius: 8px;
-  padding: 5px 10px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  cursor: pointer;
-  color: var(--text-soft);
+  font: inherit;
+  font-size: 0.92rem;
+  color: var(--text);
 }
-.mini-btn:hover { border-color: var(--accent); color: var(--accent); }
-.mini-btn.danger:hover { border-color: #e0524c; color: #e0524c; }
+.field input:disabled { background: var(--surface); color: var(--text-soft); }
 
-.post-list {
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--text-soft);
+  margin-top: 8px;
+}
+.checkbox-row input { width: 16px; height: 16px; }
+
+/* ---------- 사주 결과 페이지 ---------- */
+.saju-shell { max-width: 640px; }
+.saju-form-wrap { max-width: 420px; margin: 0 auto; }
+
+.saju-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface-2);
+  color: var(--accent-dark);
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.saju-gauges {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
+  margin: 0 0 24px;
 }
-.post-card {
+.saju-gauge-row .saju-gauge-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.saju-gauge-row .saju-gauge-pct { color: var(--text-soft); font-weight: 800; }
+.saju-gauge-track {
+  height: 10px;
+  background: var(--surface);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.saju-gauge-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.7s ease;
+  width: 0%;
+}
+.saju-gauge-fill.water { background: linear-gradient(90deg, #6fc2ef, #2b8fd6); }
+.saju-gauge-fill.earth { background: linear-gradient(90deg, #d9ac74, #a97a3b); }
+.saju-gauge-fill.sky { background: linear-gradient(90deg, #ac9cf7, #7c6cf0); }
+
+.saju-lucky {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 0 30px;
+}
+.saju-lucky span {
+  background: var(--surface-2);
+  color: var(--accent-dark);
+  font-weight: 700;
+  font-size: 0.78rem;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.saju-section-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+  margin: 0 0 14px;
+}
+
+.saju-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 0 0 30px;
+}
+.saju-detail-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 18px 20px;
+  padding: 16px 16px;
 }
-.post-head {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.78rem;
-  color: var(--text-soft);
-  margin-bottom: 8px;
-}
-.post-author { font-weight: 700; }
-.post-title {
-  font-size: 1rem;
-  font-weight: 800;
+.saju-detail-card h3 {
   margin: 0 0 8px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
-.post-content {
-  font-size: 0.9rem;
-  color: var(--text);
-  white-space: pre-wrap;
+.saju-detail-card p {
+  margin: 0;
+  font-size: 0.84rem;
+  color: var(--text-soft);
+}
+
+.saju-tip-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 0 0 30px;
+}
+.saju-tip-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-md);
+  padding: 16px 16px;
+}
+.saju-tip-card.dos { border-left-color: var(--accent-3); }
+.saju-tip-card h3 {
   margin: 0 0 10px;
+  font-size: 0.92rem;
+  font-weight: 800;
 }
-
-.post-share-badge {
-  display: inline-block;
-  background: var(--accent-soft);
-  color: var(--accent-dark);
-  font-size: 0.76rem;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 999px;
-  margin-bottom: 8px;
-}
-.post-share-badge:hover { opacity: 0.85; }
-
-.share-preview {
-  background: var(--accent-soft);
-  color: var(--accent-dark);
-  border-radius: var(--radius-sm);
-  padding: 10px 14px;
-  font-size: 0.85rem;
-  margin-bottom: 14px;
-}
-.share-preview-emoji { font-size: 1.1rem; }
-
-.comment-list {
+.saju-tip-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin-top: 8px;
-  padding-top: 8px;
-  border-top: 1px solid var(--border);
-}
-.comment-item {
-  display: flex;
-  align-items: baseline;
   gap: 8px;
-  font-size: 0.83rem;
-  flex-wrap: wrap;
 }
-.comment-author { font-weight: 700; color: var(--text-soft); flex-shrink: 0; }
-.comment-content { flex: 1; word-break: break-word; }
-
-.comment-form {
-  display: flex;
-  gap: 8px;
-  align-items: flex-end;
-  margin-top: 10px;
-}
-.comment-form .comment-input {
-  flex: 1;
-  resize: none;
-  padding: 8px 10px;
-  border-radius: var(--radius-sm);
-  border: 1.5px solid var(--border);
-  font: inherit;
-  font-size: 0.85rem;
-}
-.comment-hint {
-  font-size: 0.78rem;
+.saju-tip-card li {
+  font-size: 0.84rem;
   color: var(--text-soft);
-  margin: 10px 0 0;
+  padding-left: 18px;
+  position: relative;
 }
+.saju-tip-card li::before {
+  content: "•";
+  position: absolute;
+  left: 4px;
+  color: var(--accent);
+  font-weight: 800;
+}
+.saju-tip-card.dos li::before { color: var(--accent-3); }
+
+/* ---------- 오늘의 운세 (띠 선택) ---------- */
+.zodiac-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 24px 0 8px;
+}
+.zodiac-btn {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}
+.zodiac-btn:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateY(-3px);
+}
+.zodiac-btn .z-emoji { font-size: 1.8rem; display: block; margin-bottom: 6px; }
+.zodiac-btn .z-name { font-size: 0.82rem; font-weight: 700; }
 
 @media (max-width: 560px) {
+  .zodiac-grid { grid-template-columns: repeat(3, 1fr); }
   .topbar { padding: 12px 16px; gap: 10px; }
   .brand { font-size: 1rem; flex-shrink: 0; }
   .topbar nav {
@@ -869,4 +895,5 @@ footer .foot-links a:hover { color: var(--accent); }
   .result-actions { flex-direction: column; }
   .compare-cards { grid-template-columns: 1fr; }
   .compare-row .compare-answers { flex-direction: column; align-items: flex-start; }
+  .saju-detail-grid, .saju-tip-grid { grid-template-columns: 1fr; }
 }

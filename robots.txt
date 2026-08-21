@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /admin.html
 Disallow: /compare.html
 Disallow: /quiz.html
 Disallow: /result.html

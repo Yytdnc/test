@@ -7,24 +7,25 @@ poomang.com 스타일을 참고한 심리테스트 사이트입니다. 순수 �
 ```
 index.html            홈 (테스트 목록)
 quiz-<id>.html         테스트별 정적 랜딩 페이지 (SEO용, scripts/build-quiz-pages.js로 생성됨)
-quiz.html              테스트 진행 엔진 (?id=테스트ID, admin 커스텀 테스트/구버전 링크용 폴백)
+quiz.html              테스트 진행 엔진 (?id=테스트ID, 구버전 링크용 폴백)
 result.html            결과 페이지
 compare.html           커플/친구 답변 비교 결과 페이지
-admin.html             관리자 로그인 게이트 (아이디/비밀번호 입력, 실제 보안 아님)
+saju.html              이름/생년월일/태어난시각 기반 미니 사주 캐릭터 테스트
+fortune.html           띠 선택 기반 오늘의 운세 (날짜별로 매일 바뀜)
 privacy.html           개인정보처리방침 (애드센스 승인에 필요)
 css/style.css          디자인
-css/admin.css          관리자 페이지 전용 스타일
 js/tests-data.js       테스트 문항/결과 데이터 (여기만 수정하면 테스트 추가/수정 가능)
 js/main.js             홈 화면 카드 렌더링
 js/quiz.js             질문 진행 및 채점 엔진
 js/result.js           결과 표시 + 커플 비교 링크 생성
 js/compare.js          커플 비교 결과 계산/표시
-js/compare-utils.js    답변 인코딩/디코딩, 채점 로직 (quiz/result/compare 공용)
-js/admin.js            관리자 로그인 게이트 로직
+js/compare-utils.js    답변 인코딩/디코딩, 채점 로직 (quiz/result/compare/saju/fortune 공용)
+js/saju.js             saju.html 로직 (물/땅/하늘 기운 계산 + 사주 캐릭터/연애운/금전운/건강운/가족운)
+js/fortune.js          fortune.html 로직 (띠 + 오늘 날짜로 매일 바뀌는 운세 계산)
 scripts/build-quiz-pages.js  quiz-<id>.html 정적 페이지 생성 스크립트
 ```
 
-현재 테스트 30종 (`js/tests-data.js`의 `TESTS` 배열 참고).
+현재 테스트 35종 (`js/tests-data.js`의 `TESTS` 배열 참고).
 
 ### 새 테스트 추가하는 법
 `js/tests-data.js`의 `TESTS` 배열에 항목을 하나 추가하면 홈/퀴즈/결과 페이지에 자동으로 반영됩니다. `type: "category"`(유형 판정) 또는 `type: "score"`(점수 구간 판정) 중 선택. 테스트 객체에 `compare: true`를 추가하면 결과 페이지에 "커플/친구와 비교하기" 공유 링크 기능이 자동으로 활성화됩니다 (URL에 답변을 인코딩해서 전달하는 방식이라 별도 서버/DB가 필요 없습니다).
@@ -35,12 +36,12 @@ scripts/build-quiz-pages.js  quiz-<id>.html 정적 페이지 생성 스크립트
 node scripts/build-quiz-pages.js
 ```
 
-### 캐시 무효화 (`?v=1`)
+### 캐시 무효화 (`?v=`)
 
 `www.mindpick.net`은 Cloudflare를 앞단에 두고 있어서, `js/*.js`·`css/*.css` 파일이 배포 후에도 최대 몇 시간 동안 예전 버전으로 캐싱될 수 있습니다 (`Cache-Control: max-age=14400`). 이를 방지하기 위해 모든 `<script src="js/...">`/`<link href="css/...">`에 `?v=1` 같은 버전 쿼리스트링을 붙여뒀습니다.
 
-**`js/` 또는 `css/` 안의 파일을 수정했다면, 아래 두 곳의 버전 번호를 하나 올려주세요** (예: `?v=1` → `?v=2`):
-- `index.html`, `quiz.html`, `result.html`, `compare.html`, `admin.html`, `privacy.html`의 `?v=` 쿼리스트링
+**`js/` 또는 `css/` 안의 파일을 수정했다면, 아래 두 곳의 버전 번호를 하나 올려주세요** (예: `?v=2` → `?v=3`):
+- `index.html`, `quiz.html`, `result.html`, `compare.html`, `saju.html`, `fortune.html`, `privacy.html`의 `?v=` 쿼리스트링
 - `scripts/build-quiz-pages.js` 안의 `?v=` 쿼리스트링 (수정 후 `node scripts/build-quiz-pages.js`로 재생성)
 
 버전 번호를 바꾸면 URL 자체가 달라지므로 캐시와 무관하게 최신 파일이 즉시 반영됩니다.

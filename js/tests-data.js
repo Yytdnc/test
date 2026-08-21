@@ -2958,4 +2958,521 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "chronotype",
+    tag: "라이프",
+    title: "나의 아침형-저녁형 테스트",
+    emoji: "🌅",
+    tagline: "나는 아침형 인간일까, 저녁형 인간일까?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "가장 집중이 잘 되는 시간은?",
+        options: [
+          { text: "이른 아침, 해 뜨기 전", value: "morning" },
+          { text: "다들 잠든 늦은 밤", value: "night" },
+          { text: "딱히 정해진 시간은 없다", value: "flexible" },
+        ],
+      },
+      {
+        text: "알람 없이 눈이 떠지는 시간은?",
+        options: [
+          { text: "새벽~아침 일찍", value: "morning" },
+          { text: "해가 중천에 뜬 뒤", value: "night" },
+          { text: "그날그날 다르다", value: "flexible" },
+        ],
+      },
+      {
+        text: "주말 늦잠을 잔다면?",
+        options: [
+          { text: "그래도 평소처럼 일찍 깬다", value: "morning" },
+          { text: "오후까지 늘어지게 잔다", value: "night" },
+          { text: "평소보다 한두 시간 정도만", value: "flexible" },
+        ],
+      },
+      {
+        text: "저녁 약속이 늦게까지 이어지면?",
+        options: [
+          { text: "피곤해서 빨리 집에 가고 싶다", value: "morning" },
+          { text: "오히려 그때부터 텐션이 오른다", value: "night" },
+          { text: "상황 봐서 맞춘다", value: "flexible" },
+        ],
+      },
+      {
+        text: "중요한 일을 준비하는 타이밍은?",
+        options: [
+          { text: "전날 일찍 자고 아침에 마무리", value: "morning" },
+          { text: "밤새워서라도 끝까지 붙잡는다", value: "night" },
+          { text: "여유 있게 미리미리 나눠서", value: "flexible" },
+        ],
+      },
+      {
+        text: "커피를 마신다면 주로 언제?",
+        options: [
+          { text: "하루를 시작하는 아침에", value: "morning" },
+          { text: "밤에 마셔도 잠은 잘 온다", value: "night" },
+          { text: "필요할 때만 그때그때", value: "flexible" },
+        ],
+      },
+      {
+        text: "나의 하루 중 가장 생산적인 시간대는?",
+        options: [
+          { text: "오전", value: "morning" },
+          { text: "밤~새벽", value: "night" },
+          { text: "오후, 애매하게 걸쳐서", value: "flexible" },
+        ],
+      },
+      {
+        text: "친구들이 나를 표현한다면?",
+        options: [
+          { text: "일찍 자고 일찍 일어나는 부지런형", value: "morning" },
+          { text: "밤에 더 빛나는 올빼미형", value: "night" },
+          { text: "그때그때 리듬 타는 유동형", value: "flexible" },
+        ],
+      },
+    ],
+    categories: {
+      morning: {
+        title: "아침형 인간 – 얼리버드",
+        emoji: "🌅",
+        desc: "해가 뜨면 몸도 마음도 자연스럽게 깨어나는 당신. 오전 시간에 가장 맑은 정신으로 중요한 일들을 척척 해내요. 다만 밤 늦은 일정이 잡히면 컨디션이 급격히 떨어지니, 저녁 약속은 적당한 선에서 조절하는 게 좋아요.",
+      },
+      night: {
+        title: "저녁형 인간 – 올빼미족",
+        emoji: "🦉",
+        desc: "해가 지고 나서야 진짜 컨디션이 올라오는 당신. 조용한 밤 시간에 집중력과 창의력이 폭발해요. 다만 아침 일정 앞에서는 유독 힘들어하니, 전날 최소한의 수면 시간은 꼭 확보해두세요.",
+      },
+      flexible: {
+        title: "유동형 인간 – 리듬 조율러",
+        emoji: "🌗",
+        desc: "정해진 리듬보다 그날그날 컨디션에 맞춰 움직이는 당신. 상황에 따라 아침형도 저녁형도 될 수 있는 유연함이 강점이에요. 다만 일정한 루틴이 없으면 생체 리듬이 쉽게 흐트러질 수 있으니, 최소한의 기상·취침 시간은 지켜보세요.",
+      },
+    },
+  },
+
+  {
+    id: "leadership",
+    tag: "직장생활",
+    title: "나의 리더십 스타일 테스트",
+    emoji: "🧭",
+    tagline: "팀을 이끌 때 진짜 나의 모습은 어떤 리더일까요?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "새 프로젝트를 맡았을 때 가장 먼저 하는 것은?",
+        options: [
+          { text: "팀에게 큰 그림과 목표를 그려서 보여준다", value: "vision" },
+          { text: "팀원 개개인의 강점부터 파악한다", value: "coach" },
+          { text: "역할과 마감을 명확하게 배분한다", value: "commander" },
+          { text: "팀원들이 필요한 게 뭔지 먼저 물어본다", value: "servant" },
+        ],
+      },
+      {
+        text: "팀원이 실수를 했을 때?",
+        options: [
+          { text: "큰 그림에서 벗어나지 않게 방향을 다시 잡아준다", value: "vision" },
+          { text: "스스로 깨닫도록 질문을 던진다", value: "coach" },
+          { text: "정확히 무엇이 잘못됐는지 짚어준다", value: "commander" },
+          { text: "내가 도와줄 부분이 있는지 먼저 챙긴다", value: "servant" },
+        ],
+      },
+      {
+        text: "회의를 이끌 때 나의 모습은?",
+        options: [
+          { text: "큰 비전과 방향성을 계속 상기시킨다", value: "vision" },
+          { text: "다양한 의견을 이끌어내는 질문을 던진다", value: "coach" },
+          { text: "결론과 액션 아이템을 빠르게 정리한다", value: "commander" },
+          { text: "모두가 편하게 말할 수 있는 분위기를 만든다", value: "servant" },
+        ],
+      },
+      {
+        text: "팀원이 힘들어 보이면?",
+        options: [
+          { text: "큰 목표를 다시 상기시켜 동기를 준다", value: "vision" },
+          { text: "어떤 성장 포인트가 있을지 함께 고민한다", value: "coach" },
+          { text: "업무량을 조정해서 빠르게 해결해준다", value: "commander" },
+          { text: "가장 먼저 괜찮은지 마음을 살핀다", value: "servant" },
+        ],
+      },
+      {
+        text: "의사결정이 필요한 순간에는?",
+        options: [
+          { text: "장기적으로 옳은 방향을 우선한다", value: "vision" },
+          { text: "팀원들의 의견을 모아 함께 결정한다", value: "coach" },
+          { text: "신속하고 단호하게 결정한다", value: "commander" },
+          { text: "팀에 가장 도움이 되는 쪽을 고른다", value: "servant" },
+        ],
+      },
+      {
+        text: "나의 성과보다 더 신경 쓰이는 것은?",
+        options: [
+          { text: "팀이 같은 방향을 보고 있는지", value: "vision" },
+          { text: "팀원 각자가 성장하고 있는지", value: "coach" },
+          { text: "목표한 결과를 제때 냈는지", value: "commander" },
+          { text: "팀원들이 편안하게 일하고 있는지", value: "servant" },
+        ],
+      },
+      {
+        text: "새로운 팀원이 합류하면?",
+        options: [
+          { text: "우리 팀이 그리는 큰 비전부터 공유한다", value: "vision" },
+          { text: "하나씩 배워갈 수 있게 옆에서 코칭한다", value: "coach" },
+          { text: "업무 프로세스와 기준을 명확히 알려준다", value: "commander" },
+          { text: "잘 적응할 수 있게 세심하게 챙긴다", value: "servant" },
+        ],
+      },
+      {
+        text: "동료들이 나를 평가한다면?",
+        options: [
+          { text: "\"큰 그림을 보여주는 사람\"", value: "vision" },
+          { text: "\"성장하게 도와주는 사람\"", value: "coach" },
+          { text: "\"확실하게 이끄는 사람\"", value: "commander" },
+          { text: "\"묵묵히 뒤에서 챙겨주는 사람\"", value: "servant" },
+        ],
+      },
+    ],
+    categories: {
+      vision: {
+        title: "비전형 리더 – 방향을 그리는 사람",
+        emoji: "🧭",
+        desc: "큰 그림을 그리고 팀이 나아갈 방향을 명확히 제시하는 당신. 팀원들에게 영감을 주고 같은 곳을 바라보게 만드는 힘이 있어요. 다만 눈앞의 디테일을 놓칠 수 있으니, 실행 단계에서는 팀원들의 현실적인 의견도 잘 챙겨 들어보세요.",
+      },
+      coach: {
+        title: "코치형 리더 – 성장을 이끄는 사람",
+        emoji: "🌱",
+        desc: "팀원 한 명 한 명의 성장에 진심인 당신. 질문과 피드백으로 스스로 답을 찾도록 돕는 능력이 탁월해요. 다만 시간이 촉박한 상황에서는 코칭보다 빠른 결정이 필요할 때도 있다는 걸 기억하세요.",
+      },
+      commander: {
+        title: "지휘형 리더 – 확실하게 이끄는 사람",
+        emoji: "🎯",
+        desc: "명확한 기준과 빠른 결단력으로 팀을 이끄는 당신. 목표 달성과 실행력에서 믿음직한 리더예요. 다만 팀원들의 의견을 듣는 시간을 조금 더 늘리면 팀의 몰입도가 한층 높아질 거예요.",
+      },
+      servant: {
+        title: "서번트형 리더 – 뒤에서 챙기는 사람",
+        emoji: "🤲",
+        desc: "팀원들이 편하게 일할 수 있도록 뒤에서 든든히 받쳐주는 당신. 사람을 먼저 생각하는 리더십으로 깊은 신뢰를 얻어요. 다만 때로는 앞장서서 결정하고 이끄는 역할도 필요하다는 걸 잊지 마세요.",
+      },
+    },
+  },
+
+  {
+    id: "emotion",
+    tag: "성격심리",
+    title: "나의 감정표현 유형 테스트",
+    emoji: "🎭",
+    tagline: "감정을 느낄 때, 나는 어떻게 표현하는 사람일까요?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "기쁜 일이 생기면 나는?",
+        options: [
+          { text: "바로 티가 나게 신나한다", value: "expressive" },
+          { text: "속으로 좋아하고 잘 안 드러낸다", value: "reserved" },
+          { text: "왜 좋은 일인지 차분히 생각해본다", value: "rational" },
+          { text: "주변 사람과 함께 기쁨을 나누고 싶어한다", value: "empathic" },
+        ],
+      },
+      {
+        text: "속상한 일이 있을 때?",
+        options: [
+          { text: "바로 표정과 말에 드러난다", value: "expressive" },
+          { text: "혼자 삭이고 티 내지 않는다", value: "reserved" },
+          { text: "원인을 분석하며 감정을 정리한다", value: "rational" },
+          { text: "누군가에게 털어놓고 위로받고 싶다", value: "empathic" },
+        ],
+      },
+      {
+        text: "친구가 슬픈 이야기를 하면?",
+        options: [
+          { text: "같이 눈물이 날 만큼 감정이입한다", value: "expressive" },
+          { text: "묵묵히 옆에서 들어준다", value: "reserved" },
+          { text: "문제를 해결할 방법을 같이 생각한다", value: "rational" },
+          { text: "그 마음이 어떤지 깊이 공감해준다", value: "empathic" },
+        ],
+      },
+      {
+        text: "화가 났을 때 나는?",
+        options: [
+          { text: "바로 표현하고 금방 푼다", value: "expressive" },
+          { text: "오래 담아두고 잘 안 푼다", value: "reserved" },
+          { text: "화난 이유를 논리적으로 설명한다", value: "rational" },
+          { text: "화보다 서운함이 먼저 앞선다", value: "empathic" },
+        ],
+      },
+      {
+        text: "감동적인 영화나 이야기를 보면?",
+        options: [
+          { text: "눈물이 많고 리액션이 크다", value: "expressive" },
+          { text: "마음속으로만 깊이 느낀다", value: "reserved" },
+          { text: "스토리의 구조나 메시지를 분석한다", value: "rational" },
+          { text: "등장인물의 감정에 깊이 몰입한다", value: "empathic" },
+        ],
+      },
+      {
+        text: "나의 감정을 남에게 표현하는 방식은?",
+        options: [
+          { text: "말과 행동으로 확실하게 드러낸다", value: "expressive" },
+          { text: "굳이 말하지 않아도 알아주길 바란다", value: "reserved" },
+          { text: "상황을 정리해서 조리 있게 설명한다", value: "rational" },
+          { text: "상대의 반응을 살피며 조심스레 표현한다", value: "empathic" },
+        ],
+      },
+      {
+        text: "사람들이 나를 표현한다면?",
+        options: [
+          { text: "\"감정이 얼굴에 다 드러나는 사람\"", value: "expressive" },
+          { text: "\"속을 잘 모르겠는 사람\"", value: "reserved" },
+          { text: "\"침착하고 이성적인 사람\"", value: "rational" },
+          { text: "\"공감을 잘해주는 사람\"", value: "empathic" },
+        ],
+      },
+      {
+        text: "스트레스를 해소하는 방식은?",
+        options: [
+          { text: "소리 지르거나 울면서 감정을 쏟아낸다", value: "expressive" },
+          { text: "혼자 조용히 시간을 보내며 삭인다", value: "reserved" },
+          { text: "원인을 분석하고 해결책을 찾는다", value: "rational" },
+          { text: "누군가와 대화하며 마음을 나눈다", value: "empathic" },
+        ],
+      },
+    ],
+    categories: {
+      expressive: {
+        title: "표현형 – 감정에 솔직한 사람",
+        emoji: "🎨",
+        desc: "기쁨도 슬픔도 숨기지 않고 솔직하게 표현하는 당신. 감정이 살아있어서 주변 사람들도 당신의 진심을 쉽게 느껴요. 다만 순간의 감정에 휩쓸려 후회할 말이 나올 수 있으니, 한 박자 쉬고 표현하는 연습도 도움이 돼요.",
+      },
+      reserved: {
+        title: "신중형 – 속으로 깊이 느끼는 사람",
+        emoji: "🌙",
+        desc: "감정을 잘 드러내지 않지만 속으로는 누구보다 깊이 느끼는 당신. 차분하고 안정적인 인상을 주지만, 주변 사람들은 가끔 당신의 진심을 몰라 답답해할 수 있어요. 가끔은 작은 감정이라도 표현해보세요.",
+      },
+      rational: {
+        title: "이성형 – 감정도 분석하는 사람",
+        emoji: "🧠",
+        desc: "감정이 생기면 그 원인과 이유를 먼저 들여다보는 당신. 침착하게 상황을 정리하는 능력이 뛰어나요. 다만 지나치게 분석하다 감정 자체를 놓칠 수 있으니, 가끔은 그냥 느끼는 대로 두는 것도 필요해요.",
+      },
+      empathic: {
+        title: "공감형 – 함께 느끼는 사람",
+        emoji: "🤝",
+        desc: "내 감정만큼 상대의 감정에도 깊이 공감하는 당신. 사람들이 마음을 터놓고 싶어하는 존재예요. 다만 타인의 감정에 너무 몰입해 지칠 수 있으니, 나의 감정을 먼저 챙기는 것도 잊지 마세요.",
+      },
+    },
+  },
+
+  {
+    id: "cafe",
+    tag: "라이프",
+    title: "나의 카페 주문 스타일 테스트",
+    emoji: "☕",
+    tagline: "카페에서 주문하는 방식만 봐도 알 수 있는 나의 성격",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "카페에 들어가면 나는?",
+        options: [
+          { text: "늘 마시던 아메리카노를 바로 주문한다", value: "classic" },
+          { text: "디저트 메뉴부터 살펴본다", value: "sweet" },
+          { text: "신메뉴가 있는지부터 확인한다", value: "trend" },
+          { text: "옵션을 하나하나 커스텀해서 주문한다", value: "custom" },
+        ],
+      },
+      {
+        text: "새로운 카페에 가면?",
+        options: [
+          { text: "시그니처보다 무난한 메뉴를 고른다", value: "classic" },
+          { text: "제일 달아 보이는 메뉴를 고른다", value: "sweet" },
+          { text: "SNS에서 화제였던 메뉴를 찾는다", value: "trend" },
+          { text: "나만의 조합으로 주문할 수 있는지 물어본다", value: "custom" },
+        ],
+      },
+      {
+        text: "주문할 때 직원에게 요청하는 것은?",
+        options: [
+          { text: "거의 없다, 기본 그대로", value: "classic" },
+          { text: "시럽이나 휘핑을 추가해달라고 한다", value: "sweet" },
+          { text: "요즘 제일 잘 나가는 메뉴를 추천받는다", value: "trend" },
+          { text: "얼음 양, 샷 추가 등 세세하게 요청한다", value: "custom" },
+        ],
+      },
+      {
+        text: "친구가 카페 메뉴를 고민하면?",
+        options: [
+          { text: "실패 없는 무난한 메뉴를 추천한다", value: "classic" },
+          { text: "제일 달콤한 디저트류를 추천한다", value: "sweet" },
+          { text: "요즘 유행하는 신메뉴를 추천한다", value: "trend" },
+          { text: "취향에 맞게 커스텀하는 법을 알려준다", value: "custom" },
+        ],
+      },
+      {
+        text: "카페 대기줄이 길면?",
+        options: [
+          { text: "그냥 무난하게 아무거나 시킨다", value: "classic" },
+          { text: "디저트라도 하나 건져야 한다는 생각뿐", value: "sweet" },
+          { text: "그래도 신메뉴는 꼭 맛본다", value: "trend" },
+          { text: "줄이 길어도 원하는 옵션은 꼭 요청한다", value: "custom" },
+        ],
+      },
+      {
+        text: "집에서 커피를 마신다면?",
+        options: [
+          { text: "믹스커피나 아메리카노로 심플하게", value: "classic" },
+          { text: "달달한 라떼나 초코음료로", value: "sweet" },
+          { text: "요즘 유행하는 레시피를 따라 만든다", value: "trend" },
+          { text: "원두, 우유 비율까지 직접 맞춰서", value: "custom" },
+        ],
+      },
+      {
+        text: "카페 메뉴판을 볼 때 가장 먼저 보는 것은?",
+        options: [
+          { text: "늘 마시던 메뉴가 있는지", value: "classic" },
+          { text: "디저트나 달콤한 음료 코너", value: "sweet" },
+          { text: "새로 나온 시즌 메뉴", value: "trend" },
+          { text: "커스텀 옵션이 뭐가 있는지", value: "custom" },
+        ],
+      },
+      {
+        text: "사람들이 내 커피 취향을 표현한다면?",
+        options: [
+          { text: "\"군더더기 없이 심플한 취향\"", value: "classic" },
+          { text: "\"디저트 없인 못 사는 단맛 러버\"", value: "sweet" },
+          { text: "\"늘 최신 유행을 아는 트렌드세터\"", value: "trend" },
+          { text: "\"나만의 방식이 확실한 사람\"", value: "custom" },
+        ],
+      },
+    ],
+    categories: {
+      classic: {
+        title: "클래식파 – 아메리카노 한 잔이면 충분",
+        emoji: "☕",
+        desc: "화려한 것보다 늘 마시던 익숙한 맛이 편안한 당신. 자신만의 확고한 취향이 있고, 유행에 쉽게 흔들리지 않는 편이에요. 가끔은 새로운 메뉴에 도전해보는 것도 소소한 재미가 될 거예요.",
+      },
+      sweet: {
+        title: "디저트파 – 단맛이 곧 행복",
+        emoji: "🍰",
+        desc: "카페는 곧 디저트 타임인 당신에게 달콤함은 하루의 힐링이에요. 소소한 것에서 행복을 찾는 감각이 뛰어나죠. 당 섭취는 적당히 조절하는 것도 잊지 마세요.",
+      },
+      trend: {
+        title: "트렌드파 – 유행은 내가 먼저",
+        emoji: "✨",
+        desc: "새로운 메뉴, 새로운 유행을 누구보다 빠르게 캐치하는 당신. 남들보다 한발 앞서가는 감각이 매력이에요. 가끔은 익숙한 메뉴에서 편안함을 느껴보는 것도 좋아요.",
+      },
+      custom: {
+        title: "커스텀파 – 취향은 내가 만든다",
+        emoji: "🎛️",
+        desc: "정해진 메뉴보다 나만의 조합을 만드는 게 더 즐거운 당신. 뚜렷한 취향과 디테일을 챙기는 섬세함이 있어요. 가끔은 그냥 메뉴판 그대로 편하게 주문해보는 것도 색다른 즐거움이 될 거예요.",
+      },
+    },
+  },
+
+  {
+    id: "gamer",
+    tag: "밈",
+    title: "나의 게임 캐릭터 유형 테스트",
+    emoji: "🎮",
+    tagline: "게임 속 나는 딜러, 탱커, 힐러, 서포터 중 어떤 역할일까요?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "팀 게임을 할 때 나의 역할은?",
+        options: [
+          { text: "앞장서서 공격하고 화력을 낸다", value: "dealer" },
+          { text: "맨 앞에서 맞으며 팀을 지킨다", value: "tank" },
+          { text: "팀원 상태를 살피며 회복시킨다", value: "healer" },
+          { text: "버프, 아이템 등으로 팀을 보조한다", value: "support" },
+        ],
+      },
+      {
+        text: "위기 상황이 오면?",
+        options: [
+          { text: "최대한 빠르게 적을 처치하려 한다", value: "dealer" },
+          { text: "몸으로 막아서며 버틴다", value: "tank" },
+          { text: "팀원들을 살리는 데 집중한다", value: "healer" },
+          { text: "상황을 보조할 방법을 찾는다", value: "support" },
+        ],
+      },
+      {
+        text: "게임에서 가장 짜릿한 순간은?",
+        options: [
+          { text: "큰 데미지로 적을 처치할 때", value: "dealer" },
+          { text: "위험한 공격을 대신 막아낼 때", value: "tank" },
+          { text: "죽어가는 팀원을 살려낼 때", value: "healer" },
+          { text: "결정적인 버프로 승기를 잡을 때", value: "support" },
+        ],
+      },
+      {
+        text: "팀원이 위험에 처하면?",
+        options: [
+          { text: "빠르게 적을 처리해서 상황을 끝낸다", value: "dealer" },
+          { text: "몸으로 막아서서 시간을 번다", value: "tank" },
+          { text: "즉시 회복 스킬을 사용한다", value: "healer" },
+          { text: "보호막이나 이동기로 도와준다", value: "support" },
+        ],
+      },
+      {
+        text: "캐릭터를 고를 때 중시하는 것은?",
+        options: [
+          { text: "강력한 공격력", value: "dealer" },
+          { text: "높은 방어력과 체력", value: "tank" },
+          { text: "회복과 생존 지원 능력", value: "healer" },
+          { text: "팀에 도움 되는 유틸리티 스킬", value: "support" },
+        ],
+      },
+      {
+        text: "게임이 잘 안 풀릴 때 나는?",
+        options: [
+          { text: "더 공격적으로 몰아붙인다", value: "dealer" },
+          { text: "묵묵히 버티며 팀을 지킨다", value: "tank" },
+          { text: "팀 전체 컨디션부터 챙긴다", value: "healer" },
+          { text: "상황을 보조하며 흐름을 바꾸려 한다", value: "support" },
+        ],
+      },
+      {
+        text: "팀원들이 나에게 기대하는 것은?",
+        options: [
+          { text: "확실한 딜, 승부를 끝내는 한 방", value: "dealer" },
+          { text: "든든하게 버텨주는 존재감", value: "tank" },
+          { text: "팀을 살리는 회복력", value: "healer" },
+          { text: "눈에 띄지 않아도 꼭 필요한 도움", value: "support" },
+        ],
+      },
+      {
+        text: "현실에서도 나는 어떤 사람에 가까운가?",
+        options: [
+          { text: "확실한 성과로 앞장서는 사람", value: "dealer" },
+          { text: "힘든 일도 묵묵히 버텨내는 사람", value: "tank" },
+          { text: "지친 사람을 챙기고 회복시키는 사람", value: "healer" },
+          { text: "티 안 나게 뒤에서 도와주는 사람", value: "support" },
+        ],
+      },
+    ],
+    categories: {
+      dealer: {
+        title: "딜러형 – 화력을 책임지는 사람",
+        emoji: "⚔️",
+        desc: "확실한 성과로 승부를 끝내는 당신. 목표를 향해 거침없이 나아가는 추진력이 최대 강점이에요. 다만 혼자 앞서 나가다 팀과 호흡이 어긋날 수 있으니, 주변과 속도를 맞추는 것도 챙겨보세요.",
+      },
+      tank: {
+        title: "탱커형 – 앞에서 지켜주는 사람",
+        emoji: "🛡️",
+        desc: "힘든 순간에도 묵묵히 버티며 자리를 지키는 당신. 팀에게 든든한 존재감을 주는 사람이에요. 다만 혼자 다 막아내려다 지칠 수 있으니, 가끔은 뒤로 물러나 쉬어가는 것도 필요해요.",
+      },
+      healer: {
+        title: "힐러형 – 회복을 책임지는 사람",
+        emoji: "💚",
+        desc: "지친 사람을 알아보고 먼저 챙기는 당신. 곁에 있는 사람들을 회복시키는 따뜻한 힘을 가졌어요. 다만 남을 챙기다 정작 자신의 회복은 뒷전이 되기 쉬우니, 스스로를 돌보는 시간도 꼭 챙기세요.",
+      },
+      support: {
+        title: "서포터형 – 티 안 나게 돕는 사람",
+        emoji: "✨",
+        desc: "눈에 띄지 않아도 꼭 필요한 순간에 힘이 되어주는 당신. 팀 전체의 흐름을 바꾸는 숨은 주역이에요. 다만 공을 드러내지 않다 보니 존재감이 가려질 수 있으니, 가끔은 자신의 기여도 당당히 표현해보세요.",
+      },
+    },
+  },
 ];
