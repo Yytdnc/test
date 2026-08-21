@@ -73,12 +73,16 @@ function buildPage(test) {
   <meta property="og:description" content="${d}" />
   <meta property="og:url" content="${url}" />
   <meta property="og:locale" content="ko_KR" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="${SITE_URL}/img/og-share.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${t}" />
   <meta name="twitter:description" content="${d}" />
+  <meta name="twitter:image" content="${SITE_URL}/img/og-share.png" />
   <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=2" />
+  <link rel="stylesheet" href="css/style.css?v=4" />
   <script type="application/ld+json">${breadcrumbJsonLd}</script>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5113083554519679" crossorigin="anonymous"></script>
@@ -136,14 +140,14 @@ function buildPage(test) {
 
   <script>window.MP_TEST_ID = ${JSON.stringify(test.id)};</script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/supabase-config.js?v=2"></script>
-  <script src="js/views.js?v=2"></script>
-  <script src="js/tests-data.js?v=2"></script>
-  <script src="js/custom-tests.js?v=2"></script>
-  <script src="js/tests-registry.js?v=2"></script>
-  <script src="js/compare-utils.js?v=2"></script>
-  <script src="js/compare-session.js?v=2"></script>
-  <script src="js/quiz.js?v=2"></script>
+  <script src="js/supabase-config.js?v=4"></script>
+  <script src="js/views.js?v=4"></script>
+  <script src="js/tests-data.js?v=4"></script>
+  <script src="js/custom-tests.js?v=4"></script>
+  <script src="js/tests-registry.js?v=4"></script>
+  <script src="js/compare-utils.js?v=4"></script>
+  <script src="js/compare-session.js?v=4"></script>
+  <script src="js/quiz.js?v=4"></script>
 </body>
 </html>
 `;

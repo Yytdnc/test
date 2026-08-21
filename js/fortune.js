@@ -174,6 +174,9 @@
         <button type="button" id="fortune-back-btn" class="button ghost" style="flex:1;">다른 띠 보기</button>
         <button type="button" id="fortune-share-btn" class="button primary" style="flex:1;">🔗 오늘의 운세 공유하기</button>
       </div>
+      <div class="result-actions">
+        <button type="button" id="kakao-share-btn" class="button block" style="background:#fee500; color:#3c1e1e;">💬 카카오톡으로 공유하기</button>
+      </div>
     `;
   }
 
@@ -208,6 +211,13 @@
         setTimeout(() => (btn.textContent = "🔗 오늘의 운세 공유하기"), 1800);
       });
     });
+
+    mpSetupKakaoButton(document.getElementById("kakao-share-btn"), () => ({
+      title: `${zodiac.name} 오늘의 운세 (${formatDateKo(dateStr)})`,
+      description: f_overall_for_share(zodiac, dateStr),
+      url: `${location.origin}/fortune.html?z=${zodiac.id}`,
+      buttonTitle: "내 띠 운세 보기",
+    }));
   }
 
   function f_overall_for_share(zodiac, dateStr) {

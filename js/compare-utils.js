@@ -104,3 +104,51 @@ function mpShareFallback(url, onCopied) {
   }
   window.prompt("아래 링크를 복사해서 공유해주세요 📋", url);
 }
+
+/* 카카오톡 공유: js/kakao-config.js에 실제 JS 키를 넣기 전까지는 비활성 상태로 남는다
+ * (플레이스홀더 키로는 카카오 SDK 초기화가 실패하므로, 버튼 자체를 숨겨서
+ * "눌러도 안 되는 버튼"이 노출되지 않도록 한다) */
+function mpKakaoReady() {
+  return (
+    typeof KAKAO_JS_KEY === "string" &&
+    !KAKAO_JS_KEY.startsWith("YOUR_") &&
+    typeof window.Kakao !== "undefined"
+  );
+}
+
+function mpKakaoInit() {
+  if (!mpKakaoReady()) return false;
+  if (!window.Kakao.isInitialized()) {
+    window.Kakao.init(KAKAO_JS_KEY);
+  }
+  return true;
+}
+
+function mpKakaoShare({ title, description, imageUrl, url, buttonTitle }) {
+  if (!mpKakaoInit()) return false;
+  const link = { mobileWebUrl: url, webUrl: url };
+  window.Kakao.Share.sendDefault({
+    objectType: "feed",
+    content: {
+      title,
+      description,
+      imageUrl: imageUrl || `${location.origin}/img/og-share.png`,
+      link,
+    },
+    buttons: [{ title: buttonTitle || "나도 확인해보기", link }],
+  });
+  return true;
+}
+
+/* 카카오 공유 버튼을 세팅한다. 키가 없으면 버튼을 숨기고, 있으면 클릭 시
+ * getShareData()가 반환하는 { title, description, imageUrl, url, buttonTitle }로 공유한다. */
+function mpSetupKakaoButton(btn, getShareData) {
+  if (!btn) return;
+  if (!mpKakaoReady()) {
+    btn.style.display = "none";
+    return;
+  }
+  btn.addEventListener("click", () => {
+    mpKakaoShare(getShareData());
+  });
+}

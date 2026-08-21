@@ -19,13 +19,15 @@ js/main.js             홈 화면 카드 렌더링
 js/quiz.js             질문 진행 및 채점 엔진
 js/result.js           결과 표시 + 커플 비교 링크 생성
 js/compare.js          커플 비교 결과 계산/표시
-js/compare-utils.js    답변 인코딩/디코딩, 채점 로직 (quiz/result/compare/saju/fortune 공용)
+js/compare-utils.js    답변 인코딩/디코딩, 채점 로직 + 카카오톡 공유 헬퍼 (quiz/result/compare/saju/fortune 공용)
 js/saju.js             saju.html 로직 (물/땅/하늘 기운 계산 + 사주 캐릭터/연애운/금전운/건강운/가족운)
 js/fortune.js          fortune.html 로직 (띠 + 오늘 날짜로 매일 바뀌는 운세 계산)
+js/kakao-config.js     카카오 JS SDK 앱 키 설정 (아래 "카카오톡 공유 설정" 참고)
+img/og-share.png       링크 공유 시 노출되는 대표 이미지 (OG 이미지 / 카카오 공유 카드)
 scripts/build-quiz-pages.js  quiz-<id>.html 정적 페이지 생성 스크립트
 ```
 
-현재 테스트 35종 (`js/tests-data.js`의 `TESTS` 배열 참고).
+현재 테스트 40종 (`js/tests-data.js`의 `TESTS` 배열 참고).
 
 ### 새 테스트 추가하는 법
 `js/tests-data.js`의 `TESTS` 배열에 항목을 하나 추가하면 홈/퀴즈/결과 페이지에 자동으로 반영됩니다. `type: "category"`(유형 판정) 또는 `type: "score"`(점수 구간 판정) 중 선택. 테스트 객체에 `compare: true`를 추가하면 결과 페이지에 "커플/친구와 비교하기" 공유 링크 기능이 자동으로 활성화됩니다 (URL에 답변을 인코딩해서 전달하는 방식이라 별도 서버/DB가 필요 없습니다).
@@ -82,6 +84,21 @@ python3 -m http.server 8080
    - `.ad-slot` div들을 실제 `<ins class="adsbygoogle">` 광고 단위 코드로 교체 (AdSense 관리자 페이지에서 광고 단위 생성 후 복사)
 3. 저장소 루트에 `ads.txt` 파일을 만들고 AdSense에서 안내하는 내용(`google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0`)을 넣어주세요. (예시 `ads.txt` 포함되어 있음, 값만 교체)
 4. 애드센스는 실제 콘텐츠와 트래픽이 있어야 승인되는 경우가 많으니, 테스트 문항을 더 채우고 일정 기간 운영 후 신청하는 것을 권장합니다.
+
+## 카카오톡 공유 설정
+
+결과/사주/운세 페이지에 "카카오톡으로 공유하기" 버튼이 있는데, 실제 앱 키를 넣기 전까지는 자동으로 숨겨져 있습니다.
+
+1. [Kakao Developers](https://developers.kakao.com)에 가입 후 애플리케이션을 하나 생성합니다.
+2. [내 애플리케이션 > 앱 설정 > 플랫폼]에서 "Web 플랫폼 등록"으로 `https://www.mindpick.net`을 등록합니다.
+3. [내 애플리케이션 > 앱 키]에서 **JavaScript 키**를 복사해 `js/kakao-config.js`의 `KAKAO_JS_KEY` 값에 넣습니다.
+4. [제품 설정 > 카카오 로그인]은 필요 없고, 카카오톡 공유(메시지 API) 기능은 앱 생성 시 기본 활성화되어 있습니다.
+
+키를 넣은 뒤 `js/kakao-config.js`를 커밋/배포하면 버튼이 자동으로 나타납니다.
+
+## 링크 공유 미리보기 이미지 (OG 이미지)
+
+`img/og-share.png`가 카카오톡/트위터(X)/디스코드 등에 링크를 공유했을 때 뜨는 대표 카드 이미지입니다. 모든 페이지의 `og:image`/`twitter:image`가 이 파일을 가리키고 있습니다. 브랜드 톤(문구, 색상 등)이 바뀌면 이 이미지도 새로 만들어서 같은 경로(`img/og-share.png`, 1200×630px)에 덮어써 주세요.
 
 ## 참고
 

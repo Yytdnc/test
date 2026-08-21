@@ -61,13 +61,21 @@
 
   retryLink.href = `quiz-${test.id}.html`;
 
+  const shareUrl = () => `${location.origin}${location.pathname}?id=${test.id}&r=${mpEncodeAnswers(answers)}`;
+
   shareBtn.addEventListener("click", () => {
-    const url = `${location.origin}${location.pathname}?id=${test.id}&r=${mpEncodeAnswers(answers)}`;
-    mpShareLink(url, document.title, () => {
+    mpShareLink(shareUrl(), document.title, () => {
       shareBtn.textContent = "링크가 복사되었어요!";
       setTimeout(() => (shareBtn.textContent = "결과 링크 공유하기"), 1800);
     });
   });
+
+  mpSetupKakaoButton(document.getElementById("kakao-share-btn"), () => ({
+    title: `${resultInfo.emoji} ${resultInfo.title}`,
+    description: `${test.title} 결과: ${resultInfo.desc}`,
+    url: shareUrl(),
+    buttonTitle: "나도 결과 보기",
+  }));
 
   if (test.compare) {
     const inviteEl = document.getElementById("compare-invite");

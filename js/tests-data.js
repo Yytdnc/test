@@ -3475,4 +3475,502 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "lovelanguage",
+    tag: "연애심리",
+    title: "5가지 사랑의 언어 테스트",
+    emoji: "💌",
+    tagline: "내가 사랑을 느끼고 표현하는 방식은 어떤 언어일까요?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "연인에게 사랑받고 있다고 가장 크게 느낄 때는?",
+        options: [
+          { text: "\"고맙다\", \"잘했다\" 같은 말을 들을 때", value: "words" },
+          { text: "온전히 둘만의 시간을 보낼 때", value: "time" },
+          { text: "나를 생각하며 준비한 선물을 받을 때", value: "gifts" },
+          { text: "나 대신 귀찮은 일을 해줄 때", value: "service" },
+          { text: "손을 잡거나 안아줄 때", value: "touch" },
+        ],
+      },
+      {
+        text: "연인에게 사랑을 표현하는 나만의 방식은?",
+        options: [
+          { text: "좋은 말을 자주 해준다", value: "words" },
+          { text: "시간을 내서 함께 있으려 한다", value: "time" },
+          { text: "선물이나 깜짝 이벤트를 준비한다", value: "gifts" },
+          { text: "필요한 걸 먼저 챙겨서 해준다", value: "service" },
+          { text: "스킨십으로 애정을 표현한다", value: "touch" },
+        ],
+      },
+      {
+        text: "서운함을 가장 크게 느끼는 순간은?",
+        options: [
+          { text: "칭찬이나 인정의 말이 없을 때", value: "words" },
+          { text: "같이 있어도 각자 딴짓을 할 때", value: "time" },
+          { text: "기념일에 선물이 없을 때", value: "gifts" },
+          { text: "부탁해도 도와주지 않을 때", value: "service" },
+          { text: "스킨십에 소극적일 때", value: "touch" },
+        ],
+      },
+      {
+        text: "힘든 하루를 보낸 연인에게 나는?",
+        options: [
+          { text: "위로와 칭찬의 말을 건넨다", value: "words" },
+          { text: "옆에서 시간을 함께 보내준다", value: "time" },
+          { text: "좋아하는 걸 사다 준다", value: "gifts" },
+          { text: "대신 할 일을 처리해준다", value: "service" },
+          { text: "꼭 안아준다", value: "touch" },
+        ],
+      },
+      {
+        text: "이상적인 기념일은?",
+        options: [
+          { text: "진심 어린 편지나 말 한마디", value: "words" },
+          { text: "방해받지 않는 온전한 데이트", value: "time" },
+          { text: "정성스럽게 고른 선물", value: "gifts" },
+          { text: "서로를 위해 뭔가를 해주는 하루", value: "service" },
+          { text: "꼭 붙어있는 스킨십 가득한 하루", value: "touch" },
+        ],
+      },
+      {
+        text: "연인이 바빠서 연락이 뜸하면?",
+        options: [
+          { text: "그래도 따뜻한 말 한마디면 괜찮다", value: "words" },
+          { text: "짧더라도 함께 있는 시간이 아쉽다", value: "time" },
+          { text: "작은 선물이라도 챙겨주면 좋겠다", value: "gifts" },
+          { text: "사소한 걸 챙겨주면 마음이 풀린다", value: "service" },
+          { text: "만나면 꼭 안아주길 바란다", value: "touch" },
+        ],
+      },
+      {
+        text: "친구들에게 애정을 표현할 때도?",
+        options: [
+          { text: "칭찬과 격려의 말을 자주 한다", value: "words" },
+          { text: "시간을 내서 자주 만난다", value: "time" },
+          { text: "작은 선물을 자주 챙긴다", value: "gifts" },
+          { text: "도움이 필요할 때 발 벗고 나선다", value: "service" },
+          { text: "스킨십(하이파이브, 포옹)이 자연스럽다", value: "touch" },
+        ],
+      },
+      {
+        text: "나에게 최고의 사랑 표현은?",
+        options: [
+          { text: "\"너라서 고마워\"라는 말", value: "words" },
+          { text: "아무것도 안 해도 함께 있는 시간", value: "time" },
+          { text: "마음이 담긴 선물", value: "gifts" },
+          { text: "필요할 때 곁에서 도와주는 것", value: "service" },
+          { text: "따뜻한 포옹 한 번", value: "touch" },
+        ],
+      },
+    ],
+    categories: {
+      words: {
+        title: "인정하는 말형 – 말 한마디의 힘을 아는 사람",
+        emoji: "💬",
+        desc: "따뜻한 말 한마디에 사랑을 느끼는 당신. 칭찬과 감사의 표현이 관계를 채우는 가장 큰 힘이에요. 연인에게도 마음을 말로 자주 표현해보세요. 듣고 싶은 말을 먼저 해주는 것도 좋은 방법이에요.",
+      },
+      time: {
+        title: "함께하는 시간형 – 온전한 순간이 소중한 사람",
+        emoji: "⏳",
+        desc: "같이 보내는 시간 자체가 사랑의 증거인 당신. 짧아도 온전히 집중하는 시간이 무엇보다 소중해요. 바쁘더라도 서로에게 온전히 집중하는 시간을 꼭 만들어보세요.",
+      },
+      gifts: {
+        title: "선물형 – 마음이 담긴 물건으로 느끼는 사람",
+        emoji: "🎁",
+        desc: "정성이 담긴 선물에서 사랑을 느끼는 당신. 값비싼 것보다 '나를 생각했다'는 마음 자체가 중요해요. 작더라도 마음을 담은 선물을 주고받는 걸 즐겨보세요.",
+      },
+      service: {
+        title: "봉사형 – 행동으로 느끼는 사람",
+        emoji: "🤲",
+        desc: "말보다 행동으로 보여주는 사랑이 와닿는 당신. 상대가 나를 위해 무언가를 해줄 때 가장 큰 사랑을 느껴요. 서로를 위해 작은 일을 대신 해주는 습관을 만들어보세요.",
+      },
+      touch: {
+        title: "스킨십형 – 손끝으로 느끼는 사람",
+        emoji: "🤗",
+        desc: "포옹이나 손길 같은 스킨십에서 안정감을 느끼는 당신. 신체적 접촉이 곧 사랑의 언어예요. 말이 서툴러도 다정한 스킨십으로 마음을 전해보세요.",
+      },
+    },
+  },
+
+  {
+    id: "selfesteem",
+    tag: "힐링",
+    title: "나의 자존감 테스트",
+    emoji: "🌟",
+    tagline: "지금 내 마음의 자존감은 얼마나 단단할까요?",
+    type: "score",
+    compare: true,
+    questions: [
+      {
+        text: "실수를 했을 때 나는?",
+        options: [
+          { text: "\"역시 난 안 돼\" 라고 자책한다", value: 1 },
+          { text: "한동안 마음이 무겁다", value: 2 },
+          { text: "그럴 수도 있지 하고 넘긴다", value: 3 },
+          { text: "다음엔 더 잘할 수 있다고 생각한다", value: 4 },
+        ],
+      },
+      {
+        text: "거울 속 내 모습을 보면?",
+        options: [
+          { text: "마음에 안 드는 부분만 보인다", value: 1 },
+          { text: "좋은 점보다 부족한 점이 먼저 보인다", value: 2 },
+          { text: "그냥저냥 괜찮다고 생각한다", value: 3 },
+          { text: "나름 마음에 드는 부분이 많다", value: 4 },
+        ],
+      },
+      {
+        text: "누군가 나를 칭찬하면?",
+        options: [
+          { text: "괜히 부담스럽고 믿기지 않는다", value: 1 },
+          { text: "예의상 하는 말 같다", value: 2 },
+          { text: "고맙게 받아들인다", value: 3 },
+          { text: "자연스럽게 인정하고 기뻐한다", value: 4 },
+        ],
+      },
+      {
+        text: "남과 나를 비교하게 될 때?",
+        options: [
+          { text: "늘 내가 부족하다고 느낀다", value: 1 },
+          { text: "자주 위축된다", value: 2 },
+          { text: "가끔 신경 쓰이지만 곧 잊는다", value: 3 },
+          { text: "각자의 길이 다르다고 생각한다", value: 4 },
+        ],
+      },
+      {
+        text: "거절을 해야 할 때 나는?",
+        options: [
+          { text: "미움받을까 봐 거의 못 한다", value: 1 },
+          { text: "하고 나서도 계속 신경 쓰인다", value: 2 },
+          { text: "조심스럽지만 필요하면 한다", value: 3 },
+          { text: "내 기준이 있으면 편하게 거절한다", value: 4 },
+        ],
+      },
+      {
+        text: "실패를 경험하면?",
+        options: [
+          { text: "내 가치 자체가 부정당한 것 같다", value: 1 },
+          { text: "오래도록 자신감을 잃는다", value: 2 },
+          { text: "속상하지만 곧 털어낸다", value: 3 },
+          { text: "배울 점을 찾고 다시 시도한다", value: 4 },
+        ],
+      },
+      {
+        text: "혼자 있는 시간에 드는 생각은?",
+        options: [
+          { text: "내가 잘 살고 있는지 불안하다", value: 1 },
+          { text: "남들과 비교하며 초조해진다", value: 2 },
+          { text: "그럭저럭 편안하다", value: 3 },
+          { text: "온전히 나를 채우는 시간이라 좋다", value: 4 },
+        ],
+      },
+      {
+        text: "나 자신에게 해주고 싶은 말은?",
+        options: [
+          { text: "왜 이렇게밖에 못하냐는 말", value: 1 },
+          { text: "좀 더 노력하라는 말", value: 2 },
+          { text: "지금도 나쁘지 않다는 말", value: 3 },
+          { text: "있는 그대로 충분하다는 말", value: 4 },
+        ],
+      },
+    ],
+    scoreRanges: [
+      { min: 8, max: 14, title: "자존감 충전이 필요해요", emoji: "🌱", desc: "요즘 스스로에게 유독 엄격했던 것 같아요. 나의 가치는 성과나 남의 시선으로 결정되지 않는다는 걸 기억해주세요. 작은 성취도 스스로 인정해주는 연습부터 시작해보세요." },
+      { min: 15, max: 20, title: "자존감이 흔들리는 시기예요", emoji: "🌤️", desc: "괜찮을 때도 있지만 작은 일에 쉽게 흔들리는 편이에요. 남과 비교하기보다 어제의 나와 비교하는 습관을 들여보면 마음이 한결 편해질 거예요." },
+      { min: 21, max: 26, title: "안정적인 자존감을 가지고 있어요", emoji: "🌻", desc: "대체로 나 자신을 잘 받아들이는 편이에요. 가끔 흔들려도 금방 중심을 되찾는 힘이 있어요. 지금의 균형 잡힌 마음가짐을 잘 유지해보세요." },
+      { min: 27, max: 32, title: "단단한 자존감의 소유자예요", emoji: "🌳", desc: "나 자신을 있는 그대로 존중하고 인정할 줄 아는 당신. 실패나 비교에도 크게 흔들리지 않는 단단한 마음을 가졌어요. 그 여유를 주변 사람들에게도 나눠주세요." },
+    ],
+  },
+
+  {
+    id: "productivity",
+    tag: "자기계발",
+    title: "나의 갓생 지수 테스트",
+    emoji: "📈",
+    tagline: "요즘 내 하루, 얼마나 알차게 채워지고 있을까요?",
+    type: "score",
+    compare: true,
+    questions: [
+      {
+        text: "아침에 일어나면 가장 먼저 하는 것은?",
+        options: [
+          { text: "눈뜨자마자 휴대폰부터 본다", value: 1 },
+          { text: "조금 미적대다 겨우 일어난다", value: 2 },
+          { text: "정해진 루틴대로 움직인다", value: 3 },
+          { text: "계획한 목표부터 떠올린다", value: 4 },
+        ],
+      },
+      {
+        text: "하루 일과를 계획하는 편인가요?",
+        options: [
+          { text: "거의 즉흥적으로 움직인다", value: 1 },
+          { text: "머릿속으로만 대충 생각한다", value: 2 },
+          { text: "간단하게라도 적어둔다", value: 3 },
+          { text: "시간 단위로 꼼꼼히 계획한다", value: 4 },
+        ],
+      },
+      {
+        text: "운동이나 자기관리는?",
+        options: [
+          { text: "거의 하지 않는다", value: 1 },
+          { text: "마음만 먹고 잘 안 된다", value: 2 },
+          { text: "가끔이라도 챙기려 한다", value: 3 },
+          { text: "꾸준한 루틴으로 자리 잡았다", value: 4 },
+        ],
+      },
+      {
+        text: "목표를 세울 때 나는?",
+        options: [
+          { text: "목표 자체를 잘 안 세운다", value: 1 },
+          { text: "세워도 금방 흐지부지된다", value: 2 },
+          { text: "작은 목표는 곧잘 지킨다", value: 3 },
+          { text: "장단기 목표를 나눠서 실천한다", value: 4 },
+        ],
+      },
+      {
+        text: "잠자리에 들기 전 하루를 돌아보면?",
+        options: [
+          { text: "오늘 뭘 했는지 기억이 안 난다", value: 1 },
+          { text: "시간을 허비한 것 같아 아쉽다", value: 2 },
+          { text: "나름 할 일은 했다고 느낀다", value: 3 },
+          { text: "뿌듯한 마음으로 하루를 마무리한다", value: 4 },
+        ],
+      },
+      {
+        text: "새로운 습관을 만들 때 나는?",
+        options: [
+          { text: "시도조차 잘 안 한다", value: 1 },
+          { text: "며칠 하다 포기한다", value: 2 },
+          { text: "조금씩이라도 이어간다", value: 3 },
+          { text: "꾸준히 기록하며 습관화한다", value: 4 },
+        ],
+      },
+      {
+        text: "시간 관리 앱이나 다이어리 사용은?",
+        options: [
+          { text: "전혀 쓰지 않는다", value: 1 },
+          { text: "받아만 놓고 안 쓴다", value: 2 },
+          { text: "가끔 필요할 때 쓴다", value: 3 },
+          { text: "매일 습관처럼 활용한다", value: 4 },
+        ],
+      },
+      {
+        text: "스스로의 하루를 점수로 매긴다면?",
+        options: [
+          { text: "늘 낮은 점수를 준다", value: 1 },
+          { text: "평균 이하라고 느낀다", value: 2 },
+          { text: "평균은 한다고 생각한다", value: 3 },
+          { text: "꽤 만족스러운 점수를 준다", value: 4 },
+        ],
+      },
+    ],
+    scoreRanges: [
+      { min: 8, max: 14, title: "충전이 필요한 널브러짐형", emoji: "🛌", desc: "요즘 하루하루가 유독 늘어지는 편이에요. 무리해서 갓생을 살기보다, 딱 하나만 작은 루틴을 만들어보는 것부터 시작해보세요. 작은 성공이 다음 동력이 될 거예요." },
+      { min: 15, max: 20, title: "느슨한 시작형", emoji: "🌱", desc: "마음은 있지만 실천이 아직 서툰 편이에요. 거창한 계획보다 5분짜리 작은 습관 하나를 꾸준히 이어가 보세요. 완벽보다 꾸준함이 먼저예요." },
+      { min: 21, max: 26, title: "꾸준한 루틴형", emoji: "📅", desc: "나름의 루틴을 가지고 하루하루를 채워가는 당신. 계획한 것들을 착실히 해내는 편이에요. 가끔은 무리하지 않고 쉬어가는 여유도 챙겨보세요." },
+      { min: 27, max: 32, title: "완전 갓생러", emoji: "🏆", desc: "계획하고, 실천하고, 기록까지 하는 완벽한 갓생 루틴을 가진 당신. 스스로를 성장시키는 힘이 대단해요. 가끔은 계획 없이 쉬어가는 하루도 소중하다는 걸 잊지 마세요." },
+    ],
+  },
+
+  {
+    id: "moviegenre",
+    tag: "취향",
+    title: "나의 인생 영화 장르 테스트",
+    emoji: "🎬",
+    tagline: "내 삶을 영화로 만든다면 어떤 장르일까요?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "주말에 보고 싶은 영화 장르는?",
+        options: [
+          { text: "설레는 로맨스", value: "romance" },
+          { text: "빵빵 터지는 코미디", value: "comedy" },
+          { text: "손에 땀을 쥐는 액션", value: "action" },
+          { text: "마음을 울리는 드라마", value: "drama" },
+        ],
+      },
+      {
+        text: "인생에서 가장 중요한 가치는?",
+        options: [
+          { text: "사랑과 감정", value: "romance" },
+          { text: "즐거움과 유머", value: "comedy" },
+          { text: "도전과 성취", value: "action" },
+          { text: "의미와 성장", value: "drama" },
+        ],
+      },
+      {
+        text: "스트레스를 풀 때 나는?",
+        options: [
+          { text: "좋아하는 사람과 시간을 보낸다", value: "romance" },
+          { text: "실컷 웃고 떠든다", value: "comedy" },
+          { text: "몸을 움직이며 발산한다", value: "action" },
+          { text: "조용히 생각을 정리한다", value: "drama" },
+        ],
+      },
+      {
+        text: "친구들 사이에서 나의 포지션은?",
+        options: [
+          { text: "연애 상담을 도맡는 편", value: "romance" },
+          { text: "분위기를 띄우는 개그 담당", value: "comedy" },
+          { text: "뭐든 앞장서서 이끄는 편", value: "action" },
+          { text: "진지한 고민을 들어주는 편", value: "drama" },
+        ],
+      },
+      {
+        text: "인생의 위기가 닥치면?",
+        options: [
+          { text: "사랑하는 사람을 먼저 떠올린다", value: "romance" },
+          { text: "웃음으로 이겨내려 한다", value: "comedy" },
+          { text: "정면으로 부딪혀 돌파한다", value: "action" },
+          { text: "깊이 성찰하며 답을 찾는다", value: "drama" },
+        ],
+      },
+      {
+        text: "좋아하는 이야기의 결말은?",
+        options: [
+          { text: "해피엔딩 사랑 이야기", value: "romance" },
+          { text: "유쾌하게 웃으며 끝나는 이야기", value: "comedy" },
+          { text: "짜릿한 승리로 끝나는 이야기", value: "action" },
+          { text: "여운이 남는 감동적인 이야기", value: "drama" },
+        ],
+      },
+      {
+        text: "나를 한 단어로 표현한다면?",
+        options: [
+          { text: "다정함", value: "romance" },
+          { text: "유쾌함", value: "comedy" },
+          { text: "열정", value: "action" },
+          { text: "진솔함", value: "drama" },
+        ],
+      },
+      {
+        text: "인생 최고의 순간은 언제였나?",
+        options: [
+          { text: "누군가와 사랑에 빠졌을 때", value: "romance" },
+          { text: "사람들과 배꼽 잡고 웃었을 때", value: "comedy" },
+          { text: "큰 도전에 성공했을 때", value: "action" },
+          { text: "진짜 나를 발견했을 때", value: "drama" },
+        ],
+      },
+    ],
+    categories: {
+      romance: {
+        title: "로맨스 – 사랑이 이끄는 인생",
+        emoji: "💕",
+        desc: "관계와 감정을 소중히 여기는 당신의 인생은 설렘 가득한 로맨스 영화 같아요. 사람과의 깊은 연결에서 삶의 의미를 찾는 편이에요. 가끔은 나 혼자만의 서사도 소중히 여겨보세요.",
+      },
+      comedy: {
+        title: "코미디 – 웃음이 넘치는 인생",
+        emoji: "😂",
+        desc: "어떤 상황에서도 유머를 잃지 않는 당신의 인생은 유쾌한 코미디 영화 같아요. 주변 사람들에게 웃음을 주는 힘을 가졌어요. 가끔은 진지한 순간도 피하지 말고 마주해보세요.",
+      },
+      action: {
+        title: "액션 – 도전으로 가득한 인생",
+        emoji: "💥",
+        desc: "끊임없이 도전하고 부딪히는 당신의 인생은 짜릿한 액션 영화 같아요. 목표를 향해 거침없이 나아가는 추진력이 매력이에요. 가끔은 잠시 멈춰 숨을 고르는 것도 필요해요.",
+      },
+      drama: {
+        title: "휴먼드라마 – 성장으로 채워진 인생",
+        emoji: "🎭",
+        desc: "깊이 고민하고 성찰하며 나아가는 당신의 인생은 잔잔한 감동을 주는 드라마 같아요. 진솔함으로 사람들의 마음을 움직여요. 가끔은 가볍게 즐기는 순간도 스스로에게 허락해주세요.",
+      },
+    },
+  },
+
+  {
+    id: "energytype",
+    tag: "관계심리",
+    title: "나의 관계 에너지 유형 테스트",
+    emoji: "🔋",
+    tagline: "관계 속에서 나는 에너지를 주는 사람일까, 채우는 사람일까?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "친구와 만나고 집에 돌아오면?",
+        options: [
+          { text: "뿌듯하지만 살짝 지친다", value: "giver" },
+          { text: "에너지가 오히려 채워진다", value: "taker" },
+          { text: "적당히 좋고 적당히 피곤하다", value: "balanced" },
+        ],
+      },
+      {
+        text: "모임에서 나의 역할은?",
+        options: [
+          { text: "분위기를 챙기고 사람들을 살핀다", value: "giver" },
+          { text: "자연스럽게 대접받고 힘을 얻는다", value: "taker" },
+          { text: "상황에 따라 주기도 받기도 한다", value: "balanced" },
+        ],
+      },
+      {
+        text: "힘든 친구의 이야기를 들을 때?",
+        options: [
+          { text: "내 감정보다 상대를 먼저 살핀다", value: "giver" },
+          { text: "들어주는 게 버겁게 느껴질 때가 있다", value: "taker" },
+          { text: "공감하되 적당한 선을 지킨다", value: "balanced" },
+        ],
+      },
+      {
+        text: "관계에서 지칠 때 나는?",
+        options: [
+          { text: "그래도 상대를 먼저 챙긴다", value: "giver" },
+          { text: "내가 채워질 때까지 거리를 둔다", value: "taker" },
+          { text: "스스로를 먼저 돌본 후 다시 다가간다", value: "balanced" },
+        ],
+      },
+      {
+        text: "부탁을 받으면 나는?",
+        options: [
+          { text: "웬만하면 다 들어주려 한다", value: "giver" },
+          { text: "내키지 않으면 잘 거절한다", value: "taker" },
+          { text: "상황을 보고 적당히 조율한다", value: "balanced" },
+        ],
+      },
+      {
+        text: "사람들이 나를 찾는 이유는?",
+        options: [
+          { text: "이야기를 잘 들어주고 챙겨줘서", value: "giver" },
+          { text: "함께 있으면 즐겁고 힘이 나서", value: "taker" },
+          { text: "편안하고 균형 잡힌 사람이라서", value: "balanced" },
+        ],
+      },
+      {
+        text: "연애나 우정에서 나는?",
+        options: [
+          { text: "늘 더 많이 주는 편인 것 같다", value: "giver" },
+          { text: "받는 것에 더 익숙한 편이다", value: "taker" },
+          { text: "주고받는 게 비교적 균형 잡혀있다", value: "balanced" },
+        ],
+      },
+      {
+        text: "관계에서 가장 중요한 건?",
+        options: [
+          { text: "상대를 챙기고 배려하는 마음", value: "giver" },
+          { text: "나에게 힘이 되어주는 관계", value: "taker" },
+          { text: "서로에게 도움이 되는 균형", value: "balanced" },
+        ],
+      },
+    ],
+    categories: {
+      giver: {
+        title: "기버형 – 먼저 채워주는 사람",
+        emoji: "🌷",
+        desc: "관계 속에서 늘 먼저 챙기고 배려하는 당신. 곁에 있는 사람들에게 큰 힘이 되어주는 존재예요. 다만 계속 주기만 하면 쉽게 지칠 수 있으니, 나를 채워주는 관계도 곁에 두는 게 중요해요.",
+      },
+      taker: {
+        title: "테이커형 – 에너지를 채우는 사람",
+        emoji: "🔋",
+        desc: "관계에서 자연스럽게 힘을 얻고 채워지는 당신. 좋은 에너지를 받아들이는 데 능숙해요. 가끔은 상대에게도 먼저 마음을 써주는 연습을 해보면 관계가 더 풍성해질 거예요.",
+      },
+      balanced: {
+        title: "밸런스형 – 주고받음이 균형 잡힌 사람",
+        emoji: "⚖️",
+        desc: "관계 속에서 주는 것과 받는 것의 균형을 잘 맞추는 당신. 건강하고 지속 가능한 관계를 만드는 힘이 있어요. 지금처럼 스스로를 먼저 살피는 균형 감각을 잘 유지해보세요.",
+      },
+    },
+  },
 ];

@@ -20,10 +20,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
   <title>커플 비교 결과 | MindPick</title>
+  <meta name="description" content="나와 상대방의 심리테스트 결과를 나란히 비교해보세요." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MindPick" />
+  <meta property="og:title" content="커플 비교 결과 | MindPick" />
+  <meta property="og:description" content="나와 상대방의 심리테스트 결과를 나란히 비교해보세요." />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://www.mindpick.net/img/og-share.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="커플 비교 결과 | MindPick" />
+  <meta name="twitter:description" content="나와 상대방의 심리테스트 결과를 나란히 비교해보세요." />
+  <meta name="twitter:image" content="https://www.mindpick.net/img/og-share.png" />
   <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=2" />
+  <link rel="stylesheet" href="css/style.css?v=4" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5113083554519679" crossorigin="anonymous"></script>
+  <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.5/kakao.min.js" integrity="sha384-dok87au0gKqJdxs7msEdBPNnKSRT+/mhTVzq+qOhcL464zXwvcrpjeWvyj1kCdq6" crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -75,6 +89,9 @@
         <a class="button ghost" style="flex:1;" href="index.html">홈으로</a>
         <button type="button" id="compare-share-btn" class="button primary" style="flex:1;">이 비교 결과 공유하기</button>
       </div>
+      <div class="result-actions">
+        <button id="kakao-share-btn" type="button" class="button block" style="background:#fee500; color:#3c1e1e;">💬 카카오톡으로 공유하기</button>
+      </div>
     </div>
 
     <p class="disclaimer">본 테스트 결과는 재미로 즐기는 콘텐츠이며 과학적·심리학적 근거가 없습니다.</p>
@@ -89,12 +106,13 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/supabase-config.js?v=2"></script>
-  <script src="js/tests-data.js?v=2"></script>
-  <script src="js/custom-tests.js?v=2"></script>
-  <script src="js/tests-registry.js?v=2"></script>
-  <script src="js/compare-utils.js?v=2"></script>
-  <script src="js/compare-session.js?v=2"></script>
-  <script src="js/compare.js?v=2"></script>
+  <script src="js/supabase-config.js?v=4"></script>
+  <script src="js/kakao-config.js?v=4"></script>
+  <script src="js/tests-data.js?v=4"></script>
+  <script src="js/custom-tests.js?v=4"></script>
+  <script src="js/tests-registry.js?v=4"></script>
+  <script src="js/compare-utils.js?v=4"></script>
+  <script src="js/compare-session.js?v=4"></script>
+  <script src="js/compare.js?v=4"></script>
 </body>
 </html>

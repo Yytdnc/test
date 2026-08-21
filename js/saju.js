@@ -177,11 +177,17 @@
         <div class="result-actions">
           <button type="button" id="saju-try-own-btn" class="button primary block">나도 내 사주 캐릭터 확인하기</button>
         </div>
+        <div class="result-actions">
+          <button type="button" id="kakao-share-btn" class="button block" style="background:#fee500; color:#3c1e1e;">💬 카카오톡으로 공유하기</button>
+        </div>
       `
       : `
         <div class="result-actions">
           <button type="button" id="saju-retry-btn" class="button ghost" style="flex:1;">다시 하기</button>
           <button type="button" id="saju-share-btn" class="button primary" style="flex:1;">🔗 결과 공유하고 친구도 확인해보기</button>
+        </div>
+        <div class="result-actions">
+          <button type="button" id="kakao-share-btn" class="button block" style="background:#fee500; color:#3c1e1e;">💬 카카오톡으로 공유하기</button>
         </div>
       `;
 
@@ -311,6 +317,13 @@
         setTimeout(() => (btn.textContent = "🔗 결과 공유하고 친구도 확인해보기"), 1800);
       });
     });
+
+    mpSetupKakaoButton(document.getElementById("kakao-share-btn"), () => ({
+      title: `${name}님의 사주 캐릭터: ${type.character}`,
+      description: `${type.title} — 물 ${water}% · 땅 ${earth}% · 하늘 ${sky}%. 너는 어떤 사주 캐릭터일까?`,
+      url: buildShareUrl(name, water, earth, sky),
+      buttonTitle: "내 사주 캐릭터 확인하기",
+    }));
   });
 
   // 공유 링크로 들어온 경우: 상대방 결과를 먼저 보여주고, 직접 해볼 수 있도록 유도한다
@@ -341,6 +354,13 @@
 
     formSection.style.display = "none";
     sharedSection.style.display = "block";
+
+    mpSetupKakaoButton(document.getElementById("kakao-share-btn"), () => ({
+      title: `${sharedName ? sharedName + "님의 " : ""}사주 캐릭터: ${type.character}`,
+      description: `${type.title} — 물 ${w}% · 땅 ${e}% · 하늘 ${s}%. 너는 어떤 사주 캐릭터일까?`,
+      url: buildShareUrl(sharedName, w, e, s),
+      buttonTitle: "내 사주 캐릭터 확인하기",
+    }));
 
     document.getElementById("saju-try-own-btn").addEventListener("click", () => {
       sharedSection.style.display = "none";

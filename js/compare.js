@@ -103,5 +103,12 @@
         setTimeout(() => (shareBtn.textContent = "이 비교 결과 공유하기"), 1800);
       });
     });
+
+    mpSetupKakaoButton(document.getElementById("kakao-share-btn"), () => ({
+      title: `${percent}% 일치! ${test.title} 커플 비교`,
+      description: `나는 ${myInfo.title}, 상대는 ${partnerInfo.title} — ${matchMsg}`,
+      url: location.href,
+      buttonTitle: "나도 비교해보기",
+    }));
   }
 })();
