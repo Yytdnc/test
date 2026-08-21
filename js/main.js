@@ -7,8 +7,12 @@
     return "tag-c" + (h % TAG_COLOR_COUNT);
   }
 
+  // 조회수가 아직 적을 때는 배지를 아예 숨긴다 (초라해 보이는 "👀 3" 대신
+  // 트래픽이 쌓여서 이 기준을 넘으면 자동으로 배지가 나타난다)
+  const MIN_VIEWS_TO_SHOW = 50;
+
   function formatViews(n) {
-    if (!n) return null;
+    if (!n || n < MIN_VIEWS_TO_SHOW) return null;
     if (n >= 10000) return (n / 10000).toFixed(1).replace(/\.0$/, "") + "만";
     if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, "") + "천";
     return String(n);
