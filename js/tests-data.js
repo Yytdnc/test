@@ -3973,4 +3973,110 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "fashion",
+    tag: "패션",
+    title: "나의 패션 스타일 테스트",
+    emoji: "👗",
+    tagline: "옷장만 봐도 알 수 있는 진짜 나의 스타일은?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "옷을 고를 때 가장 중요하게 생각하는 것은?",
+        options: [
+          { text: "편안함과 활동성", value: "casual" },
+          { text: "깔끔한 핏과 정돈된 느낌", value: "minimal" },
+          { text: "남들과 다른 개성", value: "street" },
+          { text: "부드럽고 여성스러운 느낌", value: "romantic" },
+        ],
+      },
+      {
+        text: "옷장을 열어보면 가장 많은 아이템은?",
+        options: [
+          { text: "후드티, 맨투맨", value: "casual" },
+          { text: "무채색 셔츠와 슬랙스", value: "minimal" },
+          { text: "그래픽 티셔츠, 볼캡", value: "street" },
+          { text: "플라워 원피스, 블라우스", value: "romantic" },
+        ],
+      },
+      {
+        text: "쇼핑할 때 나는?",
+        options: [
+          { text: "편하게 걸칠 수 있는 옷 위주로 고른다", value: "casual" },
+          { text: "핏과 소재를 꼼꼼히 따진다", value: "minimal" },
+          { text: "한정판이나 특이한 아이템에 끌린다", value: "street" },
+          { text: "예쁘고 러블리한 디자인에 끌린다", value: "romantic" },
+        ],
+      },
+      {
+        text: "데이트할 때 즐겨 입는 스타일은?",
+        options: [
+          { text: "청바지에 편한 티셔츠", value: "casual" },
+          { text: "깔끔한 셋업이나 니트", value: "minimal" },
+          { text: "트렌디한 레이어드 룩", value: "street" },
+          { text: "원피스나 스커트", value: "romantic" },
+        ],
+      },
+      {
+        text: "좋아하는 신발 스타일은?",
+        options: [
+          { text: "운동화, 스니커즈", value: "casual" },
+          { text: "심플한 로퍼나 단화", value: "minimal" },
+          { text: "볼드한 디자인의 하이탑", value: "street" },
+          { text: "리본이나 플랫슈즈", value: "romantic" },
+        ],
+      },
+      {
+        text: "액세서리에 대한 나의 생각은?",
+        options: [
+          { text: "거의 안 하는 편이다", value: "casual" },
+          { text: "미니멀한 아이템 한두 개만", value: "minimal" },
+          { text: "체인, 볼캡 등으로 포인트를 준다", value: "street" },
+          { text: "귀걸이, 목걸이로 러블리하게", value: "romantic" },
+        ],
+      },
+      {
+        text: "친구들이 내 스타일을 표현한다면?",
+        options: [
+          { text: "편안하고 자연스러운", value: "casual" },
+          { text: "깔끔하고 세련된", value: "minimal" },
+          { text: "개성 있고 힙한", value: "street" },
+          { text: "여리여리하고 사랑스러운", value: "romantic" },
+        ],
+      },
+      {
+        text: "옷을 살 때 가장 많이 찾는 색은?",
+        options: [
+          { text: "무난한 데님, 그레이", value: "casual" },
+          { text: "블랙, 화이트, 베이지", value: "minimal" },
+          { text: "비비드하거나 강렬한 컬러", value: "street" },
+          { text: "파스텔톤, 핑크 계열", value: "romantic" },
+        ],
+      },
+    ],
+    categories: {
+      casual: {
+        title: "캐주얼 – 편안함이 진짜 스타일",
+        emoji: "👕",
+        desc: "편안함과 자연스러움을 가장 중요하게 생각하는 당신. 꾸미지 않아도 매력이 넘치는 자유로운 감각을 지녔어요. 가끔은 포인트 아이템 하나로 새로운 분위기를 내보는 것도 즐거운 변화가 될 거예요.",
+      },
+      minimal: {
+        title: "미니멀 – 심플함 속의 세련미",
+        emoji: "🤍",
+        desc: "군더더기 없는 깔끔함을 추구하는 당신은 어디서나 정돈된 인상을 남겨요. 소재와 핏을 세심하게 챙기는 안목이 진짜 강점이죠. 가끔은 과감한 컬러나 아이템으로 포인트를 줘보는 것도 새로운 매력이 될 수 있어요.",
+      },
+      street: {
+        title: "스트리트 – 나만의 개성 폭발",
+        emoji: "🧢",
+        desc: "트렌드를 앞서가며 자신만의 개성을 뚜렷하게 표현하는 당신. 남들과 다른 아이템을 두려움 없이 소화하는 자신감이 매력이에요. 가끔은 힘을 뺀 심플한 룩도 시도해보면 스타일의 폭이 더 넓어질 거예요.",
+      },
+      romantic: {
+        title: "로맨틱 – 사랑스러운 무드메이커",
+        emoji: "🌸",
+        desc: "부드럽고 여성스러운 무드로 주변을 사랑스럽게 물들이는 당신. 디테일 하나하나에서 섬세한 감성이 묻어나요. 가끔은 러프한 아이템을 매치해 보면 반전 매력을 보여줄 수 있을 거예요.",
+      },
+    },
+  },
 ];
