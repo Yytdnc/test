@@ -2579,200 +2579,6 @@ const TESTS = [
   },
 
   {
-    id: "jealousy",
-    tag: "연애심리",
-    title: "나의 질투 유형 테스트",
-    emoji: "😤",
-    tagline: "사랑 앞에서 진짜 내 모습은?",
-    type: "category",
-    compare: true,
-    questions: [
-      {
-        text: "연인이 다른 이성과 톡을 오래 하면?",
-        options: [
-          { text: "바로 물어본다 \"누구야?\"", value: "direct" },
-          { text: "신경쓰이지만 티 내지 않는다", value: "silent" },
-          { text: "대수롭지 않게 넘긴다", value: "logical" },
-          { text: "계속 신경 쓰이고 불안해진다", value: "anxious" },
-        ],
-      },
-      {
-        text: "SNS에 연인이 다른 사람과 찍은 사진이 올라오면?",
-        options: [
-          { text: "바로 연락해서 물어본다", value: "direct" },
-          { text: "마음속으로만 신경쓴다", value: "silent" },
-          { text: "그럴 수도 있지 생각한다", value: "logical" },
-          { text: "계속 사진을 다시 확인하게 된다", value: "anxious" },
-        ],
-      },
-      {
-        text: "질투가 날 때 나의 행동은?",
-        options: [
-          { text: "솔직하게 감정을 표현한다", value: "direct" },
-          { text: "혼자 삭이다가 나중에 티가 난다", value: "silent" },
-          { text: "감정보다 상황을 먼저 판단한다", value: "logical" },
-          { text: "계속 확인하고 싶어진다", value: "anxious" },
-        ],
-      },
-      {
-        text: "연인의 과거 연애 이야기를 들으면?",
-        options: [
-          { text: "궁금한 건 그냥 물어본다", value: "direct" },
-          { text: "듣고 싶지 않지만 참는다", value: "silent" },
-          { text: "과거는 과거일 뿐이라고 생각한다", value: "logical" },
-          { text: "자꾸 비교하게 된다", value: "anxious" },
-        ],
-      },
-      {
-        text: "연인이 친구들과 늦게까지 놀면?",
-        options: [
-          { text: "언제 오는지 솔직히 물어본다", value: "direct" },
-          { text: "서운하지만 말은 안 한다", value: "silent" },
-          { text: "각자의 시간을 존중한다", value: "logical" },
-          { text: "연락이 안 되면 불안해진다", value: "anxious" },
-        ],
-      },
-      {
-        text: "질투를 표현하는 나만의 방식은?",
-        options: [
-          { text: "직접적으로 말한다", value: "direct" },
-          { text: "은근한 말투로 티를 낸다", value: "silent" },
-          { text: "표현하지 않는 편이다", value: "logical" },
-          { text: "서운함이나 눈물로 표현된다", value: "anxious" },
-        ],
-      },
-      {
-        text: "연인이 나를 안심시켜줄 때 필요한 건?",
-        options: [
-          { text: "명확한 설명", value: "direct" },
-          { text: "시간이 지나면 자연히 풀린다", value: "silent" },
-          { text: "별로 필요하지 않다", value: "logical" },
-          { text: "꾸준한 애정 표현", value: "anxious" },
-        ],
-      },
-    ],
-    categories: {
-      direct: {
-        title: "직진 표현형 – 솔직하게 확인하는",
-        emoji: "🔥",
-        desc: "질투가 나면 숨기지 않고 바로 표현하는 당신. 오해를 오래 끌지 않는 게 장점이에요. 다만 상대가 놀라지 않게 말투는 조금 부드럽게!",
-      },
-      silent: {
-        title: "조용한 삭임형 – 속으로 삼키는",
-        emoji: "🌫️",
-        desc: "질투가 나도 겉으로는 티를 잘 안 내는 당신. 상대를 배려하는 마음이지만, 쌓아두면 마음이 힘들어져요. 가끔은 솔직하게 표현해보세요.",
-      },
-      logical: {
-        title: "쿨한 이성형 – 질투에 잘 흔들리지 않는",
-        emoji: "😎",
-        desc: "감정보다 상황을 먼저 보는 당신은 질투에 크게 휘둘리지 않아요. 안정적인 연애를 하는 편이지만, 가끔은 솔직한 감정 표현도 관계에 도움이 돼요.",
-      },
-      anxious: {
-        title: "불안 증폭형 – 사랑이 큰 만큼 불안도 큰",
-        emoji: "💭",
-        desc: "좋아하는 마음이 큰 만큼 불안도 쉽게 커지는 당신. 그만큼 진심으로 사랑하고 있다는 뜻이에요. 스스로 안정감을 채우는 연습을 함께 해보세요.",
-      },
-    },
-  },
-
-  {
-    id: "defense",
-    tag: "성격",
-    title: "나의 방어기제 테스트",
-    emoji: "🧩",
-    tagline: "힘든 순간, 나도 모르게 나오는 마음의 습관은?",
-    type: "category",
-    compare: true,
-    questions: [
-      {
-        text: "실수했을 때 나의 첫 반응은?",
-        options: [
-          { text: "\"그럴 수도 있지\" 하며 이유를 찾는다", value: "rationalize" },
-          { text: "그 상황 자체를 피하고 싶다", value: "avoidance" },
-          { text: "농담으로 넘기려 한다", value: "humor" },
-          { text: "남 탓부터 하게 된다", value: "projection" },
-        ],
-      },
-      {
-        text: "스트레스 받는 상황이 생기면?",
-        options: [
-          { text: "논리적으로 이유를 설명하려 한다", value: "rationalize" },
-          { text: "아예 그 자리를 벗어난다", value: "avoidance" },
-          { text: "웃음으로 분위기를 바꾼다", value: "humor" },
-          { text: "다른 사람이나 상황 탓을 한다", value: "projection" },
-        ],
-      },
-      {
-        text: "비판을 들었을 때?",
-        options: [
-          { text: "나름의 근거를 대며 설명한다", value: "rationalize" },
-          { text: "그 얘기를 더 이상 하고 싶지 않다", value: "avoidance" },
-          { text: "가볍게 웃어넘긴다", value: "humor" },
-          { text: "상대도 똑같다고 반박한다", value: "projection" },
-        ],
-      },
-      {
-        text: "갈등 상황을 마주하면?",
-        options: [
-          { text: "상황을 분석해서 납득하려 한다", value: "rationalize" },
-          { text: "일단 피하고 나중에 생각한다", value: "avoidance" },
-          { text: "유머로 긴장을 풀려고 한다", value: "humor" },
-          { text: "내 잘못보다 상대 잘못이 크다고 느낀다", value: "projection" },
-        ],
-      },
-      {
-        text: "실패했을 때 스스로에게 하는 말은?",
-        options: [
-          { text: "\"이번엔 상황이 안 좋았을 뿐이야\"", value: "rationalize" },
-          { text: "\"그냥 신경 안 쓸래\"", value: "avoidance" },
-          { text: "\"웃자 웃자, 다음에 잘하면 되지\"", value: "humor" },
-          { text: "\"저것 때문에 이렇게 된 거야\"", value: "projection" },
-        ],
-      },
-      {
-        text: "불안한 감정이 들 때 나는?",
-        options: [
-          { text: "이유를 찾아 스스로를 설득한다", value: "rationalize" },
-          { text: "그 감정을 마주하기보다 다른 데 집중한다", value: "avoidance" },
-          { text: "농담처럼 가볍게 표현한다", value: "humor" },
-          { text: "원인을 외부에서 찾는다", value: "projection" },
-        ],
-      },
-      {
-        text: "화가 났을 때 나의 모습은?",
-        options: [
-          { text: "화난 이유를 조목조목 설명한다", value: "rationalize" },
-          { text: "자리를 피해 진정할 시간을 갖는다", value: "avoidance" },
-          { text: "실없는 농담으로 풀어본다", value: "humor" },
-          { text: "\"너 때문이잖아\"라는 생각이 먼저 든다", value: "projection" },
-        ],
-      },
-    ],
-    categories: {
-      rationalize: {
-        title: "합리화형 – 이유를 찾아 마음을 다독이는",
-        emoji: "🧩",
-        desc: "힘든 상황도 나름의 이유를 찾아 이해하려는 당신. 스스로를 다독이는 힘이 있어요. 가끔은 이유를 찾기보다 감정을 그대로 느껴보는 것도 좋아요.",
-      },
-      avoidance: {
-        title: "회피형 – 일단 거리를 두는",
-        emoji: "🚪",
-        desc: "불편한 상황에서 한 발 물러나 숨을 고르는 당신. 나쁜 게 아니라 스스로를 지키는 방법이에요. 다만 너무 오래 피하지만 말고 천천히 마주해보세요.",
-      },
-      humor: {
-        title: "유머형 – 웃음으로 넘기는",
-        emoji: "😂",
-        desc: "힘든 순간도 유머로 가볍게 넘기는 당신. 분위기를 밝게 만드는 재주가 있어요. 가끔은 웃음 뒤에 숨은 진짜 감정도 들여다봐주세요.",
-      },
-      projection: {
-        title: "투사형 – 원인을 밖에서 찾는",
-        emoji: "🪞",
-        desc: "힘든 감정을 외부에서 원인을 찾아 해소하는 당신. 스스로를 보호하려는 자연스러운 반응이에요. 가끔은 내 마음 안쪽도 한 번씩 들여다보면 더 편안해질 거예요.",
-      },
-    },
-  },
-
-  {
     id: "perfectionist",
     tag: "힐링",
     title: "나의 완벽주의 지수 테스트",
@@ -2955,99 +2761,6 @@ const TESTS = [
         title: "소통왕형 – 사람과 이어지는 게 즐거운",
         emoji: "💬",
         desc: "게시물보다 사람과의 대화가 즐거운 당신. 댓글과 DM으로 관계를 넓혀가는 힘이 있어요. 온라인만큼 오프라인 만남도 챙겨보세요.",
-      },
-    },
-  },
-
-  {
-    id: "chronotype",
-    tag: "라이프",
-    title: "나의 아침형-저녁형 테스트",
-    emoji: "🌅",
-    tagline: "나는 아침형 인간일까, 저녁형 인간일까?",
-    type: "category",
-    compare: true,
-    questions: [
-      {
-        text: "가장 집중이 잘 되는 시간은?",
-        options: [
-          { text: "이른 아침, 해 뜨기 전", value: "morning" },
-          { text: "다들 잠든 늦은 밤", value: "night" },
-          { text: "딱히 정해진 시간은 없다", value: "flexible" },
-        ],
-      },
-      {
-        text: "알람 없이 눈이 떠지는 시간은?",
-        options: [
-          { text: "새벽~아침 일찍", value: "morning" },
-          { text: "해가 중천에 뜬 뒤", value: "night" },
-          { text: "그날그날 다르다", value: "flexible" },
-        ],
-      },
-      {
-        text: "주말 늦잠을 잔다면?",
-        options: [
-          { text: "그래도 평소처럼 일찍 깬다", value: "morning" },
-          { text: "오후까지 늘어지게 잔다", value: "night" },
-          { text: "평소보다 한두 시간 정도만", value: "flexible" },
-        ],
-      },
-      {
-        text: "저녁 약속이 늦게까지 이어지면?",
-        options: [
-          { text: "피곤해서 빨리 집에 가고 싶다", value: "morning" },
-          { text: "오히려 그때부터 텐션이 오른다", value: "night" },
-          { text: "상황 봐서 맞춘다", value: "flexible" },
-        ],
-      },
-      {
-        text: "중요한 일을 준비하는 타이밍은?",
-        options: [
-          { text: "전날 일찍 자고 아침에 마무리", value: "morning" },
-          { text: "밤새워서라도 끝까지 붙잡는다", value: "night" },
-          { text: "여유 있게 미리미리 나눠서", value: "flexible" },
-        ],
-      },
-      {
-        text: "커피를 마신다면 주로 언제?",
-        options: [
-          { text: "하루를 시작하는 아침에", value: "morning" },
-          { text: "밤에 마셔도 잠은 잘 온다", value: "night" },
-          { text: "필요할 때만 그때그때", value: "flexible" },
-        ],
-      },
-      {
-        text: "나의 하루 중 가장 생산적인 시간대는?",
-        options: [
-          { text: "오전", value: "morning" },
-          { text: "밤~새벽", value: "night" },
-          { text: "오후, 애매하게 걸쳐서", value: "flexible" },
-        ],
-      },
-      {
-        text: "친구들이 나를 표현한다면?",
-        options: [
-          { text: "일찍 자고 일찍 일어나는 부지런형", value: "morning" },
-          { text: "밤에 더 빛나는 올빼미형", value: "night" },
-          { text: "그때그때 리듬 타는 유동형", value: "flexible" },
-        ],
-      },
-    ],
-    categories: {
-      morning: {
-        title: "아침형 인간 – 얼리버드",
-        emoji: "🌅",
-        desc: "해가 뜨면 몸도 마음도 자연스럽게 깨어나는 당신. 오전 시간에 가장 맑은 정신으로 중요한 일들을 척척 해내요. 다만 밤 늦은 일정이 잡히면 컨디션이 급격히 떨어지니, 저녁 약속은 적당한 선에서 조절하는 게 좋아요.",
-      },
-      night: {
-        title: "저녁형 인간 – 올빼미족",
-        emoji: "🦉",
-        desc: "해가 지고 나서야 진짜 컨디션이 올라오는 당신. 조용한 밤 시간에 집중력과 창의력이 폭발해요. 다만 아침 일정 앞에서는 유독 힘들어하니, 전날 최소한의 수면 시간은 꼭 확보해두세요.",
-      },
-      flexible: {
-        title: "유동형 인간 – 리듬 조율러",
-        emoji: "🌗",
-        desc: "정해진 리듬보다 그날그날 컨디션에 맞춰 움직이는 당신. 상황에 따라 아침형도 저녁형도 될 수 있는 유연함이 강점이에요. 다만 일정한 루틴이 없으면 생체 리듬이 쉽게 흐트러질 수 있으니, 최소한의 기상·취침 시간은 지켜보세요.",
       },
     },
   },
@@ -3260,112 +2973,6 @@ const TESTS = [
         title: "공감형 – 함께 느끼는 사람",
         emoji: "🤝",
         desc: "내 감정만큼 상대의 감정에도 깊이 공감하는 당신. 사람들이 마음을 터놓고 싶어하는 존재예요. 다만 타인의 감정에 너무 몰입해 지칠 수 있으니, 나의 감정을 먼저 챙기는 것도 잊지 마세요.",
-      },
-    },
-  },
-
-  {
-    id: "cafe",
-    tag: "라이프",
-    title: "나의 카페 주문 스타일 테스트",
-    emoji: "☕",
-    tagline: "카페에서 주문하는 방식만 봐도 알 수 있는 나의 성격",
-    type: "category",
-    compare: true,
-    questions: [
-      {
-        text: "카페에 들어가면 나는?",
-        options: [
-          { text: "늘 마시던 아메리카노를 바로 주문한다", value: "classic" },
-          { text: "디저트 메뉴부터 살펴본다", value: "sweet" },
-          { text: "신메뉴가 있는지부터 확인한다", value: "trend" },
-          { text: "옵션을 하나하나 커스텀해서 주문한다", value: "custom" },
-        ],
-      },
-      {
-        text: "새로운 카페에 가면?",
-        options: [
-          { text: "시그니처보다 무난한 메뉴를 고른다", value: "classic" },
-          { text: "제일 달아 보이는 메뉴를 고른다", value: "sweet" },
-          { text: "SNS에서 화제였던 메뉴를 찾는다", value: "trend" },
-          { text: "나만의 조합으로 주문할 수 있는지 물어본다", value: "custom" },
-        ],
-      },
-      {
-        text: "주문할 때 직원에게 요청하는 것은?",
-        options: [
-          { text: "거의 없다, 기본 그대로", value: "classic" },
-          { text: "시럽이나 휘핑을 추가해달라고 한다", value: "sweet" },
-          { text: "요즘 제일 잘 나가는 메뉴를 추천받는다", value: "trend" },
-          { text: "얼음 양, 샷 추가 등 세세하게 요청한다", value: "custom" },
-        ],
-      },
-      {
-        text: "친구가 카페 메뉴를 고민하면?",
-        options: [
-          { text: "실패 없는 무난한 메뉴를 추천한다", value: "classic" },
-          { text: "제일 달콤한 디저트류를 추천한다", value: "sweet" },
-          { text: "요즘 유행하는 신메뉴를 추천한다", value: "trend" },
-          { text: "취향에 맞게 커스텀하는 법을 알려준다", value: "custom" },
-        ],
-      },
-      {
-        text: "카페 대기줄이 길면?",
-        options: [
-          { text: "그냥 무난하게 아무거나 시킨다", value: "classic" },
-          { text: "디저트라도 하나 건져야 한다는 생각뿐", value: "sweet" },
-          { text: "그래도 신메뉴는 꼭 맛본다", value: "trend" },
-          { text: "줄이 길어도 원하는 옵션은 꼭 요청한다", value: "custom" },
-        ],
-      },
-      {
-        text: "집에서 커피를 마신다면?",
-        options: [
-          { text: "믹스커피나 아메리카노로 심플하게", value: "classic" },
-          { text: "달달한 라떼나 초코음료로", value: "sweet" },
-          { text: "요즘 유행하는 레시피를 따라 만든다", value: "trend" },
-          { text: "원두, 우유 비율까지 직접 맞춰서", value: "custom" },
-        ],
-      },
-      {
-        text: "카페 메뉴판을 볼 때 가장 먼저 보는 것은?",
-        options: [
-          { text: "늘 마시던 메뉴가 있는지", value: "classic" },
-          { text: "디저트나 달콤한 음료 코너", value: "sweet" },
-          { text: "새로 나온 시즌 메뉴", value: "trend" },
-          { text: "커스텀 옵션이 뭐가 있는지", value: "custom" },
-        ],
-      },
-      {
-        text: "사람들이 내 커피 취향을 표현한다면?",
-        options: [
-          { text: "\"군더더기 없이 심플한 취향\"", value: "classic" },
-          { text: "\"디저트 없인 못 사는 단맛 러버\"", value: "sweet" },
-          { text: "\"늘 최신 유행을 아는 트렌드세터\"", value: "trend" },
-          { text: "\"나만의 방식이 확실한 사람\"", value: "custom" },
-        ],
-      },
-    ],
-    categories: {
-      classic: {
-        title: "클래식파 – 아메리카노 한 잔이면 충분",
-        emoji: "☕",
-        desc: "화려한 것보다 늘 마시던 익숙한 맛이 편안한 당신. 자신만의 확고한 취향이 있고, 유행에 쉽게 흔들리지 않는 편이에요. 가끔은 새로운 메뉴에 도전해보는 것도 소소한 재미가 될 거예요.",
-      },
-      sweet: {
-        title: "디저트파 – 단맛이 곧 행복",
-        emoji: "🍰",
-        desc: "카페는 곧 디저트 타임인 당신에게 달콤함은 하루의 힐링이에요. 소소한 것에서 행복을 찾는 감각이 뛰어나죠. 당 섭취는 적당히 조절하는 것도 잊지 마세요.",
-      },
-      trend: {
-        title: "트렌드파 – 유행은 내가 먼저",
-        emoji: "✨",
-        desc: "새로운 메뉴, 새로운 유행을 누구보다 빠르게 캐치하는 당신. 남들보다 한발 앞서가는 감각이 매력이에요. 가끔은 익숙한 메뉴에서 편안함을 느껴보는 것도 좋아요.",
-      },
-      custom: {
-        title: "커스텀파 – 취향은 내가 만든다",
-        emoji: "🎛️",
-        desc: "정해진 메뉴보다 나만의 조합을 만드는 게 더 즐거운 당신. 뚜렷한 취향과 디테일을 챙기는 섬세함이 있어요. 가끔은 그냥 메뉴판 그대로 편하게 주문해보는 것도 색다른 즐거움이 될 거예요.",
       },
     },
   },
@@ -3882,99 +3489,6 @@ const TESTS = [
   },
 
   {
-    id: "energytype",
-    tag: "관계심리",
-    title: "나의 관계 에너지 유형 테스트",
-    emoji: "🔋",
-    tagline: "관계 속에서 나는 에너지를 주는 사람일까, 채우는 사람일까?",
-    type: "category",
-    compare: true,
-    questions: [
-      {
-        text: "친구와 만나고 집에 돌아오면?",
-        options: [
-          { text: "뿌듯하지만 살짝 지친다", value: "giver" },
-          { text: "에너지가 오히려 채워진다", value: "taker" },
-          { text: "적당히 좋고 적당히 피곤하다", value: "balanced" },
-        ],
-      },
-      {
-        text: "모임에서 나의 역할은?",
-        options: [
-          { text: "분위기를 챙기고 사람들을 살핀다", value: "giver" },
-          { text: "자연스럽게 대접받고 힘을 얻는다", value: "taker" },
-          { text: "상황에 따라 주기도 받기도 한다", value: "balanced" },
-        ],
-      },
-      {
-        text: "힘든 친구의 이야기를 들을 때?",
-        options: [
-          { text: "내 감정보다 상대를 먼저 살핀다", value: "giver" },
-          { text: "들어주는 게 버겁게 느껴질 때가 있다", value: "taker" },
-          { text: "공감하되 적당한 선을 지킨다", value: "balanced" },
-        ],
-      },
-      {
-        text: "관계에서 지칠 때 나는?",
-        options: [
-          { text: "그래도 상대를 먼저 챙긴다", value: "giver" },
-          { text: "내가 채워질 때까지 거리를 둔다", value: "taker" },
-          { text: "스스로를 먼저 돌본 후 다시 다가간다", value: "balanced" },
-        ],
-      },
-      {
-        text: "부탁을 받으면 나는?",
-        options: [
-          { text: "웬만하면 다 들어주려 한다", value: "giver" },
-          { text: "내키지 않으면 잘 거절한다", value: "taker" },
-          { text: "상황을 보고 적당히 조율한다", value: "balanced" },
-        ],
-      },
-      {
-        text: "사람들이 나를 찾는 이유는?",
-        options: [
-          { text: "이야기를 잘 들어주고 챙겨줘서", value: "giver" },
-          { text: "함께 있으면 즐겁고 힘이 나서", value: "taker" },
-          { text: "편안하고 균형 잡힌 사람이라서", value: "balanced" },
-        ],
-      },
-      {
-        text: "연애나 우정에서 나는?",
-        options: [
-          { text: "늘 더 많이 주는 편인 것 같다", value: "giver" },
-          { text: "받는 것에 더 익숙한 편이다", value: "taker" },
-          { text: "주고받는 게 비교적 균형 잡혀있다", value: "balanced" },
-        ],
-      },
-      {
-        text: "관계에서 가장 중요한 건?",
-        options: [
-          { text: "상대를 챙기고 배려하는 마음", value: "giver" },
-          { text: "나에게 힘이 되어주는 관계", value: "taker" },
-          { text: "서로에게 도움이 되는 균형", value: "balanced" },
-        ],
-      },
-    ],
-    categories: {
-      giver: {
-        title: "기버형 – 먼저 채워주는 사람",
-        emoji: "🌷",
-        desc: "관계 속에서 늘 먼저 챙기고 배려하는 당신. 곁에 있는 사람들에게 큰 힘이 되어주는 존재예요. 다만 계속 주기만 하면 쉽게 지칠 수 있으니, 나를 채워주는 관계도 곁에 두는 게 중요해요.",
-      },
-      taker: {
-        title: "테이커형 – 에너지를 채우는 사람",
-        emoji: "🔋",
-        desc: "관계에서 자연스럽게 힘을 얻고 채워지는 당신. 좋은 에너지를 받아들이는 데 능숙해요. 가끔은 상대에게도 먼저 마음을 써주는 연습을 해보면 관계가 더 풍성해질 거예요.",
-      },
-      balanced: {
-        title: "밸런스형 – 주고받음이 균형 잡힌 사람",
-        emoji: "⚖️",
-        desc: "관계 속에서 주는 것과 받는 것의 균형을 잘 맞추는 당신. 건강하고 지속 가능한 관계를 만드는 힘이 있어요. 지금처럼 스스로를 먼저 살피는 균형 감각을 잘 유지해보세요.",
-      },
-    },
-  },
-
-  {
     id: "fashion",
     tag: "패션",
     title: "나의 패션 스타일 테스트",
@@ -4077,6 +3591,547 @@ const TESTS = [
         emoji: "🌸",
         desc: "부드럽고 여성스러운 무드로 주변을 사랑스럽게 물들이는 당신. 디테일 하나하나에서 섬세한 감성이 묻어나요. 가끔은 러프한 아이템을 매치해 보면 반전 매력을 보여줄 수 있을 거예요.",
       },
+    },
+  },
+  {
+    id: "egenteto",
+    tag: "성격유형",
+    title: "나의 에겐-테토 유형 테스트",
+    emoji: "⚡",
+    tagline: "요즘 다들 한다는 그 테스트, 나는 에겐일까 테토일까?",
+    type: "score",
+    compare: true,
+    questions: [
+      {
+        text: "새로운 모임에 가면 나는?",
+        options: [
+          { text: "구석에서 조용히 분위기를 살핀다", value: 1 },
+          { text: "필요한 사람들에게만 다가간다", value: 2 },
+          { text: "먼저 다가가서 말을 건다", value: 3 },
+          { text: "금방 분위기를 주도한다", value: 4 },
+        ],
+      },
+      {
+        text: "갈등 상황에서 나는?",
+        options: [
+          { text: "웬만하면 참고 넘어간다", value: 1 },
+          { text: "속으로 정리한 뒤 조심스레 말한다", value: 2 },
+          { text: "바로 내 생각을 말한다", value: 3 },
+          { text: "할 말은 확실히 하고 넘어간다", value: 4 },
+        ],
+      },
+      {
+        text: "친구가 무례하게 굴면?",
+        options: [
+          { text: "그냥 넘어가는 편이다", value: 1 },
+          { text: "표정으로 티가 난다", value: 2 },
+          { text: "바로 지적한다", value: 3 },
+          { text: "단호하게 선을 긋는다", value: 4 },
+        ],
+      },
+      {
+        text: "평소 말투는?",
+        options: [
+          { text: "조곤조곤 부드럽다", value: 1 },
+          { text: "차분하고 다정하다", value: 2 },
+          { text: "시원시원하다", value: 3 },
+          { text: "직설적이고 강단있다", value: 4 },
+        ],
+      },
+      {
+        text: "고민이 있을 때 나는?",
+        options: [
+          { text: "혼자 삭히는 편이다", value: 1 },
+          { text: "가까운 사람에게만 살짝 말한다", value: 2 },
+          { text: "주변에 바로 이야기한다", value: 3 },
+          { text: "적극적으로 해결책을 찾아나선다", value: 4 },
+        ],
+      },
+      {
+        text: "누군가 나를 오해하면?",
+        options: [
+          { text: "굳이 해명하지 않는다", value: 1 },
+          { text: "기회가 되면 조심스레 풀어본다", value: 2 },
+          { text: "바로 찾아가서 설명한다", value: 3 },
+          { text: "확실하게 오해를 풀고 넘어간다", value: 4 },
+        ],
+      },
+      {
+        text: "리더 역할을 맡으면?",
+        options: [
+          { text: "부담스러워 피하고 싶다", value: 1 },
+          { text: "필요하면 하지만 편하진 않다", value: 2 },
+          { text: "은근히 즐기는 편이다", value: 3 },
+          { text: "자신있게 이끈다", value: 4 },
+        ],
+      },
+      {
+        text: "연애할 때 나는?",
+        options: [
+          { text: "속마음을 잘 안 드러낸다", value: 1 },
+          { text: "은근하게 다정함을 표현한다", value: 2 },
+          { text: "적극적으로 표현하는 편이다", value: 3 },
+          { text: "리드하며 확실하게 챙긴다", value: 4 },
+        ],
+      },
+    ],
+    scoreRanges: [
+      { min: 8, max: 14, title: "찐에겐형 – 부드러운 온기", emoji: "🌙", desc: "잔잔하고 다정한 에너지를 가진 당신. 무리해서 나서지 않아도 곁에 있는 사람을 편안하게 만들어줘요. 가끔은 하고 싶은 말을 조금 더 꺼내봐도 좋아요." },
+      { min: 15, max: 20, title: "에겐 성향형 – 다정한 균형러", emoji: "🌗", desc: "부드러움과 단단함을 함께 가진 당신. 평소엔 조용하지만 필요할 땐 확실히 자기 생각을 말할 줄 알아요. 그 균형이 당신의 매력이에요." },
+      { min: 21, max: 26, title: "테토 성향형 – 확신 있는 에너지", emoji: "🌖", desc: "밝고 확신에 찬 에너지가 매력인 당신. 사람들 앞에서 자연스럽게 중심을 잡는 편이에요. 가끔은 상대의 속도에 맞춰 한 박자 쉬어가도 좋아요." },
+      { min: 27, max: 32, title: "찐테토형 – 거침없는 리더", emoji: "☀️", desc: "확실하고 거침없는 당신은 어디서나 눈에 띄는 리더형이에요. 추진력이 당신의 최대 강점이지만, 가끔은 주변의 속도에도 귀 기울여보세요." },
+    ],
+  },
+
+  {
+    id: "brainmap",
+    tag: "밈",
+    title: "나의 뇌 구조 테스트",
+    emoji: "🧠",
+    tagline: "머릿속을 열어보면 무슨 생각으로 가득 차 있을까?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "머릿속이 복잡할 때 가장 먼저 떠오르는 생각은?",
+        options: [
+          { text: "그 사람 지금 뭐 하고 있을까", value: "love" },
+          { text: "이번 달 카드값 얼마 나왔더라", value: "money" },
+          { text: "아 진짜 눕고 싶다", value: "rest" },
+          { text: "사람들이 날 어떻게 생각할까", value: "attention" },
+        ],
+      },
+      {
+        text: "회의나 수업이 지루할 때 머릿속엔?",
+        options: [
+          { text: "썸 타는 사람한테 톡 할까 말까", value: "love" },
+          { text: "월급 들어오면 뭐부터 해야 하지", value: "money" },
+          { text: "얼른 끝나고 집에 눕고 싶다", value: "rest" },
+          { text: "이따 할 일 다 못 끝내면 어떡하지", value: "worry" },
+        ],
+      },
+      {
+        text: "SNS를 켰을 때 가장 먼저 확인하는 건?",
+        options: [
+          { text: "그 사람이 새 게시물 올렸는지", value: "love" },
+          { text: "내 게시물에 누가 반응했는지", value: "attention" },
+          { text: "혹시 내 얘기하는 사람 있는지", value: "worry" },
+          { text: "그냥 아무 생각 없이 스크롤만", value: "rest" },
+        ],
+      },
+      {
+        text: "월급이나 용돈이 들어온 순간 드는 생각은?",
+        options: [
+          { text: "저축부터 얼마 해야 하지", value: "money" },
+          { text: "이걸로 뭐 사면 부러워하려나", value: "attention" },
+          { text: "나가야 할 돈부터 계산이 된다", value: "worry" },
+          { text: "이걸로 데이트하면 좋겠다", value: "love" },
+        ],
+      },
+      {
+        text: "혼자 있는 시간이 생기면?",
+        options: [
+          { text: "일단 눕고 아무것도 안 한다", value: "rest" },
+          { text: "사람들 연락이 뜸한 게 신경 쓰인다", value: "attention" },
+          { text: "괜히 미래 걱정을 시작한다", value: "worry" },
+          { text: "생활비 정산부터 해본다", value: "money" },
+        ],
+      },
+      {
+        text: "친구랑 대화하다 머릿속으로 딴생각을 한다면?",
+        options: [
+          { text: "좋아하는 사람 생각", value: "love" },
+          { text: "다음 달 지출 걱정", value: "money" },
+          { text: "내가 방금 이상한 말 안 했나", value: "attention" },
+          { text: "그냥 막연한 불안감", value: "worry" },
+        ],
+      },
+      {
+        text: "여행 계획을 짤 때 가장 먼저 떠오르는 건?",
+        options: [
+          { text: "누구랑 같이 가고 싶은지", value: "love" },
+          { text: "얼마나 푹 쉴 수 있을지", value: "rest" },
+          { text: "예산이 얼마나 들지", value: "money" },
+          { text: "사진이 잘 나올 곳인지", value: "attention" },
+        ],
+      },
+      {
+        text: "잠들기 직전 마지막으로 하는 생각은?",
+        options: [
+          { text: "내일 걱정거리들", value: "worry" },
+          { text: "오늘 그 사람이 한 말", value: "love" },
+          { text: "아 진짜 푹 자고 싶다", value: "rest" },
+          { text: "이번 달 돈 관리 잘 했나", value: "money" },
+        ],
+      },
+    ],
+    categories: {
+      love: { title: "연애 뇌 – 마음은 온통 그 사람 생각", emoji: "💗", desc: "머릿속 지분율 1위는 언제나 '그 사람'인 당신. 사소한 말 한마디도 오래 곱씹는 로맨티스트예요. 가끔은 다른 생각으로도 머리를 환기해보세요." },
+      money: { title: "머니 뇌 – 통장부터 챙기는 현실파", emoji: "💰", desc: "무슨 생각을 하든 결국 지출과 저축으로 귀결되는 당신. 현실 감각이 뛰어난 계획형이에요. 가끔은 돈 걱정 없이 즐기는 여유도 필요해요." },
+      rest: { title: "휴식 뇌 – 눕고 싶은 마음이 8할", emoji: "🛌", desc: "어떤 상황에서도 마음 한켠엔 '눕고 싶다'가 자리한 당신. 에너지를 아껴 쓰는 효율적인 타입이에요. 쉬는 시간만큼은 죄책감 없이 푹 쉬어도 괜찮아요." },
+      attention: { title: "인정욕구 뇌 – 시선이 늘 신경쓰이는", emoji: "👀", desc: "남들이 나를 어떻게 볼지 늘 신경 쓰는 당신. 그만큼 관계와 이미지를 소중히 여긴다는 뜻이에요. 가끔은 타인의 시선보다 내 만족을 먼저 챙겨보세요." },
+      worry: { title: "걱정 뇌 – 생각이 많아 피곤한", emoji: "🌀", desc: "일어나지도 않은 일까지 미리 걱정하는 당신. 신중하고 꼼꼼한 성격의 다른 얼굴이에요. 걱정을 종이에 적어보는 것만으로도 마음이 한결 가벼워질 거예요." },
+    },
+  },
+
+  {
+    id: "facereading",
+    tag: "판타지",
+    title: "나의 관상 테스트",
+    emoji: "🔮",
+    tagline: "얼굴이 아니라 행동으로 보는, 재미로 보는 관상",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "사람들이 처음 본 나에게 자주 하는 말은?",
+        options: [
+          { text: "웃는 인상이 좋다", value: "popularity" },
+          { text: "야무지고 똑부러져 보인다", value: "wealth" },
+          { text: "듬직하고 믿음직스럽다", value: "leader" },
+          { text: "차분하고 지적으로 보인다", value: "scholar" },
+        ],
+      },
+      {
+        text: "돈이 생기면 나는?",
+        options: [
+          { text: "일단 잘 모아둔다", value: "wealth" },
+          { text: "주변 사람들에게 쓴다", value: "popularity" },
+          { text: "필요한 곳에 과감히 투자한다", value: "leader" },
+          { text: "생각지도 못한 곳에서 또 생긴다", value: "lucky" },
+        ],
+      },
+      {
+        text: "모임에서 나의 포지션은?",
+        options: [
+          { text: "분위기 메이커", value: "popularity" },
+          { text: "정산 담당", value: "wealth" },
+          { text: "자연스럽게 이끄는 역할", value: "leader" },
+          { text: "조용히 관찰하며 조언하는 역할", value: "scholar" },
+        ],
+      },
+      {
+        text: "어려운 일이 생겼을 때?",
+        options: [
+          { text: "주변에서 자연스럽게 도와준다", value: "lucky" },
+          { text: "내가 앞장서서 해결한다", value: "leader" },
+          { text: "차분히 원인부터 분석한다", value: "scholar" },
+          { text: "손해부터 계산해본다", value: "wealth" },
+        ],
+      },
+      {
+        text: "낯선 사람과도 금방 친해지는 편인가요?",
+        options: [
+          { text: "네, 금방 친해진다", value: "popularity" },
+          { text: "상대가 먼저 다가오는 편이다", value: "lucky" },
+          { text: "아니요, 시간이 걸린다", value: "scholar" },
+          { text: "필요하면 먼저 다가간다", value: "leader" },
+        ],
+      },
+      {
+        text: "일이 잘 안 풀릴 때 나는?",
+        options: [
+          { text: "다시 계획을 세워 밀어붙인다", value: "leader" },
+          { text: "원인을 차분히 분석한다", value: "scholar" },
+          { text: "누군가 도와줄 거라 믿는다", value: "lucky" },
+          { text: "일단 손실부터 줄인다", value: "wealth" },
+        ],
+      },
+      {
+        text: "사람들이 나에게 자주 부탁하는 것은?",
+        options: [
+          { text: "결정이나 방향 제시", value: "leader" },
+          { text: "정보나 조언", value: "scholar" },
+          { text: "같이 놀자는 부탁", value: "popularity" },
+          { text: "돈 관리 팁", value: "wealth" },
+        ],
+      },
+      {
+        text: "인생에서 가장 중요하게 여기는 가치는?",
+        options: [
+          { text: "안정과 재산", value: "wealth" },
+          { text: "사람들과의 관계", value: "popularity" },
+          { text: "성취와 영향력", value: "leader" },
+          { text: "지식과 성장", value: "scholar" },
+        ],
+      },
+    ],
+    categories: {
+      wealth: { title: "재물상 – 차곡차곡 쌓는 타입", emoji: "💰", desc: "실속을 챙기는 데 능한 당신. 눈앞의 즐거움보다 장기적인 안정을 먼저 생각하는 재물운 좋은 관상이에요. 가끔은 모은 만큼 스스로에게도 아낌없이 써보세요." },
+      popularity: { title: "인기상 – 사람이 절로 모이는 타입", emoji: "🌟", desc: "타고난 친화력으로 어디서나 사람이 모이는 당신. 함께 있으면 편안하고 즐거운 존재예요. 그 인기만큼 스스로를 챙기는 것도 잊지 마세요." },
+      leader: { title: "리더상 – 앞에서 이끄는 타입", emoji: "👑", desc: "결단력과 추진력을 겸비한 당신은 타고난 리더 관상이에요. 사람들이 자연스럽게 당신을 따르고 의지해요. 가끔은 속도를 늦추고 주변을 돌아보는 여유도 필요해요." },
+      scholar: { title: "학자상 – 지혜롭고 신중한 타입", emoji: "📚", desc: "차분한 관찰력과 깊은 사고를 지닌 당신. 급하게 나서기보다 제대로 알고 움직이는 신중한 관상이에요. 그 지혜가 결정적인 순간에 빛을 발할 거예요." },
+      lucky: { title: "귀인상 – 도움이 절로 따르는 타입", emoji: "🍀", desc: "위기의 순간마다 누군가 도와주는, 사람 복 많은 관상이에요. 평소 베푼 마음이 좋은 인연으로 돌아오는 타입이죠. 그 행운을 믿고 조금 더 자신 있게 나아가도 좋아요." },
+    },
+  },
+
+  {
+    id: "pushpull",
+    tag: "연애심리",
+    title: "나의 밀당 스타일 테스트",
+    emoji: "🎣",
+    tagline: "썸 탈 때 진짜 나의 밀당 방식은?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "좋아하는 사람이 생기면 나는?",
+        options: [
+          { text: "바로 마음을 표현한다", value: "direct" },
+          { text: "일부러 조금 튕겨본다", value: "push" },
+          { text: "티 내지 않고 지켜본다", value: "passive" },
+          { text: "자연스럽게 다가간다", value: "balance" },
+        ],
+      },
+      {
+        text: "상대에게 연락이 뜸해지면?",
+        options: [
+          { text: "바로 무슨 일 있냐고 물어본다", value: "direct" },
+          { text: "나도 똑같이 연락을 줄인다", value: "push" },
+          { text: "혼자 이런저런 생각을 한다", value: "passive" },
+          { text: "그럴 수도 있지 하고 넘어간다", value: "balance" },
+        ],
+      },
+      {
+        text: "데이트 약속을 잡을 때 나는?",
+        options: [
+          { text: "내가 먼저 날짜를 제안한다", value: "direct" },
+          { text: "상대가 먼저 제안하길 기다린다", value: "push" },
+          { text: "은근히 힌트만 준다", value: "passive" },
+          { text: "편하게 서로 맞춰서 정한다", value: "balance" },
+        ],
+      },
+      {
+        text: "상대가 나에게 관심을 보이면?",
+        options: [
+          { text: "적극적으로 반응한다", value: "direct" },
+          { text: "일부러 덤덤하게 반응한다", value: "push" },
+          { text: "속으로만 좋아하고 티 안 낸다", value: "passive" },
+          { text: "자연스럽게 호감을 표현한다", value: "balance" },
+        ],
+      },
+      {
+        text: "썸 타는 상대와 다투면?",
+        options: [
+          { text: "바로 대화로 풀려고 한다", value: "direct" },
+          { text: "먼저 연락 안 하고 기다린다", value: "push" },
+          { text: "혼자 끙끙 앓는다", value: "passive" },
+          { text: "시간을 두고 자연스럽게 푼다", value: "balance" },
+        ],
+      },
+      {
+        text: "상대가 다른 사람과 친해 보이면?",
+        options: [
+          { text: "솔직하게 신경쓰인다고 말한다", value: "direct" },
+          { text: "나도 다른 사람과 친한 척한다", value: "push" },
+          { text: "티 안 내지만 신경쓰인다", value: "passive" },
+          { text: "믿고 크게 신경쓰지 않는다", value: "balance" },
+        ],
+      },
+      {
+        text: "고백은 보통 누가 먼저?",
+        options: [
+          { text: "내가 먼저 하는 편", value: "direct" },
+          { text: "상대가 먼저 하게 유도한다", value: "push" },
+          { text: "고백을 못 하고 흐지부지된다", value: "passive" },
+          { text: "타이밍 맞으면 자연스럽게", value: "balance" },
+        ],
+      },
+      {
+        text: "연애 초반 나의 연락 빈도는?",
+        options: [
+          { text: "자주, 적극적으로 연락한다", value: "direct" },
+          { text: "일부러 텀을 둔다", value: "push" },
+          { text: "상대 연락에 맞춰서만 한다", value: "passive" },
+          { text: "부담 없이 편한 만큼 한다", value: "balance" },
+        ],
+      },
+    ],
+    categories: {
+      direct: { title: "직진 돌격형 – 마음을 숨기지 않는", emoji: "🚀", desc: "좋으면 좋다고 바로 표현하는 솔직한 당신. 밀당보다 진심이 더 큰 무기예요. 다만 상대가 부담스러워하지 않게 속도 조절도 함께 해보세요." },
+      push: { title: "밀당 고수형 – 튕기기의 정석", emoji: "🎣", desc: "적당한 거리감으로 상대를 궁금하게 만드는 당신. 밀당의 재미를 아는 연애 고수예요. 다만 진심을 너무 오래 숨기면 오해를 살 수도 있어요." },
+      passive: { title: "속마음 감춤형 – 티 안 나는 짝사랑꾼", emoji: "🙈", desc: "좋아하는 마음을 잘 숨기는 당신. 조심스럽고 신중한 만큼 상처도 덜 받으려는 마음이에요. 가끔은 작은 신호라도 보내보는 용기를 내보세요." },
+      balance: { title: "자연스러운 균형형 – 편안한 밀당", emoji: "🌿", desc: "밀지도 당기지도 않고 편안하게 흘러가는 당신의 연애. 그 여유로움이 오히려 상대를 안심시켜요. 지금처럼 자연스러운 페이스를 유지해보세요." },
+    },
+  },
+
+  {
+    id: "firstimpression",
+    tag: "성격",
+    title: "나의 반전 매력 테스트",
+    emoji: "🎭",
+    tagline: "겉모습과는 다른, 알고 보면 이런 사람",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "사람들이 나에 대해 자주 오해하는 점은?",
+        options: [
+          { text: "차가워 보인다고 오해한다", value: "coldwarm" },
+          { text: "엄청 사교적일 것 같다고 생각한다", value: "loudshy" },
+          { text: "얌전할 것 같다고 생각한다", value: "calmwild" },
+          { text: "쿨하고 무던할 것 같다고 생각한다", value: "toughsoft" },
+        ],
+      },
+      {
+        text: "친해지고 나면 사람들이 자주 하는 말은?",
+        options: [
+          { text: "생각보다 되게 다정하다", value: "coldwarm" },
+          { text: "의외로 집순이/집돌이다", value: "loudshy" },
+          { text: "은근 텐션이 높다", value: "calmwild" },
+          { text: "생각보다 여리고 정이 많다", value: "toughsoft" },
+        ],
+      },
+      {
+        text: "낯선 자리에서 나는?",
+        options: [
+          { text: "표정 관리가 잘 안 돼서 무뚝뚝해 보인다", value: "coldwarm" },
+          { text: "밝게 행동하지만 속으론 빨리 집에 가고 싶다", value: "loudshy" },
+          { text: "조용히 있다가 친해지면 확 달라진다", value: "calmwild" },
+          { text: "쿨한 척하지만 사실 신경을 많이 쓴다", value: "toughsoft" },
+        ],
+      },
+      {
+        text: "화가 났을 때 겉으로 드러나는 모습은?",
+        options: [
+          { text: "표정에서부터 티가 많이 난다", value: "coldwarm" },
+          { text: "티 안 내려 하지만 결국 티가 난다", value: "loudshy" },
+          { text: "갑자기 폭발하듯 터진다", value: "calmwild" },
+          { text: "괜찮은 척하다가 혼자 삭인다", value: "toughsoft" },
+        ],
+      },
+      {
+        text: "슬픈 일이 있을 때 나는?",
+        options: [
+          { text: "혼자 삭이는 것 같아 보이지만 실은 위로받고 싶다", value: "coldwarm" },
+          { text: "밝은 척하지만 집에서 많이 운다", value: "loudshy" },
+          { text: "덤덤해 보이지만 마음이 오래 남는다", value: "calmwild" },
+          { text: "괜찮다고 말하지만 사실 크게 흔들린다", value: "toughsoft" },
+        ],
+      },
+      {
+        text: "SNS에 비치는 내 모습은?",
+        options: [
+          { text: "시크하고 무심해 보인다", value: "coldwarm" },
+          { text: "엄청 활발해 보인다", value: "loudshy" },
+          { text: "차분하고 정적으로 보인다", value: "calmwild" },
+          { text: "쿨하고 털털해 보인다", value: "toughsoft" },
+        ],
+      },
+      {
+        text: "반면 실제 나의 일상은?",
+        options: [
+          { text: "생각보다 세심하게 사람을 챙긴다", value: "coldwarm" },
+          { text: "혼자 있는 시간을 훨씬 좋아한다", value: "loudshy" },
+          { text: "친한 사람들 앞에서는 텐션이 터진다", value: "calmwild" },
+          { text: "작은 일에도 마음을 잘 쓴다", value: "toughsoft" },
+        ],
+      },
+      {
+        text: "나를 진짜 아는 사람들이 말하는 나는?",
+        options: [
+          { text: "알고 보면 제일 다정한 사람", value: "coldwarm" },
+          { text: "의외로 집콕을 제일 좋아하는 사람", value: "loudshy" },
+          { text: "반전 텐션 甲", value: "calmwild" },
+          { text: "누구보다 정 많고 여린 사람", value: "toughsoft" },
+        ],
+      },
+    ],
+    categories: {
+      coldwarm: { title: "츤데레형 – 차가워 보이지만 속은 다정", emoji: "🧊", desc: "첫인상은 시크하지만 알고 보면 누구보다 다정한 당신. 표현이 서툴 뿐 마음은 늘 따뜻해요. 가끔은 그 다정함을 조금 더 솔직하게 드러내보세요." },
+      loudshy: { title: "인싸력 방전형 – 밝아 보이지만 집순이", emoji: "🏠", desc: "밖에서는 밝고 활발하지만 집에 오면 방전되는 당신. 사람들과 있는 시간만큼 혼자만의 충전 시간이 꼭 필요한 타입이에요. 무리하지 말고 쉬는 시간을 충분히 챙기세요." },
+      calmwild: { title: "반전 텐션형 – 차분해 보이지만 텐션 甲", emoji: "🎢", desc: "겉으론 얌전해 보여도 친한 사람 앞에서는 텐션이 폭발하는 당신. 그 반전 매력이 주변 사람들을 즐겁게 만들어요. 마음을 여는 데 시간이 걸릴 뿐, 한번 열리면 최고의 텐션이죠." },
+      toughsoft: { title: "쿨内유리형 – 쿨해 보이지만 여린 마음", emoji: "🍡", desc: "겉으로는 쿨하고 무던해 보이지만 속은 여리고 정이 많은 당신. 남 신경 안 쓰는 척해도 사실 마음을 많이 쓰는 타입이에요. 가끔은 힘들다는 말도 편하게 꺼내보세요." },
+    },
+  },
+
+  {
+    id: "speechstyle",
+    tag: "성격",
+    title: "나의 말투로 보는 성격 테스트",
+    emoji: "💬",
+    tagline: "말투만 봐도 알 수 있는 진짜 성격",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "친구가 고민을 털어놓으면 나는?",
+        options: [
+          { text: "괜찮아, 잘하고 있어부터 말한다", value: "gentle" },
+          { text: "원인부터 차근차근 짚어준다", value: "logical" },
+          { text: "농담으로 분위기부터 풀어준다", value: "humor" },
+          { text: "솔직한 내 생각을 바로 말한다", value: "straightforward" },
+        ],
+      },
+      {
+        text: "단톡방에서 나의 말투는?",
+        options: [
+          { text: "이모티콘과 존댓말을 자주 쓴다", value: "gentle" },
+          { text: "핵심만 정리해서 짧게 쓴다", value: "logical" },
+          { text: "드립과 밈을 자주 섞는다", value: "humor" },
+          { text: "직설적이고 짧게 쓴다", value: "straightforward" },
+        ],
+      },
+      {
+        text: "부탁을 거절할 때 나는?",
+        options: [
+          { text: "미안함을 잔뜩 담아 돌려 말한다", value: "gentle" },
+          { text: "이유를 논리적으로 설명한다", value: "logical" },
+          { text: "농담 섞어서 부드럽게 거절한다", value: "humor" },
+          { text: "안 된다고 바로 말한다", value: "straightforward" },
+        ],
+      },
+      {
+        text: "회의나 토론에서 나는?",
+        options: [
+          { text: "다른 사람 의견을 먼저 듣는다", value: "gentle" },
+          { text: "근거와 데이터로 말한다", value: "logical" },
+          { text: "분위기를 풀며 말한다", value: "humor" },
+          { text: "생각을 직설적으로 말한다", value: "straightforward" },
+        ],
+      },
+      {
+        text: "칭찬을 할 때 나는?",
+        options: [
+          { text: "따뜻한 말을 길게 해준다", value: "gentle" },
+          { text: "구체적으로 뭐가 좋았는지 짚어준다", value: "logical" },
+          { text: "장난스럽게 놀리듯 칭찬한다", value: "humor" },
+          { text: "짧고 확실하게 말한다", value: "straightforward" },
+        ],
+      },
+      {
+        text: "문자나 톡을 보낼 때 나는?",
+        options: [
+          { text: "말줄임표와 부드러운 어미를 자주 쓴다", value: "gentle" },
+          { text: "군더더기 없이 용건만 쓴다", value: "logical" },
+          { text: "이모지와 드립을 섞는다", value: "humor" },
+          { text: "짧고 명확하게 쓴다", value: "straightforward" },
+        ],
+      },
+      {
+        text: "누군가 실수를 하면 나는?",
+        options: [
+          { text: "괜찮다며 다독여준다", value: "gentle" },
+          { text: "원인과 해결책을 같이 짚어준다", value: "logical" },
+          { text: "웃으며 가볍게 넘긴다", value: "humor" },
+          { text: "바로 지적하고 넘어간다", value: "straightforward" },
+        ],
+      },
+      {
+        text: "나의 말투에 대해 사람들이 하는 말은?",
+        options: [
+          { text: "말이 참 따뜻하다", value: "gentle" },
+          { text: "설명을 잘한다", value: "logical" },
+          { text: "같이 있으면 재밌다", value: "humor" },
+          { text: "시원시원하다", value: "straightforward" },
+        ],
+      },
+    ],
+    categories: {
+      gentle: { title: "다정체 – 말 한마디에도 배려가 담긴", emoji: "🌷", desc: "말투 하나에도 상대를 향한 배려가 묻어나는 당신. 듣는 사람을 편안하게 만드는 재주가 있어요. 가끔은 스스로를 위한 말도 다정하게 건네보세요." },
+      logical: { title: "팩폭체 – 논리정연하고 명쾌한", emoji: "📐", desc: "군더더기 없이 핵심을 짚어내는 당신의 말투는 늘 신뢰가 가요. 명확한 설명 덕분에 믿고 의지하는 사람이 많아요. 가끔은 감정을 조금 더 섞어 말해도 좋아요." },
+      humor: { title: "드립체 – 대화가 즐거운 분위기 메이커", emoji: "😆", desc: "어떤 대화든 즐겁게 만드는 재주를 가진 당신. 함께 있으면 자연스럽게 웃음이 나는 사람이에요. 가끔은 진지한 이야기도 편하게 꺼내보세요." },
+      straightforward: { title: "직설체 – 돌려 말하지 않는 시원시원함", emoji: "🎯", desc: "군더더기 없이 할 말은 하는 당신의 말투는 명쾌하고 시원해요. 오해 없이 소통하는 걸 중요하게 여기는 타입이에요. 가끔은 표현을 조금 더 부드럽게 다듬어보세요." },
     },
   },
 ];
