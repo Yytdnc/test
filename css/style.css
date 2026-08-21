@@ -17,8 +17,32 @@
   --radius-sm: 12px;
   --shadow: 0 8px 24px rgba(255, 111, 145, 0.14);
   --shadow-hover: 0 16px 36px rgba(255, 111, 145, 0.24);
+  --shadow-card: 0 1px 2px rgba(50, 43, 61, 0.04), 0 10px 22px -10px rgba(255, 111, 145, 0.22);
+  --shadow-card-hover: 0 2px 4px rgba(50, 43, 61, 0.06), 0 22px 40px -14px rgba(255, 111, 145, 0.32);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --max-width: 1080px;
   --font-display: "Jua", "Pretendard", "Apple SD Gothic Neo", sans-serif;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes floatBlob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(12px, -16px) scale(1.06); }
+}
+@keyframes resultPop {
+  from { opacity: 0; transform: translateY(14px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes emojiPop {
+  0% { transform: scale(0.4); opacity: 0; }
+  65% { transform: scale(1.16); opacity: 1; }
+  100% { transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
 }
 
 * { box-sizing: border-box; }
@@ -88,36 +112,67 @@ button { font: inherit; }
 
 /* ---------- Hero ---------- */
 .hero {
-  padding: 56px 0 32px;
+  padding: 64px 0 36px;
   text-align: center;
   position: relative;
+  overflow: hidden;
   background:
     radial-gradient(circle at 12% 20%, rgba(255, 111, 145, 0.14), transparent 40%),
     radial-gradient(circle at 88% 15%, rgba(124, 108, 240, 0.13), transparent 42%),
     radial-gradient(circle at 50% 100%, rgba(43, 196, 168, 0.1), transparent 45%);
 }
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(50px);
+  pointer-events: none;
+  animation: floatBlob 9s ease-in-out infinite;
+}
+.hero::before {
+  width: 240px;
+  height: 240px;
+  top: -70px;
+  left: 4%;
+  background: radial-gradient(circle, rgba(255, 111, 145, 0.4), transparent 70%);
+}
+.hero::after {
+  width: 280px;
+  height: 280px;
+  top: -50px;
+  right: 4%;
+  background: radial-gradient(circle, rgba(124, 108, 240, 0.32), transparent 70%);
+  animation-delay: -4.5s;
+}
+.hero > * { position: relative; z-index: 1; }
 .hero .eyebrow {
   display: inline-block;
-  background: var(--surface-2);
-  color: var(--accent-dark);
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
   font-weight: 700;
   font-size: 0.8rem;
-  padding: 6px 14px;
+  padding: 7px 16px;
   border-radius: 999px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+  box-shadow: 0 6px 16px rgba(255, 111, 145, 0.3);
+  animation: fadeInUp 0.6s var(--ease-out) both;
 }
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  font-size: clamp(2rem, 4.2vw, 2.9rem);
   font-weight: 400;
   letter-spacing: -0.01em;
-  margin: 0 0 12px;
+  margin: 0 0 14px;
+  animation: fadeInUp 0.6s var(--ease-out) 0.08s both;
 }
 .hero p {
   color: var(--text-soft);
   font-size: 1.02rem;
   max-width: 520px;
   margin: 0 auto;
+  animation: fadeInUp 0.6s var(--ease-out) 0.16s both;
 }
 
 /* ---------- Section ---------- */
@@ -134,6 +189,18 @@ button { font: inherit; }
   font-weight: 400;
   letter-spacing: -0.01em;
   margin: 0;
+  position: relative;
+  padding-left: 14px;
+}
+.section-head h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  bottom: 0.2em;
+  width: 5px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
 }
 .section-head .more {
   font-size: 0.85rem;
@@ -150,30 +217,46 @@ button { font: inherit; }
 
 .test-card {
   display: block;
+  position: relative;
+  overflow: hidden;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 22px 18px;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
+}
+.test-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s var(--ease-out);
 }
 .test-card:hover {
-  transform: translateY(-5px) rotate(-0.6deg) scale(1.015);
-  box-shadow: var(--shadow-hover);
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: var(--shadow-card-hover);
   border-color: transparent;
 }
+.test-card:hover::before { transform: scaleX(1); }
 .test-card .thumb {
   width: 56px;
   height: 56px;
   border-radius: 18px;
-  background: var(--surface-2);
+  background: linear-gradient(150deg, var(--surface-2), #fff);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.7rem;
   margin-bottom: 14px;
-  transition: transform 0.18s ease;
+  transition: transform 0.3s var(--ease-out);
 }
-.test-card:hover .thumb { transform: scale(1.08) rotate(4deg); }
+.test-card:hover .thumb { transform: scale(1.1) rotate(6deg); }
 .test-card .tag {
   display: inline-block;
   font-size: 0.72rem;
@@ -219,17 +302,32 @@ button { font: inherit; }
   display: flex;
   align-items: center;
   gap: 14px;
+  position: relative;
+  overflow: hidden;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 12px 18px;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+}
+.rank-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  transform: scaleY(0);
+  transition: transform 0.3s var(--ease-out);
 }
 .rank-item:hover {
-  transform: translateY(-3px) scale(1.01);
-  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px) scale(1.008);
+  box-shadow: var(--shadow-card-hover);
   border-color: transparent;
 }
+.rank-item:hover::before { transform: scaleY(1); }
 .rank-badge {
   flex-shrink: 0;
   width: 30px;
@@ -298,17 +396,21 @@ button { font: inherit; }
   font-size: 0.95rem;
   border: none;
   cursor: pointer;
-  transition: opacity 0.15s ease, transform 0.15s ease;
+  transition: opacity 0.2s var(--ease-out), transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
 }
 .button:hover { transform: translateY(-2px) scale(1.02); }
 .button:active { transform: translateY(0) scale(0.98); }
 .button.primary {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
   color: #fff;
   box-shadow: 0 8px 18px rgba(255, 111, 145, 0.35);
 }
-.button.primary:hover { background: var(--accent-dark); }
+.button.primary:hover {
+  background: linear-gradient(135deg, var(--accent-dark), #d6416a);
+  box-shadow: 0 12px 26px rgba(255, 111, 145, 0.45);
+}
 .button.ghost { background: var(--surface); color: var(--text); border: 1px solid var(--border); }
+.button.ghost:hover { background: #fff; box-shadow: var(--shadow-card); }
 .button.block { width: 100%; }
 
 /* ---------- Quiz page ---------- */
@@ -371,12 +473,13 @@ button { font: inherit; }
   font-weight: 600;
   text-align: left;
   cursor: pointer;
-  transition: border-color 0.15s ease, background 0.15s ease, transform 0.1s ease;
+  transition: border-color 0.2s var(--ease-out), background 0.2s var(--ease-out), transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
 }
 .option-btn:hover {
   border-color: var(--accent);
   background: var(--accent-soft);
-  transform: translateX(3px);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-card);
 }
 .option-btn:active { transform: scale(0.99); }
 
@@ -423,6 +526,8 @@ button { font: inherit; }
   padding: 40px 20px 60px;
 }
 .result-card {
+  position: relative;
+  overflow: hidden;
   background: linear-gradient(165deg, var(--surface-2), var(--surface) 60%);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -430,8 +535,26 @@ button { font: inherit; }
   text-align: center;
   margin-bottom: 24px;
   box-shadow: var(--shadow);
+  animation: resultPop 0.55s var(--ease-out) both;
 }
-.result-card .r-emoji { font-size: 3.6rem; margin-bottom: 16px; }
+.result-card::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  width: 320px;
+  height: 320px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(255, 111, 145, 0.28), transparent 68%);
+  pointer-events: none;
+  z-index: 0;
+}
+.result-card > * { position: relative; z-index: 1; }
+.result-card .r-emoji {
+  font-size: 3.6rem;
+  margin-bottom: 16px;
+  animation: emojiPop 0.6s var(--ease-out) 0.1s both;
+}
 .result-card .r-eyebrow {
   font-size: 0.82rem;
   font-weight: 700;
@@ -622,11 +745,23 @@ footer .foot-links a:hover { color: var(--accent); }
   padding: 56px 20px 60px;
 }
 .auth-card {
+  position: relative;
+  overflow: hidden;
   background: #fff;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-card-hover);
   padding: 36px 30px;
+  animation: resultPop 0.5s var(--ease-out) both;
+}
+.auth-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
 }
 .auth-card-head {
   text-align: center;
@@ -639,7 +774,8 @@ footer .foot-links a:hover { color: var(--accent); }
   width: 52px;
   height: 52px;
   border-radius: 16px;
-  background: var(--surface-2);
+  background: linear-gradient(150deg, var(--surface-2), #fff);
+  box-shadow: var(--shadow-card);
   font-size: 1.5rem;
   margin-bottom: 14px;
 }
@@ -859,12 +995,13 @@ footer .foot-links a:hover { color: var(--accent); }
   padding: 16px 8px;
   text-align: center;
   cursor: pointer;
-  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+  transition: border-color 0.2s var(--ease-out), background 0.2s var(--ease-out), transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
 }
 .zodiac-btn:hover {
   border-color: var(--accent);
   background: var(--accent-soft);
-  transform: translateY(-3px);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: var(--shadow-card);
 }
 .zodiac-btn .z-emoji { font-size: 1.8rem; display: block; margin-bottom: 6px; }
 .zodiac-btn .z-name { font-size: 0.82rem; font-weight: 700; }
