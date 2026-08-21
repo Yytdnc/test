@@ -27,7 +27,7 @@ img/og-share.png       링크 공유 시 노출되는 대표 이미지 (OG 이�
 scripts/build-quiz-pages.js  quiz-<id>.html 정적 페이지 생성 스크립트
 ```
 
-현재 테스트 40종 (`js/tests-data.js`의 `TESTS` 배열 참고).
+현재 테스트 42종 (`js/tests-data.js`의 `TESTS` 배열 참고).
 
 ### 새 테스트 추가하는 법
 `js/tests-data.js`의 `TESTS` 배열에 항목을 하나 추가하면 홈/퀴즈/결과 페이지에 자동으로 반영됩니다. `type: "category"`(유형 판정) 또는 `type: "score"`(점수 구간 판정) 중 선택. 테스트 객체에 `compare: true`를 추가하면 결과 페이지에 "커플/친구와 비교하기" 공유 링크 기능이 자동으로 활성화됩니다 (URL에 답변을 인코딩해서 전달하는 방식이라 별도 서버/DB가 필요 없습니다).
