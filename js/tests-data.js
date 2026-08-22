@@ -4079,4 +4079,110 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "gift",
+    tag: "선물",
+    title: "나의 선물 스타일 테스트",
+    emoji: "🎁",
+    tagline: "선물 고르는 방식에 진짜 성격이 담겨있어요",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "선물을 고를 때 가장 먼저 생각하는 것은?",
+        options: [
+          { text: "그 사람과의 추억이나 의미", value: "thoughtful" },
+          { text: "평소에 필요하다고 했던 것", value: "practical" },
+          { text: "어떻게 하면 더 감동적으로 전달할지", value: "event" },
+          { text: "예산은 상관없이 최고로 좋은 것", value: "flex" },
+        ],
+      },
+      {
+        text: "생일 선물을 준비하는 기간은?",
+        options: [
+          { text: "몇 주 전부터 의미를 고민한다", value: "thoughtful" },
+          { text: "필요한 거 물어보고 바로 산다", value: "practical" },
+          { text: "깜짝 이벤트를 몰래 기획한다", value: "event" },
+          { text: "예산 크게 잡고 통 크게 지른다", value: "flex" },
+        ],
+      },
+      {
+        text: "선물과 함께 챙기는 것은?",
+        options: [
+          { text: "손편지나 진심 담은 메시지", value: "thoughtful" },
+          { text: "교환 가능하게 영수증도 함께", value: "practical" },
+          { text: "풍선, 케이크 같은 이벤트 소품", value: "event" },
+          { text: "포장부터 고급스럽게", value: "flex" },
+        ],
+      },
+      {
+        text: "선물 예산을 정할 때 나는?",
+        options: [
+          { text: "가격보다 마음이 중요하다고 생각한다", value: "thoughtful" },
+          { text: "합리적인 선에서 고민한다", value: "practical" },
+          { text: "분위기 연출 비용까지 고려한다", value: "event" },
+          { text: "예산 제한 없이 통 크게 쓴다", value: "flex" },
+        ],
+      },
+      {
+        text: "상대가 선물을 받고 가장 좋아했으면 하는 포인트는?",
+        options: [
+          { text: "'나를 이렇게까지 생각해줬구나' 하는 마음", value: "thoughtful" },
+          { text: "'진짜 필요했던 거였어' 하는 반응", value: "practical" },
+          { text: "'완전 깜짝 놀랐잖아' 하는 반응", value: "event" },
+          { text: "'이걸 나한테?!' 하는 놀란 반응", value: "flex" },
+        ],
+      },
+      {
+        text: "친구가 선물 취향을 모르겠다고 하면 나의 조언은?",
+        options: [
+          { text: "평소 관심사를 잘 관찰해보라고 한다", value: "thoughtful" },
+          { text: "위시리스트를 물어보라고 한다", value: "practical" },
+          { text: "서프라이즈로 감동을 주라고 한다", value: "event" },
+          { text: "그냥 비싼 걸로 사면 다 좋아한다고 한다", value: "flex" },
+        ],
+      },
+      {
+        text: "선물을 받았을 때 나는?",
+        options: [
+          { text: "의미를 곱씹으며 오래 간직한다", value: "thoughtful" },
+          { text: "바로 유용하게 쓴다", value: "practical" },
+          { text: "이벤트 자체가 기억에 남는다", value: "event" },
+          { text: "가격이나 브랜드에 눈이 먼저 간다", value: "flex" },
+        ],
+      },
+      {
+        text: "커플이나 친구 사이 선물에서 가장 중요한 건?",
+        options: [
+          { text: "진심이 담긴 스토리", value: "thoughtful" },
+          { text: "실생활에 도움이 되는 것", value: "practical" },
+          { text: "잊지 못할 순간을 만드는 것", value: "event" },
+          { text: "화끈하게 통 크게 쏘는 것", value: "flex" },
+        ],
+      },
+    ],
+    categories: {
+      thoughtful: {
+        title: "감동파 – 마음을 전하는 선물",
+        emoji: "💌",
+        desc: "선물 하나에도 상대와의 추억과 진심을 담아내는 당신. 받는 사람이 감동할 만큼 세심한 배려가 느껴져요. 가끔은 부담 갖지 말고 가볍게 선물해보는 것도 좋아요.",
+      },
+      practical: {
+        title: "실용파 – 꼭 필요한 걸 챙기는",
+        emoji: "🧰",
+        desc: "겉치레보다 상대에게 실제로 도움이 되는 걸 챙기는 당신. 현실적인 센스 덕분에 늘 만족도 높은 선물을 골라요. 가끔은 짧은 편지 한 장을 더해보면 감동이 배가 될 거예요.",
+      },
+      event: {
+        title: "이벤트파 – 서프라이즈 장인",
+        emoji: "🎉",
+        desc: "깜짝 이벤트와 분위기 연출로 특별한 순간을 만드는 당신. 준비 과정 자체를 즐기는 로맨티스트예요. 가끔은 힘을 빼고 소소하게 선물하는 것도 관계에 여유를 줄 수 있어요.",
+      },
+      flex: {
+        title: "플렉스파 – 통 크게 쏘는 스타일",
+        emoji: "💎",
+        desc: "마음을 표현할 때는 화끈하게, 아낌없이 쏘는 당신. 통 큰 선물로 상대를 확실하게 감동시켜요. 가끔은 작은 정성이 담긴 선물도 큰 울림을 줄 수 있다는 걸 기억해보세요.",
+      },
+    },
+  },
 ];
