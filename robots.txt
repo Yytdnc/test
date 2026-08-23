@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /compare.html
-Disallow: /quiz.html
-Disallow: /result.html
 
 Sitemap: https://www.mindpick.net/sitemap.xml
