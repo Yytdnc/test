@@ -4185,4 +4185,110 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "learningstyle",
+    tag: "자기계발",
+    title: "나의 학습 스타일 테스트",
+    emoji: "📚",
+    tagline: "나에게 딱 맞는 공부법, 알고 있나요?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "새로운 내용을 배울 때 가장 잘 이해되는 방법은?",
+        options: [
+          { text: "그림이나 도표로 보여줄 때", value: "visual" },
+          { text: "설명을 직접 들을 때", value: "auditory" },
+          { text: "글로 정리된 자료를 읽을 때", value: "reading" },
+          { text: "직접 해보면서 몸으로 익힐 때", value: "kinesthetic" },
+        ],
+      },
+      {
+        text: "수업이나 강의를 들을 때 나의 필기 스타일은?",
+        options: [
+          { text: "색깔펜과 화살표로 구조도를 그린다", value: "visual" },
+          { text: "필기보다 귀로 듣는 데 집중한다", value: "auditory" },
+          { text: "문장으로 꼼꼼하게 받아 적는다", value: "reading" },
+          { text: "필기는 대충 하고 실습 시간을 기다린다", value: "kinesthetic" },
+        ],
+      },
+      {
+        text: "낯선 길을 찾아갈 때 나는?",
+        options: [
+          { text: "지도를 눈으로 보며 이동한다", value: "visual" },
+          { text: "사람들에게 물어보며 이동한다", value: "auditory" },
+          { text: "글로 된 안내문을 찾아 읽는다", value: "reading" },
+          { text: "일단 걸어보며 감으로 찾는다", value: "kinesthetic" },
+        ],
+      },
+      {
+        text: "새 가전제품을 샀을 때 나는?",
+        options: [
+          { text: "그림 설명서부터 살펴본다", value: "visual" },
+          { text: "유튜브 설명 영상을 틀어놓고 듣는다", value: "auditory" },
+          { text: "설명서 글을 처음부터 끝까지 읽는다", value: "reading" },
+          { text: "일단 버튼을 눌러보며 익힌다", value: "kinesthetic" },
+        ],
+      },
+      {
+        text: "시험 공부할 때 가장 효과적인 방법은?",
+        options: [
+          { text: "마인드맵이나 표로 정리한다", value: "visual" },
+          { text: "소리 내어 읽거나 녹음해서 듣는다", value: "auditory" },
+          { text: "요약 노트를 반복해서 읽는다", value: "reading" },
+          { text: "문제를 직접 풀어보며 익힌다", value: "kinesthetic" },
+        ],
+      },
+      {
+        text: "친구에게 무언가를 설명할 때 나는?",
+        options: [
+          { text: "그림을 그려가며 설명한다", value: "visual" },
+          { text: "말로 차근차근 설명한다", value: "auditory" },
+          { text: "관련 자료를 찾아서 보여준다", value: "reading" },
+          { text: "직접 해보라고 시켜본다", value: "kinesthetic" },
+        ],
+      },
+      {
+        text: "가장 오래 기억에 남는 학습 경험은?",
+        options: [
+          { text: "인상 깊었던 이미지나 영상", value: "visual" },
+          { text: "흥미로웠던 강의나 대화", value: "auditory" },
+          { text: "감명 깊게 읽은 글", value: "reading" },
+          { text: "직접 몸으로 부딪혀본 경험", value: "kinesthetic" },
+        ],
+      },
+      {
+        text: "집중이 잘 안 될 때 나는?",
+        options: [
+          { text: "도표나 색으로 내용을 재정리한다", value: "visual" },
+          { text: "소리 내어 읽거나 누군가와 이야기한다", value: "auditory" },
+          { text: "조용히 앉아 글을 다시 읽는다", value: "reading" },
+          { text: "자리에서 일어나 움직이며 다시 시도한다", value: "kinesthetic" },
+        ],
+      },
+    ],
+    categories: {
+      visual: {
+        title: "시각형 – 눈으로 익히는 학습자",
+        emoji: "🎨",
+        desc: "그림, 색, 구조도로 정보를 정리할 때 가장 잘 이해하는 당신. 복잡한 내용도 이미지로 바꾸면 금방 감이 잡히는 편이에요. 가끔은 소리 내어 말하거나 글로 옮겨보면 기억이 더 오래갈 거예요.",
+      },
+      auditory: {
+        title: "청각형 – 귀로 배우는 학습자",
+        emoji: "🎧",
+        desc: "설명을 듣거나 대화하면서 이해가 쏙쏙 되는 당신. 강의나 토론 속에서 몰입도가 특히 높아지는 편이에요. 가끔은 핵심을 간단히 메모해두면 나중에 다시 떠올리기 훨씬 편해질 거예요.",
+      },
+      reading: {
+        title: "읽기형 – 글로 정리하는 학습자",
+        emoji: "📖",
+        desc: "차분히 글을 읽고 정리하면서 지식을 쌓아가는 당신. 스스로 요약하고 되짚어보는 힘이 큰 강점이에요. 가끔은 소리 내어 읽거나 그림으로 바꿔보면 이해가 한층 깊어질 거예요.",
+      },
+      kinesthetic: {
+        title: "활동형 – 몸으로 익히는 학습자",
+        emoji: "🏃",
+        desc: "직접 해보고 부딪혀보면서 가장 확실하게 배우는 당신. 이론보다 실전에서 감을 빨리 잡는 타입이에요. 가끔은 잠깐 멈춰서 핵심 내용을 글로 정리해보면 배운 걸 더 오래 간직할 수 있을 거예요.",
+      },
+    },
+  },
 ];
