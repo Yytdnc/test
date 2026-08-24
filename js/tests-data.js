@@ -4291,4 +4291,110 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "decision",
+    tag: "성격심리",
+    title: "나의 선택 유형 테스트",
+    emoji: "🧭",
+    tagline: "인생의 갈림길, 당신은 어떻게 결정하나요?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "카페에서 메뉴를 고를 때 나는?",
+        options: [
+          { text: "딱 봐도 맛있어 보이는 걸 바로 고른다", value: "intuition" },
+          { text: "리뷰와 별점을 꼼꼼히 비교해본다", value: "analysis" },
+          { text: "먹어본 적 있는 안전한 메뉴를 고른다", value: "caution" },
+          { text: "옆 사람이 뭐 시키는지 먼저 물어본다", value: "depend" },
+        ],
+      },
+      {
+        text: "큰돈 들여 물건을 살 때 나는?",
+        options: [
+          { text: "마음에 확 꽂히면 바로 지른다", value: "intuition" },
+          { text: "여러 제품을 비교하고 스펙을 따진다", value: "analysis" },
+          { text: "며칠이고 고민하다 결정한다", value: "caution" },
+          { text: "주변에 뭐가 좋은지 물어보고 산다", value: "depend" },
+        ],
+      },
+      {
+        text: "새 학기나 새 직장처럼 중요한 선택을 앞두고 나는?",
+        options: [
+          { text: "느낌이 좋은 쪽으로 마음이 기운다", value: "intuition" },
+          { text: "장단점을 표로 정리해본다", value: "analysis" },
+          { text: "최대한 정보를 모으고 늦게 결정한다", value: "caution" },
+          { text: "가까운 사람의 조언에 많이 좌우된다", value: "depend" },
+        ],
+      },
+      {
+        text: "친구와 영화를 고를 때 나는?",
+        options: [
+          { text: "포스터나 제목 느낌으로 바로 고른다", value: "intuition" },
+          { text: "평점과 줄거리를 검색해본다", value: "analysis" },
+          { text: "안 봐서 후회 없을 확실한 걸 고른다", value: "caution" },
+          { text: "친구가 보고 싶다는 걸 따라간다", value: "depend" },
+        ],
+      },
+      {
+        text: "여행 일정을 짤 때 나는?",
+        options: [
+          { text: "가서 끌리는 대로 움직인다", value: "intuition" },
+          { text: "동선과 시간을 촘촘히 계산한다", value: "analysis" },
+          { text: "후기 좋은 코스로만 다닌다", value: "caution" },
+          { text: "동행자가 원하는 일정에 맞춘다", value: "depend" },
+        ],
+      },
+      {
+        text: "옷을 고를 때 나는?",
+        options: [
+          { text: "입어보고 느낌 오면 바로 산다", value: "intuition" },
+          { text: "코디를 미리 머릿속으로 그려본다", value: "analysis" },
+          { text: "무난하게 오래 입을 것 위주로 고른다", value: "caution" },
+          { text: "다른 사람 의견을 들어보고 정한다", value: "depend" },
+        ],
+      },
+      {
+        text: "결정을 내린 후 나는?",
+        options: [
+          { text: "웬만하면 잘 안 돌아본다", value: "intuition" },
+          { text: "결과를 따져보고 다음에 반영한다", value: "analysis" },
+          { text: "혹시 더 나은 선택이 있었는지 계속 생각한다", value: "caution" },
+          { text: "주변 반응을 보고 안심하거나 불안해한다", value: "depend" },
+        ],
+      },
+      {
+        text: "갑자기 계획이 틀어지면 나는?",
+        options: [
+          { text: "그때그때 새로 정하면 되지!", value: "intuition" },
+          { text: "대안을 빠르게 다시 계산한다", value: "analysis" },
+          { text: "일단 멈추고 신중하게 재검토한다", value: "caution" },
+          { text: "같이 있는 사람과 상의해서 정한다", value: "depend" },
+        ],
+      },
+    ],
+    categories: {
+      intuition: {
+        title: "직감형 – 순간의 촉을 믿는 사람",
+        emoji: "⚡",
+        desc: "당신은 복잡하게 재기보다 마음이 이끄는 대로 빠르게 결정하는 편이에요. 그 순발력 덕분에 기회를 놓치지 않고 스트레스도 덜 받죠. 가끔은 중요한 선택 앞에서 한 박자 쉬며 정보를 점검해보는 것도 도움이 될 거예요.",
+      },
+      analysis: {
+        title: "분석형 – 근거로 판단하는 전략가",
+        emoji: "📊",
+        desc: "당신은 감보다 데이터와 논리를 믿고 차근차근 비교한 뒤 결정하는 사람이에요. 덕분에 후회 없는 선택을 할 확률이 높고 주변에서도 신뢰를 받아요. 다만 너무 오래 재다가 타이밍을 놓치지 않도록 스스로 마감 시간을 정해보세요.",
+      },
+      caution: {
+        title: "신중형 – 돌다리도 두드리는 사람",
+        emoji: "🐢",
+        desc: "당신은 실수를 줄이기 위해 충분히 고민하고 안전한 선택을 선호하는 편이에요. 그 신중함 덕분에 큰 위험은 잘 피해가지만, 고민이 길어지면 오히려 지치기 쉬워요. 결정에 '마감 시한'을 정해두면 한결 가벼워질 거예요.",
+      },
+      depend: {
+        title: "의존형 – 함께 결정하는 조율자",
+        emoji: "🤝",
+        desc: "당신은 주변 사람의 의견을 소중히 여기고 함께 결정할 때 더 확신을 갖는 편이에요. 그 덕분에 관계 속에서 균형 잡힌 선택을 잘 해내죠. 가끔은 온전히 내 마음의 소리에 귀 기울여 스스로 결정해보는 연습도 해보세요.",
+      },
+    },
+  },
 ];
