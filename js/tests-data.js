@@ -4397,4 +4397,110 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "interior",
+    tag: "라이프",
+    title: "나의 인테리어 취향 테스트",
+    emoji: "🛋️",
+    tagline: "내 방을 보면 알 수 있는 진짜 나의 취향은?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "새 집으로 이사한다면 가장 먼저 사고 싶은 가구는?",
+        options: [
+          { text: "깔끔한 화이트 소파", value: "minimal" },
+          { text: "튼튼한 원목 테이블", value: "natural" },
+          { text: "세월이 느껴지는 앤틱 서랍장", value: "vintage" },
+          { text: "폭신한 러그와 쿠션", value: "cozy" },
+        ],
+      },
+      {
+        text: "방을 꾸밀 때 가장 중요하게 생각하는 것은?",
+        options: [
+          { text: "불필요한 물건은 최소화", value: "minimal" },
+          { text: "자연 소재가 주는 편안함", value: "natural" },
+          { text: "나만의 개성과 스토리", value: "vintage" },
+          { text: "아늑하고 따뜻한 분위기", value: "cozy" },
+        ],
+      },
+      {
+        text: "좋아하는 색감 조합은?",
+        options: [
+          { text: "화이트와 그레이", value: "minimal" },
+          { text: "베이지와 우드톤", value: "natural" },
+          { text: "짙은 브라운과 골드", value: "vintage" },
+          { text: "파스텔톤과 웜톤 조명", value: "cozy" },
+        ],
+      },
+      {
+        text: "인테리어 소품을 고를 때 나는?",
+        options: [
+          { text: "있는 듯 없는 듯 심플한 디자인을 고른다", value: "minimal" },
+          { text: "식물이나 라탄 소재 소품을 고른다", value: "natural" },
+          { text: "벼룩시장에서 오래된 물건을 찾는다", value: "vintage" },
+          { text: "캔들이나 담요 같은 감성 소품을 고른다", value: "cozy" },
+        ],
+      },
+      {
+        text: "조명을 고를 때 나는?",
+        options: [
+          { text: "매립등처럼 깔끔한 조명을 선호한다", value: "minimal" },
+          { text: "은은한 우드 스탠드 조명을 선호한다", value: "natural" },
+          { text: "클래식한 샹들리에 느낌을 선호한다", value: "vintage" },
+          { text: "노란빛 무드등을 여러 개 켜둔다", value: "cozy" },
+        ],
+      },
+      {
+        text: "SNS에서 저장해두는 인테리어 사진은?",
+        options: [
+          { text: "군더더기 없는 화이트 톤의 집", value: "minimal" },
+          { text: "초록 식물이 가득한 집", value: "natural" },
+          { text: "유럽 감성이 느껴지는 빈티지 룸", value: "vintage" },
+          { text: "이불 속처럼 포근한 침실", value: "cozy" },
+        ],
+      },
+      {
+        text: "손님이 온다면 가장 자신 있게 보여주고 싶은 공간은?",
+        options: [
+          { text: "정돈된 미니멀 거실", value: "minimal" },
+          { text: "식물로 꾸민 베란다", value: "natural" },
+          { text: "소장품이 진열된 책장", value: "vintage" },
+          { text: "폭신한 침대와 조명이 있는 방", value: "cozy" },
+        ],
+      },
+      {
+        text: "이상적인 주말 집콕 분위기는?",
+        options: [
+          { text: "깔끔하게 정리하고 여유롭게 보내기", value: "minimal" },
+          { text: "창문 열고 식물 돌보며 바람 쐬기", value: "natural" },
+          { text: "좋아하는 LP나 오래된 책 읽기", value: "vintage" },
+          { text: "이불 덮고 영화 보며 뒹굴기", value: "cozy" },
+        ],
+      },
+    ],
+    categories: {
+      minimal: {
+        title: "미니멀 심플형 – 군더더기 없는 공간",
+        emoji: "🤍",
+        desc: "불필요한 것은 덜어내고 꼭 필요한 것만 남기는 당신은 깔끔하고 정돈된 공간에서 안정감을 느껴요. 심플한 감각이 돋보이는 만큼, 가끔은 포인트가 되는 소품 하나로 공간에 온기를 더해보세요.",
+      },
+      natural: {
+        title: "내추럴 우드형 – 자연을 담은 공간",
+        emoji: "🌿",
+        desc: "식물과 원목처럼 자연스러운 소재를 곁에 둘 때 마음이 편안해지는 당신. 살아있는 느낌을 주는 공간을 만드는 감각이 뛰어나요. 가끔은 식물 돌보는 수고로움도 즐거움으로 받아들여보세요.",
+      },
+      vintage: {
+        title: "빈티지 앤틱형 – 이야기가 담긴 공간",
+        emoji: "🕰️",
+        desc: "시간이 쌓인 물건에서 특별한 매력을 발견하는 당신은 남다른 취향과 안목을 가졌어요. 나만의 개성이 담긴 공간을 만들 줄 알죠. 가끔은 새로운 스타일도 과감히 시도해보세요.",
+      },
+      cozy: {
+        title: "아늑한 무드형 – 포근함이 가득한 공간",
+        emoji: "🕯️",
+        desc: "따뜻한 조명과 포근한 패브릭으로 마음까지 편안해지는 공간을 만드는 당신. 집이 곧 힐링 공간이 되는 타입이에요. 가끔은 환기와 정리로 공간에 산뜻함도 더해보세요.",
+      },
+    },
+  },
 ];
