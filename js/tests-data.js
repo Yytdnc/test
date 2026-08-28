@@ -4503,4 +4503,110 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "humor",
+    tag: "유머",
+    title: "나의 유머 스타일 테스트",
+    emoji: "😂",
+    tagline: "나만의 웃음 포인트, 어떤 유머로 사람들을 웃길까요?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "친구들 모임에서 나는 주로?",
+        options: [
+          { text: "재치있는 드립으로 분위기를 띄운다", value: "wit" },
+          { text: "아재개그로 신음소리를 유발한다", value: "dad" },
+          { text: "다들 공감하는 일상 얘기로 웃긴다", value: "relatable" },
+          { text: "몸짓과 표정으로 다같이 빵 터트린다", value: "slapstick" },
+        ],
+      },
+      {
+        text: "웃긴 이야기를 할 때 나의 스타일은?",
+        options: [
+          { text: "예상 못한 반전으로 웃긴다", value: "wit" },
+          { text: "말장난과 라임을 활용한다", value: "dad" },
+          { text: "다들 겪어본 일을 실감나게 묘사한다", value: "relatable" },
+          { text: "그 상황을 몸으로 재연한다", value: "slapstick" },
+        ],
+      },
+      {
+        text: "개그 프로그램을 볼 때 가장 웃긴 코너는?",
+        options: [
+          { text: "순발력 있는 애드리브가 돋보이는 콩트", value: "wit" },
+          { text: "말장난 가득한 아재개그 코너", value: "dad" },
+          { text: "일상 공감 개그 코너", value: "relatable" },
+          { text: "몸을 던지는 몸개그 코너", value: "slapstick" },
+        ],
+      },
+      {
+        text: "어색한 분위기를 풀어야 할 때 나는?",
+        options: [
+          { text: "재치있는 한마디를 던진다", value: "wit" },
+          { text: "썰렁한 아재개그를 던진다", value: "dad" },
+          { text: "다들 공감할만한 얘기를 꺼낸다", value: "relatable" },
+          { text: "우스꽝스러운 행동을 한다", value: "slapstick" },
+        ],
+      },
+      {
+        text: "친구가 실수했을 때 나의 반응은?",
+        options: [
+          { text: "순간적으로 재치있게 놀린다", value: "wit" },
+          { text: "상황에 맞는 말장난을 던진다", value: "dad" },
+          { text: "\"나도 그런 적 있어\" 하며 공감한다", value: "relatable" },
+          { text: "같이 오버해서 리액션한다", value: "slapstick" },
+        ],
+      },
+      {
+        text: "내가 웃길 때 주변 반응은?",
+        options: [
+          { text: "\"어떻게 그런 생각을 했어?\" 하며 감탄한다", value: "wit" },
+          { text: "\"아 진짜...\" 하면서도 웃는다", value: "dad" },
+          { text: "\"완전 내 얘기잖아\" 하며 공감한다", value: "relatable" },
+          { text: "표정과 행동을 보고 그냥 빵 터진다", value: "slapstick" },
+        ],
+      },
+      {
+        text: "나만의 웃음 무기는?",
+        options: [
+          { text: "촌철살인 같은 말센스", value: "wit" },
+          { text: "끝없이 나오는 아재개그 드립", value: "dad" },
+          { text: "공감가는 관찰력", value: "relatable" },
+          { text: "과장된 표정과 몸짓", value: "slapstick" },
+        ],
+      },
+      {
+        text: "유머 감각을 한마디로 표현한다면?",
+        options: [
+          { text: "센스있는 재치꾼", value: "wit" },
+          { text: "사랑스러운 아재개그러", value: "dad" },
+          { text: "모두의 공감 요정", value: "relatable" },
+          { text: "흥 넘치는 분위기 메이커", value: "slapstick" },
+        ],
+      },
+    ],
+    categories: {
+      wit: {
+        title: "위트형 – 센스 넘치는 재치꾼",
+        emoji: "✨",
+        desc: "예상치 못한 타이밍에 툭 던지는 한마디로 좌중을 웃게 만드는 당신은 타고난 위트의 소유자예요. 순발력 있는 말센스 덕분에 어디서든 분위기 메이커로 인정받죠. 가끔은 너무 빠른 드립에 상대가 못 따라올 수 있으니, 상대의 리액션도 살펴가며 여유를 더해보세요.",
+      },
+      dad: {
+        title: "아재개그형 – 사랑스러운 개그 장인",
+        emoji: "😆",
+        desc: "듣는 순간 낯이 찌푸려지지만 어느새 웃게 만드는 아재개그, 그게 바로 당신의 시그니처예요. 뻔한 줄 알면서도 자꾸 기대하게 되는 사랑스러운 개그 장인이죠. 가끔은 타이밍을 살짝 늦춰서 상대가 예상할 틈을 주는 것도 재미있을 거예요.",
+      },
+      relatable: {
+        title: "공감개그형 – 모두의 웃음 요정",
+        emoji: "🥹",
+        desc: "누구나 겪어봤을 법한 일상을 콕 집어내는 공감 개그로 웃음을 주는 당신. 섬세한 관찰력 덕분에 이야기를 들으면 다들 고개를 끄덕이게 되죠. 가끔은 사소한 디테일에 상상력을 살짝 더해보면 이야기가 더 풍성해질 거예요.",
+      },
+      slapstick: {
+        title: "몸개그형 – 흥 넘치는 분위기 메이커",
+        emoji: "🤸",
+        desc: "표정과 몸짓 하나로 순식간에 분위기를 뒤집는 당신은 타고난 흥부자예요. 말보다 행동으로 보여주는 유머 감각 덕분에 모임에 활기가 넘치죠. 가끔은 에너지를 조절하며 상대의 리듬에도 맞춰보면 더 즐거운 시간이 될 거예요.",
+      },
+    },
+  },
 ];
