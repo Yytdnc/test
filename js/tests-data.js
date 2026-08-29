@@ -4609,4 +4609,110 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "plant",
+    tag: "라이프",
+    title: "나의 반려식물 집사 유형 테스트",
+    emoji: "🪴",
+    tagline: "당신은 어떤 스타일의 식물집사인가요?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "새 식물을 데려오기 전 나는?",
+        options: [
+          { text: "종류와 키우는 법을 꼼꼼히 검색한다", value: "perfectionist" },
+          { text: "일단 예뻐 보이면 데려온다", value: "emotional" },
+          { text: "정해둔 루틴에 맞춰 시기를 고른다", value: "diligent" },
+          { text: "그냥 눈에 들어오면 산다", value: "freestyle" },
+        ],
+      },
+      {
+        text: "물 주는 주기는?",
+        options: [
+          { text: "캘린더에 적어두고 꼭 지킨다", value: "diligent" },
+          { text: "흙 상태를 보고 그때그때 준다", value: "freestyle" },
+          { text: "혹시 과습될까 매번 검색해본다", value: "perfectionist" },
+          { text: "기분 내킬 때 듬뿍 준다", value: "emotional" },
+        ],
+      },
+      {
+        text: "식물 잎이 조금 시들었을 때 나는?",
+        options: [
+          { text: "바로 원인을 찾아 조치한다", value: "diligent" },
+          { text: "며칠 지켜보다 괜찮아지겠지 한다", value: "freestyle" },
+          { text: "인터넷에 사진 올려 원인을 물어본다", value: "perfectionist" },
+          { text: "괜히 마음이 짠해서 말을 걸어준다", value: "emotional" },
+        ],
+      },
+      {
+        text: "식물을 데려오는 곳은 주로?",
+        options: [
+          { text: "전문 식물샵에서 상담받고 고른다", value: "perfectionist" },
+          { text: "꽃집을 지나다 마음에 들면 바로", value: "emotional" },
+          { text: "관리하기 쉬운 걸로 화원에서 고른다", value: "diligent" },
+          { text: "지인에게 나눔 받는 경우가 많다", value: "freestyle" },
+        ],
+      },
+      {
+        text: "여행을 갈 때 식물은?",
+        options: [
+          { text: "자동 급수 장치까지 준비한다", value: "perfectionist" },
+          { text: "이웃이나 가족에게 부탁해둔다", value: "diligent" },
+          { text: "며칠쯤이야 괜찮겠지 한다", value: "freestyle" },
+          { text: "다녀와서 반갑게 인사부터 건넨다", value: "emotional" },
+        ],
+      },
+      {
+        text: "식물에게 이름을 붙이는 편인가요?",
+        options: [
+          { text: "이름도 짓고 말도 자주 건다", value: "emotional" },
+          { text: "특별히 이름은 안 짓는다", value: "freestyle" },
+          { text: "종류와 구입일을 기록해둔다", value: "diligent" },
+          { text: "성장 일지를 앱으로 관리한다", value: "perfectionist" },
+        ],
+      },
+      {
+        text: "분갈이를 해야 할 타이밍이 되면?",
+        options: [
+          { text: "시기와 화분 크기를 계산해 진행한다", value: "perfectionist" },
+          { text: "필요하다 싶으면 바로 해준다", value: "diligent" },
+          { text: "미루다가 뿌리가 꽉 차서야 한다", value: "freestyle" },
+          { text: "예쁜 새 화분 고르는 게 더 설렌다", value: "emotional" },
+        ],
+      },
+      {
+        text: "집에 있는 식물이 잘 자랐을 때 드는 생각은?",
+        options: [
+          { text: "역시 계획대로 관리한 보람이 있다", value: "diligent" },
+          { text: "얘도 다 지 알아서 크는구나", value: "freestyle" },
+          { text: "혹시 더 좋은 환경은 없을까 고민한다", value: "perfectionist" },
+          { text: "너무 뿌듯해서 사진을 백 장 찍는다", value: "emotional" },
+        ],
+      },
+    ],
+    categories: {
+      diligent: {
+        title: "성실한 정원사형",
+        emoji: "🌱",
+        desc: "정해진 루틴과 꾸준한 관심으로 식물을 알뜰하게 돌보는 당신은 타고난 성실한 정원사예요. 덕분에 집안의 초록이들이 건강하고 안정적으로 자라나죠. 가끔은 계획을 잠시 내려놓고 식물이 자라는 모습 자체를 여유롭게 즐겨보는 것도 좋아요.",
+      },
+      freestyle: {
+        title: "자유방임 힐링형",
+        emoji: "🍃",
+        desc: "느긋하고 여유로운 마음으로 식물을 대하는 당신은 스트레스 없이 초록이와 함께하는 편안한 집사예요. 자연스러운 리듬을 믿는 태도 덕분에 식물도 사람도 편안하죠. 가끔은 물 주는 날 정도는 살짝 체크해두면 더 튼튼하게 키울 수 있을 거예요.",
+      },
+      perfectionist: {
+        title: "꼼꼼한 연구형 집사",
+        emoji: "🔍",
+        desc: "식물 하나하나의 특성을 꼼꼼히 공부하고 세심하게 챙기는 당신은 믿음직한 연구형 집사예요. 덕분에 웬만한 문제는 미리 예방하고 빠르게 해결하죠. 가끔은 너무 완벽하게 하려는 마음을 내려놓고 작은 실수도 괜찮다고 여겨보세요.",
+      },
+      emotional: {
+        title: "감성 충만 애정형",
+        emoji: "💚",
+        desc: "식물 하나하나에 이름을 붙이고 마음을 나누는 당신은 애정이 가득한 감성 집사예요. 진심 어린 관심 덕분에 식물도 당신의 온기를 느끼고 잘 자라날 거예요. 가끔은 감정만큼이나 실용적인 관리 팁도 함께 챙겨보면 더 좋겠어요.",
+      },
+    },
+  },
 ];
