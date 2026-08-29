@@ -37,10 +37,13 @@
   <meta name="twitter:image" content="https://www.mindpick.net/img/og-share.png" />
   <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=13" />
+  <link rel="stylesheet" href="css/style.css?v=14" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.mindpick.net/"},{"@type":"ListItem","position":2,"name":"나의 선택 유형 테스트","item":"https://www.mindpick.net/quiz-decision.html"}]}</script>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5113083554519679" crossorigin="anonymous"></script>
+  <!-- Google Funding Choices (CMP) -->
+  <script async src="https://fundingchoicesmessages.google.com/i/pub-5113083554519679?ers=1"></script>
+  <script>(function(){function s(){if(!window.frames.googlefcPresent){if(document.body){var e=document.createElement('iframe');e.style='width:0;height:0;border:none;z-index:-1000;left:-1000px;top:-1000px;';e.style.display='none';e.name='googlefcPresent';document.body.appendChild(e);}else{setTimeout(s,0);}}}s();})();</script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -51,6 +54,8 @@
     <a class="brand" href="index.html"><span class="logo-emoji">🧠</span>Mind<span class="accent">Pick</span></a>
     <nav>
       <a href="index.html">홈</a>
+      <a href="tests.html">전체 테스트</a>
+      <a href="about.html">소개</a>
       <a href="privacy.html">개인정보처리방침</a>
     </nav>
   </header>
@@ -85,9 +90,49 @@
 
   </main>
 
+  <article class="quiz-article">
+    <h2>이 테스트는?</h2>
+    <p>나의 선택 유형 테스트는 '인생의 갈림길, 당신은 어떻게 결정하나요'를 주제로 한 성격심리 심리테스트예요. 8개의 일상 상황 질문에 답하면 평소에는 잘 드러나지 않던 나의 성향을 짧게 정리해서 보여줘요.</p>
+    <p>문항은 모두 8개이고 약 1분이면 끝나요. 4가지 유형 중 나와 가장 가까운 결과를 알려줘요. 회원가입이나 이름·이메일 같은 개인정보 입력 없이 바로 시작할 수 있고, 선택한 답변은 서버에 저장되지 않고 브라우저에만 잠시 보관돼요.</p>
+
+    <h2>이런 결과가 나와요</h2>
+      <div class="result-type">
+        <h3>⚡ 직감형 – 순간의 촉을 믿는 사람</h3>
+        <p>당신은 복잡하게 재기보다 마음이 이끄는 대로 빠르게 결정하는 편이에요. 그 순발력 덕분에 기회를 놓치지 않고 스트레스도 덜 받죠. 가끔은 중요한 선택 앞에서 한 박자 쉬며 정보를 점검해보는 것도 도움이 될 거예요.</p>
+      </div>
+      <div class="result-type">
+        <h3>📊 분석형 – 근거로 판단하는 전략가</h3>
+        <p>당신은 감보다 데이터와 논리를 믿고 차근차근 비교한 뒤 결정하는 사람이에요. 덕분에 후회 없는 선택을 할 확률이 높고 주변에서도 신뢰를 받아요. 다만 너무 오래 재다가 타이밍을 놓치지 않도록 스스로 마감 시간을 정해보세요.</p>
+      </div>
+      <div class="result-type">
+        <h3>🐢 신중형 – 돌다리도 두드리는 사람</h3>
+        <p>당신은 실수를 줄이기 위해 충분히 고민하고 안전한 선택을 선호하는 편이에요. 그 신중함 덕분에 큰 위험은 잘 피해가지만, 고민이 길어지면 오히려 지치기 쉬워요. 결정에 '마감 시한'을 정해두면 한결 가벼워질 거예요.</p>
+      </div>
+      <div class="result-type">
+        <h3>🤝 의존형 – 함께 결정하는 조율자</h3>
+        <p>당신은 주변 사람의 의견을 소중히 여기고 함께 결정할 때 더 확신을 갖는 편이에요. 그 덕분에 관계 속에서 균형 잡힌 선택을 잘 해내죠. 가끔은 온전히 내 마음의 소리에 귀 기울여 스스로 결정해보는 연습도 해보세요.</p>
+      </div>
+
+    <h2>질문 미리보기</h2>
+    <ol>
+        <li>카페에서 메뉴를 고를 때 나는?</li>
+        <li>큰돈 들여 물건을 살 때 나는?</li>
+        <li>새 학기나 새 직장처럼 중요한 선택을 앞두고 나는?</li>
+        <li>친구와 영화를 고를 때 나는?</li>
+        <li>여행 일정을 짤 때 나는?</li>
+        <li>옷을 고를 때 나는?</li>
+        <li>결정을 내린 후 나는?</li>
+        <li>갑자기 계획이 틀어지면 나는?</li>
+    </ol>
+
+    <p class="article-note">본 테스트는 재미로 즐기는 콘텐츠이며 과학적·심리학적 근거가 없습니다. 결과는 참고용으로만 봐주세요.</p>
+  </article>
+
   <footer>
     <div class="foot-links">
       <a href="index.html">홈</a>
+      <a href="tests.html">전체 테스트</a>
+      <a href="about.html">소개</a>
       <a href="privacy.html">개인정보처리방침</a>
     </div>
     <p>© 2026 MindPick. 본 사이트의 테스트는 재미로 즐기는 콘텐츠이며 과학적 근거가 없습니다.</p>
@@ -95,13 +140,13 @@
 
   <script>window.MP_TEST_ID = "decision";</script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/supabase-config.js?v=13"></script>
-  <script src="js/views.js?v=13"></script>
-  <script src="js/tests-data.js?v=13"></script>
-  <script src="js/custom-tests.js?v=13"></script>
-  <script src="js/tests-registry.js?v=13"></script>
-  <script src="js/compare-utils.js?v=13"></script>
-  <script src="js/compare-session.js?v=13"></script>
-  <script src="js/quiz.js?v=13"></script>
+  <script src="js/supabase-config.js?v=14"></script>
+  <script src="js/views.js?v=14"></script>
+  <script src="js/tests-data.js?v=14"></script>
+  <script src="js/custom-tests.js?v=14"></script>
+  <script src="js/tests-registry.js?v=14"></script>
+  <script src="js/compare-utils.js?v=14"></script>
+  <script src="js/compare-session.js?v=14"></script>
+  <script src="js/quiz.js?v=14"></script>
 </body>
 </html>
