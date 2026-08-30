@@ -4715,4 +4715,110 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "procrastination",
+    tag: "미루기",
+    title: "나의 미루기 유형 테스트",
+    emoji: "⏰",
+    tagline: "할 일은 쌓여있는데... 나는 어떤 스타일로 미룰까?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "해야 할 일이 생기면 나는?",
+        options: [
+          { text: "마감 직전까지 일단 미뤄둔다", value: "deadline" },
+          { text: "완벽하게 할 자신이 없으면 시작을 늦춘다", value: "perfect" },
+          { text: "일단 딴짓부터 좀 하고 시작한다", value: "distract" },
+          { text: "계획표부터 꼼꼼하게 짠다", value: "plan" },
+        ],
+      },
+      {
+        text: "과제나 업무 마감이 일주일 남았을 때 나는?",
+        options: [
+          { text: "마지막 이틀 전부터 슬슬 시작한다", value: "deadline" },
+          { text: "어떻게 해야 완벽할지 계속 고민만 한다", value: "perfect" },
+          { text: "다른 재밌는 일들에 먼저 눈이 간다", value: "distract" },
+          { text: "일정표에 세부 계획을 세운다", value: "plan" },
+        ],
+      },
+      {
+        text: "집중이 안 될 때 나는?",
+        options: [
+          { text: "괜찮아, 마감 임박하면 집중된다", value: "deadline" },
+          { text: "이 정도로는 부족한 것 같아 손이 안 간다", value: "perfect" },
+          { text: "SNS나 유튜브를 켠다", value: "distract" },
+          { text: "다시 할 일 목록을 정리해본다", value: "plan" },
+        ],
+      },
+      {
+        text: "새로운 프로젝트를 시작할 때 가장 먼저 하는 일은?",
+        options: [
+          { text: "일단 미뤄두고 나중에 몰아서 한다", value: "deadline" },
+          { text: "완벽한 시작을 위해 자료 조사부터 오래 한다", value: "perfect" },
+          { text: "관련 없는 재밌는 걸 먼저 찾아본다", value: "distract" },
+          { text: "전체 계획과 일정부터 세운다", value: "plan" },
+        ],
+      },
+      {
+        text: "주변 사람이 \"그거 언제 할 거야?\"라고 물으면?",
+        options: [
+          { text: "\"아직 시간 있어\"라고 답한다", value: "deadline" },
+          { text: "\"제대로 준비되면 할게\"라고 답한다", value: "perfect" },
+          { text: "\"어? 맞다 깜빡했다\"라고 답한다", value: "distract" },
+          { text: "\"계획은 다 세워놨어\"라고 답한다", value: "plan" },
+        ],
+      },
+      {
+        text: "미룬 일이 결국 발등에 불이 떨어졌을 때 나는?",
+        options: [
+          { text: "오히려 이때 최고의 집중력이 나온다", value: "deadline" },
+          { text: "그제야 눈높이를 낮추고 시작한다", value: "perfect" },
+          { text: "그제야 딴짓을 멈추고 정신을 차린다", value: "distract" },
+          { text: "세워둔 계획대로 빠르게 실행한다", value: "plan" },
+        ],
+      },
+      {
+        text: "할 일을 미루는 나 자신을 보면 드는 생각은?",
+        options: [
+          { text: "압박감이 있어야 움직이는 스타일인 듯", value: "deadline" },
+          { text: "잘하고 싶은 마음이 커서 그런 것 같다", value: "perfect" },
+          { text: "재밌는 게 너무 많아서 그런 것 같다", value: "distract" },
+          { text: "계획 세우는 것만으로 만족했나 싶다", value: "plan" },
+        ],
+      },
+      {
+        text: "이상적인 하루 마무리는?",
+        options: [
+          { text: "아슬아슬하게라도 끝냈다는 짜릿함", value: "deadline" },
+          { text: "완성도 높게 마무리했다는 뿌듯함", value: "perfect" },
+          { text: "재밌는 것도 하고 할 일도 어찌어찌 끝낸 하루", value: "distract" },
+          { text: "계획한 대로 하나씩 지워나간 하루", value: "plan" },
+        ],
+      },
+    ],
+    categories: {
+      deadline: {
+        title: "마감 임박형 – 압박감이 있어야 움직이는 사람",
+        emoji: "⏰",
+        desc: "당신은 마감이 코앞에 닥쳐야 비로소 엔진이 켜지는 벼락치기의 달인이에요. 오히려 시간이 넉넉하면 집중이 잘 안 되고, 긴장감 속에서 몰입하는 편이죠. 가끔은 스스로 작은 마감을 미리 정해두면 마음의 여유와 완성도를 동시에 챙길 수 있을 거예요.",
+      },
+      perfect: {
+        title: "완벽주의 회피형 – 잘하고 싶어서 미루는 사람",
+        emoji: "🎯",
+        desc: "당신은 대충 하느니 안 하는 게 낫다고 생각할 만큼 결과물에 대한 기준이 높은 사람이에요. 완벽하게 해내고 싶은 마음이 크다 보니 오히려 시작 자체를 미루게 되는 거죠. 처음부터 완벽할 필요는 없다는 걸 기억하고, 일단 60점짜리로 시작해보는 연습을 해보세요.",
+      },
+      distract: {
+        title: "딴짓 유발형 – 재미있는 일부터 하는 사람",
+        emoji: "🎮",
+        desc: "당신은 해야 할 일을 앞에 두고도 눈앞의 재미있는 것에 먼저 손이 가는 편이에요. 그만큼 호기심이 많고 순간을 즐길 줄 아는 사람이라 주변에서 유쾌하다는 말을 자주 듣죠. 할 일을 눈에 잘 띄는 곳에 적어두고 재미 요소를 살짝 섞어보면 시작이 한결 쉬워질 거예요.",
+      },
+      plan: {
+        title: "계획만 완벽형 – 세우는 것으로 만족하는 사람",
+        emoji: "📝",
+        desc: "당신은 할 일 목록과 계획표를 짜는 데는 진심인 사람이에요. 체계적으로 정리하는 능력 덕분에 무엇을 해야 할지는 늘 명확하게 알고 있죠. 다만 계획 세우기에서 멈추지 않도록, 목록의 첫 번째 항목만이라도 바로 시작해보는 습관을 들여보세요.",
+      },
+    },
+  },
 ];

@@ -19,7 +19,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const SITE_URL = "https://www.mindpick.net";
-const ASSET_VER = "14";
+const ASSET_VER = "15";
 
 const testsDataSrc = fs.readFileSync(path.join(ROOT, "js/tests-data.js"), "utf8");
 const TESTS = new Function(`${testsDataSrc}\nreturn TESTS;`)();
