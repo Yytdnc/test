@@ -159,7 +159,7 @@ function buildPage(test) {
   <meta name="twitter:description" content="${d}" />
   <meta name="twitter:image" content="${SITE_URL}/img/og-share.png" />
   <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <link rel="stylesheet" href="css/style.css?v=${ASSET_VER}" />
   <script type="application/ld+json">${breadcrumbJsonLd}</script>
 
@@ -335,7 +335,7 @@ function buildTestsPage() {
   <meta name="twitter:description" content="MindPick의 모든 심리테스트를 한눈에." />
   <meta name="twitter:image" content="${SITE_URL}/img/og-share.png" />
   <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <link rel="stylesheet" href="css/style.css?v=${ASSET_VER}" />
   <script type="application/ld+json">${itemListJsonLd}</script>
 
