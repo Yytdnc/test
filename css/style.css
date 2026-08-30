@@ -45,7 +45,14 @@
   * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button, a, .option-btn, .test-card, .rank-item, .zodiac-btn {
+  touch-action: manipulation;
+}
 
 html, body {
   margin: 0;
@@ -107,7 +114,6 @@ button { font: inherit; }
   color: var(--text-soft);
   font-size: 0.92rem;
 }
-.topbar nav a:hover,
 .topbar nav a.active { color: var(--accent); }
 
 /* ---------- Hero ---------- */
@@ -238,12 +244,10 @@ button { font: inherit; }
   transform-origin: left;
   transition: transform 0.35s var(--ease-out);
 }
-.test-card:hover {
-  transform: translateY(-6px) scale(1.015);
-  box-shadow: var(--shadow-card-hover);
-  border-color: transparent;
+.test-card:active {
+  transform: scale(0.98);
+  border-color: var(--accent);
 }
-.test-card:hover::before { transform: scaleX(1); }
 .test-card .thumb {
   width: 56px;
   height: 56px;
@@ -256,7 +260,6 @@ button { font: inherit; }
   margin-bottom: 14px;
   transition: transform 0.3s var(--ease-out);
 }
-.test-card:hover .thumb { transform: scale(1.1) rotate(6deg); }
 .test-card .tag {
   display: inline-block;
   font-size: 0.72rem;
@@ -322,12 +325,10 @@ button { font: inherit; }
   transform: scaleY(0);
   transition: transform 0.3s var(--ease-out);
 }
-.rank-item:hover {
-  transform: translateY(-3px) scale(1.008);
-  box-shadow: var(--shadow-card-hover);
-  border-color: transparent;
+.rank-item:active {
+  transform: scale(0.98);
+  border-color: var(--accent);
 }
-.rank-item:hover::before { transform: scaleY(1); }
 .rank-badge {
   flex-shrink: 0;
   width: 30px;
@@ -398,19 +399,13 @@ button { font: inherit; }
   cursor: pointer;
   transition: opacity 0.2s var(--ease-out), transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
 }
-.button:hover { transform: translateY(-2px) scale(1.02); }
 .button:active { transform: translateY(0) scale(0.98); }
 .button.primary {
   background: linear-gradient(135deg, var(--accent), var(--accent-dark));
   color: #fff;
   box-shadow: 0 8px 18px rgba(255, 111, 145, 0.35);
 }
-.button.primary:hover {
-  background: linear-gradient(135deg, var(--accent-dark), #d6416a);
-  box-shadow: 0 12px 26px rgba(255, 111, 145, 0.45);
-}
 .button.ghost { background: var(--surface); color: var(--text); border: 1px solid var(--border); }
-.button.ghost:hover { background: #fff; box-shadow: var(--shadow-card); }
 .button.block { width: 100%; }
 
 /* ---------- Quiz page ---------- */
@@ -475,13 +470,11 @@ button { font: inherit; }
   cursor: pointer;
   transition: border-color 0.2s var(--ease-out), background 0.2s var(--ease-out), transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
 }
-.option-btn:hover {
-  border-color: var(--accent);
+.option-btn:active {
   background: var(--accent-soft);
-  transform: translateX(4px);
-  box-shadow: var(--shadow-card);
+  border-color: var(--accent);
+  transform: scale(0.98);
 }
-.option-btn:active { transform: scale(0.99); }
 
 .quiz-nav {
   display: flex;
@@ -496,7 +489,7 @@ button { font: inherit; }
   font-weight: 600;
   cursor: pointer;
 }
-.link-btn:hover { color: var(--accent); }
+.link-btn:active { color: var(--accent); }
 
 .quiz-intro {
   text-align: center;
@@ -605,7 +598,6 @@ footer .foot-links {
   margin-bottom: 10px;
   font-weight: 600;
 }
-footer .foot-links a:hover { color: var(--accent); }
 
 /* ---------- Static content pages ---------- */
 .static-page {
@@ -997,11 +989,10 @@ footer .foot-links a:hover { color: var(--accent); }
   cursor: pointer;
   transition: border-color 0.2s var(--ease-out), background 0.2s var(--ease-out), transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
 }
-.zodiac-btn:hover {
-  border-color: var(--accent);
+.zodiac-btn:active {
   background: var(--accent-soft);
-  transform: translateY(-4px) scale(1.03);
-  box-shadow: var(--shadow-card);
+  border-color: var(--accent);
+  transform: scale(0.96);
 }
 .zodiac-btn .z-emoji { font-size: 1.8rem; display: block; margin-bottom: 6px; }
 .zodiac-btn .z-name { font-size: 0.82rem; font-weight: 700; }
@@ -1058,3 +1049,69 @@ footer .foot-links a:hover { color: var(--accent); }
   .compare-row .compare-answers { flex-direction: column; align-items: flex-start; }
   .saju-detail-grid, .saju-tip-grid { grid-template-columns: 1fr; }
 }
+
+/* ---------- Desktop Hover Effects (Mouse / Trackpad only, prevents mobile double-tap) ---------- */
+@media (hover: hover) and (pointer: fine) {
+  .topbar nav a:hover {
+    color: var(--accent);
+  }
+
+  .test-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: rgba(255, 111, 145, 0.4);
+  }
+  .test-card:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  .test-card:hover .thumb {
+    transform: scale(1.1) rotate(4deg);
+    background: linear-gradient(135deg, #ffeef2, #fff0f5);
+  }
+
+  .rank-item:hover {
+    transform: translateX(4px);
+    border-color: var(--accent);
+    box-shadow: var(--shadow-card);
+  }
+  .rank-item:hover::before {
+    transform: scaleY(1);
+  }
+
+  .button:hover {
+    transform: translateY(-2px);
+  }
+  .button.primary:hover {
+    box-shadow: 0 12px 24px rgba(255, 111, 145, 0.45);
+    filter: brightness(1.03);
+  }
+  .button.ghost:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-soft);
+  }
+
+  .option-btn:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    transform: translateX(4px);
+    box-shadow: var(--shadow-card);
+  }
+
+  .link-btn:hover {
+    color: var(--accent);
+  }
+
+  footer .foot-links a:hover {
+    color: var(--accent);
+  }
+
+  .zodiac-btn:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: var(--shadow-card);
+  }
+}
+
