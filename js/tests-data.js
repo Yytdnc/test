@@ -4821,4 +4821,110 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "music",
+    tag: "취향",
+    title: "나의 음악 취향 유형 테스트",
+    emoji: "🎧",
+    tagline: "플레이리스트만 봐도 알 수 있는 나의 음악 감성은?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "새로운 음악을 찾을 때 나는?",
+        options: [
+          { text: "요즘 내 기분과 맞는 노래를 찾는다", value: "mood" },
+          { text: "신나고 텐션 오르는 노래부터 찾는다", value: "energy" },
+          { text: "아무도 모르는 숨은 명곡을 찾아 헤맨다", value: "explore" },
+          { text: "예전에 듣던 노래부터 다시 듣는다", value: "nostalgia" },
+        ],
+      },
+      {
+        text: "내 플레이리스트에 이름을 짓는다면?",
+        options: [
+          { text: "\"오늘의 기분\"", value: "mood" },
+          { text: "\"무조건 신나는 노래\"", value: "energy" },
+          { text: "\"아무튼 새로운 것들\"", value: "explore" },
+          { text: "\"그때 그 시절\"", value: "nostalgia" },
+        ],
+      },
+      {
+        text: "노래를 들을 때 가장 먼저 귀에 들어오는 건?",
+        options: [
+          { text: "가사 한 줄 한 줄", value: "mood" },
+          { text: "비트와 리듬감", value: "energy" },
+          { text: "낯선 사운드나 편곡", value: "explore" },
+          { text: "익숙한 멜로디", value: "nostalgia" },
+        ],
+      },
+      {
+        text: "좋아하는 노래가 생기면 나는?",
+        options: [
+          { text: "가사를 곱씹으며 여러 번 듣는다", value: "mood" },
+          { text: "볼륨 높여놓고 신나게 따라 부른다", value: "energy" },
+          { text: "그 가수의 다른 곡들까지 다 찾아 듣는다", value: "explore" },
+          { text: "예전에 좋아하던 노래와 비교하며 듣는다", value: "nostalgia" },
+        ],
+      },
+      {
+        text: "힘든 하루를 보낸 날 듣는 음악은?",
+        options: [
+          { text: "내 마음을 대신 말해주는 듯한 노래", value: "mood" },
+          { text: "스트레스를 날려버릴 신나는 노래", value: "energy" },
+          { text: "아직 안 들어본 새 플레이리스트", value: "explore" },
+          { text: "옛날에 위로받았던 익숙한 노래", value: "nostalgia" },
+        ],
+      },
+      {
+        text: "노래방에 가면 나는?",
+        options: [
+          { text: "감정 잡고 발라드를 부른다", value: "mood" },
+          { text: "신나는 댄스곡으로 분위기를 띄운다", value: "energy" },
+          { text: "남들이 잘 모르는 노래를 선곡한다", value: "explore" },
+          { text: "학창 시절 인기곡을 부른다", value: "nostalgia" },
+        ],
+      },
+      {
+        text: "친구가 \"요즘 뭐 들어?\"라고 물으면?",
+        options: [
+          { text: "\"요즘 내 감정이랑 딱 맞는 노래 있어\"", value: "mood" },
+          { text: "\"완전 신나는 노래! 같이 들어볼래?\"", value: "energy" },
+          { text: "\"이거 완전 숨은 명곡인데 아무도 몰라\"", value: "explore" },
+          { text: "\"예전 노래 다시 듣고 있어\"", value: "nostalgia" },
+        ],
+      },
+      {
+        text: "나에게 음악이란?",
+        options: [
+          { text: "마음을 알아주는 친구", value: "mood" },
+          { text: "에너지를 채워주는 연료", value: "energy" },
+          { text: "끝없는 탐험의 세계", value: "explore" },
+          { text: "추억을 소환하는 타임머신", value: "nostalgia" },
+        ],
+      },
+    ],
+    categories: {
+      mood: {
+        title: "감성 몰입형 – 가사에 마음을 담는 사람",
+        emoji: "💭",
+        desc: "당신은 노래 속 가사 한 줄에 마음이 움직이는 사람이에요. 멜로디보다 이야기에 먼저 공감하고, 음악을 통해 감정을 정리하는 편이죠. 가끔은 신나는 노래로 기분을 환기하는 시간도 함께 가져보세요.",
+      },
+      energy: {
+        title: "텐션 부스터형 – 리듬으로 에너지를 채우는 사람",
+        emoji: "⚡",
+        desc: "당신에게 음악은 무엇보다 강력한 에너지 충전기예요. 신나는 비트를 들으면 저절로 몸이 들썩이고, 지친 하루도 노래 한 곡이면 금세 회복되곤 하죠. 가끔은 잔잔한 곡으로 마음을 차분히 가라앉히는 시간도 가져보세요.",
+      },
+      explore: {
+        title: "탐험가형 – 새로운 사운드를 찾아다니는 사람",
+        emoji: "🧭",
+        desc: "당신은 남들이 모르는 좋은 노래를 발견했을 때 가장 짜릿함을 느끼는 사람이에요. 익숙한 인기곡보다 새로운 아티스트와 낯선 장르에 늘 귀가 열려 있죠. 좋아하는 곡을 주변 사람들과 나누면 그 즐거움이 배가 될 거예요.",
+      },
+      nostalgia: {
+        title: "추억 소환형 – 익숙한 멜로디에 위로받는 사람",
+        emoji: "📼",
+        desc: "당신에게 음악은 그 시절의 순간들을 고스란히 불러오는 타임머신이에요. 익숙한 멜로디 하나로 그때의 감정과 사람들이 떠오르곤 하죠. 가끔은 새로운 노래에도 마음을 열어보면 또 다른 추억이 쌓일 거예요.",
+      },
+    },
+  },
 ];
