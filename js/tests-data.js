@@ -4927,4 +4927,110 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "talkstyle",
+    tag: "성격심리",
+    title: "나의 말투 유형 테스트",
+    emoji: "🗣️",
+    tagline: "대화 속에서 드러나는 나의 말투는 어떤 유형일까요?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "친구가 고민을 털어놓을 때 나는?",
+        options: [
+          { text: "문제의 핵심부터 콕 짚어준다", value: "direct" },
+          { text: "힘들었겠다며 마음부터 다독인다", value: "warm" },
+          { text: "분위기를 풀어주려고 농담을 섞는다", value: "witty" },
+          { text: "일단 끝까지 조용히 들어준다", value: "reserved" },
+        ],
+      },
+      {
+        text: "대화 중 내 생각과 다른 말을 들으면?",
+        options: [
+          { text: "바로 다른 생각이라고 말한다", value: "direct" },
+          { text: "상대 입장도 이해하려 노력한다", value: "warm" },
+          { text: "웃으며 넘기고 나중에 이야기한다", value: "witty" },
+          { text: "속으로 생각하다 조심스럽게 꺼낸다", value: "reserved" },
+        ],
+      },
+      {
+        text: "단체 대화방에서 나는?",
+        options: [
+          { text: "필요한 말만 짧고 명확하게 한다", value: "direct" },
+          { text: "다른 사람 말에 리액션을 잘 해준다", value: "warm" },
+          { text: "드립이나 짤로 분위기를 띄운다", value: "witty" },
+          { text: "대체로 지켜보다가 가끔 말한다", value: "reserved" },
+        ],
+      },
+      {
+        text: "누군가에게 부탁을 해야 할 때?",
+        options: [
+          { text: "용건부터 바로 말한다", value: "direct" },
+          { text: "미안한 마음을 먼저 표현한다", value: "warm" },
+          { text: "농담처럼 가볍게 운을 뗀다", value: "witty" },
+          { text: "어떻게 말할지 여러 번 고민한다", value: "reserved" },
+        ],
+      },
+      {
+        text: "내 말투에 대해 주변에서 자주 하는 말은?",
+        options: [
+          { text: "\"너무 팩폭이야\"", value: "direct" },
+          { text: "\"말이 참 따뜻해\"", value: "warm" },
+          { text: "\"너랑 있으면 안 웃을 수가 없어\"", value: "witty" },
+          { text: "\"말 한마디 한마디가 신중해\"", value: "reserved" },
+        ],
+      },
+      {
+        text: "화가 났을 때 나는?",
+        options: [
+          { text: "감정을 숨기지 않고 바로 표현한다", value: "direct" },
+          { text: "상처 줄까 봐 최대한 부드럽게 말한다", value: "warm" },
+          { text: "농담으로 넘기려 애쓴다", value: "witty" },
+          { text: "일단 말을 아끼고 시간을 둔다", value: "reserved" },
+        ],
+      },
+      {
+        text: "발표나 프레젠테이션을 할 때?",
+        options: [
+          { text: "결론부터 명확하게 전달한다", value: "direct" },
+          { text: "듣는 사람 반응을 살피며 말한다", value: "warm" },
+          { text: "적절한 유머로 긴장을 풀어준다", value: "witty" },
+          { text: "준비한 대로 차분히 말한다", value: "reserved" },
+        ],
+      },
+      {
+        text: "나에게 대화란?",
+        options: [
+          { text: "정확한 정보를 주고받는 것", value: "direct" },
+          { text: "서로의 마음을 나누는 것", value: "warm" },
+          { text: "즐겁게 웃을 수 있는 시간", value: "witty" },
+          { text: "신중하게 쌓아가는 신뢰", value: "reserved" },
+        ],
+      },
+    ],
+    categories: {
+      direct: {
+        title: "직설형 – 핵심을 콕 짚어 말하는",
+        emoji: "🎯",
+        desc: "당신은 돌려 말하지 않고 하고 싶은 말을 명확하게 전달하는 사람이에요. 덕분에 대화가 빠르고 시원하게 흘러가죠. 가끔은 상대의 마음이 다치지 않도록 표현에 쿠션을 더해보는 것도 좋아요.",
+      },
+      warm: {
+        title: "다정형 – 마음부터 살피는",
+        emoji: "🫶",
+        desc: "당신은 말 한마디에도 상대의 마음을 먼저 헤아리는 사람이에요. 함께 대화하는 사람을 편안하게 만들어주는 힘이 있죠. 가끔은 당신의 솔직한 생각도 조금 더 표현해보세요.",
+      },
+      witty: {
+        title: "위트형 – 분위기를 살리는",
+        emoji: "😄",
+        desc: "당신은 유머 감각으로 대화의 분위기를 밝게 만드는 사람이에요. 함께 있으면 지루할 틈이 없다는 말을 자주 듣죠. 가끔은 진지한 순간엔 농담을 잠시 내려놓아도 좋아요.",
+      },
+      reserved: {
+        title: "신중형 – 한 마디도 곱씹어 말하는",
+        emoji: "🤫",
+        desc: "당신은 말을 꺼내기 전에 신중하게 생각을 정리하는 사람이에요. 그래서 당신의 말에는 무게와 신뢰가 실리죠. 가끔은 생각을 다 정리하기 전에도 편하게 먼저 말해보세요.",
+      },
+    },
+  },
 ];
