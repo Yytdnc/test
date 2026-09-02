@@ -5033,4 +5033,110 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "organizing",
+    tag: "정리",
+    title: "나의 정리정돈 유형 테스트",
+    emoji: "🧹",
+    tagline: "내 방, 내 책상만 봐도 알 수 있는 진짜 정리 스타일",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "책상 위 상태는 보통 어떤가요?",
+        options: [
+          { text: "필요한 것만 딱 올려져 있다", value: "minimal" },
+          { text: "겉은 깔끔한데 서랍 열면 아수라장", value: "surface" },
+          { text: "라벨 붙인 정리함이 줄지어 있다", value: "storage" },
+          { text: "이것저것 늘어놓아도 나름 편하다", value: "freestyle" },
+        ],
+      },
+      {
+        text: "옷장을 정리할 때 나는?",
+        options: [
+          { text: "안 입는 옷은 바로 버리거나 나눔한다", value: "minimal" },
+          { text: "보이는 곳만 걸어두고 나머진 몰아넣는다", value: "surface" },
+          { text: "계절별, 색깔별로 칸을 나눠 정리한다", value: "storage" },
+          { text: "그냥 손에 잡히는 대로 넣는다", value: "freestyle" },
+        ],
+      },
+      {
+        text: "새 물건을 살 때 나의 원칙은?",
+        options: [
+          { text: "하나 사면 하나는 버린다", value: "minimal" },
+          { text: "예쁘면 일단 사고 정리는 나중에", value: "surface" },
+          { text: "수납 공간부터 확인하고 산다", value: "storage" },
+          { text: "필요하면 그냥 산다, 정리는 별생각 없다", value: "freestyle" },
+        ],
+      },
+      {
+        text: "손님이 갑자기 온다고 하면?",
+        options: [
+          { text: "평소에도 깔끔해서 크게 걱정 없다", value: "minimal" },
+          { text: "눈에 보이는 곳만 빛의 속도로 치운다", value: "surface" },
+          { text: "정리함 뚜껑만 닫으면 끝, 이미 다 제자리다", value: "storage" },
+          { text: "그냥 대충 치우고 손님 눈치를 본다", value: "freestyle" },
+        ],
+      },
+      {
+        text: "여행 짐을 쌀 때 나는?",
+        options: [
+          { text: "체크리스트로 딱 필요한 것만 챙긴다", value: "minimal" },
+          { text: "일단 캐리어에 다 넣고 본다", value: "surface" },
+          { text: "파우치, 압축팩으로 종류별 분류", value: "storage" },
+          { text: "출발 직전에 몰아서 대충 싼다", value: "freestyle" },
+        ],
+      },
+      {
+        text: "물건을 어디 뒀는지 기억이 안 날 때?",
+        options: [
+          { text: "애초에 물건 수가 적어서 금방 찾는다", value: "minimal" },
+          { text: "분명 어딘가 쌓아뒀는데 못 찾는다", value: "surface" },
+          { text: "정리해둔 위치가 명확해서 바로 찾는다", value: "storage" },
+          { text: "찾다가 포기하고 새로 산다", value: "freestyle" },
+        ],
+      },
+      {
+        text: "정리정돈에 대한 나의 생각은?",
+        options: [
+          { text: "적게 소유하는 게 최고의 정리다", value: "minimal" },
+          { text: "정리는 보여주기용이어도 괜찮다", value: "surface" },
+          { text: "정리 도구, 수납템 모으는 게 취미다", value: "storage" },
+          { text: "어지러워도 내 물건이 어딨는지는 나만 안다", value: "freestyle" },
+        ],
+      },
+      {
+        text: "이상적인 방을 한마디로 표현하면?",
+        options: [
+          { text: "텅 빈 듯 깔끔한 공간", value: "minimal" },
+          { text: "보기엔 예쁜데 자세히 보면 애매한 공간", value: "surface" },
+          { text: "칸칸이 각 잡힌 정리의 정석", value: "storage" },
+          { text: "어수선해도 내 손길이 느껴지는 공간", value: "freestyle" },
+        ],
+      },
+    ],
+    categories: {
+      minimal: {
+        title: "미니멀리스트형 – 비움의 미학",
+        emoji: "🤍",
+        desc: "불필요한 물건을 과감히 덜어내는 당신은 진짜 정리의 고수예요. 적게 가질수록 마음도 가벼워진다는 걸 아는 사람이죠. 가끔은 추억이 담긴 물건 한두 개쯤은 남겨두는 여유도 좋아요.",
+      },
+      surface: {
+        title: "겉정리형 – 보이는 게 반이다",
+        emoji: "🎭",
+        desc: "손님 앞에서는 완벽하게 정돈된 모습을 보여주는 센스가 있는 당신. 급할 때 순발력 있게 공간을 정리하는 능력이 탁월해요. 가끔은 서랍 속까지 한 번씩 비워보면 마음도 한결 개운해질 거예요.",
+      },
+      storage: {
+        title: "수납마스터형 – 정리 도구는 나의 힘",
+        emoji: "📦",
+        desc: "칸칸이 이름표를 붙이고 체계를 세우는 당신은 진짜 정리 장인이에요. 어디에 뭐가 있는지 훤히 꿰고 있어 효율적인 하루를 보내죠. 가끔은 완벽한 시스템 없이도 괜찮다는 여유를 가져보세요.",
+      },
+      freestyle: {
+        title: "자유로운 영혼형 – 어지러움 속의 질서",
+        emoji: "🌀",
+        desc: "정리보다 하고 싶은 일에 집중하는 당신만의 자유로운 리듬이 있어요. 남들 눈엔 어수선해도 당신만의 동선과 감각으로 잘 지내는 편이죠. 가끔 5분만 투자해 눈에 띄는 곳부터 정리해보면 기분 전환에 좋을 거예요.",
+      },
+    },
+  },
 ];
