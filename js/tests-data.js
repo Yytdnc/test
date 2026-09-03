@@ -5139,4 +5139,110 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "firstimpression",
+    tag: "인상",
+    title: "나의 첫인상 유형 테스트",
+    emoji: "🌟",
+    tagline: "사람들은 나를 처음 봤을 때 어떤 느낌을 받을까요?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "새로운 모임에 처음 갔을 때 나는?",
+        options: [
+          { text: "조용히 상황부터 관찰한다", value: "cool" },
+          { text: "먼저 다가가 인사를 건넨다", value: "warm" },
+          { text: "굳이 나서지 않고 여운을 남긴다", value: "mystery" },
+          { text: "텐션을 올려 분위기를 띄운다", value: "bright" },
+        ],
+      },
+      {
+        text: "처음 만난 사람과 대화할 때 내 표정은?",
+        options: [
+          { text: "무표정에 가까운 편", value: "cool" },
+          { text: "잘 웃고 리액션이 큰 편", value: "warm" },
+          { text: "살짝 미소만 짓는 편", value: "mystery" },
+          { text: "표정이 계속 바뀌며 생동감 있다", value: "bright" },
+        ],
+      },
+      {
+        text: "평소 옷차림 스타일은?",
+        options: [
+          { text: "깔끔한 무채색 위주", value: "cool" },
+          { text: "편안하고 부드러운 톤", value: "warm" },
+          { text: "포인트 하나로 존재감 있는 스타일", value: "mystery" },
+          { text: "눈에 띄는 컬러나 아이템", value: "bright" },
+        ],
+      },
+      {
+        text: "낯선 사람이 말을 걸어오면?",
+        options: [
+          { text: "필요한 말만 짧게 답한다", value: "cool" },
+          { text: "반갑게 맞장구치며 대화를 이어간다", value: "warm" },
+          { text: "짧게 답하고 묘한 여지를 남긴다", value: "mystery" },
+          { text: "신나서 이것저것 물어본다", value: "bright" },
+        ],
+      },
+      {
+        text: "친구들이 나를 표현할 때 자주 하는 말은?",
+        options: [
+          { text: "\"차갑진 않은데 다가가기 어려워\"", value: "cool" },
+          { text: "\"편하고 따뜻해\"", value: "warm" },
+          { text: "\"속을 잘 모르겠어\"", value: "mystery" },
+          { text: "\"에너지가 넘쳐\"", value: "bright" },
+        ],
+      },
+      {
+        text: "단체 사진을 찍을 때 나는?",
+        options: [
+          { text: "무난하고 자연스러운 포즈", value: "cool" },
+          { text: "옆 사람 챙기며 다정하게", value: "warm" },
+          { text: "살짝 다른 포즈로 존재감 있게", value: "mystery" },
+          { text: "제일 크게 리액션하며 웃는다", value: "bright" },
+        ],
+      },
+      {
+        text: "첫 만남 후 상대가 나에게 느낄 감정은?",
+        options: [
+          { text: "괜히 어려운 사람 같다", value: "cool" },
+          { text: "또 만나고 싶다", value: "warm" },
+          { text: "좀 더 알고 싶다", value: "mystery" },
+          { text: "재밌는 사람이다", value: "bright" },
+        ],
+      },
+      {
+        text: "새로운 자리에서 나의 목소리 톤은?",
+        options: [
+          { text: "낮고 차분한 편", value: "cool" },
+          { text: "부드럽고 편안한 톤", value: "warm" },
+          { text: "낮은 톤으로 은근한 매력", value: "mystery" },
+          { text: "높고 활기찬 톤", value: "bright" },
+        ],
+      },
+    ],
+    categories: {
+      cool: {
+        title: "시크한 도시형 – 쿨함이 매력",
+        emoji: "🕶️",
+        desc: "처음 보면 다가가기 조심스러운 도시적인 분위기를 풍기는 당신. 감정을 크게 드러내지 않아 신뢰감 있고 프로페셔널해 보여요. 친해지면 반전 매력이 크니, 가끔은 먼저 살짝 미소를 건네보는 것도 좋아요.",
+      },
+      warm: {
+        title: "다정한 옆집형 – 편안함이 매력",
+        emoji: "🤗",
+        desc: "누구에게나 편안하고 다정한 인상을 주는 당신은 처음 만나도 이야기 나누기 쉬운 사람이에요. 배려심 많은 태도 덕분에 금방 마음을 여는 상대가 많죠. 가끔은 본인의 이야기도 먼저 꺼내보는 용기를 내보세요.",
+      },
+      mystery: {
+        title: "신비로운 매력형 – 여운이 매력",
+        emoji: "🌙",
+        desc: "속을 다 보여주지 않는 묘한 분위기로 상대의 궁금증을 자아내는 당신. 은은한 존재감만으로도 사람들의 시선을 끄는 힘이 있어요. 가끔은 마음을 조금 더 열어 보여주면 관계가 더 깊어질 거예요.",
+      },
+      bright: {
+        title: "발랄한 텐션형 – 에너지가 매력",
+        emoji: "✨",
+        desc: "밝고 활기찬 에너지로 분위기를 순식간에 띄우는 당신. 어디서든 먼저 웃어주는 모습에 사람들도 덩달아 편해져요. 가끔은 차분히 상대의 속도에 맞춰주는 여유도 챙겨보세요.",
+      },
+    },
+  },
 ];
