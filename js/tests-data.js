@@ -5245,4 +5245,110 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "workout",
+    tag: "건강",
+    title: "나의 운동 스타일 테스트",
+    emoji: "🏋️",
+    tagline: "당신에게 딱 맞는 운동 방식은 무엇일까요?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "운동을 시작하기로 마음먹었다면, 가장 먼저 하는 일은?",
+        options: [
+          { text: "헬스장부터 등록한다", value: "gym" },
+          { text: "요가원이나 필라테스 학원을 알아본다", value: "yoga" },
+          { text: "러닝화부터 장만한다", value: "running" },
+          { text: "유튜브 홈트 영상을 찾아본다", value: "hometraining" },
+        ],
+      },
+      {
+        text: "운동할 때 가장 중요하게 생각하는 건?",
+        options: [
+          { text: "근력과 몸의 변화", value: "gym" },
+          { text: "호흡과 마음의 안정", value: "yoga" },
+          { text: "상쾌한 기분과 지구력", value: "running" },
+          { text: "편안함과 자유로움", value: "hometraining" },
+        ],
+      },
+      {
+        text: "운동 갈 때 챙기는 필수템은?",
+        options: [
+          { text: "프로틴 쉐이커", value: "gym" },
+          { text: "요가매트와 편한 옷", value: "yoga" },
+          { text: "이어폰과 물병", value: "running" },
+          { text: "매트 하나면 충분", value: "hometraining" },
+        ],
+      },
+      {
+        text: "운동 중 가장 뿌듯한 순간은?",
+        options: [
+          { text: "무게를 늘렸을 때", value: "gym" },
+          { text: "동작이 유연해졌을 때", value: "yoga" },
+          { text: "기록이 단축됐을 때", value: "running" },
+          { text: "오늘도 꾸준히 했다는 것 자체", value: "hometraining" },
+        ],
+      },
+      {
+        text: "친구가 같이 운동하자고 하면 나는?",
+        options: [
+          { text: "같이 헬스장 가자고 한다", value: "gym" },
+          { text: "필라테스 원데이클래스를 추천한다", value: "yoga" },
+          { text: "공원에서 같이 러닝하자고 한다", value: "running" },
+          { text: "각자 집에서 하고 인증샷을 공유하자고 한다", value: "hometraining" },
+        ],
+      },
+      {
+        text: "나의 운동복 스타일은?",
+        options: [
+          { text: "탱크탑에 트레이닝 벨트", value: "gym" },
+          { text: "레깅스에 편한 크롭탑", value: "yoga" },
+          { text: "기능성 러닝복", value: "running" },
+          { text: "그냥 편한 트레이닝복", value: "hometraining" },
+        ],
+      },
+      {
+        text: "비 오는 날의 운동 계획은?",
+        options: [
+          { text: "그래도 헬스장은 실내니까 간다", value: "gym" },
+          { text: "실내 요가로 대체한다", value: "yoga" },
+          { text: "러닝머신으로 대체하거나 쉰다", value: "running" },
+          { text: "집에서 홈트로 해결한다", value: "hometraining" },
+        ],
+      },
+      {
+        text: "운동 후 나에게 주는 보상은?",
+        options: [
+          { text: "든든한 단백질 보충식", value: "gym" },
+          { text: "따뜻한 차 한 잔과 스트레칭", value: "yoga" },
+          { text: "시원한 샤워와 완주의 뿌듯함", value: "running" },
+          { text: "소파에 누워 좋아하는 영상 보기", value: "hometraining" },
+        ],
+      },
+    ],
+    categories: {
+      gym: {
+        title: "헬스 마니아형 – 근력이 곧 자신감",
+        emoji: "💪",
+        desc: "목표를 세우고 꾸준히 무게를 늘려가는 걸 즐기는 당신. 눈에 보이는 변화와 성취감이 운동을 지속하는 원동력이에요. 가끔은 무리한 목표보다 몸이 보내는 신호에 귀 기울이는 여유도 챙겨보세요.",
+      },
+      yoga: {
+        title: "요가·필라테스형 – 몸과 마음의 균형",
+        emoji: "🧘",
+        desc: "격렬함보다는 호흡과 자세에 집중하며 몸과 마음을 함께 다스리는 당신. 유연함과 안정감을 중요하게 여기는 편이에요. 가끔은 심박수를 살짝 올리는 활동도 더해보면 균형이 한층 더 좋아질 거예요.",
+      },
+      running: {
+        title: "러닝·아웃도어형 – 야외에서 채우는 에너지",
+        emoji: "🏃",
+        desc: "탁 트인 공간에서 몸을 움직일 때 진짜 활력을 느끼는 당신. 조금씩 나아지는 기록을 보며 성취감을 얻는 편이에요. 날씨가 안 좋은 날을 위한 실내 대체 루틴도 하나쯤 마련해두면 좋아요.",
+      },
+      hometraining: {
+        title: "홈트·자유러형 – 내 공간에서 편하게",
+        emoji: "🏠",
+        desc: "시간과 장소에 얽매이지 않고 내 페이스대로 몸을 움직이는 걸 좋아하는 당신. 부담 없이 꾸준히 이어가는 게 최대 강점이에요. 가끔은 새로운 루틴이나 운동을 시도해보면 색다른 재미를 느낄 수 있을 거예요.",
+      },
+    },
+  },
 ];
