@@ -5351,4 +5351,110 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "hobbytype",
+    tag: "취향",
+    title: "나의 취미 성향 테스트",
+    emoji: "🎯",
+    tagline: "진짜 나에게 맞는 취미는 어떤 스타일일까?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "주말에 아무 약속이 없다면?",
+        options: [
+          { text: "밖에 나가서 몸을 움직인다", value: "active" },
+          { text: "손으로 뭔가를 만들거나 그린다", value: "creative" },
+          { text: "친구들을 불러서 논다", value: "social" },
+          { text: "집에서 넷플릭스 보며 뒹군다", value: "cozy" },
+        ],
+      },
+      {
+        text: "새로운 취미를 고를 때 가장 중요한 기준은?",
+        options: [
+          { text: "땀 흘리고 성취감을 느낄 수 있는가", value: "active" },
+          { text: "내 손으로 결과물을 만들 수 있는가", value: "creative" },
+          { text: "함께 즐길 사람이 있는가", value: "social" },
+          { text: "부담 없이 편하게 즐길 수 있는가", value: "cozy" },
+        ],
+      },
+      {
+        text: "스트레스가 쌓였을 때 나만의 해소법은?",
+        options: [
+          { text: "달리기나 등산으로 땀을 뺀다", value: "active" },
+          { text: "그림을 그리거나 글을 쓴다", value: "creative" },
+          { text: "친한 사람들과 수다 떨며 푼다", value: "social" },
+          { text: "혼자 조용히 쉬며 마음을 가라앉힌다", value: "cozy" },
+        ],
+      },
+      {
+        text: "여행지에 도착하면 가장 먼저 하고 싶은 건?",
+        options: [
+          { text: "액티비티부터 예약한다", value: "active" },
+          { text: "그 지역 감성을 사진이나 그림으로 남긴다", value: "creative" },
+          { text: "현지인이나 다른 여행자와 어울린다", value: "social" },
+          { text: "숙소에서 여유롭게 시간을 보낸다", value: "cozy" },
+        ],
+      },
+      {
+        text: "갖고 싶은 취미 용품이 있다면?",
+        options: [
+          { text: "운동화나 캠핑 장비", value: "active" },
+          { text: "카메라나 그림 도구", value: "creative" },
+          { text: "보드게임이나 파티용품", value: "social" },
+          { text: "포근한 담요와 좋아하는 책", value: "cozy" },
+        ],
+      },
+      {
+        text: "SNS에 올리고 싶은 사진은?",
+        options: [
+          { text: "운동하거나 도전하는 모습", value: "active" },
+          { text: "내가 만든 작품 사진", value: "creative" },
+          { text: "친구들과 함께 찍은 단체 사진", value: "social" },
+          { text: "집에서의 소소한 힐링 순간", value: "cozy" },
+        ],
+      },
+      {
+        text: "친구가 취미를 추천해달라고 하면?",
+        options: [
+          { text: "클라이밍이나 러닝 클럽 어때?", value: "active" },
+          { text: "원데이 클래스로 뭔가 만들어봐", value: "creative" },
+          { text: "동호회 들어가서 사람들 만나봐", value: "social" },
+          { text: "일단 좀 쉬면서 천천히 찾아봐", value: "cozy" },
+        ],
+      },
+      {
+        text: "이상적인 하루를 한 문장으로 표현한다면?",
+        options: [
+          { text: "몸을 움직이며 활력 넘치는 하루", value: "active" },
+          { text: "무언가에 몰입해서 만들어내는 하루", value: "creative" },
+          { text: "좋아하는 사람들과 웃고 떠드는 하루", value: "social" },
+          { text: "아무 방해 없이 나만의 속도로 쉬는 하루", value: "cozy" },
+        ],
+      },
+    ],
+    categories: {
+      active: {
+        title: "액티브형 – 몸으로 채우는 에너지",
+        emoji: "🏃",
+        desc: "가만히 있는 것보다 몸을 움직일 때 진짜 활력을 느끼는 당신. 땀 흘리고 나면 스트레스도 씻은 듯 사라지고 성취감까지 챙기는 타입이에요. 다만 몸이 보내는 신호를 무시하고 무리하게 스케줄을 채우진 않았는지, 가끔은 완전한 휴식도 계획에 넣어보세요.",
+      },
+      creative: {
+        title: "창작형 – 손끝에서 피어나는 몰입",
+        emoji: "🎨",
+        desc: "무언가를 직접 만들고 표현할 때 가장 나다워지는 당신. 결과물이 쌓여갈수록 스스로에 대한 만족감도 커지는 편이죠. 완벽한 결과에 너무 얽매이기보다, 과정 자체를 즐기는 여유도 가져보면 좋아요.",
+      },
+      social: {
+        title: "소셜형 – 함께할 때 빛나는 사람",
+        emoji: "🎉",
+        desc: "혼자보다 여럿이 함께할 때 에너지가 배로 차오르는 당신. 사람들과 어울리며 관계를 넓혀가는 데서 큰 즐거움을 찾는 편이에요. 가끔은 혼자만의 시간도 스스로에게 선물해주면 밸런스가 더 좋아질 거예요.",
+      },
+      cozy: {
+        title: "힐링형 – 나만의 속도로 채우는 편안함",
+        emoji: "🛋️",
+        desc: "바쁜 일상 속에서도 나만의 페이스를 지키는 당신. 조용하고 편안한 시간 속에서 진짜 에너지를 회복하는 타입이에요. 가끔은 낯선 활동에도 살짝 발을 담가보면 새로운 즐거움을 만날 수 있을 거예요.",
+      },
+    },
+  },
 ];
