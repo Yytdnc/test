@@ -5457,4 +5457,110 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "book",
+    tag: "독서",
+    title: "나의 독서 취향 테스트",
+    emoji: "📚",
+    tagline: "당신의 마음이 끌리는 이야기는 어떤 장르일까요?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "서점에 가면 제일 먼저 향하는 코너는?",
+        options: [
+          { text: "두근두근한 사랑 이야기 코너", value: "romance" },
+          { text: "범인을 추리하는 코너", value: "mystery" },
+          { text: "새로운 세계관이 펼쳐지는 코너", value: "fantasy" },
+          { text: "마음을 다독여주는 에세이 코너", value: "essay" },
+        ],
+      },
+      {
+        text: "책 속 주인공에게 가장 몰입하게 되는 순간은?",
+        options: [
+          { text: "설레는 감정이 싹틀 때", value: "romance" },
+          { text: "숨겨진 단서를 발견할 때", value: "mystery" },
+          { text: "상상도 못한 세계가 열릴 때", value: "fantasy" },
+          { text: "내 마음과 닮은 문장을 만날 때", value: "essay" },
+        ],
+      },
+      {
+        text: "책을 고를 때 가장 중요하게 보는 것은?",
+        options: [
+          { text: "두 사람 사이의 케미", value: "romance" },
+          { text: "반전이 있는지 여부", value: "mystery" },
+          { text: "세계관의 스케일", value: "fantasy" },
+          { text: "저자의 삶에서 나온 통찰", value: "essay" },
+        ],
+      },
+      {
+        text: "나도 모르게 밤새 책을 읽게 되는 순간은?",
+        options: [
+          { text: "다음 장면이 궁금해 심장이 두근거릴 때", value: "romance" },
+          { text: "범인이 누구인지 미치도록 궁금할 때", value: "mystery" },
+          { text: "다음 세계가 어떻게 펼쳐질지 궁금할 때", value: "fantasy" },
+          { text: "문장 하나하나가 위로가 될 때", value: "essay" },
+        ],
+      },
+      {
+        text: "친구에게 책을 추천한다면 이런 말을 할 것 같다?",
+        options: [
+          { text: "이거 읽으면 너도 설렐걸", value: "romance" },
+          { text: "결말 보고 소름 돋았잖아", value: "mystery" },
+          { text: "이 세계관 진짜 미쳤어", value: "fantasy" },
+          { text: "읽고 나면 마음이 편해져", value: "essay" },
+        ],
+      },
+      {
+        text: "예고편만 보고 가장 끌리는 이야기 장르는?",
+        options: [
+          { text: "멜로, 로맨스", value: "romance" },
+          { text: "스릴러, 미스터리", value: "mystery" },
+          { text: "SF, 판타지", value: "fantasy" },
+          { text: "잔잔한 드라마, 다큐멘터리", value: "essay" },
+        ],
+      },
+      {
+        text: "여행 갈 때 가방에 챙기고 싶은 책 한 권은?",
+        options: [
+          { text: "설레는 로맨스 소설", value: "romance" },
+          { text: "손에 땀을 쥐게 하는 추리소설", value: "mystery" },
+          { text: "몰입감 있는 판타지 장편", value: "fantasy" },
+          { text: "가볍게 읽을 에세이", value: "essay" },
+        ],
+      },
+      {
+        text: "나에게 독서란 어떤 시간에 가깝나?",
+        options: [
+          { text: "설렘을 채워주는 시간", value: "romance" },
+          { text: "두뇌를 자극하는 게임 같은 시간", value: "mystery" },
+          { text: "현실을 벗어나는 탈출구 같은 시간", value: "fantasy" },
+          { text: "나를 돌아보는 시간", value: "essay" },
+        ],
+      },
+    ],
+    categories: {
+      romance: {
+        title: "로맨스파 – 설렘을 사랑하는 마음",
+        emoji: "💕",
+        desc: "사랑이 피어나는 순간의 떨림을 그 누구보다 생생하게 느끼는 당신. 인물들의 감정선에 깊이 공감하는 섬세함을 가졌어요. 가끔은 이야기 속 설렘을 일상에서도 조금씩 표현해보는 건 어떨까요?",
+      },
+      mystery: {
+        title: "미스터리파 – 예리한 관찰자",
+        emoji: "🔍",
+        desc: "작은 단서 하나도 놓치지 않는 예리한 관찰력을 가진 당신. 상황을 논리적으로 파악하는 능력이 남달라요. 가끔은 답을 서두르지 않고 그 과정 자체를 즐겨보는 여유도 가져보세요.",
+      },
+      fantasy: {
+        title: "판타지파 – 무한한 상상가",
+        emoji: "🐉",
+        desc: "현실의 경계를 뛰어넘는 상상력을 지닌 당신. 새로운 세계와 가능성을 그려보는 걸 좋아해요. 그 상상력을 일상의 작은 아이디어로도 펼쳐보면 더 즐거운 하루가 될 거예요.",
+      },
+      essay: {
+        title: "에세이파 – 깊이 있는 사색가",
+        emoji: "🍂",
+        desc: "삶의 소소한 순간에서도 의미를 찾아내는 당신. 다른 사람의 이야기에 진심으로 공감할 줄 아는 따뜻함을 가졌어요. 가끔은 그 사색을 짧은 글로 남겨보는 것도 좋은 기록이 될 거예요.",
+      },
+    },
+  },
 ];
