@@ -50,24 +50,46 @@ function resultTypesOf(test) {
   return [];
 }
 
+/* test.id 문자열을 결정론적으로 정수 해시한 뒤 mod로 나눠 배열 인덱스를 고른다.
+ * 같은 문구가 48페이지에 그대로 반복되던 문제를 피하기 위해, 페이지마다
+ * (하지만 재생성해도 항상 같게) 다른 문구 변형을 고정 배정하는 용도. */
+function pickVariant(id, list) {
+  let h = 0;
+  for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) >>> 0;
+  return list[h % list.length];
+}
+
+const HOWTO_OPENERS = [
+  (qCount, estMinutes) => `문항은 모두 ${qCount}개이고 약 ${estMinutes}분이면 끝나요.`,
+  (qCount, estMinutes) => `질문 ${qCount}개에 답하는 데 대략 ${estMinutes}분 정도 걸려요.`,
+  (qCount, estMinutes) => `총 ${qCount}개 문항으로 구성되어 있고, ${estMinutes}분이면 충분히 끝낼 수 있어요.`,
+  (qCount, estMinutes) => `${qCount}개의 질문에 답하면 되고, 소요 시간은 약 ${estMinutes}분이에요.`,
+];
+
+const CLOSING_NOTES = [
+  "본 테스트는 재미로 즐기는 콘텐츠이며 과학적·심리학적 근거가 없습니다. 결과는 참고용으로만 봐주세요.",
+  "이 테스트는 오락 목적의 콘텐츠로, 의학적·심리학적 진단을 대신하지 않습니다. 결과는 가볍게 참고만 해주세요.",
+  "테스트 결과는 재미를 위한 것으로 학술적 근거를 담보하지 않습니다. 전문적인 상담이 필요하다면 관련 기관에 문의해주세요.",
+  "가볍게 즐기는 콘텐츠인 만큼 결과를 절대적인 기준으로 받아들이지 않아도 괜찮아요.",
+];
+
 /* 자바스크립트 없이도 읽을 수 있는 본문 아티클. */
 function articleHtml(test) {
+  if (!test.intro) throw new Error(`test.intro가 없습니다: ${test.id}`);
   const results = resultTypesOf(test);
   const qCount = test.questions.length;
   const estMinutes = estMinutesOf(test);
-  const tagline = String(test.tagline).replace(/[.?!\s]+$/, "");
 
   const resultLine =
     test.type === "score"
       ? `응답 점수에 따라 ${results.length}가지 결과 중 하나로 나와요.`
       : `${results.length}가지 유형 중 나와 가장 가까운 결과를 알려줘요.`;
 
-  const intro =
-    `${test.title}는 '${tagline}'를 주제로 한 ${escapeHtml(test.tag)} 심리테스트예요. ` +
-    `${qCount}개의 일상 상황 질문에 답하면 평소에는 잘 드러나지 않던 나의 성향을 짧게 정리해서 보여줘요.`;
+  const howtoOpener = pickVariant(test.id, HOWTO_OPENERS)(qCount, estMinutes);
+  const closingNote = pickVariant(test.id, CLOSING_NOTES);
 
   const howto =
-    `문항은 모두 ${qCount}개이고 약 ${estMinutes}분이면 끝나요. ${resultLine} ` +
+    `${howtoOpener} ${resultLine} ` +
     `회원가입이나 이름·이메일 같은 개인정보 입력 없이 바로 시작할 수 있고, ` +
     `선택한 답변은 서버에 저장되지 않고 브라우저에만 잠시 보관돼요.`;
 
@@ -85,9 +107,13 @@ function articleHtml(test) {
     .map((q) => `        <li>${escapeHtml(q.text)}</li>`)
     .join("\n");
 
+  const insightSection = test.insight
+    ? `\n    <h2>이 결과, 이렇게 활용해보세요</h2>\n    <p>${escapeHtml(test.insight)}</p>\n`
+    : "";
+
   return `  <article class="quiz-article">
     <h2>이 테스트는?</h2>
-    <p>${escapeHtml(intro)}</p>
+    <p>${escapeHtml(test.intro)}</p>
     <p>${escapeHtml(howto)}</p>
 
     <h2>이런 결과가 나와요</h2>
@@ -97,8 +123,8 @@ ${resultBlocks}
     <ol>
 ${questionItems}
     </ol>
-
-    <p class="article-note">본 테스트는 재미로 즐기는 콘텐츠이며 과학적·심리학적 근거가 없습니다. 결과는 참고용으로만 봐주세요.</p>
+${insightSection}
+    <p class="article-note">${escapeHtml(closingNote)}</p>
   </article>`;
 }
 
