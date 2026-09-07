@@ -5563,4 +5563,110 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "textstyle",
+    tag: "습관",
+    title: "나의 카톡 답장 스타일 테스트",
+    emoji: "💬",
+    tagline: "당신은 카톡에서 어떤 답장 스타일을 가지고 있을까요?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "카톡 알림이 울리면 나는?",
+        options: [
+          { text: "바로 확인하고 답장한다", value: "instant" },
+          { text: "손이 빌 때 천천히 확인한다", value: "chill" },
+          { text: "답장 대신 이모티콘부터 보낸다", value: "emoji" },
+          { text: "확인만 하고 짧게 답한다", value: "short" },
+        ],
+      },
+      {
+        text: "친구에게 답장을 보낼 때 나의 스타일은?",
+        options: [
+          { text: "생각할 틈도 없이 바로 보낸다", value: "instant" },
+          { text: "여유롭게 타이밍을 본다", value: "chill" },
+          { text: "감정을 이모티콘으로 표현한다", value: "emoji" },
+          { text: "'ㅇㅇ', 'ㄱㄱ' 같은 짧은 말로 끝낸다", value: "short" },
+        ],
+      },
+      {
+        text: "오랜만에 연락 온 친구에게?",
+        options: [
+          { text: "바로 반갑게 답장한다", value: "instant" },
+          { text: "나중에 여유 있을 때 길게 답한다", value: "chill" },
+          { text: "반가운 이모티콘을 왕창 보낸다", value: "emoji" },
+          { text: "'오랜만ㅎㅎ' 한마디로 답한다", value: "short" },
+        ],
+      },
+      {
+        text: "단체 채팅방에서 나는?",
+        options: [
+          { text: "제일 먼저 반응하는 사람", value: "instant" },
+          { text: "흐름을 지켜보다 가끔 참여하는 사람", value: "chill" },
+          { text: "이모티콘으로 리액션 담당하는 사람", value: "emoji" },
+          { text: "필요한 말만 짧게 남기는 사람", value: "short" },
+        ],
+      },
+      {
+        text: "메시지를 쓸 때 나의 습관은?",
+        options: [
+          { text: "타자 속도가 엄청 빠르다", value: "instant" },
+          { text: "천천히 곱씹으며 쓴다", value: "chill" },
+          { text: "문장보다 이모티콘이 먼저 나간다", value: "emoji" },
+          { text: "최대한 짧게 줄여서 보낸다", value: "short" },
+        ],
+      },
+      {
+        text: "답장이 늦은 친구에게 서운함이 들 때?",
+        options: [
+          { text: "궁금해서 바로 다시 물어본다", value: "instant" },
+          { text: "그럴 수도 있지 하고 넘긴다", value: "chill" },
+          { text: "귀여운 재촉 이모티콘을 보낸다", value: "emoji" },
+          { text: "물음표 하나로 답장을 부른다", value: "short" },
+        ],
+      },
+      {
+        text: "고민 상담을 받아줄 때 답장 스타일은?",
+        options: [
+          { text: "바로바로 반응하며 함께 고민한다", value: "instant" },
+          { text: "충분히 생각한 후 진지하게 답한다", value: "chill" },
+          { text: "위로의 이모티콘을 먼저 보낸다", value: "emoji" },
+          { text: "핵심 조언만 간단히 전한다", value: "short" },
+        ],
+      },
+      {
+        text: "메신저 프로필을 보면 알 수 있는 나는?",
+        options: [
+          { text: "항상 온라인 표시에, 답장도 빠른 사람", value: "instant" },
+          { text: "상태 메시지도 여유로운 문구인 사람", value: "chill" },
+          { text: "프로필 사진부터 이모티콘 감성인 사람", value: "emoji" },
+          { text: "심플하고 군더더기 없는 프로필인 사람", value: "short" },
+        ],
+      },
+    ],
+    categories: {
+      instant: {
+        title: "칼답형 – 즉각 반응 커뮤니케이터",
+        emoji: "⚡",
+        desc: "생각보다 마음이 먼저 움직이는 당신은 소통에 진심을 다하는 사람이에요. 상대방이 언제나 당신의 관심과 애정을 느낄 수 있어 신뢰를 주는 존재죠. 가끔은 답장을 잠시 미뤄두고 나만의 시간을 갖는 여유도 가져보세요.",
+      },
+      chill: {
+        title: "여유형 – 내 페이스대로 답하는 사람",
+        emoji: "🌙",
+        desc: "자신만의 속도를 지키며 답장하는 당신은 감정에 쉽게 휘둘리지 않는 안정감을 가졌어요. 급하지 않게 상황을 살피고 신중하게 반응하는 모습이 믿음직스럽죠. 가끔은 짧은 안부 한마디를 먼저 건네보면 상대방도 더 편안함을 느낄 거예요.",
+      },
+      emoji: {
+        title: "이모티콘형 – 표현이 풍부한 사람",
+        emoji: "🎉",
+        desc: "말보다 이모티콘으로 감정을 풍성하게 표현하는 당신은 대화에 활기를 불어넣는 사람이에요. 함께 이야기하는 것만으로도 상대의 기분을 밝게 만들어주는 재주가 있죠. 가끔은 진솔한 말 한마디를 더해보면 마음이 더 깊이 전해질 거예요.",
+      },
+      short: {
+        title: "단답형 – 핵심만 전하는 사람",
+        emoji: "✂️",
+        desc: "군더더기 없이 핵심만 전하는 당신은 효율적이고 명확하게 소통하는 사람이에요. 짧은 말 속에도 확실함이 담겨 있어 상대방이 편안하게 느끼곤 하죠. 가끔은 마음을 담은 문장을 하나 더 붙여보면 관계가 더 따뜻해질 거예요.",
+      },
+    },
+  },
 ];
