@@ -4747,4 +4747,322 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "textstyle",
+    tag: "습관",
+    title: "나의 카톡 답장 스타일 테스트",
+    emoji: "💬",
+    tagline: "당신은 카톡에서 어떤 답장 스타일을 가지고 있을까요?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "카톡 알림이 울리면 나는?",
+        options: [
+          { text: "바로 확인하고 답장한다", value: "instant" },
+          { text: "손이 빌 때 천천히 확인한다", value: "chill" },
+          { text: "답장 대신 이모티콘부터 보낸다", value: "emoji" },
+          { text: "확인만 하고 짧게 답한다", value: "short" },
+        ],
+      },
+      {
+        text: "친구에게 답장을 보낼 때 나의 스타일은?",
+        options: [
+          { text: "생각할 틈도 없이 바로 보낸다", value: "instant" },
+          { text: "여유롭게 타이밍을 본다", value: "chill" },
+          { text: "감정을 이모티콘으로 표현한다", value: "emoji" },
+          { text: "'ㅇㅇ', 'ㄱㄱ' 같은 짧은 말로 끝낸다", value: "short" },
+        ],
+      },
+      {
+        text: "오랜만에 연락 온 친구에게?",
+        options: [
+          { text: "바로 반갑게 답장한다", value: "instant" },
+          { text: "나중에 여유 있을 때 길게 답한다", value: "chill" },
+          { text: "반가운 이모티콘을 왕창 보낸다", value: "emoji" },
+          { text: "'오랜만ㅎㅎ' 한마디로 답한다", value: "short" },
+        ],
+      },
+      {
+        text: "단체 채팅방에서 나는?",
+        options: [
+          { text: "제일 먼저 반응하는 사람", value: "instant" },
+          { text: "흐름을 지켜보다 가끔 참여하는 사람", value: "chill" },
+          { text: "이모티콘으로 리액션 담당하는 사람", value: "emoji" },
+          { text: "필요한 말만 짧게 남기는 사람", value: "short" },
+        ],
+      },
+      {
+        text: "메시지를 쓸 때 나의 습관은?",
+        options: [
+          { text: "타자 속도가 엄청 빠르다", value: "instant" },
+          { text: "천천히 곱씹으며 쓴다", value: "chill" },
+          { text: "문장보다 이모티콘이 먼저 나간다", value: "emoji" },
+          { text: "최대한 짧게 줄여서 보낸다", value: "short" },
+        ],
+      },
+      {
+        text: "답장이 늦은 친구에게 서운함이 들 때?",
+        options: [
+          { text: "궁금해서 바로 다시 물어본다", value: "instant" },
+          { text: "그럴 수도 있지 하고 넘긴다", value: "chill" },
+          { text: "귀여운 재촉 이모티콘을 보낸다", value: "emoji" },
+          { text: "물음표 하나로 답장을 부른다", value: "short" },
+        ],
+      },
+      {
+        text: "고민 상담을 받아줄 때 답장 스타일은?",
+        options: [
+          { text: "바로바로 반응하며 함께 고민한다", value: "instant" },
+          { text: "충분히 생각한 후 진지하게 답한다", value: "chill" },
+          { text: "위로의 이모티콘을 먼저 보낸다", value: "emoji" },
+          { text: "핵심 조언만 간단히 전한다", value: "short" },
+        ],
+      },
+      {
+        text: "메신저 프로필을 보면 알 수 있는 나는?",
+        options: [
+          { text: "항상 온라인 표시에, 답장도 빠른 사람", value: "instant" },
+          { text: "상태 메시지도 여유로운 문구인 사람", value: "chill" },
+          { text: "프로필 사진부터 이모티콘 감성인 사람", value: "emoji" },
+          { text: "심플하고 군더더기 없는 프로필인 사람", value: "short" },
+        ],
+      },
+    ],
+    categories: {
+      instant: {
+        title: "칼답형 – 즉각 반응 커뮤니케이터",
+        emoji: "⚡",
+        desc: "생각보다 마음이 먼저 움직이는 당신은 소통에 진심을 다하는 사람이에요. 상대방이 언제나 당신의 관심과 애정을 느낄 수 있어 신뢰를 주는 존재죠. 가끔은 답장을 잠시 미뤄두고 나만의 시간을 갖는 여유도 가져보세요.",
+      },
+      chill: {
+        title: "여유형 – 내 페이스대로 답하는 사람",
+        emoji: "🌙",
+        desc: "자신만의 속도를 지키며 답장하는 당신은 감정에 쉽게 휘둘리지 않는 안정감을 가졌어요. 급하지 않게 상황을 살피고 신중하게 반응하는 모습이 믿음직스럽죠. 가끔은 짧은 안부 한마디를 먼저 건네보면 상대방도 더 편안함을 느낄 거예요.",
+      },
+      emoji: {
+        title: "이모티콘형 – 표현이 풍부한 사람",
+        emoji: "🎉",
+        desc: "말보다 이모티콘으로 감정을 풍성하게 표현하는 당신은 대화에 활기를 불어넣는 사람이에요. 함께 이야기하는 것만으로도 상대의 기분을 밝게 만들어주는 재주가 있죠. 가끔은 진솔한 말 한마디를 더해보면 마음이 더 깊이 전해질 거예요.",
+      },
+      short: {
+        title: "단답형 – 핵심만 전하는 사람",
+        emoji: "✂️",
+        desc: "군더더기 없이 핵심만 전하는 당신은 효율적이고 명확하게 소통하는 사람이에요. 짧은 말 속에도 확실함이 담겨 있어 상대방이 편안하게 느끼곤 하죠. 가끔은 마음을 담은 문장을 하나 더 붙여보면 관계가 더 따뜻해질 거예요.",
+      },
+    },
+  },
+
+  {
+    id: "sleephabit",
+    tag: "잠버릇",
+    title: "나의 잠버릇 유형 테스트",
+    emoji: "😴",
+    tagline: "당신이 잠든 모습 속에 숨겨진 진짜 성격은?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "잠들기 전 나의 자세는?",
+        options: [
+          { text: "대자로 쭉 뻗는다", value: "star" },
+          { text: "이불을 돌돌 말고 웅크린다", value: "cocoon" },
+          { text: "엎드려서 베개를 껴안는다", value: "prone" },
+          { text: "이 자세 저 자세 계속 바뀐다", value: "roll" },
+        ],
+      },
+      {
+        text: "잠자리에서 이불을 덮는 방식은?",
+        options: [
+          { text: "가볍게 덮거나 아예 안 덮는다", value: "star" },
+          { text: "목까지 꽁꽁 싸맨다", value: "cocoon" },
+          { text: "반쯤 걸치고 베개에 파묻힌다", value: "prone" },
+          { text: "덮었다 걷었다를 반복한다", value: "roll" },
+        ],
+      },
+      {
+        text: "낯선 곳(여행지, 친구 집)에서 잘 때 나는?",
+        options: [
+          { text: "신경 안 쓰고 바로 뻗는다", value: "star" },
+          { text: "익숙한 담요나 베개가 있어야 편하다", value: "cocoon" },
+          { text: "엎드릴 수만 있으면 어디서든 잔다", value: "prone" },
+          { text: "뒤척이다 겨우 잠든다", value: "roll" },
+        ],
+      },
+      {
+        text: "자기 전 생각이 많아질 때 나는?",
+        options: [
+          { text: "생각이 많아도 눕자마자 곯아떨어진다", value: "star" },
+          { text: "이불 속에 파고들면 마음이 편안해진다", value: "cocoon" },
+          { text: "엎드려서 얼굴을 파묻으면 진정된다", value: "prone" },
+          { text: "이 생각 저 생각에 계속 뒤척인다", value: "roll" },
+        ],
+      },
+      {
+        text: "아침에 일어났을 때 이불과 침대 상태는?",
+        options: [
+          { text: "이불이 저 멀리 떨어져 있다", value: "star" },
+          { text: "이불에 폭 싸인 채로 일어난다", value: "cocoon" },
+          { text: "베개와 이불이 다 헝클어져 있다", value: "prone" },
+          { text: "이불이 여기저기 흩어져 있다", value: "roll" },
+        ],
+      },
+      {
+        text: "옆에서 누가 뒤척이면 나는?",
+        options: [
+          { text: "신경 안 쓰고 계속 잔다", value: "star" },
+          { text: "이불 속으로 더 파고든다", value: "cocoon" },
+          { text: "자세만 살짝 바꾸고 다시 잔다", value: "prone" },
+          { text: "나도 같이 잠에서 깬다", value: "roll" },
+        ],
+      },
+      {
+        text: "선호하는 침대 크기나 공간은?",
+        options: [
+          { text: "넓을수록 좋다, 다 차지하고 싶다", value: "star" },
+          { text: "아늑하고 좁아도 포근하면 된다", value: "cocoon" },
+          { text: "엎드릴 공간만 있으면 충분하다", value: "prone" },
+          { text: "자세를 바꿀 수 있게 넉넉해야 한다", value: "roll" },
+        ],
+      },
+      {
+        text: "나의 수면에 대한 한마디는?",
+        options: [
+          { text: "일단 눕고 본다, 자세는 자유롭게", value: "star" },
+          { text: "포근함이 최고의 수면제", value: "cocoon" },
+          { text: "엎드려야 진짜 숙면", value: "prone" },
+          { text: "매일 밤 자세가 바뀐다", value: "roll" },
+        ],
+      },
+    ],
+    categories: {
+      star: {
+        title: "대자형 – 자유로운 영혼",
+        emoji: "🌟",
+        desc: "잠자리에서도 자유로움을 만끽하는 당신은 어디서든 편하게 몸과 마음을 내려놓을 줄 아는 사람이에요. 얽매이지 않는 이 여유가 스트레스를 잘 털어내는 힘이 되어주죠. 함께 자는 사람에게는 침대가 좁게 느껴질 수 있으니, 가끔은 배려하는 자세도 챙겨보세요.",
+      },
+      cocoon: {
+        title: "이불둘둘형 – 포근함을 찾는 사람",
+        emoji: "🐛",
+        desc: "이불 속에서 안정감을 찾는 당신은 편안하고 아늑한 것을 좋아하는 다정한 성격이에요. 익숙함과 포근함 속에서 하루의 피로를 잘 풀어내는 편이죠. 가끔은 낯선 잠자리 환경에도 마음을 열어보면 더 다양한 경험을 즐길 수 있을 거예요.",
+      },
+      prone: {
+        title: "엎드림형 – 몰입형 인간",
+        emoji: "🛏️",
+        desc: "무엇에든 폭 빠져드는 당신은 하나에 집중하면 끝까지 파고드는 몰입력을 가졌어요. 엎드려 자는 자세처럼, 좋아하는 일에는 온몸을 다해 몰두하는 스타일이죠. 목과 허리에 무리가 갈 수 있으니, 가끔은 자세를 바꿔주는 것도 잊지 마세요.",
+      },
+      roll: {
+        title: "뒤척임형 – 생각 많은 사람",
+        emoji: "🌀",
+        desc: "잠들기 전까지도 이런저런 생각을 정리하는 당신은 섬세하고 사려 깊은 사람이에요. 하루를 돌아보고 내일을 준비하는 신중함이 큰 장점이죠. 생각이 너무 많아지면 잠을 설칠 수 있으니, 자기 전 가벼운 스트레칭이나 명상으로 마음을 편안하게 해보는 것도 좋아요.",
+      },
+    },
+  },
+
+  {
+    id: "handwriting",
+    tag: "손글씨",
+    title: "나의 손글씨 유형 테스트",
+    emoji: "✍️",
+    tagline: "손끝에서 드러나는 나도 몰랐던 진짜 성격은?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "메모할 때 글씨 크기는?",
+        options: [
+          { text: "시원시원하게 크게 쓴다", value: "big" },
+          { text: "작고 또박또박 쓴다", value: "neat" },
+          { text: "자연스럽게 흘려 쓴다", value: "cursive" },
+          { text: "반듯하게 각 잡아 쓴다", value: "block" },
+        ],
+      },
+      {
+        text: "필기할 때 나의 속도는?",
+        options: [
+          { text: "빠르고 시원하게 휘갈긴다", value: "big" },
+          { text: "천천히 꼼꼼하게 쓴다", value: "neat" },
+          { text: "리듬 타듯 술술 쓴다", value: "cursive" },
+          { text: "일정한 속도로 또박또박 쓴다", value: "block" },
+        ],
+      },
+      {
+        text: "노트 필기 스타일은?",
+        options: [
+          { text: "페이지를 크게크게 채운다", value: "big" },
+          { text: "칸에 맞춰 작게 정리한다", value: "neat" },
+          { text: "내키는 대로 자유롭게 적는다", value: "cursive" },
+          { text: "줄과 여백을 딱 맞춰 쓴다", value: "block" },
+        ],
+      },
+      {
+        text: "편지나 카드를 쓸 때?",
+        options: [
+          { text: "큼직하게 마음을 담아 쓴다", value: "big" },
+          { text: "글씨 하나하나 신경 써서 쓴다", value: "neat" },
+          { text: "감성적으로 흘려가며 쓴다", value: "cursive" },
+          { text: "또박또박 격식 있게 쓴다", value: "block" },
+        ],
+      },
+      {
+        text: "급하게 메모해야 할 때?",
+        options: [
+          { text: "알아볼 수만 있으면 된다며 크게 쓴다", value: "big" },
+          { text: "급해도 최대한 깔끔하게 쓰려 한다", value: "neat" },
+          { text: "손 가는 대로 휘리릭 적는다", value: "cursive" },
+          { text: "급해도 자세를 흐트러뜨리지 않는다", value: "block" },
+        ],
+      },
+      {
+        text: "다이어리나 플래너를 쓸 때?",
+        options: [
+          { text: "자유분방하게 채운다", value: "big" },
+          { text: "칸칸이 예쁘게 정리한다", value: "neat" },
+          { text: "그날 기분 따라 다르게 쓴다", value: "cursive" },
+          { text: "규칙적인 양식대로 채운다", value: "block" },
+        ],
+      },
+      {
+        text: "내 글씨체에 대한 주변 반응은?",
+        options: [
+          { text: "\"시원시원하다\"", value: "big" },
+          { text: "\"글씨 예쁘다, 꼼꼼하다\"", value: "neat" },
+          { text: "\"개성 있다, 감성적이다\"", value: "cursive" },
+          { text: "\"반듯하다, 정자체 같다\"", value: "block" },
+        ],
+      },
+      {
+        text: "글씨를 쓸 때 나의 마음가짐은?",
+        options: [
+          { text: "내용이 중요하지 모양은 안 중요하다", value: "big" },
+          { text: "보기 좋게 쓰는 게 예의라고 생각한다", value: "neat" },
+          { text: "손이 가는 대로 마음을 표현한다", value: "cursive" },
+          { text: "기본과 원칙을 지키고 싶다", value: "block" },
+        ],
+      },
+    ],
+    categories: {
+      big: {
+        title: "호탕형 – 시원시원한 자유인",
+        emoji: "🖊️",
+        desc: "글씨체처럼 마음도 시원시원하고 자유로운 당신이에요. 작은 것에 얽매이지 않고 큰 그림을 보는 대범함이 매력이죠. 가끔은 중요한 내용을 다시 한번 또박또박 짚어주면 상대방이 더 편하게 알아볼 수 있을 거예요.",
+      },
+      neat: {
+        title: "꼼꼼형 – 정갈함의 끝판왕",
+        emoji: "📝",
+        desc: "한 글자 한 글자 정성 들여 쓰는 당신은 무엇이든 꼼꼼하고 성실하게 해내는 사람이에요. 세심한 배려 덕분에 주변 사람들이 당신을 믿고 의지하죠. 가끔은 완벽하지 않아도 괜찮다는 마음으로 스스로에게 여유를 줘보세요.",
+      },
+      cursive: {
+        title: "감성형 – 개성 넘치는 예술가",
+        emoji: "🎨",
+        desc: "자유롭게 흘려 쓰는 글씨처럼 감성이 풍부하고 개성이 뚜렷한 당신이에요. 틀에 얽매이지 않는 발상으로 주변에 신선한 자극을 주는 사람이죠. 중요한 순간에는 조금 더 또렷하게 전달하는 연습을 해보면 오해를 줄일 수 있을 거예요.",
+      },
+      block: {
+        title: "원칙형 – 반듯한 모범생",
+        emoji: "📐",
+        desc: "반듯한 정자체처럼 원칙과 신뢰를 중요하게 여기는 당신이에요. 흔들림 없는 태도 덕분에 어떤 일을 맡겨도 안심이 되는 사람이죠. 가끔은 힘을 빼고 유연하게 흘러가는 것도 스스로에게 좋은 선물이 될 거예요.",
+      },
+    },
+  },
 ];
