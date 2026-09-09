@@ -4004,5 +4004,747 @@ const TESTS = [
     },
     "intro": "'해야 하는 거 아는데 왜 자꾸 미룰까' 이 질문에 답을 주는 테스트예요. 8가지 질문으로 나만의 미루기 패턴을 확인해보세요.",
     "insight": "미루는 이유를 알면 대처법도 달라져요. 마감 임박형이라면 미리 작은 마감을 만들어두고, 완벽주의 회피형이라면 60점짜리로 시작하는 연습이, 딴짓 유발형이라면 유혹 자체를 눈에서 치우는 게 더 효과적이에요. 내 유형에 맞는 처방을 하나씩 시도해보세요."
-  }
+  },
+
+  {
+    id: "music",
+    tag: "취향",
+    title: "나의 음악 취향 유형 테스트",
+    emoji: "🎧",
+    tagline: "플레이리스트만 봐도 알 수 있는 나의 음악 감성은?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "새로운 음악을 찾을 때 나는?",
+        options: [
+          { text: "요즘 내 기분과 맞는 노래를 찾는다", value: "mood" },
+          { text: "신나고 텐션 오르는 노래부터 찾는다", value: "energy" },
+          { text: "아무도 모르는 숨은 명곡을 찾아 헤맨다", value: "explore" },
+          { text: "예전에 듣던 노래부터 다시 듣는다", value: "nostalgia" },
+        ],
+      },
+      {
+        text: "내 플레이리스트에 이름을 짓는다면?",
+        options: [
+          { text: "\"오늘의 기분\"", value: "mood" },
+          { text: "\"무조건 신나는 노래\"", value: "energy" },
+          { text: "\"아무튼 새로운 것들\"", value: "explore" },
+          { text: "\"그때 그 시절\"", value: "nostalgia" },
+        ],
+      },
+      {
+        text: "노래를 들을 때 가장 먼저 귀에 들어오는 건?",
+        options: [
+          { text: "가사 한 줄 한 줄", value: "mood" },
+          { text: "비트와 리듬감", value: "energy" },
+          { text: "낯선 사운드나 편곡", value: "explore" },
+          { text: "익숙한 멜로디", value: "nostalgia" },
+        ],
+      },
+      {
+        text: "좋아하는 노래가 생기면 나는?",
+        options: [
+          { text: "가사를 곱씹으며 여러 번 듣는다", value: "mood" },
+          { text: "볼륨 높여놓고 신나게 따라 부른다", value: "energy" },
+          { text: "그 가수의 다른 곡들까지 다 찾아 듣는다", value: "explore" },
+          { text: "예전에 좋아하던 노래와 비교하며 듣는다", value: "nostalgia" },
+        ],
+      },
+      {
+        text: "힘든 하루를 보낸 날 듣는 음악은?",
+        options: [
+          { text: "내 마음을 대신 말해주는 듯한 노래", value: "mood" },
+          { text: "스트레스를 날려버릴 신나는 노래", value: "energy" },
+          { text: "아직 안 들어본 새 플레이리스트", value: "explore" },
+          { text: "옛날에 위로받았던 익숙한 노래", value: "nostalgia" },
+        ],
+      },
+      {
+        text: "노래방에 가면 나는?",
+        options: [
+          { text: "감정 잡고 발라드를 부른다", value: "mood" },
+          { text: "신나는 댄스곡으로 분위기를 띄운다", value: "energy" },
+          { text: "남들이 잘 모르는 노래를 선곡한다", value: "explore" },
+          { text: "학창 시절 인기곡을 부른다", value: "nostalgia" },
+        ],
+      },
+      {
+        text: "친구가 \"요즘 뭐 들어?\"라고 물으면?",
+        options: [
+          { text: "\"요즘 내 감정이랑 딱 맞는 노래 있어\"", value: "mood" },
+          { text: "\"완전 신나는 노래! 같이 들어볼래?\"", value: "energy" },
+          { text: "\"이거 완전 숨은 명곡인데 아무도 몰라\"", value: "explore" },
+          { text: "\"예전 노래 다시 듣고 있어\"", value: "nostalgia" },
+        ],
+      },
+      {
+        text: "나에게 음악이란?",
+        options: [
+          { text: "마음을 알아주는 친구", value: "mood" },
+          { text: "에너지를 채워주는 연료", value: "energy" },
+          { text: "끝없는 탐험의 세계", value: "explore" },
+          { text: "추억을 소환하는 타임머신", value: "nostalgia" },
+        ],
+      },
+    ],
+    categories: {
+      mood: {
+        title: "감성 몰입형 – 가사에 마음을 담는 사람",
+        emoji: "💭",
+        desc: "당신은 노래 속 가사 한 줄에 마음이 움직이는 사람이에요. 멜로디보다 이야기에 먼저 공감하고, 음악을 통해 감정을 정리하는 편이죠. 가끔은 신나는 노래로 기분을 환기하는 시간도 함께 가져보세요.",
+      },
+      energy: {
+        title: "텐션 부스터형 – 리듬으로 에너지를 채우는 사람",
+        emoji: "⚡",
+        desc: "당신에게 음악은 무엇보다 강력한 에너지 충전기예요. 신나는 비트를 들으면 저절로 몸이 들썩이고, 지친 하루도 노래 한 곡이면 금세 회복되곤 하죠. 가끔은 잔잔한 곡으로 마음을 차분히 가라앉히는 시간도 가져보세요.",
+      },
+      explore: {
+        title: "탐험가형 – 새로운 사운드를 찾아다니는 사람",
+        emoji: "🧭",
+        desc: "당신은 남들이 모르는 좋은 노래를 발견했을 때 가장 짜릿함을 느끼는 사람이에요. 익숙한 인기곡보다 새로운 아티스트와 낯선 장르에 늘 귀가 열려 있죠. 좋아하는 곡을 주변 사람들과 나누면 그 즐거움이 배가 될 거예요.",
+      },
+      nostalgia: {
+        title: "추억 소환형 – 익숙한 멜로디에 위로받는 사람",
+        emoji: "📼",
+        desc: "당신에게 음악은 그 시절의 순간들을 고스란히 불러오는 타임머신이에요. 익숙한 멜로디 하나로 그때의 감정과 사람들이 떠오르곤 하죠. 가끔은 새로운 노래에도 마음을 열어보면 또 다른 추억이 쌓일 거예요.",
+      },
+    },
+  },
+
+  {
+    id: "talkstyle",
+    tag: "성격심리",
+    title: "나의 말투 유형 테스트",
+    emoji: "🗣️",
+    tagline: "대화 속에서 드러나는 나의 말투는 어떤 유형일까요?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "친구가 고민을 털어놓을 때 나는?",
+        options: [
+          { text: "문제의 핵심부터 콕 짚어준다", value: "direct" },
+          { text: "힘들었겠다며 마음부터 다독인다", value: "warm" },
+          { text: "분위기를 풀어주려고 농담을 섞는다", value: "witty" },
+          { text: "일단 끝까지 조용히 들어준다", value: "reserved" },
+        ],
+      },
+      {
+        text: "대화 중 내 생각과 다른 말을 들으면?",
+        options: [
+          { text: "바로 다른 생각이라고 말한다", value: "direct" },
+          { text: "상대 입장도 이해하려 노력한다", value: "warm" },
+          { text: "웃으며 넘기고 나중에 이야기한다", value: "witty" },
+          { text: "속으로 생각하다 조심스럽게 꺼낸다", value: "reserved" },
+        ],
+      },
+      {
+        text: "단체 대화방에서 나는?",
+        options: [
+          { text: "필요한 말만 짧고 명확하게 한다", value: "direct" },
+          { text: "다른 사람 말에 리액션을 잘 해준다", value: "warm" },
+          { text: "드립이나 짤로 분위기를 띄운다", value: "witty" },
+          { text: "대체로 지켜보다가 가끔 말한다", value: "reserved" },
+        ],
+      },
+      {
+        text: "누군가에게 부탁을 해야 할 때?",
+        options: [
+          { text: "용건부터 바로 말한다", value: "direct" },
+          { text: "미안한 마음을 먼저 표현한다", value: "warm" },
+          { text: "농담처럼 가볍게 운을 뗀다", value: "witty" },
+          { text: "어떻게 말할지 여러 번 고민한다", value: "reserved" },
+        ],
+      },
+      {
+        text: "내 말투에 대해 주변에서 자주 하는 말은?",
+        options: [
+          { text: "\"너무 팩폭이야\"", value: "direct" },
+          { text: "\"말이 참 따뜻해\"", value: "warm" },
+          { text: "\"너랑 있으면 안 웃을 수가 없어\"", value: "witty" },
+          { text: "\"말 한마디 한마디가 신중해\"", value: "reserved" },
+        ],
+      },
+      {
+        text: "화가 났을 때 나는?",
+        options: [
+          { text: "감정을 숨기지 않고 바로 표현한다", value: "direct" },
+          { text: "상처 줄까 봐 최대한 부드럽게 말한다", value: "warm" },
+          { text: "농담으로 넘기려 애쓴다", value: "witty" },
+          { text: "일단 말을 아끼고 시간을 둔다", value: "reserved" },
+        ],
+      },
+      {
+        text: "발표나 프레젠테이션을 할 때?",
+        options: [
+          { text: "결론부터 명확하게 전달한다", value: "direct" },
+          { text: "듣는 사람 반응을 살피며 말한다", value: "warm" },
+          { text: "적절한 유머로 긴장을 풀어준다", value: "witty" },
+          { text: "준비한 대로 차분히 말한다", value: "reserved" },
+        ],
+      },
+      {
+        text: "나에게 대화란?",
+        options: [
+          { text: "정확한 정보를 주고받는 것", value: "direct" },
+          { text: "서로의 마음을 나누는 것", value: "warm" },
+          { text: "즐겁게 웃을 수 있는 시간", value: "witty" },
+          { text: "신중하게 쌓아가는 신뢰", value: "reserved" },
+        ],
+      },
+    ],
+    categories: {
+      direct: {
+        title: "직설형 – 핵심을 콕 짚어 말하는",
+        emoji: "🎯",
+        desc: "당신은 돌려 말하지 않고 하고 싶은 말을 명확하게 전달하는 사람이에요. 덕분에 대화가 빠르고 시원하게 흘러가죠. 가끔은 상대의 마음이 다치지 않도록 표현에 쿠션을 더해보는 것도 좋아요.",
+      },
+      warm: {
+        title: "다정형 – 마음부터 살피는",
+        emoji: "🫶",
+        desc: "당신은 말 한마디에도 상대의 마음을 먼저 헤아리는 사람이에요. 함께 대화하는 사람을 편안하게 만들어주는 힘이 있죠. 가끔은 당신의 솔직한 생각도 조금 더 표현해보세요.",
+      },
+      witty: {
+        title: "위트형 – 분위기를 살리는",
+        emoji: "😄",
+        desc: "당신은 유머 감각으로 대화의 분위기를 밝게 만드는 사람이에요. 함께 있으면 지루할 틈이 없다는 말을 자주 듣죠. 가끔은 진지한 순간엔 농담을 잠시 내려놓아도 좋아요.",
+      },
+      reserved: {
+        title: "신중형 – 한 마디도 곱씹어 말하는",
+        emoji: "🤫",
+        desc: "당신은 말을 꺼내기 전에 신중하게 생각을 정리하는 사람이에요. 그래서 당신의 말에는 무게와 신뢰가 실리죠. 가끔은 생각을 다 정리하기 전에도 편하게 먼저 말해보세요.",
+      },
+    },
+  },
+
+  {
+    id: "organizing",
+    tag: "정리",
+    title: "나의 정리정돈 유형 테스트",
+    emoji: "🧹",
+    tagline: "내 방, 내 책상만 봐도 알 수 있는 진짜 정리 스타일",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "책상 위 상태는 보통 어떤가요?",
+        options: [
+          { text: "필요한 것만 딱 올려져 있다", value: "minimal" },
+          { text: "겉은 깔끔한데 서랍 열면 아수라장", value: "surface" },
+          { text: "라벨 붙인 정리함이 줄지어 있다", value: "storage" },
+          { text: "이것저것 늘어놓아도 나름 편하다", value: "freestyle" },
+        ],
+      },
+      {
+        text: "옷장을 정리할 때 나는?",
+        options: [
+          { text: "안 입는 옷은 바로 버리거나 나눔한다", value: "minimal" },
+          { text: "보이는 곳만 걸어두고 나머진 몰아넣는다", value: "surface" },
+          { text: "계절별, 색깔별로 칸을 나눠 정리한다", value: "storage" },
+          { text: "그냥 손에 잡히는 대로 넣는다", value: "freestyle" },
+        ],
+      },
+      {
+        text: "새 물건을 살 때 나의 원칙은?",
+        options: [
+          { text: "하나 사면 하나는 버린다", value: "minimal" },
+          { text: "예쁘면 일단 사고 정리는 나중에", value: "surface" },
+          { text: "수납 공간부터 확인하고 산다", value: "storage" },
+          { text: "필요하면 그냥 산다, 정리는 별생각 없다", value: "freestyle" },
+        ],
+      },
+      {
+        text: "손님이 갑자기 온다고 하면?",
+        options: [
+          { text: "평소에도 깔끔해서 크게 걱정 없다", value: "minimal" },
+          { text: "눈에 보이는 곳만 빛의 속도로 치운다", value: "surface" },
+          { text: "정리함 뚜껑만 닫으면 끝, 이미 다 제자리다", value: "storage" },
+          { text: "그냥 대충 치우고 손님 눈치를 본다", value: "freestyle" },
+        ],
+      },
+      {
+        text: "여행 짐을 쌀 때 나는?",
+        options: [
+          { text: "체크리스트로 딱 필요한 것만 챙긴다", value: "minimal" },
+          { text: "일단 캐리어에 다 넣고 본다", value: "surface" },
+          { text: "파우치, 압축팩으로 종류별 분류", value: "storage" },
+          { text: "출발 직전에 몰아서 대충 싼다", value: "freestyle" },
+        ],
+      },
+      {
+        text: "물건을 어디 뒀는지 기억이 안 날 때?",
+        options: [
+          { text: "애초에 물건 수가 적어서 금방 찾는다", value: "minimal" },
+          { text: "분명 어딘가 쌓아뒀는데 못 찾는다", value: "surface" },
+          { text: "정리해둔 위치가 명확해서 바로 찾는다", value: "storage" },
+          { text: "찾다가 포기하고 새로 산다", value: "freestyle" },
+        ],
+      },
+      {
+        text: "정리정돈에 대한 나의 생각은?",
+        options: [
+          { text: "적게 소유하는 게 최고의 정리다", value: "minimal" },
+          { text: "정리는 보여주기용이어도 괜찮다", value: "surface" },
+          { text: "정리 도구, 수납템 모으는 게 취미다", value: "storage" },
+          { text: "어지러워도 내 물건이 어딨는지는 나만 안다", value: "freestyle" },
+        ],
+      },
+      {
+        text: "이상적인 방을 한마디로 표현하면?",
+        options: [
+          { text: "텅 빈 듯 깔끔한 공간", value: "minimal" },
+          { text: "보기엔 예쁜데 자세히 보면 애매한 공간", value: "surface" },
+          { text: "칸칸이 각 잡힌 정리의 정석", value: "storage" },
+          { text: "어수선해도 내 손길이 느껴지는 공간", value: "freestyle" },
+        ],
+      },
+    ],
+    categories: {
+      minimal: {
+        title: "미니멀리스트형 – 비움의 미학",
+        emoji: "🤍",
+        desc: "불필요한 물건을 과감히 덜어내는 당신은 진짜 정리의 고수예요. 적게 가질수록 마음도 가벼워진다는 걸 아는 사람이죠. 가끔은 추억이 담긴 물건 한두 개쯤은 남겨두는 여유도 좋아요.",
+      },
+      surface: {
+        title: "겉정리형 – 보이는 게 반이다",
+        emoji: "🎭",
+        desc: "손님 앞에서는 완벽하게 정돈된 모습을 보여주는 센스가 있는 당신. 급할 때 순발력 있게 공간을 정리하는 능력이 탁월해요. 가끔은 서랍 속까지 한 번씩 비워보면 마음도 한결 개운해질 거예요.",
+      },
+      storage: {
+        title: "수납마스터형 – 정리 도구는 나의 힘",
+        emoji: "📦",
+        desc: "칸칸이 이름표를 붙이고 체계를 세우는 당신은 진짜 정리 장인이에요. 어디에 뭐가 있는지 훤히 꿰고 있어 효율적인 하루를 보내죠. 가끔은 완벽한 시스템 없이도 괜찮다는 여유를 가져보세요.",
+      },
+      freestyle: {
+        title: "자유로운 영혼형 – 어지러움 속의 질서",
+        emoji: "🌀",
+        desc: "정리보다 하고 싶은 일에 집중하는 당신만의 자유로운 리듬이 있어요. 남들 눈엔 어수선해도 당신만의 동선과 감각으로 잘 지내는 편이죠. 가끔 5분만 투자해 눈에 띄는 곳부터 정리해보면 기분 전환에 좋을 거예요.",
+      },
+    },
+  },
+
+  {
+    id: "firstimpression",
+    tag: "인상",
+    title: "나의 첫인상 유형 테스트",
+    emoji: "🌟",
+    tagline: "사람들은 나를 처음 봤을 때 어떤 느낌을 받을까요?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "새로운 모임에 처음 갔을 때 나는?",
+        options: [
+          { text: "조용히 상황부터 관찰한다", value: "cool" },
+          { text: "먼저 다가가 인사를 건넨다", value: "warm" },
+          { text: "굳이 나서지 않고 여운을 남긴다", value: "mystery" },
+          { text: "텐션을 올려 분위기를 띄운다", value: "bright" },
+        ],
+      },
+      {
+        text: "처음 만난 사람과 대화할 때 내 표정은?",
+        options: [
+          { text: "무표정에 가까운 편", value: "cool" },
+          { text: "잘 웃고 리액션이 큰 편", value: "warm" },
+          { text: "살짝 미소만 짓는 편", value: "mystery" },
+          { text: "표정이 계속 바뀌며 생동감 있다", value: "bright" },
+        ],
+      },
+      {
+        text: "평소 옷차림 스타일은?",
+        options: [
+          { text: "깔끔한 무채색 위주", value: "cool" },
+          { text: "편안하고 부드러운 톤", value: "warm" },
+          { text: "포인트 하나로 존재감 있는 스타일", value: "mystery" },
+          { text: "눈에 띄는 컬러나 아이템", value: "bright" },
+        ],
+      },
+      {
+        text: "낯선 사람이 말을 걸어오면?",
+        options: [
+          { text: "필요한 말만 짧게 답한다", value: "cool" },
+          { text: "반갑게 맞장구치며 대화를 이어간다", value: "warm" },
+          { text: "짧게 답하고 묘한 여지를 남긴다", value: "mystery" },
+          { text: "신나서 이것저것 물어본다", value: "bright" },
+        ],
+      },
+      {
+        text: "친구들이 나를 표현할 때 자주 하는 말은?",
+        options: [
+          { text: "\"차갑진 않은데 다가가기 어려워\"", value: "cool" },
+          { text: "\"편하고 따뜻해\"", value: "warm" },
+          { text: "\"속을 잘 모르겠어\"", value: "mystery" },
+          { text: "\"에너지가 넘쳐\"", value: "bright" },
+        ],
+      },
+      {
+        text: "단체 사진을 찍을 때 나는?",
+        options: [
+          { text: "무난하고 자연스러운 포즈", value: "cool" },
+          { text: "옆 사람 챙기며 다정하게", value: "warm" },
+          { text: "살짝 다른 포즈로 존재감 있게", value: "mystery" },
+          { text: "제일 크게 리액션하며 웃는다", value: "bright" },
+        ],
+      },
+      {
+        text: "첫 만남 후 상대가 나에게 느낄 감정은?",
+        options: [
+          { text: "괜히 어려운 사람 같다", value: "cool" },
+          { text: "또 만나고 싶다", value: "warm" },
+          { text: "좀 더 알고 싶다", value: "mystery" },
+          { text: "재밌는 사람이다", value: "bright" },
+        ],
+      },
+      {
+        text: "새로운 자리에서 나의 목소리 톤은?",
+        options: [
+          { text: "낮고 차분한 편", value: "cool" },
+          { text: "부드럽고 편안한 톤", value: "warm" },
+          { text: "낮은 톤으로 은근한 매력", value: "mystery" },
+          { text: "높고 활기찬 톤", value: "bright" },
+        ],
+      },
+    ],
+    categories: {
+      cool: {
+        title: "시크한 도시형 – 쿨함이 매력",
+        emoji: "🕶️",
+        desc: "처음 보면 다가가기 조심스러운 도시적인 분위기를 풍기는 당신. 감정을 크게 드러내지 않아 신뢰감 있고 프로페셔널해 보여요. 친해지면 반전 매력이 크니, 가끔은 먼저 살짝 미소를 건네보는 것도 좋아요.",
+      },
+      warm: {
+        title: "다정한 옆집형 – 편안함이 매력",
+        emoji: "🤗",
+        desc: "누구에게나 편안하고 다정한 인상을 주는 당신은 처음 만나도 이야기 나누기 쉬운 사람이에요. 배려심 많은 태도 덕분에 금방 마음을 여는 상대가 많죠. 가끔은 본인의 이야기도 먼저 꺼내보는 용기를 내보세요.",
+      },
+      mystery: {
+        title: "신비로운 매력형 – 여운이 매력",
+        emoji: "🌙",
+        desc: "속을 다 보여주지 않는 묘한 분위기로 상대의 궁금증을 자아내는 당신. 은은한 존재감만으로도 사람들의 시선을 끄는 힘이 있어요. 가끔은 마음을 조금 더 열어 보여주면 관계가 더 깊어질 거예요.",
+      },
+      bright: {
+        title: "발랄한 텐션형 – 에너지가 매력",
+        emoji: "✨",
+        desc: "밝고 활기찬 에너지로 분위기를 순식간에 띄우는 당신. 어디서든 먼저 웃어주는 모습에 사람들도 덩달아 편해져요. 가끔은 차분히 상대의 속도에 맞춰주는 여유도 챙겨보세요.",
+      },
+    },
+  },
+
+  {
+    id: "workout",
+    tag: "건강",
+    title: "나의 운동 스타일 테스트",
+    emoji: "🏋️",
+    tagline: "당신에게 딱 맞는 운동 방식은 무엇일까요?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "운동을 시작하기로 마음먹었다면, 가장 먼저 하는 일은?",
+        options: [
+          { text: "헬스장부터 등록한다", value: "gym" },
+          { text: "요가원이나 필라테스 학원을 알아본다", value: "yoga" },
+          { text: "러닝화부터 장만한다", value: "running" },
+          { text: "유튜브 홈트 영상을 찾아본다", value: "hometraining" },
+        ],
+      },
+      {
+        text: "운동할 때 가장 중요하게 생각하는 건?",
+        options: [
+          { text: "근력과 몸의 변화", value: "gym" },
+          { text: "호흡과 마음의 안정", value: "yoga" },
+          { text: "상쾌한 기분과 지구력", value: "running" },
+          { text: "편안함과 자유로움", value: "hometraining" },
+        ],
+      },
+      {
+        text: "운동 갈 때 챙기는 필수템은?",
+        options: [
+          { text: "프로틴 쉐이커", value: "gym" },
+          { text: "요가매트와 편한 옷", value: "yoga" },
+          { text: "이어폰과 물병", value: "running" },
+          { text: "매트 하나면 충분", value: "hometraining" },
+        ],
+      },
+      {
+        text: "운동 중 가장 뿌듯한 순간은?",
+        options: [
+          { text: "무게를 늘렸을 때", value: "gym" },
+          { text: "동작이 유연해졌을 때", value: "yoga" },
+          { text: "기록이 단축됐을 때", value: "running" },
+          { text: "오늘도 꾸준히 했다는 것 자체", value: "hometraining" },
+        ],
+      },
+      {
+        text: "친구가 같이 운동하자고 하면 나는?",
+        options: [
+          { text: "같이 헬스장 가자고 한다", value: "gym" },
+          { text: "필라테스 원데이클래스를 추천한다", value: "yoga" },
+          { text: "공원에서 같이 러닝하자고 한다", value: "running" },
+          { text: "각자 집에서 하고 인증샷을 공유하자고 한다", value: "hometraining" },
+        ],
+      },
+      {
+        text: "나의 운동복 스타일은?",
+        options: [
+          { text: "탱크탑에 트레이닝 벨트", value: "gym" },
+          { text: "레깅스에 편한 크롭탑", value: "yoga" },
+          { text: "기능성 러닝복", value: "running" },
+          { text: "그냥 편한 트레이닝복", value: "hometraining" },
+        ],
+      },
+      {
+        text: "비 오는 날의 운동 계획은?",
+        options: [
+          { text: "그래도 헬스장은 실내니까 간다", value: "gym" },
+          { text: "실내 요가로 대체한다", value: "yoga" },
+          { text: "러닝머신으로 대체하거나 쉰다", value: "running" },
+          { text: "집에서 홈트로 해결한다", value: "hometraining" },
+        ],
+      },
+      {
+        text: "운동 후 나에게 주는 보상은?",
+        options: [
+          { text: "든든한 단백질 보충식", value: "gym" },
+          { text: "따뜻한 차 한 잔과 스트레칭", value: "yoga" },
+          { text: "시원한 샤워와 완주의 뿌듯함", value: "running" },
+          { text: "소파에 누워 좋아하는 영상 보기", value: "hometraining" },
+        ],
+      },
+    ],
+    categories: {
+      gym: {
+        title: "헬스 마니아형 – 근력이 곧 자신감",
+        emoji: "💪",
+        desc: "목표를 세우고 꾸준히 무게를 늘려가는 걸 즐기는 당신. 눈에 보이는 변화와 성취감이 운동을 지속하는 원동력이에요. 가끔은 무리한 목표보다 몸이 보내는 신호에 귀 기울이는 여유도 챙겨보세요.",
+      },
+      yoga: {
+        title: "요가·필라테스형 – 몸과 마음의 균형",
+        emoji: "🧘",
+        desc: "격렬함보다는 호흡과 자세에 집중하며 몸과 마음을 함께 다스리는 당신. 유연함과 안정감을 중요하게 여기는 편이에요. 가끔은 심박수를 살짝 올리는 활동도 더해보면 균형이 한층 더 좋아질 거예요.",
+      },
+      running: {
+        title: "러닝·아웃도어형 – 야외에서 채우는 에너지",
+        emoji: "🏃",
+        desc: "탁 트인 공간에서 몸을 움직일 때 진짜 활력을 느끼는 당신. 조금씩 나아지는 기록을 보며 성취감을 얻는 편이에요. 날씨가 안 좋은 날을 위한 실내 대체 루틴도 하나쯤 마련해두면 좋아요.",
+      },
+      hometraining: {
+        title: "홈트·자유러형 – 내 공간에서 편하게",
+        emoji: "🏠",
+        desc: "시간과 장소에 얽매이지 않고 내 페이스대로 몸을 움직이는 걸 좋아하는 당신. 부담 없이 꾸준히 이어가는 게 최대 강점이에요. 가끔은 새로운 루틴이나 운동을 시도해보면 색다른 재미를 느낄 수 있을 거예요.",
+      },
+    },
+  },
+
+  {
+    id: "hobbytype",
+    tag: "취향",
+    title: "나의 취미 성향 테스트",
+    emoji: "🎯",
+    tagline: "진짜 나에게 맞는 취미는 어떤 스타일일까?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "주말에 아무 약속이 없다면?",
+        options: [
+          { text: "밖에 나가서 몸을 움직인다", value: "active" },
+          { text: "손으로 뭔가를 만들거나 그린다", value: "creative" },
+          { text: "친구들을 불러서 논다", value: "social" },
+          { text: "집에서 넷플릭스 보며 뒹군다", value: "cozy" },
+        ],
+      },
+      {
+        text: "새로운 취미를 고를 때 가장 중요한 기준은?",
+        options: [
+          { text: "땀 흘리고 성취감을 느낄 수 있는가", value: "active" },
+          { text: "내 손으로 결과물을 만들 수 있는가", value: "creative" },
+          { text: "함께 즐길 사람이 있는가", value: "social" },
+          { text: "부담 없이 편하게 즐길 수 있는가", value: "cozy" },
+        ],
+      },
+      {
+        text: "스트레스가 쌓였을 때 나만의 해소법은?",
+        options: [
+          { text: "달리기나 등산으로 땀을 뺀다", value: "active" },
+          { text: "그림을 그리거나 글을 쓴다", value: "creative" },
+          { text: "친한 사람들과 수다 떨며 푼다", value: "social" },
+          { text: "혼자 조용히 쉬며 마음을 가라앉힌다", value: "cozy" },
+        ],
+      },
+      {
+        text: "여행지에 도착하면 가장 먼저 하고 싶은 건?",
+        options: [
+          { text: "액티비티부터 예약한다", value: "active" },
+          { text: "그 지역 감성을 사진이나 그림으로 남긴다", value: "creative" },
+          { text: "현지인이나 다른 여행자와 어울린다", value: "social" },
+          { text: "숙소에서 여유롭게 시간을 보낸다", value: "cozy" },
+        ],
+      },
+      {
+        text: "갖고 싶은 취미 용품이 있다면?",
+        options: [
+          { text: "운동화나 캠핑 장비", value: "active" },
+          { text: "카메라나 그림 도구", value: "creative" },
+          { text: "보드게임이나 파티용품", value: "social" },
+          { text: "포근한 담요와 좋아하는 책", value: "cozy" },
+        ],
+      },
+      {
+        text: "SNS에 올리고 싶은 사진은?",
+        options: [
+          { text: "운동하거나 도전하는 모습", value: "active" },
+          { text: "내가 만든 작품 사진", value: "creative" },
+          { text: "친구들과 함께 찍은 단체 사진", value: "social" },
+          { text: "집에서의 소소한 힐링 순간", value: "cozy" },
+        ],
+      },
+      {
+        text: "친구가 취미를 추천해달라고 하면?",
+        options: [
+          { text: "클라이밍이나 러닝 클럽 어때?", value: "active" },
+          { text: "원데이 클래스로 뭔가 만들어봐", value: "creative" },
+          { text: "동호회 들어가서 사람들 만나봐", value: "social" },
+          { text: "일단 좀 쉬면서 천천히 찾아봐", value: "cozy" },
+        ],
+      },
+      {
+        text: "이상적인 하루를 한 문장으로 표현한다면?",
+        options: [
+          { text: "몸을 움직이며 활력 넘치는 하루", value: "active" },
+          { text: "무언가에 몰입해서 만들어내는 하루", value: "creative" },
+          { text: "좋아하는 사람들과 웃고 떠드는 하루", value: "social" },
+          { text: "아무 방해 없이 나만의 속도로 쉬는 하루", value: "cozy" },
+        ],
+      },
+    ],
+    categories: {
+      active: {
+        title: "액티브형 – 몸으로 채우는 에너지",
+        emoji: "🏃",
+        desc: "가만히 있는 것보다 몸을 움직일 때 진짜 활력을 느끼는 당신. 땀 흘리고 나면 스트레스도 씻은 듯 사라지고 성취감까지 챙기는 타입이에요. 다만 몸이 보내는 신호를 무시하고 무리하게 스케줄을 채우진 않았는지, 가끔은 완전한 휴식도 계획에 넣어보세요.",
+      },
+      creative: {
+        title: "창작형 – 손끝에서 피어나는 몰입",
+        emoji: "🎨",
+        desc: "무언가를 직접 만들고 표현할 때 가장 나다워지는 당신. 결과물이 쌓여갈수록 스스로에 대한 만족감도 커지는 편이죠. 완벽한 결과에 너무 얽매이기보다, 과정 자체를 즐기는 여유도 가져보면 좋아요.",
+      },
+      social: {
+        title: "소셜형 – 함께할 때 빛나는 사람",
+        emoji: "🎉",
+        desc: "혼자보다 여럿이 함께할 때 에너지가 배로 차오르는 당신. 사람들과 어울리며 관계를 넓혀가는 데서 큰 즐거움을 찾는 편이에요. 가끔은 혼자만의 시간도 스스로에게 선물해주면 밸런스가 더 좋아질 거예요.",
+      },
+      cozy: {
+        title: "힐링형 – 나만의 속도로 채우는 편안함",
+        emoji: "🛋️",
+        desc: "바쁜 일상 속에서도 나만의 페이스를 지키는 당신. 조용하고 편안한 시간 속에서 진짜 에너지를 회복하는 타입이에요. 가끔은 낯선 활동에도 살짝 발을 담가보면 새로운 즐거움을 만날 수 있을 거예요.",
+      },
+    },
+  },
+
+  {
+    id: "book",
+    tag: "독서",
+    title: "나의 독서 취향 테스트",
+    emoji: "📚",
+    tagline: "당신의 마음이 끌리는 이야기는 어떤 장르일까요?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "서점에 가면 제일 먼저 향하는 코너는?",
+        options: [
+          { text: "두근두근한 사랑 이야기 코너", value: "romance" },
+          { text: "범인을 추리하는 코너", value: "mystery" },
+          { text: "새로운 세계관이 펼쳐지는 코너", value: "fantasy" },
+          { text: "마음을 다독여주는 에세이 코너", value: "essay" },
+        ],
+      },
+      {
+        text: "책 속 주인공에게 가장 몰입하게 되는 순간은?",
+        options: [
+          { text: "설레는 감정이 싹틀 때", value: "romance" },
+          { text: "숨겨진 단서를 발견할 때", value: "mystery" },
+          { text: "상상도 못한 세계가 열릴 때", value: "fantasy" },
+          { text: "내 마음과 닮은 문장을 만날 때", value: "essay" },
+        ],
+      },
+      {
+        text: "책을 고를 때 가장 중요하게 보는 것은?",
+        options: [
+          { text: "두 사람 사이의 케미", value: "romance" },
+          { text: "반전이 있는지 여부", value: "mystery" },
+          { text: "세계관의 스케일", value: "fantasy" },
+          { text: "저자의 삶에서 나온 통찰", value: "essay" },
+        ],
+      },
+      {
+        text: "나도 모르게 밤새 책을 읽게 되는 순간은?",
+        options: [
+          { text: "다음 장면이 궁금해 심장이 두근거릴 때", value: "romance" },
+          { text: "범인이 누구인지 미치도록 궁금할 때", value: "mystery" },
+          { text: "다음 세계가 어떻게 펼쳐질지 궁금할 때", value: "fantasy" },
+          { text: "문장 하나하나가 위로가 될 때", value: "essay" },
+        ],
+      },
+      {
+        text: "친구에게 책을 추천한다면 이런 말을 할 것 같다?",
+        options: [
+          { text: "이거 읽으면 너도 설렐걸", value: "romance" },
+          { text: "결말 보고 소름 돋았잖아", value: "mystery" },
+          { text: "이 세계관 진짜 미쳤어", value: "fantasy" },
+          { text: "읽고 나면 마음이 편해져", value: "essay" },
+        ],
+      },
+      {
+        text: "예고편만 보고 가장 끌리는 이야기 장르는?",
+        options: [
+          { text: "멜로, 로맨스", value: "romance" },
+          { text: "스릴러, 미스터리", value: "mystery" },
+          { text: "SF, 판타지", value: "fantasy" },
+          { text: "잔잔한 드라마, 다큐멘터리", value: "essay" },
+        ],
+      },
+      {
+        text: "여행 갈 때 가방에 챙기고 싶은 책 한 권은?",
+        options: [
+          { text: "설레는 로맨스 소설", value: "romance" },
+          { text: "손에 땀을 쥐게 하는 추리소설", value: "mystery" },
+          { text: "몰입감 있는 판타지 장편", value: "fantasy" },
+          { text: "가볍게 읽을 에세이", value: "essay" },
+        ],
+      },
+      {
+        text: "나에게 독서란 어떤 시간에 가깝나?",
+        options: [
+          { text: "설렘을 채워주는 시간", value: "romance" },
+          { text: "두뇌를 자극하는 게임 같은 시간", value: "mystery" },
+          { text: "현실을 벗어나는 탈출구 같은 시간", value: "fantasy" },
+          { text: "나를 돌아보는 시간", value: "essay" },
+        ],
+      },
+    ],
+    categories: {
+      romance: {
+        title: "로맨스파 – 설렘을 사랑하는 마음",
+        emoji: "💕",
+        desc: "사랑이 피어나는 순간의 떨림을 그 누구보다 생생하게 느끼는 당신. 인물들의 감정선에 깊이 공감하는 섬세함을 가졌어요. 가끔은 이야기 속 설렘을 일상에서도 조금씩 표현해보는 건 어떨까요?",
+      },
+      mystery: {
+        title: "미스터리파 – 예리한 관찰자",
+        emoji: "🔍",
+        desc: "작은 단서 하나도 놓치지 않는 예리한 관찰력을 가진 당신. 상황을 논리적으로 파악하는 능력이 남달라요. 가끔은 답을 서두르지 않고 그 과정 자체를 즐겨보는 여유도 가져보세요.",
+      },
+      fantasy: {
+        title: "판타지파 – 무한한 상상가",
+        emoji: "🐉",
+        desc: "현실의 경계를 뛰어넘는 상상력을 지닌 당신. 새로운 세계와 가능성을 그려보는 걸 좋아해요. 그 상상력을 일상의 작은 아이디어로도 펼쳐보면 더 즐거운 하루가 될 거예요.",
+      },
+      essay: {
+        title: "에세이파 – 깊이 있는 사색가",
+        emoji: "🍂",
+        desc: "삶의 소소한 순간에서도 의미를 찾아내는 당신. 다른 사람의 이야기에 진심으로 공감할 줄 아는 따뜻함을 가졌어요. 가끔은 그 사색을 짧은 글로 남겨보는 것도 좋은 기록이 될 거예요.",
+      },
+    },
+  },
 ];
