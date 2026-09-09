@@ -5775,4 +5775,110 @@ const TESTS = [
       },
     },
   },
+
+  {
+    id: "handwriting",
+    tag: "손글씨",
+    title: "나의 손글씨 유형 테스트",
+    emoji: "✍️",
+    tagline: "손끝에서 드러나는 나도 몰랐던 진짜 성격은?",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "메모할 때 글씨 크기는?",
+        options: [
+          { text: "시원시원하게 크게 쓴다", value: "big" },
+          { text: "작고 또박또박 쓴다", value: "neat" },
+          { text: "자연스럽게 흘려 쓴다", value: "cursive" },
+          { text: "반듯하게 각 잡아 쓴다", value: "block" },
+        ],
+      },
+      {
+        text: "필기할 때 나의 속도는?",
+        options: [
+          { text: "빠르고 시원하게 휘갈긴다", value: "big" },
+          { text: "천천히 꼼꼼하게 쓴다", value: "neat" },
+          { text: "리듬 타듯 술술 쓴다", value: "cursive" },
+          { text: "일정한 속도로 또박또박 쓴다", value: "block" },
+        ],
+      },
+      {
+        text: "노트 필기 스타일은?",
+        options: [
+          { text: "페이지를 크게크게 채운다", value: "big" },
+          { text: "칸에 맞춰 작게 정리한다", value: "neat" },
+          { text: "내키는 대로 자유롭게 적는다", value: "cursive" },
+          { text: "줄과 여백을 딱 맞춰 쓴다", value: "block" },
+        ],
+      },
+      {
+        text: "편지나 카드를 쓸 때?",
+        options: [
+          { text: "큼직하게 마음을 담아 쓴다", value: "big" },
+          { text: "글씨 하나하나 신경 써서 쓴다", value: "neat" },
+          { text: "감성적으로 흘려가며 쓴다", value: "cursive" },
+          { text: "또박또박 격식 있게 쓴다", value: "block" },
+        ],
+      },
+      {
+        text: "급하게 메모해야 할 때?",
+        options: [
+          { text: "알아볼 수만 있으면 된다며 크게 쓴다", value: "big" },
+          { text: "급해도 최대한 깔끔하게 쓰려 한다", value: "neat" },
+          { text: "손 가는 대로 휘리릭 적는다", value: "cursive" },
+          { text: "급해도 자세를 흐트러뜨리지 않는다", value: "block" },
+        ],
+      },
+      {
+        text: "다이어리나 플래너를 쓸 때?",
+        options: [
+          { text: "자유분방하게 채운다", value: "big" },
+          { text: "칸칸이 예쁘게 정리한다", value: "neat" },
+          { text: "그날 기분 따라 다르게 쓴다", value: "cursive" },
+          { text: "규칙적인 양식대로 채운다", value: "block" },
+        ],
+      },
+      {
+        text: "내 글씨체에 대한 주변 반응은?",
+        options: [
+          { text: "\"시원시원하다\"", value: "big" },
+          { text: "\"글씨 예쁘다, 꼼꼼하다\"", value: "neat" },
+          { text: "\"개성 있다, 감성적이다\"", value: "cursive" },
+          { text: "\"반듯하다, 정자체 같다\"", value: "block" },
+        ],
+      },
+      {
+        text: "글씨를 쓸 때 나의 마음가짐은?",
+        options: [
+          { text: "내용이 중요하지 모양은 안 중요하다", value: "big" },
+          { text: "보기 좋게 쓰는 게 예의라고 생각한다", value: "neat" },
+          { text: "손이 가는 대로 마음을 표현한다", value: "cursive" },
+          { text: "기본과 원칙을 지키고 싶다", value: "block" },
+        ],
+      },
+    ],
+    categories: {
+      big: {
+        title: "호탕형 – 시원시원한 자유인",
+        emoji: "🖊️",
+        desc: "글씨체처럼 마음도 시원시원하고 자유로운 당신이에요. 작은 것에 얽매이지 않고 큰 그림을 보는 대범함이 매력이죠. 가끔은 중요한 내용을 다시 한번 또박또박 짚어주면 상대방이 더 편하게 알아볼 수 있을 거예요.",
+      },
+      neat: {
+        title: "꼼꼼형 – 정갈함의 끝판왕",
+        emoji: "📝",
+        desc: "한 글자 한 글자 정성 들여 쓰는 당신은 무엇이든 꼼꼼하고 성실하게 해내는 사람이에요. 세심한 배려 덕분에 주변 사람들이 당신을 믿고 의지하죠. 가끔은 완벽하지 않아도 괜찮다는 마음으로 스스로에게 여유를 줘보세요.",
+      },
+      cursive: {
+        title: "감성형 – 개성 넘치는 예술가",
+        emoji: "🎨",
+        desc: "자유롭게 흘려 쓰는 글씨처럼 감성이 풍부하고 개성이 뚜렷한 당신이에요. 틀에 얽매이지 않는 발상으로 주변에 신선한 자극을 주는 사람이죠. 중요한 순간에는 조금 더 또렷하게 전달하는 연습을 해보면 오해를 줄일 수 있을 거예요.",
+      },
+      block: {
+        title: "원칙형 – 반듯한 모범생",
+        emoji: "📐",
+        desc: "반듯한 정자체처럼 원칙과 신뢰를 중요하게 여기는 당신이에요. 흔들림 없는 태도 덕분에 어떤 일을 맡겨도 안심이 되는 사람이죠. 가끔은 힘을 빼고 유연하게 흘러가는 것도 스스로에게 좋은 선물이 될 거예요.",
+      },
+    },
+  },
 ];
