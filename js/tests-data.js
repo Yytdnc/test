@@ -4012,6 +4012,7 @@ const TESTS = [
     title: "나의 음악 취향 유형 테스트",
     emoji: "🎧",
     tagline: "플레이리스트만 봐도 알 수 있는 나의 음악 감성은?",
+    intro: "무슨 노래를 즐겨 듣는지, 어떤 상황에서 어떤 곡을 찾는지에도 그 사람만의 감성이 묻어나요. 8가지 질문으로 나의 음악 취향 유형을 확인해보세요.",
     type: "category",
     compare: true,
     questions: [
@@ -4118,6 +4119,7 @@ const TESTS = [
     title: "나의 말투 유형 테스트",
     emoji: "🗣️",
     tagline: "대화 속에서 드러나는 나의 말투는 어떤 유형일까요?",
+    intro: "같은 말도 누군가는 직설적으로, 누군가는 돌려서 전해요. 8가지 질문으로 대화 속에 드러나는 나의 말투 유형을 확인해보세요.",
     type: "category",
     compare: true,
     questions: [
@@ -4224,6 +4226,7 @@ const TESTS = [
     title: "나의 정리정돈 유형 테스트",
     emoji: "🧹",
     tagline: "내 방, 내 책상만 봐도 알 수 있는 진짜 정리 스타일",
+    intro: "정리된 방과 어질러진 책상, 그 차이는 습관보다 성향에 가까워요. 8가지 질문으로 나의 진짜 정리정돈 유형을 확인해보세요.",
     type: "category",
     compare: true,
     questions: [
@@ -4330,6 +4333,7 @@ const TESTS = [
     title: "나의 첫인상 유형 테스트",
     emoji: "🌟",
     tagline: "사람들은 나를 처음 봤을 때 어떤 느낌을 받을까요?",
+    intro: "처음 만난 사람들 눈에 비치는 나의 모습은 스스로 생각하는 것과 다를 때가 많아요. 8가지 질문으로 사람들에게 비치는 나의 첫인상 유형을 확인해보세요.",
     type: "category",
     compare: true,
     questions: [
@@ -4436,6 +4440,7 @@ const TESTS = [
     title: "나의 운동 스타일 테스트",
     emoji: "🏋️",
     tagline: "당신에게 딱 맞는 운동 방식은 무엇일까요?",
+    intro: "누군가는 혼자 묵묵히, 누군가는 함께 부대끼며 운동할 때 더 힘이 나요. 8가지 질문으로 나에게 딱 맞는 운동 스타일을 확인해보세요.",
     type: "category",
     compare: true,
     questions: [
@@ -4542,6 +4547,7 @@ const TESTS = [
     title: "나의 취미 성향 테스트",
     emoji: "🎯",
     tagline: "진짜 나에게 맞는 취미는 어떤 스타일일까?",
+    intro: "쉬는 시간에 무엇을 하며 에너지를 채우는지 보면 그 사람의 성향이 보여요. 8가지 질문으로 진짜 나에게 맞는 취미 성향을 확인해보세요.",
     type: "category",
     compare: true,
     questions: [
@@ -4648,6 +4654,7 @@ const TESTS = [
     title: "나의 독서 취향 테스트",
     emoji: "📚",
     tagline: "당신의 마음이 끌리는 이야기는 어떤 장르일까요?",
+    intro: "손이 가는 책의 장르를 보면 지금 내 마음이 무엇을 원하는지 알 수 있어요. 8가지 질문으로 나의 독서 취향 유형을 확인해보세요.",
     type: "category",
     compare: true,
     questions: [
@@ -4754,6 +4761,7 @@ const TESTS = [
     title: "나의 카톡 답장 스타일 테스트",
     emoji: "💬",
     tagline: "당신은 카톡에서 어떤 답장 스타일을 가지고 있을까요?",
+    intro: "카톡 답장 속도와 말투에도 나만의 습관이 고스란히 담겨 있어요. 8가지 질문으로 나의 카톡 답장 스타일을 확인해보세요.",
     type: "category",
     compare: true,
     questions: [
@@ -4860,6 +4868,7 @@ const TESTS = [
     title: "나의 잠버릇 유형 테스트",
     emoji: "😴",
     tagline: "당신이 잠든 모습 속에 숨겨진 진짜 성격은?",
+    intro: "잠든 모습은 스스로 볼 수 없지만, 잠들기 전 습관에는 성격이 묻어나요. 8가지 질문으로 나의 잠버릇 유형을 확인해보세요.",
     type: "category",
     compare: true,
     questions: [
@@ -4966,6 +4975,7 @@ const TESTS = [
     title: "나의 손글씨 유형 테스트",
     emoji: "✍️",
     tagline: "손끝에서 드러나는 나도 몰랐던 진짜 성격은?",
+    intro: "글씨체 하나에도 그 사람만의 성격과 습관이 은근히 드러나요. 8가지 질문으로 손끝에 숨겨진 나의 진짜 성격을 확인해보세요.",
     type: "category",
     compare: true,
     questions: [
@@ -5062,6 +5072,113 @@ const TESTS = [
         title: "원칙형 – 반듯한 모범생",
         emoji: "📐",
         desc: "반듯한 정자체처럼 원칙과 신뢰를 중요하게 여기는 당신이에요. 흔들림 없는 태도 덕분에 어떤 일을 맡겨도 안심이 되는 사람이죠. 가끔은 힘을 빼고 유연하게 흘러가는 것도 스스로에게 좋은 선물이 될 거예요.",
+      },
+    },
+  },
+
+  {
+    id: "travel",
+    tag: "여행",
+    title: "나의 여행 스타일 테스트",
+    emoji: "✈️",
+    tagline: "떠나는 방식만 봐도 알 수 있는 나의 진짜 여행 스타일",
+    intro: "짐을 싸는 방식부터 일정을 짜는 태도까지, 여행에는 그 사람의 성향이 고스란히 묻어나요. 8가지 질문으로 나는 어떤 여행자인지 확인해보세요.",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "여행 짐을 쌀 때 나는?",
+        options: [
+          { text: "체크리스트를 만들어 하나씩 확인한다", value: "planner" },
+          { text: "출발 전날 밤에 몰아서 대충 챙긴다", value: "spontaneous" },
+          { text: "필요한 것만 가볍게, 편안함 위주로 챙긴다", value: "healing" },
+          { text: "운동복과 장비부터 먼저 챙긴다", value: "activity" },
+        ],
+      },
+      {
+        text: "여행 일정을 짤 때?",
+        options: [
+          { text: "시간대별로 꼼꼼하게 계획을 세운다", value: "planner" },
+          { text: "큰 틀만 정하고 그때그때 정한다", value: "spontaneous" },
+          { text: "일정은 최소한으로, 여유롭게 비워둔다", value: "healing" },
+          { text: "하고 싶은 액티비티로 일정을 꽉 채운다", value: "activity" },
+        ],
+      },
+      {
+        text: "비행기가 연착되면?",
+        options: [
+          { text: "대체 계획을 미리 세워둬서 당황하지 않는다", value: "planner" },
+          { text: "오히려 즉흥적인 다른 계획을 세운다", value: "spontaneous" },
+          { text: "공항 라운지에서 여유롭게 쉰다", value: "healing" },
+          { text: "답답해서 몸을 움직일 거리를 찾는다", value: "activity" },
+        ],
+      },
+      {
+        text: "숙소를 고를 때 가장 중요한 건?",
+        options: [
+          { text: "동선과 위치, 효율성", value: "planner" },
+          { text: "예약 없이도 갈 수 있는 유연함", value: "spontaneous" },
+          { text: "뷰 좋고 조용한 힐링 공간", value: "healing" },
+          { text: "수영장, 헬스장 등 액티비티 접근성", value: "activity" },
+        ],
+      },
+      {
+        text: "여행지에서 하루 일과는?",
+        options: [
+          { text: "아침부터 계획한 스팟을 순서대로 방문", value: "planner" },
+          { text: "발길 닿는 대로 걷다가 마음에 드는 곳에 머문다", value: "spontaneous" },
+          { text: "늦잠 자고 카페에서 여유 부리기", value: "healing" },
+          { text: "하이킹, 다이빙 등 몸으로 부딪히는 체험", value: "activity" },
+        ],
+      },
+      {
+        text: "여행 예산은 어떻게 관리하나요?",
+        options: [
+          { text: "항목별로 미리 예산을 짜둔다", value: "planner" },
+          { text: "그때그때 상황 봐서 쓴다", value: "spontaneous" },
+          { text: "편안한 숙소와 음식엔 아낌없이 쓴다", value: "healing" },
+          { text: "액티비티, 장비 대여엔 아낌없이 쓴다", value: "activity" },
+        ],
+      },
+      {
+        text: "여행에서 돌아와 가장 뿌듯한 건?",
+        options: [
+          { text: "계획한 걸 다 해냈다는 성취감", value: "planner" },
+          { text: "예상 못한 특별한 순간을 만난 것", value: "spontaneous" },
+          { text: "몸과 마음이 푹 쉬었다는 느낌", value: "healing" },
+          { text: "평소에 못 해본 걸 도전해봤다는 것", value: "activity" },
+        ],
+      },
+      {
+        text: "나에게 여행이란?",
+        options: [
+          { text: "완벽하게 준비해서 즐기는 프로젝트", value: "planner" },
+          { text: "예측 불가능해서 더 짜릿한 모험", value: "spontaneous" },
+          { text: "지친 일상에서 벗어나는 쉼표", value: "healing" },
+          { text: "에너지를 발산하는 액티브한 시간", value: "activity" },
+        ],
+      },
+    ],
+    categories: {
+      planner: {
+        title: "계획형 여행러 – 완벽한 동선의 마스터",
+        emoji: "🗺️",
+        desc: "여행 전부터 이미 반은 여행을 끝낸 듯 꼼꼼하게 준비하는 당신. 덕분에 시간 낭비 없이 알찬 여행을 즐길 수 있어요. 가끔은 계획에 없던 골목 하나쯤 그냥 걸어보는 것도 새로운 재미가 될 거예요.",
+      },
+      spontaneous: {
+        title: "즉흥형 여행러 – 발길 닿는 대로",
+        emoji: "🎒",
+        desc: "정해진 틀 없이 그 순간의 기분과 인연을 따라가는 당신의 여행엔 늘 예상 못한 이야기가 생겨요. 낯선 상황에도 유연하게 적응하는 게 큰 장점이죠. 숙소나 교통편 같은 최소한의 안전장치만 미리 챙겨두면 더 마음 편한 여행이 될 거예요.",
+      },
+      healing: {
+        title: "힐링형 여행러 – 쉼표가 필요한 당신",
+        emoji: "🌊",
+        desc: "바쁜 일상에서 벗어나 온전히 쉬는 것 자체가 여행의 목적인 당신. 무리한 일정 없이 몸과 마음을 충전하는 방법을 잘 알고 있어요. 가끔은 짧은 산책이나 가벼운 체험 하나쯤 더해보면 쉼 속에서도 새로운 활력을 얻을 수 있을 거예요.",
+      },
+      activity: {
+        title: "액티비티형 여행러 – 몸으로 부딪히는 모험가",
+        emoji: "🏄",
+        desc: "가만히 있기보단 직접 뛰어들고 체험해야 직성이 풀리는 당신. 새로운 도전 앞에서 망설이지 않는 에너지가 여행을 더 특별하게 만들어요. 가끔은 일정 사이사이 아무것도 안 하는 시간도 남겨두면 몸도 마음도 더 오래 즐거울 거예요.",
       },
     },
   },
