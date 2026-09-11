@@ -54,7 +54,19 @@
 
   const answers = [];
   let currentIndex = 0;
+  // 연타/고스트 클릭 방어. 화면을 새로 그린 "직후"에는 잠깐 입력을 받지 않는다.
+  // (같은 틱에 바로 풀어버리면 이전 문항에서 눌린 두 번째 클릭이 다음 문항의
+  //  답으로 그대로 들어가 버린다.)
   let isAnswering = false;
+  let unlockTimer = null;
+  const INPUT_LOCK_MS = 250;
+
+  function unlockInputSoon() {
+    clearTimeout(unlockTimer);
+    unlockTimer = setTimeout(function () {
+      isAnswering = false;
+    }, INPUT_LOCK_MS);
+  }
 
   function startQuiz() {
     introEl.style.display = "none";
@@ -63,7 +75,7 @@
   }
 
   function renderQuestion() {
-    isAnswering = false;
+    unlockInputSoon();
     const q = test.questions[currentIndex];
     const progress = Math.round((currentIndex / test.questions.length) * 100);
 

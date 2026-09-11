@@ -299,12 +299,14 @@
     else document.title = titleText;
 
     formSection.style.display = "none";
+    // 공유 결과를 보던 중이라면 그 내용을 비운다 (#kakao-share-btn 중복 방지)
     sharedSection.style.display = "none";
+    sharedSection.innerHTML = "";
     resultSection.style.display = "block";
 
     document.getElementById("saju-retry-btn").addEventListener("click", () => {
       resultSection.style.display = "none";
-      sharedSection.style.display = "none";
+      resultSection.innerHTML = "";
       formSection.style.display = "block";
     });
 
@@ -364,6 +366,7 @@
 
     document.getElementById("saju-try-own-btn").addEventListener("click", () => {
       sharedSection.style.display = "none";
+      sharedSection.innerHTML = "";
       formSection.style.display = "block";
       history.replaceState(null, "", "/saju.html");
     });
