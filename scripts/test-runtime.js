@@ -235,7 +235,7 @@ function playQuiz(test, chooseIndex) {
   return { page, problems, chosen };
 }
 
-check("26개 테스트를 처음부터 끝까지 풀 수 있다 (첫 보기 선택)", () => {
+check(`${TESTS.length}개 테스트를 처음부터 끝까지 풀 수 있다 (첫 보기 선택)", () => {
   const problems = [];
   TESTS.forEach((t) => {
     const r = playQuiz(t, () => 0);
@@ -244,7 +244,7 @@ check("26개 테스트를 처음부터 끝까지 풀 수 있다 (첫 보기 선�
   return problems;
 });
 
-check("26개 테스트를 다른 답변 경로로도 풀 수 있다 (보기 순환 선택)", () => {
+check(`${TESTS.length}개 테스트를 다른 답변 경로로도 풀 수 있다 (보기 순환 선택)", () => {
   const problems = [];
   TESTS.forEach((t) => {
     const r = playQuiz(t, (i, q) => i % q.options.length);
