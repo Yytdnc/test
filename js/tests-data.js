@@ -6477,4 +6477,111 @@ const TESTS = [
     },
     insight: "커피 한 잔을 고르는 방식에도 내가 일상을 대하는 태도가 묻어나요. 오늘 나온 결과를 참고해서, 나에게 맞는 방식으로 하루의 여유를 챙겨보세요.",
   },
+  {
+    id: "gamer",
+    tag: "게임",
+    title: "나의 게이머 유형 테스트",
+    emoji: "🎮",
+    tagline: "게임할 때 드러나는 진짜 나의 플레이 스타일은 어떤 유형일까요?",
+    intro: "같은 게임을 해도 즐기는 포인트는 사람마다 다 달라요. 8가지 질문으로 내 안에 숨어 있는 게이머 유형을 찾아보세요.",
+    type: "category",
+    compare: true,
+    questions: [
+      {
+        text: "새로운 게임을 시작하면 제일 먼저 하는 행동은?",
+        options: [
+          { text: "퀘스트 목록부터 확인하고 순서대로 깬다", value: "achiever" },
+          { text: "맵 구석구석을 돌아다니며 숨겨진 요소를 찾는다", value: "explorer" },
+          { text: "다른 플레이어들과 인사하고 친구를 맺는다", value: "socializer" },
+          { text: "랭킹전이나 대전 모드부터 찾아본다", value: "competitor" },
+        ],
+      },
+      {
+        text: "레벨업을 하는 가장 큰 이유는?",
+        options: [
+          { text: "도전과제와 업적을 채우기 위해", value: "achiever" },
+          { text: "새로운 지역과 콘텐츠를 보기 위해", value: "explorer" },
+          { text: "함께하는 파티원들에게 뒤처지지 않기 위해", value: "socializer" },
+          { text: "남들보다 강해지기 위해", value: "competitor" },
+        ],
+      },
+      {
+        text: "게임에서 가장 짜릿함을 느끼는 순간은?",
+        options: [
+          { text: "어려운 업적을 완료했을 때", value: "achiever" },
+          { text: "아무도 모르는 히든 장소를 발견했을 때", value: "explorer" },
+          { text: "함께 플레이한 사람들과 합을 맞춰 성공했을 때", value: "socializer" },
+          { text: "상대를 이기고 랭킹이 오를 때", value: "competitor" },
+        ],
+      },
+      {
+        text: "게임 중 막히는 구간을 만나면?",
+        options: [
+          { text: "공략을 찾아서라도 반드시 클리어한다", value: "achiever" },
+          { text: "다른 루트가 없는지 이리저리 시도해본다", value: "explorer" },
+          { text: "같이 하는 사람에게 도움을 요청한다", value: "socializer" },
+          { text: "실력으로 뚫릴 때까지 계속 도전한다", value: "competitor" },
+        ],
+      },
+      {
+        text: "더 끌리는 게임 장르는?",
+        options: [
+          { text: "수집 요소가 많은 RPG", value: "achiever" },
+          { text: "오픈월드나 샌드박스 게임", value: "explorer" },
+          { text: "함께 즐기는 파티·협동 게임", value: "socializer" },
+          { text: "슈팅이나 대전 격투 같은 경쟁 게임", value: "competitor" },
+        ],
+      },
+      {
+        text: "함께하던 게임 친구가 실수를 했을 때 나는?",
+        options: [
+          { text: "목표 달성에 지장 없으면 그냥 넘어간다", value: "achiever" },
+          { text: "크게 신경 쓰지 않고 각자 할 일을 한다", value: "explorer" },
+          { text: "괜찮다고 다독이며 분위기를 챙긴다", value: "socializer" },
+          { text: "다음엔 잘하자며 승부욕을 북돋운다", value: "competitor" },
+        ],
+      },
+      {
+        text: "게임을 잠깐 쉬었다가 다시 켰을 때 가장 먼저 확인하는 것은?",
+        options: [
+          { text: "밀린 퀘스트와 업적 진행도", value: "achiever" },
+          { text: "그 사이 새로 열린 맵이나 콘텐츠", value: "explorer" },
+          { text: "친구 목록과 길드 소식", value: "socializer" },
+          { text: "내 랭킹과 순위 변동", value: "competitor" },
+        ],
+      },
+      {
+        text: "친구에게 게임을 추천할 때 자주 하는 말은?",
+        options: [
+          { text: "\"이거 다 깨면 진짜 뿌듯해\"", value: "achiever" },
+          { text: "\"숨겨진 요소가 진짜 많아, 볼 게 많아\"", value: "explorer" },
+          { text: "\"같이 하면 훨씬 재밌어\"", value: "socializer" },
+          { text: "\"실력 겨루는 재미가 있어, 한판 붙자\"", value: "competitor" },
+        ],
+      },
+    ],
+    categories: {
+      achiever: {
+        title: "성취형 – 목표를 향해 달리는 사람",
+        emoji: "🏆",
+        desc: "정해진 목표를 하나씩 이뤄나갈 때 가장 큰 만족감을 느끼는 사람이에요. 뚜렷한 목표의식 덕분에 무엇을 하든 끝까지 해내는 힘이 있죠. 가끔은 결과보다 과정 자체를 즐기는 여유도 가져보면 게임이 한층 더 즐거워질 거예요.",
+      },
+      explorer: {
+        title: "탐험형 – 새로운 것을 찾아다니는 사람",
+        emoji: "🧭",
+        desc: "정해진 길보다 아직 아무도 가보지 않은 곳에 끌리는 사람이에요. 호기심이 많아서 작은 디테일도 놓치지 않고 발견하는 재미를 아는 편이죠. 가끔은 발견한 것들을 주변 사람들과 나누면 그 즐거움이 두 배가 될 거예요.",
+      },
+      socializer: {
+        title: "사교형 – 함께할 때 빛나는 사람",
+        emoji: "🤝",
+        desc: "혼자보다 누군가와 함께할 때 더 큰 즐거움을 느끼는 사람이에요. 상대를 배려하고 분위기를 살필 줄 알아서 함께 있는 사람들을 편하게 만들어주죠. 가끔은 온전히 나만을 위한 플레이 시간도 챙겨보면 좋아요.",
+      },
+      competitor: {
+        title: "승부형 – 이기고 싶은 사람",
+        emoji: "🔥",
+        desc: "도전과 경쟁 앞에서 눈이 반짝이는 사람이에요. 지지 않으려는 승부욕 덕분에 실력을 빠르게 키우고 발전하는 힘이 있죠. 가끔은 결과에 너무 얽매이지 말고 게임 자체를 즐기는 마음도 가져보세요.",
+      },
+    },
+    insight: "게임을 즐기는 방식에도 내가 일상에서 무엇을 중요하게 여기는지가 묻어나요. 오늘 나온 유형을 참고해서, 나와 잘 맞는 플레이 스타일과 사람들을 더 즐겁게 만나보세요.",
+  },
 ];
