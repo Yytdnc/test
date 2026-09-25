@@ -55,6 +55,24 @@ const exists = (p) => fs.existsSync(path.join(ROOT, p));
 
 const testsDataSrc = read("js/tests-data.js");
 const TESTS = new Function(`${testsDataSrc}\nreturn TESTS;`)();
+const CORE_TEST_IDS = [
+  "love",
+  "attachment",
+  "burnout",
+  "mbti",
+  "balance-mala",
+  "socialbattery",
+  "conflict",
+  "defense",
+  "perfectionist",
+  "chronotype",
+  "leadership",
+  "lovelanguage",
+  "selfesteem",
+  "learningstyle",
+  "humor",
+  "procrastination",
+];
 
 const compareUtilsSrc = read("js/compare-utils.js");
 const utils = new Function(
@@ -442,13 +460,28 @@ console.log("\n[BUILD] 생성 파일 동기화");
 check("테스트 목록과 quiz-*.html 파일이 1:1 대응한다", () => {
   const problems = [];
   const ids = new Set(TESTS.map((t) => t.id));
+
   TESTS.forEach((t) => {
     if (!exists(`quiz-${t.id}.html`)) problems.push(`quiz-${t.id}.html 파일이 없음`);
   });
+
   HTML_FILES.filter((f) => /^quiz-.+\.html$/.test(f)).forEach((f) => {
     const id = f.replace(/^quiz-/, "").replace(/\.html$/, "");
     if (!ids.has(id)) problems.push(`${f} 에 대응하는 테스트 데이터가 없음 (고아 페이지)`);
   });
+
+  return problems;
+});
+
+check("애드센스 공개 범위: quiz-*.html 은 핵심 16개만 남겨야 한다", () => {
+  const problems = [];
+  const keep = new Set(CORE_TEST_IDS);
+
+  HTML_FILES.filter((f) => /^quiz-.+\.html$/.test(f)).forEach((f) => {
+    const id = f.replace(/^quiz-/, "").replace(/\.html$/, "");
+    if (!keep.has(id)) problems.push(`${f}: 핵심 16개 범위를 벗어난 quiz-*.html 이 남아 있음`);
+  });
+
   return problems;
 });
 
@@ -579,6 +612,15 @@ check("동적 페이지에 noindex 가 걸려 있다", () => {
   return problems;
 });
 
+check("정적 퀴즈 페이지에 동적 오류 셸이 남아 있지 않다", () => {
+  const problems = [];
+  HTML_FILES.filter((f) => /^quiz-.+\.html$/.test(f)).forEach((f) => {
+    if (/quiz-not-found|테스트를 찾을 수 없어요/.test(htmlSrc[f]))
+      problems.push(`${f}: 정적 페이지에 동적 오류 셸이 남아 있음`);
+  });
+  return problems;
+});
+
 check("모든 페이지에 title/description/OG 태그가 있다", () => {
   const problems = [];
   HTML_FILES.forEach((f) => {
@@ -648,7 +690,16 @@ function selectorsOf(src) {
 }
 
 /* JS가 런타임에 직접 만들어 붙이는 요소 (HTML에 없는 게 정상) */
-const DYNAMIC_OK = new Set(["compare-invite-badge", "option-btn", "test-card", "thumb", "tag"]);
+const DYNAMIC_OK = new Set([
+  "compare-invite-badge",
+  "option-btn",
+  "test-card",
+  "thumb",
+  "tag",
+  // quiz.js는 notFoundEl이 없어도 안전하게 동작하도록 작성되어 있으므로
+  // 정적 quiz-<id>.html에서는 오류 셸을 제거해도 검사에서 통과시킨다.
+  "quiz-not-found",
+]);
 
 const pageScripts = {};
 HTML_FILES.forEach((f) => (pageScripts[f] = scriptsOf(htmlSrc[f])));

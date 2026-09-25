@@ -209,10 +209,6 @@ function buildPage(test) {
   </header>
 
   <main class="quiz-shell">
-    <div id="quiz-not-found" style="display:none; text-align:center; padding: 60px 0;">
-      <p>테스트를 찾을 수 없어요. <a href="index.html" style="color:var(--accent); font-weight:700;">홈으로 돌아가기</a></p>
-    </div>
-
     <section id="quiz-intro" class="quiz-intro">
       <div class="big-emoji">${test.emoji}</div>
       <h1>${testTitle}</h1>
@@ -407,6 +403,16 @@ ${rows}
 </body>
 </html>
 `;
+}
+
+const activeQuizFiles = new Set(TESTS.map((test) => `quiz-${test.id}.html`));
+// Orphan quiz 페이지는 남겨두면(특히 sitemap/내부링크와 무관하게) 계속 공개·크롤될 수 있어
+// 빌드 시 제거한다.
+for (const file of fs.readdirSync(ROOT)) {
+  if (/^quiz-.+\.html$/.test(file) && !activeQuizFiles.has(file)) {
+    fs.unlinkSync(path.join(ROOT, file));
+    console.log(`removed orphan ${file}`);
+  }
 }
 
 let count = 0;
