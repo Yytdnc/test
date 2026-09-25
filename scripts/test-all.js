@@ -55,24 +55,7 @@ const exists = (p) => fs.existsSync(path.join(ROOT, p));
 
 const testsDataSrc = read("js/tests-data.js");
 const TESTS = new Function(`${testsDataSrc}\nreturn TESTS;`)();
-const CORE_TEST_IDS = [
-  "love",
-  "attachment",
-  "burnout",
-  "mbti",
-  "balance-mala",
-  "socialbattery",
-  "conflict",
-  "defense",
-  "perfectionist",
-  "chronotype",
-  "leadership",
-  "lovelanguage",
-  "selfesteem",
-  "learningstyle",
-  "humor",
-  "procrastination",
-];
+const { CORE_TEST_IDS } = require("./core-tests.js");
 
 const compareUtilsSrc = read("js/compare-utils.js");
 const utils = new Function(
@@ -480,6 +463,23 @@ check("애드센스 공개 범위: quiz-*.html 은 핵심 16개만 남겨야 한
   HTML_FILES.filter((f) => /^quiz-.+\.html$/.test(f)).forEach((f) => {
     const id = f.replace(/^quiz-/, "").replace(/\.html$/, "");
     if (!keep.has(id)) problems.push(`${f}: 핵심 16개 범위를 벗어난 quiz-*.html 이 남아 있음`);
+  });
+
+  return problems;
+});
+
+check("애드센스 공개 범위: tests-data.js 도 핵심 16개만 담아야 한다", () => {
+  /* quiz-*.html 파일만 보는 위 검사로는 부족하다. tests-data.js 는 브라우저가
+   * 그대로 읽어서 index/tests 의 카드 그리드를 그리므로, 여기 남아 있으면
+   * 정적 페이지가 없어도 목록에는 계속 노출된다.
+   * 걸리면: node scripts/prune-scaled-quizzes.js && node scripts/build-quiz-pages.js */
+  const keep = new Set(CORE_TEST_IDS);
+  const problems = TESTS.filter((t) => !keep.has(t.id)).map(
+    (t) => `${t.id}: 핵심 16개 밖의 테스트가 tests-data.js 에 있음 (archive 로 옮겨야 함)`
+  );
+
+  CORE_TEST_IDS.forEach((id) => {
+    if (!TESTS.some((t) => t.id === id)) problems.push(`${id}: 핵심 테스트인데 tests-data.js 에 없음`);
   });
 
   return problems;

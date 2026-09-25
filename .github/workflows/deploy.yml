@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write   # 양산형 정리 커밋을 main 에 되돌려 push 하기 위해 필요
   pages: write
   id-token: write
 
@@ -23,6 +23,49 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # push 충돌 시 rebase 재시도를 위해 전체 이력 필요
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # 외부 스케줄 작업이 매일 00:05 UTC 무렵 양산형 퀴즈를 main 에 밀어넣는다.
+      # 애드센스 거절 원인이 그 양산형 콘텐츠였으므로 배포 전에 공개 범위를
+      # 핵심 16개(scripts/core-tests.js)로 되돌린다. 걷어낸 테스트는 지우지 않고
+      # js/tests-data-archive.js 로 보관한다.
+      #
+      # 정리할 게 없으면 어떤 파일도 바뀌지 않아 커밋도 push 도 일어나지 않는다.
+      # 즉 이 단계는 멱등이라 자기 커밋으로 다시 돌아도 무한 루프가 생기지 않는다.
+      - name: Prune scaled quizzes
+        run: |
+          node scripts/prune-scaled-quizzes.js
+          node scripts/build-quiz-pages.js
+
+      # 정리된 트리가 실제로 온전한지 확인하고 나서 배포한다.
+      # 여기서 실패하면 배포가 멈춘다 (깨진 사이트를 올리는 것보다 낫다).
+      - name: Verify
+        run: |
+          node scripts/test-all.js
+          node scripts/test-runtime.js
+
+      # GITHUB_TOKEN 으로 push 하면 워크플로가 다시 트리거되지 않으므로,
+      # 이 실행이 아래에서 정리된 트리를 그대로 배포까지 마쳐야 한다.
+      - name: Commit pruned result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          # 개행 정규화 같은 껍데기 변경만 있을 때 빈 커밋으로 실패하지 않도록
+          # 스테이징된 실질 변경이 있을 때만 커밋한다
+          if git diff --cached --quiet; then
+            echo "정리할 양산형 퀴즈 없음 — 커밋 생략"
+            exit 0
+          fi
+          git commit -m "Archive scaled quizzes to keep the AdSense scope at 16 [auto-prune]"
+          # 정리하는 사이 생성기가 또 push 했을 수 있으니 한 번 rebase 재시도
+          git push || (git pull --rebase origin main && git push)
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3

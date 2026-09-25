@@ -24,18 +24,39 @@ js/saju.js             saju.html 로직 (물/땅/하늘 기운 계산 + 사주 �
 js/fortune.js          fortune.html 로직 (띠 + 오늘 날짜로 매일 바뀌는 운세 계산)
 js/kakao-config.js     카카오 JS SDK 앱 키 설정 (아래 "카카오톡 공유 설정" 참고)
 img/og-share.png       링크 공유 시 노출되는 대표 이미지 (OG 이미지 / 카카오 공유 카드)
+js/tests-data-archive.js  공개하지 않는 테스트 보관소 (어디서도 로드되지 않음)
 scripts/build-quiz-pages.js  quiz-<id>.html 정적 페이지 생성 스크립트
+scripts/core-tests.js        공개할 테스트 id 허용목록 (단일 출처)
+scripts/prune-scaled-quizzes.js  허용목록 밖 테스트를 archive 로 옮기는 스크립트
 ```
 
-현재 테스트 40종 (`js/tests-data.js`의 `TESTS` 배열 참고).
+현재 공개 테스트 16종 (`scripts/core-tests.js`의 `CORE_TEST_IDS` 참고).
+
+### 공개 범위가 16종으로 고정되어 있는 이유
+
+애드센스가 "가치 없는 대량 생산 콘텐츠"를 이유로 반복 거절했습니다. 원인은 한 템플릿에서 명사만 바꿔 찍어낸 양산형 퀴즈였고, 2026-09-06 에 48종 → 16종으로 줄이고 이 16종만 사람 손으로 다시 썼습니다.
+
+그래서 **공개 여부는 `js/tests-data.js` 가 아니라 `scripts/core-tests.js` 의 허용목록이 결정합니다.**
+
+- 허용목록에 없는 id 는 `scripts/prune-scaled-quizzes.js` 가 `js/tests-data-archive.js` 로 옮기고, 해당 `quiz-<id>.html` 과 `sitemap.xml` 항목도 함께 정리합니다.
+- 이 정리는 `main` 에 푸시될 때마다 `.github/workflows/deploy.yml` 이 자동으로 돌려서 결과를 다시 커밋한 뒤 배포합니다. 즉 허용목록에 추가하지 않은 테스트는 어떤 경로로 들어와도 사이트에 남지 않습니다.
+- `node scripts/test-all.js` 가 `tests-data.js`·생성된 HTML·`sitemap.xml` 세 곳 모두 16종인지 검사합니다.
+
+데이터를 지우지 않고 archive 로 옮기는 이유는 되살릴 여지를 남기기 위함입니다. 복원 방법은 `js/tests-data-archive.js` 헤더에 적혀 있습니다.
 
 ### 새 테스트 추가하는 법
-`js/tests-data.js`의 `TESTS` 배열에 항목을 하나 추가하면 홈/퀴즈/결과 페이지에 자동으로 반영됩니다. `type: "category"`(유형 판정) 또는 `type: "score"`(점수 구간 판정) 중 선택. 테스트 객체에 `compare: true`를 추가하면 결과 페이지에 "커플/친구와 비교하기" 공유 링크 기능이 자동으로 활성화됩니다 (URL에 답변을 인코딩해서 전달하는 방식이라 별도 서버/DB가 필요 없습니다).
+
+먼저 양산형이 아닌지 확인하세요. 기존 테스트에서 문구 골격을 그대로 두고 소재만 바꾼 것이라면 추가하지 않는 편이 낫습니다 (애드센스 거절 사유 그 자체입니다).
+
+`js/tests-data.js`의 `TESTS` 배열에 항목을 하나 추가하고, **`scripts/core-tests.js`의 `CORE_TEST_IDS` 에도 그 id 를 추가해야** 홈/퀴즈/결과 페이지에 반영됩니다 (허용목록에 없으면 자동 정리로 archive 로 옮겨집니다). `type: "category"`(유형 판정) 또는 `type: "score"`(점수 구간 판정) 중 선택. 테스트 객체에 `compare: true`를 추가하면 결과 페이지에 "커플/친구와 비교하기" 공유 링크 기능이 자동으로 활성화됩니다 (URL에 답변을 인코딩해서 전달하는 방식이라 별도 서버/DB가 필요 없습니다).
 
 추가/수정 후에는 **반드시** 아래 명령으로 테스트별 정적 SEO 페이지를 다시 생성해서 커밋해야 합니다 (GitHub Pages는 빌드 단계 없이 저장소 파일을 그대로 서빙하기 때문에, 생성된 `quiz-<id>.html` 파일도 저장소에 커밋되어 있어야 합니다).
 
 ```bash
-node scripts/build-quiz-pages.js
+node scripts/prune-scaled-quizzes.js   # 허용목록 밖 테스트를 archive 로 이관
+node scripts/build-quiz-pages.js      # quiz-<id>.html / index.html / tests.html 재생성
+node scripts/test-all.js              # 공개 범위 16종 + 데이터 정합성 검사
+node scripts/test-runtime.js          # 실제 채점 로직 검사
 ```
 
 ### 캐시 무효화 (`?v=`)
@@ -59,7 +80,15 @@ python3 -m http.server 8080
 
 ## GitHub Pages 자동 배포
 
-`.github/workflows/deploy.yml`이 `main` 브랜치에 푸시될 때마다 자동으로 GitHub Pages에 배포합니다.
+`.github/workflows/deploy.yml`이 `main` 브랜치에 푸시될 때마다 아래 순서로 한 번에 처리합니다.
+
+1. `scripts/prune-scaled-quizzes.js` — 허용목록(`scripts/core-tests.js`) 밖 테스트를 archive 로 이관
+2. `scripts/build-quiz-pages.js` — 정적 페이지 재생성 (남은 `quiz-*.html` 정리 포함)
+3. `scripts/test-all.js` + `scripts/test-runtime.js` — 검사 실패 시 배포 중단
+4. 변경이 있으면 `[auto-prune]` 커밋을 `main` 에 되돌려 push
+5. GitHub Pages 배포
+
+정리할 것이 없으면 커밋 없이 4번을 건너뛰므로 워크플로가 스스로를 다시 트리거하지 않습니다. 또한 `GITHUB_TOKEN` 으로 한 push 는 워크플로를 재실행시키지 않기 때문에, 정리·검사·배포를 **같은 실행 안에서** 순서대로 처리하도록 묶어 뒀습니다.
 
 최초 1회, 저장소 **Settings → Pages → Build and deployment → Source**를 **GitHub Actions**로 설정해주세요. 이후에는 `git push`만 하면 자동으로 사이트가 갱신됩니다.
 
